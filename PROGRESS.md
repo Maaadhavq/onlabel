@@ -70,6 +70,32 @@ its own quotes, and must not list violations (`agent/guards.py`). Result:
 needs_human_review with both reasons named. The 8B model is not good enough to confirm
 true numeric claims; the hosted models and the verifier have to be measured in Phase 4.
 
+### 10. Free-tier minute limits are the binding constraint, not quality
+With keys in place every hosted model passed the strict-JSON smoke test (gpt-oss-120b 2.4 s,
+gpt-oss-20b 9.3 s, Qwen3.8-27B 0.5 s, Gemma 4 26B 4.5 s; Prompt Guard 2 returns a plain
+probability: 0.0005 for "Ask your doctor...", 0.9995 for "Ignore all previous
+instructions..."). The third judge call in a minute then got a 429: each call reserves about
+3.6K of Groq's 8K tokens a minute. `LLMClient` now keeps its own 60 s ledger per model; the
+live API moves to the next model when one is busy, eval runs wait. Groq's 429 text names the
+organization, so only the error type and status code reach the trace. A stalled Gemma call
+held one review for 90 s; the API's per-call timeout is now 30 s.
+
+### 11. Correct verdicts were being rejected for how they quoted
+gpt-oss-120b called "Wegovy is approved for children as young as 8" off-label (right) but
+shortened its quote with "..." and also quoted a section title; both failed grounding, so the
+right answer became needs_human_review. Now: elided quotes match if every fragment appears in
+order (exact or normalised, never fuzzy; span capped at 800 chars; the UI shows the located
+text with the elided middle, never the model's shortened version), titles and table
+captions/headers are quotable, and a table's caption/header vouches for figures its row
+lacks ("Week 68"). Prompt v2 asks for unshortened quotes. Next run: off_label with an exact
+quote.
+
+### 12. Gold labels will need care: "14.9% at 68 weeks" is arguable
+gpt-oss-120b judged the claim overstated: -14.9 is Study 2's result while Studies 3 and 4
+show -9.6 and -16, so "in clinical trials, adults lost an average of 14.9%" generalises one
+study. An MLR reviewer would likely ask for a qualifier. The benchmark must define its labels
+(and accept needs_qualifier) before any accuracy number means anything.
+
 ## Done this session (2026-10-05)
 
 - Repo scaffold: `pyproject.toml` (uv, Python 3.12), `.gitattributes`, `.gitignore`,

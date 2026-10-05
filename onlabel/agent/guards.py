@@ -54,29 +54,41 @@ class GuardResult:
     flags: list[str] = field(default_factory=list)
 
 
+def _haystack(chunk: Chunk) -> tuple[str, int]:
+    """What a quote may come from (section title, table caption and header rows, the excerpt
+    itself) and where the excerpt's own text starts in it. The judge sees all three."""
+    head = "\n".join(p for p in (chunk.section_path, chunk.context) if p)
+    return f"{head}\n{chunk.text}", len(head) + 1
+
+
 def check_verdict(out: JudgeOutput, chunks: dict[str, Chunk], claim: str = "") -> GuardResult:
     res = GuardResult(status=out.verdict)
+    # Figures a quote can vouch for: its own, plus its table's caption and header rows (a
+    # row of numbers means nothing without "Week 68" above it). Never the section title:
+    # titles carry "14.2" and "12 Years" and would wave a wrong figure through.
+    vouched: set[str] = set()
     for ev in out.evidence:
         chunk = chunks.get(ev.chunk_id)
         if chunk is None:
             res.flags.append("cited_unknown_excerpt")
             continue
-        haystack = f"{chunk.context}\n{chunk.text}" if chunk.context else chunk.text
+        haystack, text_at = _haystack(chunk)
         g = locate(haystack, ev.quote)
         if not g.ok:
             res.flags.append("quote_not_found_in_excerpt")
             continue
-        offset = len(chunk.context) + 1 if chunk.context else 0
-        start = chunk.start + max(0, g.start - offset)
-        end = chunk.start + max(0, g.end - offset)
-        res.evidence.append(CheckedEvidence(chunk.chunk_id, g.located or ev.quote, g.match,
+        start = chunk.start + max(0, g.start - text_at)  # a title or header quote highlights
+        end = chunk.start + max(0, g.end - text_at)  # the start of the excerpt
+        located = g.located or ev.quote
+        res.evidence.append(CheckedEvidence(chunk.chunk_id, located, g.match,
                                             chunk.section_path, chunk.set_id, start, end))
+        vouched |= figures(located) | figures(chunk.context)
 
     if out.verdict == "supported" and not res.evidence:
         res.status = "needs_human_review"
         res.flags.append("supported_without_grounded_quote")
     elif out.verdict == "supported":
-        quoted = set().union(*(figures(e.quote) for e in res.evidence))
+        quoted = vouched
         missing = sorted(figures(claim) - quoted)
         if missing:
             res.status = "needs_human_review"

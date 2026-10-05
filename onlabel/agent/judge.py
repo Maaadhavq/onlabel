@@ -12,7 +12,7 @@ from onlabel.agent.verdict import JudgeOutput
 from onlabel.data.chunk import Chunk
 from onlabel.llm.client import LLMClient, LLMResult
 
-PROMPT_VERSION = "judge-v1"
+PROMPT_VERSION = "judge-v2"  # v2: no "..." in quotes; titles, captions and table rows are quotable
 MAX_COMPLETION_TOKENS = 700
 
 SYSTEM = """\
@@ -34,9 +34,11 @@ Violations (list every one that applies; empty list if supported):
 overstated_efficacy, unsubstantiated_superiority, broadened_indication, omitted_qualifier,
 minimized_risk, missing_risk_information, unsupported_absolute_claim.
 
-Evidence: copy exact sentences or table rows from the excerpts, each with its excerpt id. Copy, do not paraphrase.
-For "supported", quote the text that states each element. For other verdicts, quote the text that shows the gap or conflict
-if one exists. Reasoning: at most three sentences.
+Evidence: copy text exactly as it appears in an excerpt, with that excerpt's id: a whole sentence, a table row,
+a table caption, or the section title. Do not paraphrase and do not shorten a quote with "...".
+For "supported", quote text that states every element and every figure in the claim (for a table value,
+quote the row and the caption or header that says what it measures). For other verdicts, quote the text
+that shows the gap or conflict if one exists. Reasoning: at most three sentences.
 """
 
 

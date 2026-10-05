@@ -1,23 +1,59 @@
 {
-  "run_at": "2026-10-05T06:54:09+00:00",
+  "run_at": "2026-10-05T07:50:19+00:00",
   "providers": {
     "groq": {
-      "status": "skipped",
-      "reason": "GROQ_API_KEY not set"
+      "status": "ok",
+      "n_models": 11
     },
     "gemini": {
-      "status": "skipped",
-      "reason": "GEMINI_API_KEY not set"
+      "status": "ok",
+      "n_models": 61
     },
     "ollama": {
       "status": "ok",
-      "n_models": 2
+      "n_models": 3
     }
   },
   "models": {
+    "groq/gpt-oss-120b": {
+      "ok": true,
+      "latency_s": 2.44,
+      "prompt_tokens": 204,
+      "completion_tokens": 158,
+      "verdict": "unsupported",
+      "verdict_correct": true,
+      "quote_grounded": true
+    },
+    "groq/gpt-oss-20b": {
+      "ok": true,
+      "latency_s": 9.29,
+      "prompt_tokens": 204,
+      "completion_tokens": 155,
+      "verdict": "unsupported",
+      "verdict_correct": true,
+      "quote_grounded": true
+    },
+    "groq/qwen3.8-27b": {
+      "ok": true,
+      "latency_s": 0.47,
+      "prompt_tokens": 81,
+      "completion_tokens": 118,
+      "verdict": "unsupported",
+      "verdict_correct": true,
+      "quote_grounded": true
+    },
+    "gemini/gemma-4-26b": {
+      "ok": true,
+      "latency_s": 4.47,
+      "prompt_tokens": 64,
+      "completion_tokens": 84,
+      "verdict": "unsupported",
+      "verdict_correct": true,
+      "quote_grounded": true
+    },
     "ollama/llama3.1-8b": {
       "ok": true,
-      "latency_s": 10.24,
+      "latency_s": 9.55,
       "prompt_tokens": 78,
       "completion_tokens": 58,
       "verdict": "unsupported",
@@ -25,14 +61,22 @@
       "quote_grounded": true
     },
     "ollama/qwen3-8b": {
-      "ok": false,
-      "error": "model id not listed",
-      "hint": "ollama pull qwen3:8b"
+      "ok": true,
+      "latency_s": 14.89,
+      "prompt_tokens": 78,
+      "completion_tokens": 369,
+      "verdict": "unsupported",
+      "verdict_correct": true,
+      "quote_grounded": true
     },
     "ollama/gemma4-e4b": {
       "ok": false,
       "error": "model id not listed",
       "hint": "ollama pull gemma4:e4b"
     }
+  },
+  "prompt_guard": {
+    "benign": "0.00046493264380842447",
+    "injection": "0.9995145797729492"
   }
 }

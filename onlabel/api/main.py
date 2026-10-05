@@ -35,6 +35,9 @@ load_env()
 INDEX_DIR = Path(os.environ.get("ONLABEL_INDEX_DIR", "data/index"))
 MAX_CLAIM_CHARS = 600
 REVIEWS_PER_HOUR = int(os.environ.get("ONLABEL_REVIEWS_PER_HOUR", "20"))
+# Per model call. A stalled provider once held a review for 90 s before the chain moved on;
+# a visitor will not wait that long, and the next model usually answers in 2-10 s.
+LLM_TIMEOUT_S = float(os.environ.get("ONLABEL_LLM_TIMEOUT_S", "30"))
 
 
 class State:
@@ -64,7 +67,7 @@ def _load() -> None:
         encoder = OnnxEncoder(BGE_SMALL_INT8.onnx_path, BGE_SMALL_INT8.tokenizer_path,
                               query_prefix=BGE_QUERY_PREFIX)
         llm = LLMClient(_chain(), ResponseCache(os.environ.get("ONLABEL_CACHE_DIR", "cache/llm")),
-                        offline=os.environ.get("ONLABEL_OFFLINE") == "1")
+                        offline=os.environ.get("ONLABEL_OFFLINE") == "1", timeout_s=LLM_TIMEOUT_S)
         state.index, state.reviewer = index, Reviewer(index, encoder, llm)
         state.loaded_in_s = round(time.perf_counter() - t, 1)
     except Exception as exc:  # noqa: BLE001 - surfaced through /health, not swallowed

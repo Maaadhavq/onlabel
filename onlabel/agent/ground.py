@@ -6,6 +6,9 @@ takes part in this step. Match ladder, strictest first:
     exact       the quote appears verbatim in the evidence text
     normalized  it appears after folding whitespace, dashes, quotes, ligatures and the
                 "- " bullet markers this project's SPL renderer writes
+    elided      the quote was shortened with "..." and every fragment appears, in order,
+                after folding (models do this with long label sentences; gpt-oss-120b's
+                first pediatric verdict was rejected for it). Never fuzzy.
     fuzzy       >= FUZZY_MIN similarity over a same-length window (only for quotes with
                 no digits: "14.9%" and "19.4%" are 80% similar and mean different things)
     failed      -> the citation is rejected
@@ -30,6 +33,11 @@ _FOLD = {
 }
 _BULLET = re.compile(r"(?m)^[ \t]*- ")
 _DIGIT = re.compile(r"\d")
+_ELLIPSIS = re.compile(r"\s*(?:\.{3}|…)\s*")
+MIN_FRAGMENT_CHARS = 4
+# An elision can drop a "not". Callers show the located span (elided middle included), never
+# the model's shortened text, and a span this long is no longer a quotation.
+MAX_ELIDED_SPAN = 800
 
 
 @dataclass
@@ -94,6 +102,9 @@ def locate(text: str, quote: str) -> Grounding:
         s, e = span(pos)
         return Grounding("normalized", s, e, text[s:e])
 
+    if _ELLIPSIS.search(quote):
+        return _elided(text, quote, folded, back)
+
     if _DIGIT.search(nquote) or len(nquote) < MIN_QUOTE_CHARS:
         return Grounding("failed")
     best, best_pos = 0.0, -1
@@ -109,3 +120,24 @@ def locate(text: str, quote: str) -> Grounding:
         s, e = span(best_pos)
         return Grounding("fuzzy", s, e, text[s:e])
     return Grounding("failed")
+
+
+def _elided(text: str, quote: str, folded: str, back: list[int]) -> Grounding:
+    """Every fragment of an elided quote must appear in order; no fuzzy matching."""
+    fragments = [_fold_index(f)[0].strip() for f in _ELLIPSIS.split(quote)]
+    fragments = [f for f in fragments if f]
+    if not fragments or any(len(f) < MIN_FRAGMENT_CHARS for f in fragments):
+        return Grounding("failed")
+    if sum(len(f) for f in fragments) < MIN_QUOTE_CHARS:
+        return Grounding("failed")
+    pos, first = 0, None
+    for frag in fragments:
+        hit = folded.find(frag, pos)
+        if hit < 0:
+            return Grounding("failed")
+        first = hit if first is None else first
+        pos = hit + len(frag)
+    s, e = back[first], back[pos - 1] + 1
+    if e - s > MAX_ELIDED_SPAN:
+        return Grounding("failed")
+    return Grounding("elided", s, e, text[s:e])
