@@ -102,3 +102,18 @@ def test_mentioning_the_warning_subject_passes_but_still_asks_for_review():
 
 def test_no_boxed_warning_no_check():
     assert risk_information_check(COPY, "jardiance", "JARDIANCE", []) is None
+
+
+def test_denying_the_warning_subject_is_flagged_as_minimized():
+    found = risk_information_check(COPY + " Unlike insulin, Wegovy carries no risk of thyroid tumors.",
+                                   "wegovy", "WEGOVY", _boxed())
+    assert found["ok"] is False and found["title"] == "Boxed-warning risk is denied"
+    assert found["denied"] == ["Unlike insulin, Wegovy carries no risk of thyroid tumors."]
+
+
+def test_risk_language_with_conditions_or_instructions_is_not_a_denial():
+    for line in ["It is not known whether Wegovy causes thyroid C-cell tumors in people.",
+                 "Do not use Wegovy if you have had thyroid cancer.",
+                 "Do not ignore thyroid symptoms such as a lump in your neck."]:
+        found = risk_information_check(COPY + " " + line, "wegovy", "WEGOVY", _boxed())
+        assert found["ok"] is True and found["denied"] == [], line

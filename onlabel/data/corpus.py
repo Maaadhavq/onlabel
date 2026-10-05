@@ -44,3 +44,14 @@ CORPUS: dict[str, LabelSpec] = {
 }
 
 SKELETON = ["wegovy", "ozempic", "mounjaro"]
+
+
+def label_name(products: list[str], key: str) -> str:
+    """How a label is named to reviewers and to the judge: every brand it covers, the one it
+    is filed under first. Rybelsus's label also covers Ozempic tablets, and naming it by its
+    first product called it "OZEMPIC", exactly like the Ozempic injection label."""
+    names = [p for p in products if p] or [key.upper()]
+    # MOUNJARO KWIKPEN is a presentation of MOUNJARO, not another brand.
+    brands = [p for p in names if not any(p != q and p.startswith(q + " ") for q in names)]
+    brands.sort(key=lambda p: p.lower() != key.lower())
+    return " and ".join(brands)

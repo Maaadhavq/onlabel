@@ -22,7 +22,7 @@ export function EditorCard({ labels, draft, setDraft, onCheck, canCheck, busy, s
           <select id="label-pick" className="select" value={draft.label} onChange={(e) => setDraft({ ...draft, label: e.target.value })}>
             <option value="">Detect from the copy</option>
             {labels.map((l) => (
-              <option key={l.key} value={l.key}>{l.drug}, version {l.version}</option>
+              <option key={l.key} value={l.key}>{l.drug}{l.generic ? ` (${l.generic})` : ""}, version {l.version}</option>
             ))}
           </select>
           <span className="field-label" id="audience-label">Audience</span>

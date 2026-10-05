@@ -15,6 +15,7 @@ from onlabel.agent.document import detect_labels, risk_information_check, split_
 from onlabel.agent.evidence import BOXED_WARNING, DAILYMED_URL, present
 from onlabel.agent.guards import check_verdict, checks_for
 from onlabel.agent.judge import PROMPT_VERSION, judge_claim
+from onlabel.data.corpus import label_name
 from onlabel.llm.client import LLMClient
 from onlabel.retrieval.encoder import OnnxEncoder
 from onlabel.retrieval.index import LabelIndex
@@ -142,7 +143,9 @@ class Reviewer:
             emit("error", {"message": "No indexed drug is named in the copy. Pick the label to check against.",
                            "code": "no_label"})
             return
-        emit("start", {"labels": [{"key": k, **self.labels_meta.get(k, {})} for k in labels],
+        emit("start", {"labels": [{"key": k, **self.labels_meta.get(k, {}),
+                                   "drug": label_name(self.labels_meta.get(k, {}).get("products", []), k)}
+                                  for k in labels],
                        "ambiguous": ambiguous})
 
         claims, split = split_claims(self.splitter, text)
@@ -157,8 +160,7 @@ class Reviewer:
 
         checks = []
         for key in labels:
-            meta = self.labels_meta.get(key, {})
-            drug = (meta.get("products") or [key.upper()])[0]
+            drug = label_name(self.labels_meta.get(key, {}).get("products", []), key)
             found = risk_information_check(text, key, drug, self.boxed_warning(key))
             if found:
                 checks.append(found)

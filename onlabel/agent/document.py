@@ -141,24 +141,68 @@ def _terms(title: str) -> set[str]:
     return words | {w[:-1] for w in words if w.endswith("s") and len(w) > 4}
 
 
+# Naming a boxed-warning subject only to deny it ("carries no risk of thyroid tumors") is
+# minimized risk, which OPDP letters cite; a mention check alone counted it as presented.
+_NEGATIONS = {"no", "not", "never", "without", "zero", "none"}
+_CONDITIONS = {"if", "whether", "unless", "known", "sure"}  # "do not use if...", "not known whether"
+_INSTRUCTIONS = {"use", "take", "start", "inject", "stop", "share", "ignore", "skip"}  # "do not ignore..."
+DENIAL_WINDOW = 4  # words allowed between the negation and the warning's subject
+
+
+def _is_negation(words: list[str], i: int) -> bool:
+    w = words[i]
+    if w == "free":  # "free of thyroid tumors"
+        return i + 1 < len(words) and words[i + 1] in ("of", "from")
+    return w in _NEGATIONS or w.endswith("n't")
+
+
+def denials(text: str, terms: set[str]) -> list[str]:
+    """Sentences that name a boxed-warning subject with a negation just before it."""
+    out = []
+    for sentence in re.split(r"(?<=[.!?])\s+", text):
+        words = [w.lower() for w in re.findall(r"[A-Za-z][A-Za-z'’-]*", sentence.replace("’", "'"))]
+        for i, w in enumerate(words):
+            if not any(w.startswith(t) for t in terms):
+                continue
+            lo = max(0, i - DENIAL_WINDOW - 1)
+            if any(
+                _is_negation(words, j)
+                and not set(words[j + 1 : i]) & _CONDITIONS
+                and not (j + 1 < i and words[j + 1] in _INSTRUCTIONS)
+                for j in range(lo, i)
+            ):
+                out.append(sentence.strip())
+                break
+    return out
+
+
 def risk_information_check(text: str, label_key: str, drug: str, boxed: list[Chunk]) -> dict | None:
-    """Does the copy mention the subject of the label's boxed warning at all?"""
+    """Does the copy present the subject of the label's boxed warning, deny it, or leave it out?"""
     if not boxed:
         return None
     title = boxed[0].section_path.split(" > ")[0]
     terms = _terms(title.split(":", 1)[-1] if ":" in title else title)
     lowered = text.lower()
     mentioned = sorted(t for t in terms if re.search(rf"\b{re.escape(t)}", lowered))
+    denied = denials(text, terms) if mentioned else []
     first = re.split(r"(?<=[.;])\s", boxed[0].text.lstrip("- "), maxsplit=1)[0]
+    if denied:
+        title_out = "Boxed-warning risk is denied"
+        detail = (f"The copy says “{denied[0]}” The {drug} boxed warning ({title}) describes this risk, "
+                  "so the copy minimizes it. The full warning still has to be presented.")
+    elif mentioned:
+        title_out = "Boxed warning is mentioned"
+        detail = f"The copy mentions {', '.join(mentioned)} from the {drug} boxed warning. A reviewer still checks it is presented in full."
+    else:
+        title_out = "Risk information missing"
+        detail = (f"The copy includes none of the {drug} boxed warning ({title}). "
+                  "Copy that states benefits has to present this risk information too.")
     return {
         "label": label_key,
         "drug": drug,
-        "ok": bool(mentioned),
-        "title": "Boxed warning is mentioned" if mentioned else "Risk information missing",
-        "detail": (
-            f"The copy mentions {', '.join(mentioned)} from the {drug} boxed warning. A reviewer still checks it is presented in full."
-            if mentioned
-            else f"The copy includes none of the {drug} boxed warning ({title}). Copy that states benefits has to present this risk information too."
-        ),
+        "ok": bool(mentioned) and not denied,
+        "title": title_out,
+        "detail": detail,
+        "denied": denied,
         "evidence": {"chunk_id": boxed[0].chunk_id, "section_path": boxed[0].section_path, "quote": first},
     }

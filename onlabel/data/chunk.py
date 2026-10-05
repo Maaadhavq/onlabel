@@ -17,6 +17,7 @@ from __future__ import annotations
 import re
 from dataclasses import asdict, dataclass
 
+from onlabel.data.corpus import label_name
 from onlabel.data.parse_spl import Label
 
 SECTION_SEP = "\n\n"
@@ -137,7 +138,7 @@ def _pack(units: list[tuple[int, int, str]], text: str, max_words: int) -> list[
 def section_chunks(label: Label, label_key: str, ingredient: str, max_words: int = 180) -> list[Chunk]:
     chunks: list[Chunk] = []
     starts = section_offsets(label)
-    drug = label.products[0] if label.products else label_key.upper()
+    drug = label_name(label.products, label_key)
     for si, sec in enumerate(label.sections):
         for n, group in enumerate(_pack(_units(sec.text, max_words), sec.text, max_words)):
             s, e = group[0][0], group[-1][1]
@@ -160,8 +161,8 @@ def fixed_chunks(
 ) -> list[Chunk]:
     doc = label_doc(label)
     starts = section_offsets(label)
-    drug = label.products[0] if label.products else label_key.upper()
-    spans = [(m.start(), m.end()) for m in re.finditer(r"\S+", doc)]
+    drug = label_name(label.products, label_key)
+    spans =[(m.start(), m.end()) for m in re.finditer(r"\S+", doc)]
     chunks: list[Chunk] = []
     step = window - overlap
     for n, i in enumerate(range(0, max(1, len(spans) - overlap), step)):

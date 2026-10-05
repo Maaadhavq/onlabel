@@ -29,6 +29,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from onlabel.agent.rewrite import suggest_rewrite
 from onlabel.api.jobs import Job, JobRunner
+from onlabel.data.corpus import label_name
 from onlabel.env import load_env
 from onlabel.llm.cache import ResponseCache
 from onlabel.llm.client import LLMClient
@@ -187,8 +188,8 @@ def labels() -> list[dict]:
         raise HTTPException(503, "Still loading the label index; try again in a few seconds.")
     out = []
     for key, meta in state.index.meta.get("labels", {}).items():
-        out.append({"key": key, "drug": (meta.get("products") or [key.upper()])[0], "set_id": meta["set_id"],
-                    "version": meta["version"], "effective_time": meta.get("effective_time"),
+        out.append({"key": key, "drug": label_name(meta.get("products", []), key), "generic": meta.get("generic"),
+                    "set_id": meta["set_id"], "version": meta["version"], "effective_time": meta.get("effective_time"),
                     "url": DAILYMED_URL.format(set_id=meta["set_id"])})
     return out
 
