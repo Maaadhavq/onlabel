@@ -38,7 +38,9 @@ WINDOW_S = 60.0
 
 
 def estimate_tokens(text: str) -> int:
-    return len(text) // 3 + 1  # deliberately pessimistic for English with numbers
+    # Measured: an 8.3K-character judge prompt was 2,173 tokens (3.8 chars a token). 3.5 keeps
+    # a margin; the ledger is settled to the real count once the provider replies.
+    return int(len(text) / 3.5) + 1
 
 
 class MinuteBudget:
@@ -46,10 +48,10 @@ class MinuteBudget:
 
     def __init__(self, clock: Callable[[], float] = time.monotonic) -> None:
         self.clock = clock
-        self._spent: dict[str, deque[tuple[float, int]]] = defaultdict(deque)
+        self._spent: dict[str, deque[list]] = defaultdict(deque)  # entries: [timestamp, tokens]
         self._lock = threading.Lock()
 
-    def _trim(self, key: str, now: float) -> deque[tuple[float, int]]:
+    def _trim(self, key: str, now: float) -> deque[list]:
         q = self._spent[key]
         while q and now - q[0][0] >= WINDOW_S:
             q.popleft()
@@ -70,9 +72,17 @@ class MinuteBudget:
                     return max(0.0, ts + WINDOW_S - now)
             return WINDOW_S
 
-    def charge(self, key: str, tokens: int) -> None:
+    def charge(self, key: str, tokens: int) -> list:
+        """Book an estimate before the request; returns the entry so it can be settled."""
+        entry = [self.clock(), tokens]
         with self._lock:
-            self._spent[key].append((self.clock(), tokens))
+            self._spent[key].append(entry)
+        return entry
+
+    def settle(self, entry: list, tokens: int) -> None:
+        """Replace an estimate with what the provider reported."""
+        with self._lock:
+            entry[1] = tokens
 
 
 def _public_error(exc: Exception) -> str:
@@ -100,11 +110,17 @@ class LLMResult:
 
 def strict_schema(model: type[BaseModel]) -> dict:
     """Pydantic's JSON schema, shaped for strict structured outputs: every object closed,
-    every property required (optional fields must be declared nullable instead)."""
+    every property required (optional fields must be declared nullable instead), and every
+    `$ref` written out in place. Google's endpoint answered 500 to the judge schema while it
+    used `$defs`, and correctly once they were inlined."""
+    raw = model.model_json_schema()
+    defs = raw.get("$defs", {})
 
     def walk(node: Any) -> Any:
         if isinstance(node, dict):
-            node = {k: walk(v) for k, v in node.items() if k not in ("default", "title")}
+            if "$ref" in node:
+                return walk(defs[node["$ref"].rsplit("/", 1)[-1]])
+            node = {k: walk(v) for k, v in node.items() if k not in ("default", "title", "$defs")}
             if node.get("type") == "object" and "properties" in node:
                 node["additionalProperties"] = False
                 node["required"] = list(node["properties"])
@@ -113,7 +129,7 @@ def strict_schema(model: type[BaseModel]) -> dict:
             return [walk(v) for v in node]
         return node
 
-    return walk(model.model_json_schema())
+    return walk(raw)
 
 
 class LLMClient:
@@ -234,9 +250,10 @@ class LLMClient:
             }
             if spec.reasoning_effort:
                 kwargs["reasoning_effort"] = spec.reasoning_effort
+            entry = None
             if spec.tpm:  # every request is charged, including the repair attempt
                 sent = "".join(m["content"] for m in messages)
-                self.budget.charge(spec.key, estimate_tokens(sent) + max_completion_tokens)
+                entry = self.budget.charge(spec.key, estimate_tokens(sent) + max_completion_tokens)
             t = time.perf_counter()
             try:
                 resp = client.chat.completions.create(**kwargs)
@@ -250,6 +267,8 @@ class LLMClient:
             if resp.usage:
                 out["prompt_tokens"] += resp.usage.prompt_tokens or 0
                 out["completion_tokens"] += resp.usage.completion_tokens or 0
+                if entry is not None:
+                    self.budget.settle(entry, (resp.usage.prompt_tokens or 0) + (resp.usage.completion_tokens or 0))
             content = resp.choices[0].message.content or ""
             try:
                 out["data"] = schema.model_validate(json.loads(content))

@@ -65,6 +65,11 @@ class LabelIndex:
         meta = json.loads((directory / "meta.json").read_text(encoding="utf-8"))
         return cls(chunks, emb, BM25.load(directory), meta)
 
+    def get(self, chunk_id: str) -> Chunk | None:
+        if not hasattr(self, "_by_id"):
+            self._by_id = {c.chunk_id: c for c in self.chunks}
+        return self._by_id.get(chunk_id)
+
     # -- search --------------------------------------------------------------------------
     def mask(self, labels: list[str] | None = None, top_codes: list[str] | None = None) -> np.ndarray:
         m = np.ones(len(self.chunks), dtype=bool)

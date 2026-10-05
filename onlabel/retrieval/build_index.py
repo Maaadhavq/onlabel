@@ -57,7 +57,13 @@ def main() -> int:
         meta={
             "strategy": args.strategy, "max_words": args.max_words, "encoder": BGE_SMALL_INT8.key,
             "encoder_revision": BGE_SMALL_INT8.revision,
-            "labels": {k: {"set_id": e["set_id"], "version": e["version"]} for k, (_, e) in labels.items()},
+            "labels": {
+                k: {
+                    "set_id": e["set_id"], "version": e["version"], "effective_time": e["effective_time"],
+                    "products": e["products"], "generic": e["generic"], "ingredient": e["ingredient"],
+                }
+                for k, (_, e) in labels.items()
+            },
         },
     )
     index.save(args.out)

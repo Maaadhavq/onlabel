@@ -100,3 +100,40 @@ def check_verdict(out: JudgeOutput, chunks: dict[str, Chunk], claim: str = "") -
         res.status = "needs_human_review"
         res.flags.append("violation_without_grounded_quote")
     return res
+
+
+def checks_for(claim: str, out: JudgeOutput | None, res: GuardResult | None) -> list[dict]:
+    """What the guards found, in sentences a reviewer can read. `ok` False marks a catch."""
+    if out is None or res is None:
+        return [{"ok": False, "text": "No model was available, so a reviewer decides."}]
+    checks: list[dict] = []
+    proposed, kept = len(out.evidence), len(res.evidence)
+    if proposed:
+        checks.append({"ok": kept == proposed,
+                       "text": f"{kept} of {proposed} quotes found word for word in the label."})
+        if kept < proposed:
+            dropped = proposed - kept
+            checks.append({"ok": False, "text": f"{dropped} quote{'s' if dropped > 1 else ''} dropped: "
+                                                "the wording is not in the label text."})
+    elif out.verdict == "unsupported":
+        checks.append({"ok": True, "text": "No label text supports the claim, so no quote was expected."})
+    else:
+        checks.append({"ok": False, "text": "The model gave no quotes."})
+
+    claimed = figures(claim)
+    missing = next((f.split(":", 1)[1] for f in res.flags if f.startswith("claim_figures_not_in_quotes:")), None)
+    if missing:
+        checks.append({"ok": False, "text": f"Figures in the claim missing from every quote: {missing.replace(',', ', ')}. "
+                                            "A reviewer decides."})
+    elif claimed and res.status == "supported":
+        checks.append({"ok": True, "text": f"Figures {', '.join(sorted(claimed))} appear in the quoted label text."})
+    elif not claimed:
+        checks.append({"ok": True, "text": "No figures in the claim to check."})
+    if "supported_but_lists_violations" in res.flags:
+        checks.append({"ok": False, "text": "The model said traced and also listed violations, so a reviewer decides."})
+    if "violation_without_grounded_quote" in res.flags:
+        checks.append({"ok": False, "text": "The model flagged a problem without a quote found in the label, "
+                                            "so a reviewer decides."})
+    if "cited_unknown_excerpt" in res.flags:
+        checks.append({"ok": False, "text": "The model cited an excerpt it was not shown. That citation was dropped."})
+    return checks

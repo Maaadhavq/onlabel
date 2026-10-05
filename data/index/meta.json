@@ -6,17 +6,36 @@
  "labels": {
   "mounjaro": {
    "set_id": "d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
-   "version": 40
+   "version": 40,
+   "effective_time": "20260827",
+   "products": [
+    "MOUNJARO",
+    "MOUNJARO KWIKPEN"
+   ],
+   "generic": "tirzepatide",
+   "ingredient": "tirzepatide"
   },
   "ozempic": {
    "set_id": "adec4fd2-6858-4c99-91d4-531f5f2a2d79",
-   "version": 20
+   "version": 20,
+   "effective_time": "20260601",
+   "products": [
+    "OZEMPIC"
+   ],
+   "generic": "semaglutide",
+   "ingredient": "semaglutide"
   },
   "wegovy": {
    "set_id": "ee06186f-2aa3-4990-a760-757579d8f77b",
-   "version": 19
+   "version": 19,
+   "effective_time": "20260618",
+   "products": [
+    "WEGOVY"
+   ],
+   "generic": "semaglutide",
+   "ingredient": "semaglutide"
   }
  },
  "n_chunks": 431,
- "built_at": "2026-10-05T07:12:31+00:00"
+ "built_at": "2026-10-05T08:58:32+00:00"
 }

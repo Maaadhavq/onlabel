@@ -117,6 +117,31 @@ study. An MLR reviewer would likely ask for a qualifier. The benchmark must defi
   `Downloads\.claude\launch.json`. Local `.env` routes the chain to Ollama after the
   hosted models and keeps dev answers in `scratch/cache_api`.
 
+## In flight (2026-10-05, stopped at the usage limit)
+
+Product UI work, from the Claude Design canvas https://claude.ai/artifact/ERqB5PYVKhHwGL645a5YDG
+(Review workspace + First visit / Server waking up / Checking, live). Backend for it is built
+and tested (71 tests): `agent/document.py` (claim split, label detection, risk-information
+check), `agent/evidence.py`, `agent/rewrite.py`, `api/jobs.py`, `/documents` + SSE events +
+rewrite endpoints. A live run of the Wegovy spring email streamed all 6 claims in 70 s.
+Done just now: `$ref`-inlined strict schemas (Gemma 4 answered 500 with `$defs`, works
+inlined: 11.5 s), token estimate len/3.5 and the ledger settled to real usage.
+
+Left, in order:
+1. `LLMClient.complete_json(accept=...)`: reject an empty or unlocatable answer, try the next
+   model, never cache it (Qwen once returned `{"claims": []}`, the split fell back to
+   sentences and checked a tagline as a claim). Delete `scratch/cache_api` after.
+2. `data/chunk.py::_units`: captions render as "- Table 8. ..."; strip "- " before the
+   "table" check, then rebuild the index (the 14.9% claim needs "Week 68" from the caption).
+3. Reviewer `k=5`; add `groq/qwen3.8-27b` to ONLABEL_LLM_CHAIN in Madhav's `.env` (edit the
+   line with a script, never print the file: it holds his keys).
+4. `scripts/make_samples.py`: 3 sample documents (Wegovy email, Ozempic banner, Mounjaro HCP
+   detail aid) -> `web/src/samples/*.json`.
+5. React workspace from the design (Public Sans / Source Serif 4 / IBM Plex Mono, highlighter
+   evidence, boxed-warning box, claims bar, tabs: evidence / checks / how it decided,
+   rewrite on demand, SSE with polling fallback, the three states).
+6. Commit, push, then the Render deploy (Madhav asked to see the UI first).
+
 ## Next
 
 1. First Render deploy (needs the repo), then `smoke_llm.py` against Groq and AI Studio.
