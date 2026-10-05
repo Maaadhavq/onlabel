@@ -115,7 +115,8 @@ class FakeClock:
 
 
 def _ok():
-    return _resp(json.dumps({"verdict": "supported", "note": None}))
+    # Realistic usage: the ledger settles to it, so two calls fill most of 7,040 and a third waits.
+    return _resp(json.dumps({"verdict": "supported", "note": None}), pt=2_300, ct=700)
 
 
 def _big_ask(llm):
