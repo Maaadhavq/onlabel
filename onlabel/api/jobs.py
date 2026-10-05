@@ -36,6 +36,13 @@ class Job:
         with self._lock:
             return list(self.events[index:]), self.done
 
+    def claim_kind(self, n: int) -> str | None:
+        with self._lock:
+            for ev in self.events:
+                if ev["event"] == "claims":
+                    return next((c.get("kind") for c in ev["data"]["claims"] if c["n"] == n), None)
+        return None
+
     def claim_review(self, n: int) -> dict | None:
         with self._lock:
             for ev in self.events:

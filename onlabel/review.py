@@ -21,6 +21,25 @@ from onlabel.retrieval.index import LabelIndex
 
 __all__ = ["DAILYMED_URL", "ClaimReview", "Reviewer"]
 
+# The label sections that govern each kind of claim. Similarity search alone let an
+# indication claim be judged without the Indications section (the Ozempic kidney claim was
+# traced although the label limits it to adults with type 2 diabetes and CKD) and a safety
+# claim without the contraindications, so these sections are always put in front of the judge.
+SECTION_ROUTES = {
+    "indication": ("34067-9",),
+    "safety": ("34066-1", "34070-3", "43685-7"),
+    "dosing": ("34068-7", "43678-2"),
+    "comparative": ("34092-7",),
+    "efficacy": ("34067-9", "34092-7"),
+}
+SECTION_NAMES = {
+    "34067-9": "Indications and Usage", "34066-1": "Boxed Warning", "34070-3": "Contraindications",
+    "43685-7": "Warnings and Precautions", "34068-7": "Dosage and Administration",
+    "43678-2": "Dosage Forms and Strengths", "34092-7": "Clinical Studies",
+}
+ROUTED_PER_CLAIM = 2
+MAX_EXCERPTS = 6
+
 
 @dataclass
 class ClaimReview:
@@ -45,7 +64,8 @@ class ClaimReview:
 
 
 class Reviewer:
-    def __init__(self, index: LabelIndex, encoder: OnnxEncoder, llm: LLMClient, k: int = 6,
+    # 5 excerpts: about 2.2K prompt tokens a claim; 6 cost a sixth more of a free minute budget.
+    def __init__(self, index: LabelIndex, encoder: OnnxEncoder, llm: LLMClient, k: int = 5,
                  splitter: LLMClient | None = None) -> None:
         self.index, self.encoder, self.llm, self.k = index, encoder, llm, k
         self.splitter = splitter  # a cheaper chain for claim splitting; None means sentences
@@ -54,14 +74,26 @@ class Reviewer:
     def labels_meta(self) -> dict[str, dict]:
         return self.index.meta.get("labels", {})
 
-    def review_claim(self, claim: str, labels: list[str] | None = None) -> ClaimReview:
+    def review_claim(self, claim: str, labels: list[str] | None = None, kind: str | None = None) -> ClaimReview:
         t0 = time.perf_counter()
         trace: list[dict] = []
 
         t = time.perf_counter()
-        hits = self.index.search(claim, self.encoder.encode_query(claim), k=self.k, labels=labels)
+        qvec = self.encoder.encode_query(claim)
+        hits = self.index.search(claim, qvec, k=self.k, labels=labels)
+        routed_codes = SECTION_ROUTES.get(kind or "", ())
+        routed: list = []
+        if routed_codes:
+            have = {h.chunk.chunk_id for h in hits}
+            for h in self.index.search(claim, qvec, k=ROUTED_PER_CLAIM * len(routed_codes), labels=labels,
+                                       top_codes=list(routed_codes)):
+                if h.chunk.chunk_id not in have and len(routed) < ROUTED_PER_CLAIM:
+                    routed.append(h)
+            # Routed sections go first; the similarity hits fill the rest of the budget.
+            hits = (routed + hits)[:MAX_EXCERPTS]
         trace.append({"step": "search_label", "labels": labels, "n_hits": len(hits),
                       "pinned_for_figures": sum(1 for h in hits if h.number_rank == 1),
+                      "routed_to": [SECTION_NAMES[c] for c in routed_codes], "routed_added": len(routed),
                       "ms": round((time.perf_counter() - t) * 1000)})
         chunks = {h.chunk.chunk_id: h.chunk for h in hits}
         retrieved = [{"chunk_id": h.chunk.chunk_id, "section": h.chunk.section_path,
@@ -119,7 +151,7 @@ class Reviewer:
                         "split_model": split.model_key if split else None})
         tokens = (split.prompt_tokens + split.completion_tokens) if split else 0
         for c in claims:
-            review = self.review_claim(c.text, labels)
+            review = self.review_claim(c.text, labels, kind=c.kind)
             tokens += review.tokens
             emit("claim", {"n": c.n, "review": review.to_dict()})
 

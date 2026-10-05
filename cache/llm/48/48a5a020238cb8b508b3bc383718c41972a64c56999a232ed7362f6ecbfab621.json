@@ -1,0 +1,18 @@
+{
+ "key": "48a5a020238cb8b508b3bc383718c41972a64c56999a232ed7362f6ecbfab621",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The label excerpts describe semaglutide lowering fasting and postprandial glucose and reducing body weight, but they do not provide any information about reductions in A1C. Therefore the claim that it lowers A1C is not supported by the provided excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 218,
+  "prompt_tokens": 2096
+ }
+}

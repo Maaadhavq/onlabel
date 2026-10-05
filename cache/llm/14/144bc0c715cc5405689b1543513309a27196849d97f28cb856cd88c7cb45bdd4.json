@@ -1,0 +1,28 @@
+{
+ "key": "144bc0c715cc5405689b1543513309a27196849d97f28cb856cd88c7cb45bdd4",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:13",
+    "quote": "- % change from baseline (LSMean) | -2.4 | -14.9 | -3.4 | -9.6 | -5.7 | -16"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:13",
+    "quote": "Table 8. Changes in Body Weight at Week 68 in Studies 2, 3, and 4 with WEGOVY 2.4 mg Injection"
+   }
+  ],
+  "reasoning": "The claim states an average 14.9% weight loss at 68 weeks, but the label excerpts only show a 14.9% LSMean change for Study 2 (WEGOVY 2.4 mg) and different percentages for other studies (‑9.6% and ‑16%). No excerpt provides an overall average of 14.9% across all trials. The claim also omits the dose and study context.",
+  "verdict": "unsupported",
+  "violations": [
+   "omitted_qualifier",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 433,
+  "prompt_tokens": 2679
+ }
+}

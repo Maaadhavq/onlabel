@@ -1,0 +1,13 @@
+{
+ "key": "18467f438fef9377348be150b90bb523ff20a2c91dbe96966aa46433644287e3",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Wegovy is approved to reduce excess body weight, in combination with a reduced‑calorie diet and increased physical activity, for pediatric patients aged 12 years and older."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 124,
+  "prompt_tokens": 1052
+ }
+}

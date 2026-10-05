@@ -1,0 +1,466 @@
+{
+ "id": "ozempic-web-banner",
+ "title": "Ozempic web banner",
+ "note": "Synthetic test copy. The first two lines echo claims FDA cited in its February 2026 untitled letter about the “There’s Only One Ozempic” TV ad.",
+ "label": "ozempic",
+ "audience": "consumer",
+ "text": "There's only one Ozempic. Ozempic is the GLP-1 with the most approved uses for adults with type 2 diabetes. It lowers A1C, and it may help you lose some weight too. Ozempic also reduces the risk of kidney failure. Ask your doctor about Ozempic.",
+ "created": "2026-10-05T09:22:31+00:00",
+ "events": [
+  {
+   "id": 0,
+   "event": "start",
+   "data": {
+    "labels": [
+     {
+      "key": "ozempic",
+      "set_id": "adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+      "version": 20,
+      "effective_time": "20260601",
+      "products": [
+       "OZEMPIC"
+      ],
+      "generic": "semaglutide",
+      "ingredient": "semaglutide"
+     }
+    ],
+    "ambiguous": false
+   }
+  },
+  {
+   "id": 1,
+   "event": "claims",
+   "data": {
+    "claims": [
+     {
+      "n": 1,
+      "text": "Ozempic is the GLP-1 with the most approved uses for adults with type 2 diabetes.",
+      "start": 26,
+      "end": 107,
+      "kind": "indication",
+      "source": "model"
+     },
+     {
+      "n": 2,
+      "text": "It lowers A1C, and it may help you lose some weight too.",
+      "start": 108,
+      "end": 164,
+      "kind": "efficacy",
+      "source": "model"
+     },
+     {
+      "n": 3,
+      "text": "Ozempic also reduces the risk of kidney failure.",
+      "start": 165,
+      "end": 213,
+      "kind": "safety",
+      "source": "model"
+     }
+    ],
+    "split_by": "model",
+    "split_model": "groq/qwen3.8-27b"
+   }
+  },
+  {
+   "id": 2,
+   "event": "claim",
+   "data": {
+    "n": 1,
+    "review": {
+     "claim": "Ozempic is the GLP-1 with the most approved uses for adults with type 2 diabetes.",
+     "status": "unsupported",
+     "model_verdict": "unsupported",
+     "violations": [
+      "unsupported_absolute_claim"
+     ],
+     "reasoning": "The label excerpts list Ozempic's approved indications but do not provide any information comparing the number of approved uses of Ozempic to other GLP-1 products. Therefore the claim that it has the most approved uses cannot be verified from the provided excerpts.",
+     "evidence": [
+      {
+       "chunk_id": "ozempic:v20:1:0",
+       "quote": "OZEMPIC is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease.",
+       "match": "normalized",
+       "section_path": "1 INDICATIONS AND USAGE",
+       "drug": "OZEMPIC",
+       "label_version": 20,
+       "effective_time": "20260601",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+       "kind": "text",
+       "before": "",
+       "after": "",
+       "table": null
+      }
+     ],
+     "checks": [
+      {
+       "ok": true,
+       "text": "1 of 1 quotes found word for word in the label."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      }
+     ],
+     "flags": [],
+     "retrieved": [
+      {
+       "chunk_id": "ozempic:v20:35:0",
+       "section": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "score": 0.0489,
+       "dense_rank": 2,
+       "bm25_rank": 1,
+       "number_rank": 1
+      },
+      {
+       "chunk_id": "ozempic:v20:1:0",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0487,
+       "dense_rank": 1,
+       "bm25_rank": 2,
+       "number_rank": 2
+      },
+      {
+       "chunk_id": "ozempic:v20:40:2",
+       "section": "Medication Guide",
+       "score": 0.0465,
+       "dense_rank": 8,
+       "bm25_rank": 3,
+       "number_rank": 3
+      },
+      {
+       "chunk_id": "ozempic:v20:35:1",
+       "section": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "score": 0.0464,
+       "dense_rank": 3,
+       "bm25_rank": 5,
+       "number_rank": 6
+      },
+      {
+       "chunk_id": "ozempic:v20:35:3",
+       "section": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "score": 0.0462,
+       "dense_rank": 7,
+       "bm25_rank": 4,
+       "number_rank": 4
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 2311,
+     "latency_s": 1.65,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "ozempic"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 1,
+       "ms": 49
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 1924,
+         "completion_tokens": 387,
+         "latency_s": 1.5924104999867268,
+         "repaired": false
+        }
+       ],
+       "tokens": 2311,
+       "ms": 1592
+      },
+      {
+       "step": "guards",
+       "status": "unsupported",
+       "flags": [],
+       "kept_quotes": 1,
+       "proposed_quotes": 1,
+       "ms": 0.9
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 3,
+   "event": "claim",
+   "data": {
+    "n": 2,
+    "review": {
+     "claim": "It lowers A1C, and it may help you lose some weight too.",
+     "status": "unsupported",
+     "model_verdict": "unsupported",
+     "violations": [
+      "unsupported_absolute_claim"
+     ],
+     "reasoning": "The label excerpts describe semaglutide lowering fasting and postprandial glucose and reducing body weight, but they do not provide any information about reductions in A1C. Therefore the claim that it lowers A1C is not supported by the provided excerpts.",
+     "evidence": [],
+     "checks": [
+      {
+       "ok": true,
+       "text": "No label text supports the claim, so no quote was expected."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      }
+     ],
+     "flags": [],
+     "retrieved": [
+      {
+       "chunk_id": "ozempic:v20:31:1",
+       "section": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics",
+       "score": 0.0305,
+       "dense_rank": 1,
+       "bm25_rank": 11,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:40:6",
+       "section": "Medication Guide",
+       "score": 0.0301,
+       "dense_rank": 8,
+       "bm25_rank": 5,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:31:0",
+       "section": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics",
+       "score": 0.03,
+       "dense_rank": 2,
+       "bm25_rank": 12,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:10:0",
+       "section": "5 WARNINGS AND PRECAUTIONS > 5.5 Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin",
+       "score": 0.0283,
+       "dense_rank": 4,
+       "bm25_rank": 19,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:30:0",
+       "section": "12 CLINICAL PHARMACOLOGY > 12.1 Mechanism of Action",
+       "score": 0.0278,
+       "dense_rank": 9,
+       "bm25_rank": 15,
+       "number_rank": null
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 2314,
+     "latency_s": 56.81,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "ozempic"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 0,
+       "ms": 38
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 2096,
+         "completion_tokens": 218,
+         "latency_s": 1.0952704999945126,
+         "repaired": false
+        }
+       ],
+       "tokens": 2314,
+       "ms": 1095
+      },
+      {
+       "step": "guards",
+       "status": "unsupported",
+       "flags": [],
+       "kept_quotes": 0,
+       "proposed_quotes": 0,
+       "ms": 0.0
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 4,
+   "event": "claim",
+   "data": {
+    "n": 3,
+    "review": {
+     "claim": "Ozempic also reduces the risk of kidney failure.",
+     "status": "supported",
+     "model_verdict": "supported",
+     "violations": [],
+     "reasoning": "The label indicates Ozempic is indicated to reduce the risk of sustained eGFR decline, end‑stage kidney disease (kidney failure), and cardiovascular death in adults with type 2 diabetes and chronic kidney disease, and the clinical study excerpt states Ozempic was superior to placebo in reducing a composite endpoint that included kidney failure.",
+     "evidence": [
+      {
+       "chunk_id": "ozempic:v20:1:0",
+       "quote": "to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease.",
+       "match": "exact",
+       "section_path": "1 INDICATIONS AND USAGE",
+       "drug": "OZEMPIC",
+       "label_version": 20,
+       "effective_time": "20260601",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+       "kind": "text",
+       "before": "…2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- ",
+       "after": "",
+       "table": null
+      },
+      {
+       "chunk_id": "ozempic:v20:37:2",
+       "quote": "OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m^2, chronic renal replacement therapy, renal death, CV death (HR 0.76 [95% CI 0.66, 0.88], p=0.0003) as shown in Table 10 and Figure 7.",
+       "match": "exact",
+       "section_path": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+       "drug": "OZEMPIC",
+       "label_version": 20,
+       "effective_time": "20260601",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+       "kind": "text",
+       "before": "",
+       "after": " The treatment effect reflected a reduction in a sustained decline in eGFR of ≥50%, progression to kidney failure and CV death. There were few renal deaths during the trial.\n\nOZEMPIC also reduced the annual rate of change in eGFR (Figure…",
+       "table": null
+      }
+     ],
+     "checks": [
+      {
+       "ok": true,
+       "text": "2 of 2 quotes found word for word in the label."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      }
+     ],
+     "flags": [],
+     "retrieved": [
+      {
+       "chunk_id": "ozempic:v20:37:2",
+       "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+       "score": 0.0323,
+       "dense_rank": 2,
+       "bm25_rank": 2,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:40:2",
+       "section": "Medication Guide",
+       "score": 0.032,
+       "dense_rank": 4,
+       "bm25_rank": 1,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:1:0",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0306,
+       "dense_rank": 3,
+       "bm25_rank": 8,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:26:0",
+       "section": "8 USE IN SPECIFIC POPULATIONS > 8.6 Renal Impairment",
+       "score": 0.0301,
+       "dense_rank": 9,
+       "bm25_rank": 4,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:37:0",
+       "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+       "score": 0.0301,
+       "dense_rank": 1,
+       "bm25_rank": 13,
+       "number_rank": null
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 2127,
+     "latency_s": 3.04,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "ozempic"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 0,
+       "ms": 10
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 1748,
+         "completion_tokens": 379,
+         "latency_s": 1.4507165999966674,
+         "repaired": false
+        }
+       ],
+       "tokens": 2127,
+       "ms": 1451
+      },
+      {
+       "step": "guards",
+       "status": "supported",
+       "flags": [],
+       "kept_quotes": 2,
+       "proposed_quotes": 2,
+       "ms": 0.1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 5,
+   "event": "document",
+   "data": {
+    "checks": [
+     {
+      "label": "ozempic",
+      "drug": "OZEMPIC",
+      "ok": false,
+      "title": "Risk information missing",
+      "detail": "The copy includes none of the OZEMPIC boxed warning (WARNING: RISK OF THYROID C-CELL TUMORS). Copy that states benefits has to present this risk information too.",
+      "evidence": {
+       "chunk_id": "ozempic:v20:0:0",
+       "section_path": "WARNING: RISK OF THYROID C-CELL TUMORS",
+       "quote": "In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 6,
+   "event": "done",
+   "data": {
+    "seconds": 62.3,
+    "tokens": 7043,
+    "n_claims": 3
+   }
+  }
+ ]
+}

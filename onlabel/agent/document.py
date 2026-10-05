@@ -88,9 +88,17 @@ def sentence_claims(text: str) -> list[ClaimSpan]:
 def split_claims(llm: LLMClient | None, text: str) -> tuple[list[ClaimSpan], LLMResult | None]:
     if llm is None:
         return sentence_claims(text), None
+
+    def usable(answer: ClaimList) -> str | None:
+        if not answer.claims:
+            return "no claims in the answer"
+        if not any(locate(text, c.text).ok for c in answer.claims):
+            return "none of the claims appear in the copy"
+        return None
+
     res = llm.complete_json(
         prompt_version=PROMPT_VERSION, system=SPLIT_SYSTEM, user=f"<copy>\n{text}\n</copy>",
-        schema=ClaimList, max_completion_tokens=900,
+        schema=ClaimList, max_completion_tokens=900, accept=usable,
     )
     if res.data is None:
         return sentence_claims(text), res

@@ -1,0 +1,28 @@
+{
+ "key": "7eb454d05e94a5c1a8b352b5c0a91bc69c99ca3a92b4e98fc992d5b682880024",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:39:5",
+    "quote": "Fatal or non-fatal myocardial infarction^5 | 334 (3.8%) | 243 (2.8%) | 0.72 (0.61; 0.85)"
+   },
+   {
+    "chunk_id": "wegovy:v19:39:5",
+    "quote": "Fatal or non-fatal stroke^5 | 178 (2%) | 160 (1.8%) | 0.89 (0.72; 1.11)"
+   }
+  ],
+  "reasoning": "The label shows a statistically significant reduction in non-fatal myocardial infarction (HR 0.72) but the reduction in non-fatal stroke (HR 0.89) was not statistically significant. The claim that Wegovy reduces the risk of heart attack and stroke omits the qualifier that stroke risk reduction was not demonstrated as significant.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "overstated_efficacy",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 397,
+  "prompt_tokens": 2386
+ }
+}

@@ -168,6 +168,30 @@ def test_provider_error_text_is_not_exposed():
     assert "slow down" not in json.dumps(res.attempts)
 
 
+def test_rejected_answer_moves_to_the_next_model_and_is_never_cached(tmp_path):
+    groq = StubClient([_resp(json.dumps({"verdict": "", "note": None}))])
+    local = StubClient([_resp(json.dumps({"verdict": "supported", "note": None}))])
+    cache = ResponseCache(tmp_path)
+    llm = LLMClient(["groq/gpt-oss-120b", "ollama/llama3.1-8b"], cache,
+                    client_factory=lambda spec: {"groq": groq, "ollama": local}[spec.provider])
+    res = llm.complete_json(prompt_version="t1", system="s", user="u", schema=Answer, max_completion_tokens=50,
+                            accept=lambda a: None if a.verdict else "empty verdict")
+    assert res.model_key == "ollama/llama3.1-8b" and res.attempts[0]["rejected"] == "empty verdict"
+    assert cache.writes == 1  # only the accepted answer
+
+
+def test_a_cached_answer_that_is_now_rejected_is_asked_again(tmp_path):
+    cache = ResponseCache(tmp_path)
+    first = StubClient([_resp(json.dumps({"verdict": "", "note": None}))])
+    _ask(_client({"ollama": first}, ["ollama/llama3.1-8b"], cache))  # caches the empty answer
+    again = StubClient([_resp(json.dumps({"verdict": "supported", "note": None}))])
+    res = _client({"ollama": again}, ["ollama/llama3.1-8b"], cache).complete_json(
+        prompt_version="t1", system="s", user="u", schema=Answer, max_completion_tokens=50,
+        accept=lambda a: None if a.verdict else "empty verdict")
+    assert res.source == "live" and res.data.verdict == "supported"
+    assert res.attempts[0]["rejected"].startswith("cached answer")
+
+
 def test_offline_mode_never_calls_a_model(tmp_path):
     stub = StubClient([])
     res = _ask(_client({"ollama": stub}, ["ollama/llama3.1-8b"], ResponseCache(tmp_path), offline=True))

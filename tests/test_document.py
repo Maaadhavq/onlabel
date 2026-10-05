@@ -56,6 +56,16 @@ def test_model_claims_are_located_in_the_copy_and_invented_ones_dropped():
     assert all(COPY[c.start : c.end] == c.text and c.source == "model" for c in claims)
 
 
+def test_an_empty_split_asks_the_next_model():
+    empty, good = _Stub({"claims": []}), _Stub({"claims": [
+        {"text": "Wegovy is approved for weight loss in children as young as 8.", "kind": "indication"}]})
+    llm = LLMClient(["groq/qwen3.8-27b", "ollama/llama3.1-8b"],
+                    client_factory=lambda spec: {"groq": empty, "ollama": good}[spec.provider])
+    claims, res = split_claims(llm, COPY)
+    assert [c.source for c in claims] == ["model"] and res.model_key == "ollama/llama3.1-8b"
+    assert res.attempts[0]["rejected"] == "no claims in the answer"
+
+
 def test_no_usable_model_answer_falls_back_to_sentences():
     claims, _ = split_claims(_splitter({"claims": [{"text": "not in the copy at all", "kind": "other"}]}), COPY)
     assert claims and all(c.source == "sentences" for c in claims)

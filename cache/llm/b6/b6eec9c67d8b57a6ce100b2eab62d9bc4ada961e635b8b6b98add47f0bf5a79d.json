@@ -1,0 +1,21 @@
+{
+ "key": "b6eec9c67d8b57a6ce100b2eab62d9bc4ada961e635b8b6b98add47f0bf5a79d",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "MOUNJARO^® is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim exactly matches the wording in the INDICATIONS AND USAGE excerpt, which states MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 181,
+  "prompt_tokens": 2082
+ }
+}

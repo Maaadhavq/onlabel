@@ -1,0 +1,610 @@
+{
+ "id": "mounjaro-hcp-detail-aid",
+ "title": "Mounjaro detail aid for HCPs",
+ "note": "Synthetic test copy.",
+ "label": "mounjaro",
+ "audience": "hcp",
+ "text": "MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus. MOUNJARO is approved for chronic weight management in adults with obesity. In SURPASS-2, MOUNJARO provided greater A1C reduction than semaglutide 1 mg. MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma.",
+ "created": "2026-10-05T09:24:31+00:00",
+ "events": [
+  {
+   "id": 0,
+   "event": "start",
+   "data": {
+    "labels": [
+     {
+      "key": "mounjaro",
+      "set_id": "d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+      "version": 40,
+      "effective_time": "20260827",
+      "products": [
+       "MOUNJARO",
+       "MOUNJARO KWIKPEN"
+      ],
+      "generic": "tirzepatide",
+      "ingredient": "tirzepatide"
+     }
+    ],
+    "ambiguous": false
+   }
+  },
+  {
+   "id": 1,
+   "event": "claims",
+   "data": {
+    "claims": [
+     {
+      "n": 1,
+      "text": "MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+      "start": 0,
+      "end": 174,
+      "kind": "indication",
+      "source": "model"
+     },
+     {
+      "n": 2,
+      "text": "MOUNJARO is approved for chronic weight management in adults with obesity.",
+      "start": 175,
+      "end": 249,
+      "kind": "indication",
+      "source": "model"
+     },
+     {
+      "n": 3,
+      "text": "In SURPASS-2, MOUNJARO provided greater A1C reduction than semaglutide 1 mg.",
+      "start": 250,
+      "end": 326,
+      "kind": "efficacy",
+      "source": "model"
+     },
+     {
+      "n": 4,
+      "text": "MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma.",
+      "start": 327,
+      "end": 415,
+      "kind": "safety",
+      "source": "model"
+     }
+    ],
+    "split_by": "model",
+    "split_model": "groq/qwen3.8-27b"
+   }
+  },
+  {
+   "id": 2,
+   "event": "claim",
+   "data": {
+    "n": 1,
+    "review": {
+     "claim": "MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+     "status": "supported",
+     "model_verdict": "supported",
+     "violations": [],
+     "reasoning": "The claim exactly matches the wording in the INDICATIONS AND USAGE excerpt, which states MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+     "evidence": [
+      {
+       "chunk_id": "mounjaro:v40:1:0",
+       "quote": "MOUNJARO^® is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+       "match": "exact",
+       "section_path": "1 INDICATIONS AND USAGE",
+       "drug": "MOUNJARO",
+       "label_version": 40,
+       "effective_time": "20260827",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+       "kind": "text",
+       "before": "",
+       "after": "\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction (MI), or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events.",
+       "table": null
+      }
+     ],
+     "checks": [
+      {
+       "ok": true,
+       "text": "1 of 1 quotes found word for word in the label."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      }
+     ],
+     "flags": [],
+     "retrieved": [
+      {
+       "chunk_id": "mounjaro:v40:1:0",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0492,
+       "dense_rank": 1,
+       "bm25_rank": 1,
+       "number_rank": 1
+      },
+      {
+       "chunk_id": "mounjaro:v40:46:0",
+       "section": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
+       "score": 0.0484,
+       "dense_rank": 2,
+       "bm25_rank": 2,
+       "number_rank": 2
+      },
+      {
+       "chunk_id": "mounjaro:v40:73:0",
+       "section": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
+       "score": 0.0474,
+       "dense_rank": 4,
+       "bm25_rank": 3,
+       "number_rank": 3
+      },
+      {
+       "chunk_id": "mounjaro:v40:79:0",
+       "section": "14 CLINICAL STUDIES > 14.5 MOUNJARO Use in Combination with Metformin or Basal Insulin, or Both in Pediatric Patients 10 Years of Age and Older with Type 2 Diabetes Mellitus",
+       "score": 0.0462,
+       "dense_rank": 3,
+       "bm25_rank": 6,
+       "number_rank": 6
+      },
+      {
+       "chunk_id": "mounjaro:v40:98:2",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.046,
+       "dense_rank": 8,
+       "bm25_rank": 4,
+       "number_rank": 4
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 2263,
+     "latency_s": 56.22,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "mounjaro"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 1,
+       "ms": 24
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 2082,
+         "completion_tokens": 181,
+         "latency_s": 1.1307457000075374,
+         "repaired": false
+        }
+       ],
+       "tokens": 2263,
+       "ms": 1131
+      },
+      {
+       "step": "guards",
+       "status": "supported",
+       "flags": [],
+       "kept_quotes": 1,
+       "proposed_quotes": 1,
+       "ms": 0.2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 3,
+   "event": "claim",
+   "data": {
+    "n": 2,
+    "review": {
+     "claim": "MOUNJARO is approved for chronic weight management in adults with obesity.",
+     "status": "off_label",
+     "model_verdict": "off_label",
+     "violations": [
+      "broadened_indication",
+      "omitted_qualifier"
+     ],
+     "reasoning": "The label excerpts list MOUNJARO's indications as improving glycemic control in type 2 diabetes and reducing CV events in adults with type 2 diabetes at high risk. There is no mention of an indication for chronic weight management or obesity. Therefore the claim promotes a use not included in the FDA-approved labeling.",
+     "evidence": [
+      {
+       "chunk_id": "mounjaro:v40:1:0",
+       "quote": "MOUNJARO^® is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction (MI), or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events.",
+       "match": "exact",
+       "section_path": "1 INDICATIONS AND USAGE",
+       "drug": "MOUNJARO",
+       "label_version": 40,
+       "effective_time": "20260827",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+       "kind": "text",
+       "before": "",
+       "after": "",
+       "table": null
+      }
+     ],
+     "checks": [
+      {
+       "ok": true,
+       "text": "1 of 1 quotes found word for word in the label."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      }
+     ],
+     "flags": [],
+     "retrieved": [
+      {
+       "chunk_id": "mounjaro:v40:98:2",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.0306,
+       "dense_rank": 8,
+       "bm25_rank": 3,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:1:0",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0294,
+       "dense_rank": 1,
+       "bm25_rank": 17,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:98:11",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.0276,
+       "dense_rank": 14,
+       "bm25_rank": 11,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:98:5",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.0274,
+       "dense_rank": 10,
+       "bm25_rank": 16,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:98:4",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.0273,
+       "dense_rank": 22,
+       "bm25_rank": 6,
+       "number_rank": null
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 2610,
+     "latency_s": 2.86,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "mounjaro"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 0,
+       "ms": 10
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 2290,
+         "completion_tokens": 320,
+         "latency_s": 1.298519200005103,
+         "repaired": false
+        }
+       ],
+       "tokens": 2610,
+       "ms": 1299
+      },
+      {
+       "step": "guards",
+       "status": "off_label",
+       "flags": [],
+       "kept_quotes": 1,
+       "proposed_quotes": 1,
+       "ms": 0.1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 4,
+   "event": "claim",
+   "data": {
+    "n": 3,
+    "review": {
+     "claim": "In SURPASS-2, MOUNJARO provided greater A1C reduction than semaglutide 1 mg.",
+     "status": "supported",
+     "model_verdict": "supported",
+     "violations": [],
+     "reasoning": "The label excerpts state that in SURPASS-2, treatment with MOUNJARO 10 mg and 15 mg resulted in a statistically significant greater reduction in HbA1c compared with semaglutide 1 mg, and Table 5 shows the numeric changes confirming greater reduction.",
+     "evidence": [
+      {
+       "chunk_id": "mounjaro:v40:75:0",
+       "quote": "Treatment with MOUNJARO 10 mg and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with semaglutide 1 mg once weekly (see Table 5 and Figure 2).",
+       "match": "exact",
+       "section_path": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "drug": "MOUNJARO",
+       "label_version": 40,
+       "effective_time": "20260827",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+       "kind": "text",
+       "before": "…and 47% were men. The mean duration of type 2 diabetes mellitus was 8.6 years, and the mean BMI was 34 kg/m^2. Overall, 83% were White, 4% were Black or African American, and 1% were Asian; 70% identified as Hispanic or Latino ethnicity.\n\n",
+       "after": "",
+       "table": null
+      }
+     ],
+     "checks": [
+      {
+       "ok": false,
+       "text": "1 of 2 quotes found word for word in the label."
+      },
+      {
+       "ok": false,
+       "text": "1 quote dropped: the wording is not in the label text."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      }
+     ],
+     "flags": [
+      "quote_not_found_in_excerpt"
+     ],
+     "retrieved": [
+      {
+       "chunk_id": "mounjaro:v40:75:0",
+       "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "score": 0.0484,
+       "dense_rank": 4,
+       "bm25_rank": 1,
+       "number_rank": 1
+      },
+      {
+       "chunk_id": "mounjaro:v40:73:0",
+       "section": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
+       "score": 0.0484,
+       "dense_rank": 2,
+       "bm25_rank": 2,
+       "number_rank": 2
+      },
+      {
+       "chunk_id": "mounjaro:v40:75:1",
+       "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "score": 0.0477,
+       "dense_rank": 1,
+       "bm25_rank": 5,
+       "number_rank": 3
+      },
+      {
+       "chunk_id": "mounjaro:v40:75:2",
+       "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "score": 0.0471,
+       "dense_rank": 3,
+       "bm25_rank": 4,
+       "number_rank": 4
+      },
+      {
+       "chunk_id": "mounjaro:v40:75:3",
+       "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "score": 0.0448,
+       "dense_rank": 10,
+       "bm25_rank": 6,
+       "number_rank": 5
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 3154,
+     "latency_s": 57.77,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "mounjaro"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 1,
+       "ms": 17
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 2726,
+         "completion_tokens": 428,
+         "latency_s": 1.770165200025076,
+         "repaired": false
+        }
+       ],
+       "tokens": 3154,
+       "ms": 1770
+      },
+      {
+       "step": "guards",
+       "status": "supported",
+       "flags": [
+        "quote_not_found_in_excerpt"
+       ],
+       "kept_quotes": 1,
+       "proposed_quotes": 2,
+       "ms": 0.4
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 5,
+   "event": "claim",
+   "data": {
+    "n": 4,
+    "review": {
+     "claim": "MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma.",
+     "status": "needs_human_review",
+     "model_verdict": "contradicted",
+     "violations": [
+      "broadened_indication",
+      "omitted_qualifier"
+     ],
+     "reasoning": "The claim states MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma, but the label excerpts explicitly state MOUNJARO is contraindicated in such patients.",
+     "evidence": [],
+     "checks": [
+      {
+       "ok": false,
+       "text": "0 of 2 quotes found word for word in the label."
+      },
+      {
+       "ok": false,
+       "text": "2 quotes dropped: the wording is not in the label text."
+      },
+      {
+       "ok": true,
+       "text": "No figures in the claim to check."
+      },
+      {
+       "ok": false,
+       "text": "The model flagged a problem without a quote found in the label, so a reviewer decides."
+      }
+     ],
+     "flags": [
+      "quote_not_found_in_excerpt",
+      "quote_not_found_in_excerpt",
+      "violation_without_grounded_quote"
+     ],
+     "retrieved": [
+      {
+       "chunk_id": "mounjaro:v40:6:0",
+       "section": "5 WARNINGS AND PRECAUTIONS > 5.1 Risk of Thyroid C-Cell Tumors",
+       "score": 0.0323,
+       "dense_rank": 2,
+       "bm25_rank": 2,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:98:1",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.032,
+       "dense_rank": 1,
+       "bm25_rank": 4,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:5:0",
+       "section": "4 CONTRAINDICATIONS",
+       "score": 0.032,
+       "dense_rank": 4,
+       "bm25_rank": 1,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:0:0",
+       "section": "WARNING: RISK OF THYROID C-CELL TUMORS",
+       "score": 0.0317,
+       "dense_rank": 3,
+       "bm25_rank": 3,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:98:2",
+       "section": "Mounjaro Medication Guide",
+       "score": 0.0303,
+       "dense_rank": 5,
+       "bm25_rank": 7,
+       "number_rank": null
+      }
+     ],
+     "model": "groq/gpt-oss-120b",
+     "source": "live",
+     "prompt_version": "judge-v2",
+     "tokens": 2325,
+     "latency_s": 2.34,
+     "trace": [
+      {
+       "step": "search_label",
+       "labels": [
+        "mounjaro"
+       ],
+       "n_hits": 5,
+       "pinned_for_figures": 0,
+       "ms": 9
+      },
+      {
+       "step": "judge",
+       "model": "groq/gpt-oss-120b",
+       "source": "live",
+       "attempts": [
+        {
+         "model": "groq/gpt-oss-120b",
+         "prompt_tokens": 1977,
+         "completion_tokens": 348,
+         "latency_s": 1.4244786000053864,
+         "repaired": false
+        }
+       ],
+       "tokens": 2325,
+       "ms": 1424
+      },
+      {
+       "step": "guards",
+       "status": "needs_human_review",
+       "flags": [
+        "quote_not_found_in_excerpt",
+        "quote_not_found_in_excerpt",
+        "violation_without_grounded_quote"
+       ],
+       "kept_quotes": 0,
+       "proposed_quotes": 2,
+       "ms": 0.3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": 6,
+   "event": "document",
+   "data": {
+    "checks": [
+     {
+      "label": "mounjaro",
+      "drug": "MOUNJARO",
+      "ok": true,
+      "title": "Boxed warning is mentioned",
+      "detail": "The copy mentions thyroid from the MOUNJARO boxed warning. A reviewer still checks it is presented in full.",
+      "evidence": {
+       "chunk_id": "mounjaro:v40:0:0",
+       "section_path": "WARNING: RISK OF THYROID C-CELL TUMORS",
+       "quote": "In both male and female rats, tirzepatide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": 7,
+   "event": "done",
+   "data": {
+    "seconds": 120.0,
+    "tokens": 10737,
+    "n_claims": 4
+   }
+  }
+ ]
+}

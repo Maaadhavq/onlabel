@@ -176,7 +176,11 @@ class LLMClient:
         user: str,
         schema: type[BaseModel],
         max_completion_tokens: int,
+        accept: Callable[[BaseModel], str | None] | None = None,
     ) -> LLMResult:
+        """`accept(answer)` returns a reason to reject a well-formed but useless answer (Qwen
+        once split a five-claim email into `{"claims": []}`); a rejected answer is never
+        cached and the next model in the chain is asked."""
         result = LLMResult(data=None)
         for spec in self.chain:
             key = cache_key(spec.key, prompt_version, schema.__name__, system, user)
@@ -184,12 +188,15 @@ class LLMClient:
                 hit = self.cache.get(key)
                 if hit is not None:
                     try:
-                        result.data = schema.model_validate(hit["response"])
+                        cached = schema.model_validate(hit["response"])
                     except ValidationError:
-                        pass  # schema changed since the entry was written: treat as a miss
-                    else:
+                        cached = None  # schema changed since the entry was written: a miss
+                    reason = accept(cached) if (cached is not None and accept) else None
+                    if reason:
+                        result.attempts.append({"model": spec.key, "rejected": f"cached answer: {reason}"})
+                    elif cached is not None:
                         usage = hit.get("usage", {})
-                        result.model_key, result.source = spec.key, "cache"
+                        result.data, result.model_key, result.source = cached, spec.key, "cache"
                         result.prompt_tokens = usage.get("prompt_tokens", 0)
                         result.completion_tokens = usage.get("completion_tokens", 0)
                         return result
@@ -220,6 +227,9 @@ class LLMClient:
                 if not (retry and self.wait_for_budget and retry <= self.max_wait_s):
                     break
                 self._sleep(retry)
+            reason = accept(outcome["data"]) if (outcome.get("data") is not None and accept) else None
+            if reason:
+                outcome = {**outcome, "data": None, "rejected": reason}
             result.attempts.append({k: v for k, v in outcome.items() if k not in ("data", "retry_after")})
             result.prompt_tokens += outcome.get("prompt_tokens", 0)
             result.completion_tokens += outcome.get("completion_tokens", 0)

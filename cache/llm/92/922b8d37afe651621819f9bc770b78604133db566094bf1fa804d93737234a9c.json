@@ -1,0 +1,28 @@
+{
+ "key": "922b8d37afe651621819f9bc770b78604133db566094bf1fa804d93737234a9c",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "Wegovy may cause serious side effects, including: - Possible thyroid tumors, including cancer."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:6",
+    "quote": "Wegovy may cause serious side effects, including: - inflammation of your pancreas (pancreatitis)."
+   }
+  ],
+  "reasoning": "The claim states Wegovy has no serious side effects, but the label explicitly lists several serious side effects such as possible thyroid tumors, pancreatitis, gallbladder problems, and increased heart rate. Therefore the claim is directly contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "minimized_risk",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 363,
+  "prompt_tokens": 1942
+ }
+}

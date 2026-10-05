@@ -1,0 +1,24 @@
+{
+ "key": "43ef2ad7cbfdd5160c3a8386a6b3fcfd8f03dae124e7863f3e1771e77db15284",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "to reduce excess body weight and maintain weight reduction long term in:\n  - adults and pediatric patients aged 12 years and older with obesity."
+   }
+  ],
+  "reasoning": "The indication section lists pediatric patients aged 12 years and older for weight loss, and no mention of children as young as 8. Therefore the claim extends the approved age range.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 224,
+  "prompt_tokens": 2242
+ }
+}

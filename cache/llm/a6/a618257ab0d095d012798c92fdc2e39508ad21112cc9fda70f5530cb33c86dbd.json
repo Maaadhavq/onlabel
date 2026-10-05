@@ -1,0 +1,30 @@
+{
+ "key": "a618257ab0d095d012798c92fdc2e39508ad21112cc9fda70f5530cb33c86dbd",
+ "model_key": "groq/qwen3.8-27b",
+ "prompt_version": "split-v1",
+ "response": {
+  "claims": [
+   {
+    "kind": "indication",
+    "text": "MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "kind": "indication",
+    "text": "MOUNJARO is approved for chronic weight management in adults with obesity."
+   },
+   {
+    "kind": "efficacy",
+    "text": "In SURPASS-2, MOUNJARO provided greater A1C reduction than semaglutide 1 mg."
+   },
+   {
+    "kind": "safety",
+    "text": "MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma."
+   }
+  ]
+ },
+ "schema": "ClaimList",
+ "usage": {
+  "completion_tokens": 154,
+  "prompt_tokens": 231
+ }
+}

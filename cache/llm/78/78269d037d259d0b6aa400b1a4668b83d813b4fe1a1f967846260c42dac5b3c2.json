@@ -1,0 +1,26 @@
+{
+ "key": "78269d037d259d0b6aa400b1a4668b83d813b4fe1a1f967846260c42dac5b3c2",
+ "model_key": "groq/qwen3.8-27b",
+ "prompt_version": "split-v1",
+ "response": {
+  "claims": [
+   {
+    "kind": "indication",
+    "text": "Ozempic is the GLP-1 with the most approved uses for adults with type 2 diabetes."
+   },
+   {
+    "kind": "efficacy",
+    "text": "It lowers A1C, and it may help you lose some weight too."
+   },
+   {
+    "kind": "safety",
+    "text": "Ozempic also reduces the risk of kidney failure."
+   }
+  ]
+ },
+ "schema": "ClaimList",
+ "usage": {
+  "completion_tokens": 94,
+  "prompt_tokens": 197
+ }
+}

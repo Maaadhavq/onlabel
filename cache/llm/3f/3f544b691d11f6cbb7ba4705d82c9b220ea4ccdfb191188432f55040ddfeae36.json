@@ -1,0 +1,25 @@
+{
+ "key": "3f544b691d11f6cbb7ba4705d82c9b220ea4ccdfb191188432f55040ddfeae36",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:2",
+    "quote": "In Studies 2, 3, 5, 7, 8 and 9, all patients received instruction for a reduced-calorie diet (approximately 500 kcal/day deficit) and increased physical activity counseling (recommended to a minimum of 150 min/week) that began with the first dose of study medication or placebo and continued throughout the trial."
+   }
+  ],
+  "reasoning": "The label indicates that WEGOVY is indicated for use in combination with a reduced‑calorie diet and increased physical activity, and the clinical study description notes that all patients received such diet and activity counseling. The claim matches this requirement exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 312,
+  "prompt_tokens": 2213
+ }
+}

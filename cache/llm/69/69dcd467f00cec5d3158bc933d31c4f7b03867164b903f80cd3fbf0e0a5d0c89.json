@@ -1,0 +1,23 @@
+{
+ "key": "69dcd467f00cec5d3158bc933d31c4f7b03867164b903f80cd3fbf0e0a5d0c89",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "OZEMPIC is indicated:\n- as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."
+   }
+  ],
+  "reasoning": "The label excerpts list Ozempic's approved indications but do not provide any information comparing the number of approved uses of Ozempic to other GLP-1 products. Therefore the claim that it has the most approved uses cannot be verified from the provided excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 387,
+  "prompt_tokens": 1924
+ }
+}

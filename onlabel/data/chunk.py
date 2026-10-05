@@ -98,7 +98,9 @@ def _units(text: str, max_words: int) -> list[tuple[int, int, str]]:
             caption = ""
             if bi > 0:
                 prev = text[blocks[bi - 1][0] : blocks[bi - 1][1]]
-                if prev.lower().startswith("table") and len(prev) < 300:
+                # Captions often render as a list item ("- Table 8. ..."); missing that left
+                # table rows without "Week 68" and sent a true claim to a human.
+                if prev.lstrip("- ").lower().startswith("table") and len(prev) < 300:
                     caption = prev
             header = "\n".join(text[s:e] for s, e in lines[:n_header])
             ctx = "\n".join(p for p in (caption, header) if p)

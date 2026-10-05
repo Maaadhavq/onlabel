@@ -24,8 +24,20 @@ STOP = frozenset(
 )
 
 
+# Query-side synonyms for terms labels and promotional copy spell differently. Kept tiny and
+# literal: the Ozempic sample's "It lowers A1C" missed every HbA1c table without it.
+SYNONYMS = {"a1c": ("hba1c",), "hba1c": ("a1c",), "glp1": ("glp-1",)}
+
+
 def tokenize(text: str) -> list[str]:
     return [t for t in TOKEN.findall(text.lower().translate(DASHES)) if t not in STOP]
+
+
+def query_terms(text: str) -> set[str]:
+    terms = set(tokenize(text))
+    for t in list(terms):
+        terms.update(SYNONYMS.get(t, ()))
+    return terms
 
 
 class BM25:
@@ -66,7 +78,7 @@ class BM25:
         if self.n_docs == 0:
             return out
         avgdl = float(self.doc_len.mean()) or 1.0
-        for t in set(tokenize(query)):
+        for t in query_terms(query):
             i = self.vocab.get(t)
             if i is None:
                 continue

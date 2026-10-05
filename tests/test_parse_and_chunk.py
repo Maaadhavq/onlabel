@@ -52,6 +52,16 @@ def test_chunk_cut_mid_table_carries_the_header():
     assert "TESTADRUG N=1,306" in row.context
 
 
+def test_a_caption_rendered_as_a_list_item_still_travels_with_its_rows():
+    from onlabel.data.chunk import _units
+
+    text = ("- Table 8. Changes in Body Weight at Week 68\n\n"
+            "| Placebo | WEGOVY\nBaseline | 1 | 2\nChange | -2.4 | -14.9\nRow3 | 5 | 6\nRow4 | 7 | 8")
+    units = _units(text, max_words=200)
+    rows = [u for u in units if u[2]]
+    assert rows and all(u[2].startswith("- Table 8. Changes in Body Weight at Week 68") for u in rows)
+
+
 def test_fixed_chunks_cover_the_document():
     label = parse_spl(SPL)
     doc = label_doc(label)

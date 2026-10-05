@@ -264,7 +264,7 @@ async def rewrite(job_id: str, n: int, request: Request) -> dict:
             if res.data is None:
                 raise HTTPException(503, "No model is available to suggest wording right now. Try again in a minute.")
             labels = sorted({c.label_key for c in chunks}) or job.labels
-            check = reviewer.review_claim(res.data.rewrite, labels)
+            check = reviewer.review_claim(res.data.rewrite, labels, kind=job.claim_kind(n))
             return {"rewrite": res.data.rewrite, "model": res.model_key, "review": check.to_dict()}
 
     return await anyio.to_thread.run_sync(run)
