@@ -40,6 +40,7 @@ def client(monkeypatch):
     monkeypatch.setattr(main.state, "runner", JobRunner(main._run_document))
     monkeypatch.setattr(main.state, "error", None)
     main._recent.clear()
+    main._today.update(day=0, count=0)
     return TestClient(main.app)  # not a context manager: lifespan (model loading) never runs
 
 
@@ -128,6 +129,23 @@ def test_rewrite_refuses_traced_or_unchecked_claims(client):
         "".join(s.iter_text())
     assert client.post(f"/documents/{job_id}/claims/1/rewrite").status_code == 409  # already traced
     assert client.post(f"/documents/{job_id}/claims/9/rewrite").status_code == 409  # never checked
+
+
+def test_limit_is_per_visitor_behind_the_proxy(client, monkeypatch):
+    monkeypatch.setattr(main, "REVIEWS_PER_HOUR", 1)
+    body = {"claim": "A long enough claim."}
+    first = client.post("/reviews", json=body, headers={"X-Forwarded-For": "6.6.6.6, 10.0.0.1"})
+    other = client.post("/reviews", json=body, headers={"X-Forwarded-For": "10.0.0.2"})
+    spoofed = client.post("/reviews", json=body, headers={"X-Forwarded-For": "1.2.3.4, 10.0.0.1"})
+    assert [first.status_code, other.status_code, spoofed.status_code] == [200, 200, 429]
+
+
+def test_daily_cap_covers_every_visitor(client, monkeypatch):
+    monkeypatch.setattr(main, "CHECKS_PER_DAY", 2)
+    main._today.update(day=0, count=0)
+    codes = [client.post("/reviews", json={"claim": "A long enough claim."},
+                         headers={"X-Forwarded-For": f"10.0.0.{i}"}).status_code for i in range(3)]
+    assert codes == [200, 200, 429]
 
 
 def test_cors_allows_only_configured_origins(client):

@@ -114,19 +114,33 @@ app.add_middleware(
 )
 
 _recent: dict[str, deque[float]] = defaultdict(deque)
+_today: dict[str, int] = {"day": 0, "count": 0}
+CHECKS_PER_DAY = int(os.environ.get("ONLABEL_CHECKS_PER_DAY", "300"))  # every visitor together
 
 
 def _rate_limit(ip: str, cost: int = 1) -> None:
     now = time.time()
+    day = int(now // 86400)
+    if _today["day"] != day:
+        _today.update(day=day, count=0)
+    if _today["count"] + cost > CHECKS_PER_DAY:
+        raise HTTPException(429, "Today's free model quota for this demo is used up. The samples still open.")
     q = _recent[ip]
     while q and now - q[0] > 3600:
         q.popleft()
     if len(q) + cost > REVIEWS_PER_HOUR:
         raise HTTPException(429, f"Limit of {REVIEWS_PER_HOUR} checks an hour reached. The samples still open.")
     q.extend([now] * cost)
+    _today["count"] += cost
 
 
 def _ip(request: Request) -> str:
+    """The visitor's address. Behind Render's proxy every request comes from the proxy, so
+    the limit would be shared by everyone; the proxy appends the real address as the LAST
+    X-Forwarded-For entry (earlier entries are whatever the client sent, so not trusted)."""
+    forwarded = request.headers.get("x-forwarded-for")
+    if forwarded:
+        return forwarded.split(",")[-1].strip()
     return request.client.host if request.client else "unknown"
 
 

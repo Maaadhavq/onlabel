@@ -6,8 +6,11 @@ OnLabel build plan, eval design, phases, and the interview kit.
 
 ## Current phase
 
-Phase 1 (walking skeleton) built and verified locally on 2026-10-05. Waiting on Madhav
-for the GitHub repo and API keys before the first Render deploy (see "Needs Madhav").
+Product UI built (2026-10-05): the React workspace from the Claude Design canvas
+(https://claude.ai/artifact/ERqB5PYVKhHwGL645a5YDG), whole-document review streamed over
+SSE, claim routing, three stored samples with checked rewrites. Repo is public at
+https://github.com/Maaadhavq/onlabel; keys are in Madhav's local `.env`. Madhav asked to
+see the UI before the Render deploy, so the deploy waits for his go-ahead.
 
 ## Findings that change assumptions (READ THESE)
 
@@ -117,7 +120,22 @@ study. An MLR reviewer would likely ask for a qualifier. The benchmark must defi
   `Downloads\.claude\launch.json`. Local `.env` routes the chain to Ollama after the
   hosted models and keeps dev answers in `scratch/cache_api`.
 
-## In flight (2026-10-05, stopped at the usage limit)
+### 13. Similarity search alone does not show the judge the governing section
+The first samples had three wrong verdicts. "Ozempic reduces the risk of kidney failure" was
+traced although the label limits it to adults with type 2 diabetes and CKD (the judge never
+saw the full Indications wording); "can be used with a personal history of MTC" was called
+a conflict on contraindication text the judge was never shown, so the guard rightly sent it
+to a human; "It lowers A1C" missed every HbA1c table. Fixes: claims are routed by kind to
+the sections that govern them (`review.py: SECTION_ROUTES`, 2 routed excerpts, 6 max), and
+an A1C/HbA1c query synonym (`retrieval/bm25.py`).
+
+### 14. Free-tier model behaviour worth knowing
+Qwen3.8-27B once returned `{"claims": []}` for a five-claim email; `accept=` now rejects
+empty or unlocatable answers and asks the next model, never caching them. Gemma 4 on Google's
+OpenAI-compatible endpoint answers 500 to schemas with `$defs`, fine once inlined (11.5 s).
+In eval mode every call goes to the first model and waits: about 30 calls take 15 minutes.
+
+## Earlier in-flight notes (2026-10-05, stopped at the usage limit; items 1-5 now done)
 
 Product UI work, from the Claude Design canvas https://claude.ai/artifact/ERqB5PYVKhHwGL645a5YDG
 (Review workspace + First visit / Server waking up / Checking, live). Backend for it is built
