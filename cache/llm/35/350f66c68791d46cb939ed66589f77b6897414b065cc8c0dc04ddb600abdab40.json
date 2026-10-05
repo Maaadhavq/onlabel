@@ -1,0 +1,28 @@
+{
+ "key": "350f66c68791d46cb939ed66589f77b6897414b065cc8c0dc04ddb600abdab40",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:2:1",
+    "quote": "- Administer WEGOVY injection once weekly, on the same day each week, at any time of day, with or without meals."
+   },
+   {
+    "chunk_id": "wegovy:v19:3:0",
+    "quote": "The recommended starting dosage of WEGOVY injection is 0.25 mg administered subcutaneously once weekly."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY injection is given once daily, but the label excerpts provided indicate that the injection is administered once weekly. The starting dosage of 0.25 mg is supported, starting dosage and dosage escalation table shows 0.25 mg for weeks 1 through 4.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 186,
+  "prompt_tokens": 2302
+ }
+}

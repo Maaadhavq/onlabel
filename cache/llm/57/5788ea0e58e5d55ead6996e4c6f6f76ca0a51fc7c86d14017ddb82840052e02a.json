@@ -1,0 +1,25 @@
+{
+ "key": "5788ea0e58e5d55ead6996e4c6f6f76ca0a51fc7c86d14017ddb82840052e02a",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (MACE) (time to first occurrence) | 608 (13.0%) | 694 (14.9%) | 0.87 (0.78; 0.97)"
+   }
+  ],
+  "reasoning": "The claim is supported by the Indications and Usage section, better explained by the clinical studies section. The claim specifies the population (adults with type 2 diabetes and established cardiovascular disease) population and the specific cardiovascular outcomes (cardiovascular death, heart attack/non-fatal myocardial infarction, and stroke) components of MACE. The label states that VICTOZA is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 283,
+  "prompt_tokens": 2005
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "key": "b3330be66f612114a8e9f3f116a596eb3336dcc0cce6e7e9f222c402613bccf5",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:98:2",
+    "quote": "MOUNJARO is an injectable prescription medicine that is used: - along with diet and exercise to improve blood sugar (glucose) in adults and children 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "MOUNJARO^® is indicated: - as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "mounjaro:v40:73:0",
+    "quote": "The effectiveness of MOUNJARO as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus was established in five trials."
+   }
+  ],
+  "reasoning": "The FDA label excerpts provided for MOUNJARO list only indications for type 2 diabetes mellitus and cardiovascular risk reduction. None of the excerpts mention obesity or weight management in adults. Therefore the claim is not supported by the label.",
+  "verdict": "unsupported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 279,
+  "prompt_tokens": 2431
+ }
+}

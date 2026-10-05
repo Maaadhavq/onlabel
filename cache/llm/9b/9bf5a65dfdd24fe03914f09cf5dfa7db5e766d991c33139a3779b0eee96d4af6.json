@@ -1,0 +1,31 @@
+{
+ "key": "9bf5a65dfdd24fe03914f09cf5dfa7db5e766d991c33139a3779b0eee96d4af6",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:0:0",
+    "quote": "It is unknown whether WEGOVY causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined [see Warnings and Precautions ( 5.1 ), Nonclinical Toxicology ( 13.1 )]."
+   },
+   {
+    "chunk_id": "wegovy:v19:9:1",
+    "quote": "Significantly elevated serum calcitonin value may indicate MTC and patients with MTC usually have calcitonin values greater than 50 ng/L."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY has been proven not to cause thyroid tumors in people. However, the label excerpts do not provide any evidence that WEGOVY has been proven to not cause thyroid tumors. In fact, the excerpts state that semaglutide caused a dose-dependent and treatment-duration-dependent increase in the incidence of thyroid C-cell tumors in rodents, and that the human relevance of this finding has not been determined. Additionally, the label warns of the potential risk for MTC with the use of WEGOVY and informs patients of symptoms of thyroid tumors. Therefore, the claim is contradicted by the label excerpts.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 374,
+  "prompt_tokens": 1825
+ }
+}

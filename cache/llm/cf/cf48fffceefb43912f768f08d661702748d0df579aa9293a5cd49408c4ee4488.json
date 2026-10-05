@@ -1,0 +1,28 @@
+{
+ "key": "cf48fffceefb43912f768f08d661702748d0df579aa9293a5cd49408c4ee4488",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:51:2",
+    "quote": "Change from baseline (adjusted mean ...) | -0.6 | 0.2"
+   },
+   {
+    "chunk_id": "januvia:v71:51:1",
+    "quote": "In the 24-week study, ... the reductions from baseline in A1C were ... -0.8 ... for those given JANUVIA, and -0.2 ... for those given placebo."
+   }
+  ],
+  "reasoning": "The claim states a 1.6% A1C reduction with JANUVIA 100 mg in a 24‑week study, but the label excerpt shows the change from baseline was -0.6% (adjusted mean) for JANUVIA and +0.2% for placebo. Therefore the claim’s efficacy figure is not supported and conflicts with the label data.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 403,
+  "prompt_tokens": 2163
+ }
+}

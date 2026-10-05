@@ -1,0 +1,27 @@
+{
+ "key": "254be2da0084fe644b4de8ea6bf40b0e99822d4be17139224e560156679ad0ab",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:4",
+    "quote": "Treatment with OZEMPIC 0.5 mg and 1 mg once weekly for 56 weeks resulted in a statistically significant reduction in HbA1c compared to sitagliptin (see Table 4 and Figure 5)."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:5",
+    "quote": "The difference from sitagliptin - [95% CI] | -0.6 [-0.7, -0.4] | -0.8 [-0.9, -0.6] |"
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC lowers A1C more than sitagliptin in every patient with type 2 diabetes. However, the label excerpts only provide data from a specific trial (NCT01930188) where OZEMPIC 0.5 mg and 1 mg once weekly were compared to sitagliptin 100 mg once daily. The excerpts do not provide data on whether OZEMPIC is more effective than sitagliptin in every patient with type 2 diabetes, but rather in a specific population (patients with type 2 diabetes mellitus in combination with metformin and/or thiazolidinediones).",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 308,
+  "prompt_tokens": 2110
+ }
+}

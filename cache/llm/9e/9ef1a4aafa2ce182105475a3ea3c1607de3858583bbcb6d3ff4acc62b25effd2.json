@@ -1,0 +1,23 @@
+{
+ "key": "9ef1a4aafa2ce182105475a3ea3c1607de3858583bbcb6d3ff4acc62b25effd2",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "- As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY is used for type 1 diabetes, but the provided label excerpts state that the drug is indicated for type 2 diabetes mellitus. Therefore, the claim is promoting a use that is not included in the Indications and Dosage excerpts.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 133,
+  "prompt_tokens": 2128
+ }
+}

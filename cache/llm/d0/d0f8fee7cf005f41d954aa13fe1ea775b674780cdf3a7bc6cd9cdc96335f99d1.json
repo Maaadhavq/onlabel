@@ -1,0 +1,27 @@
+{
+ "key": "d0f8fee7cf005f41d954aa13fe1ea775b674780cdf3a7bc6cd9cdc96335f99d1",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:8:0",
+    "quote": "JARDIANCE is not indicated for glycemic control in patients with type 1 diabetes mellitus."
+   },
+   {
+    "chunk_id": "jardiance:v31:92:4",
+    "quote": "JARDIANCE is not for use to lower blood sugar (glucose) in people with type 1 diabetes."
+   }
+  ],
+  "reasoning": "The claim suggests JARDIANCE is an option for type 1 diabetes, but the label excerpts explicitly state that the drug is not indicated for glycemic control in patients with type 1 diabetes and is not for use in that population. Furthermore, the drug increases the risk of diabetic ketoacidosis in those patients.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 174,
+  "prompt_tokens": 1838
+ }
+}

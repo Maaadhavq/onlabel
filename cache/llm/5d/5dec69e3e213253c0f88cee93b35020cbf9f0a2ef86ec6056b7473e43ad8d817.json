@@ -1,0 +1,21 @@
+{
+ "key": "5dec69e3e213253c0f88cee93b35020cbf9f0a2ef86ec6056b7473e43ad8d817",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:3:0",
+    "quote": "- The recommended starting dosage of WEGOVY injection is 0.25 mg administered subcutaneously once weekly."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY injection starts at 0.25 mg, given once weekly, which is directly supported by the label excerpts. The label states the recommended starting dosage is 0.25 mg administered subcutaneously once weekly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 113,
+  "prompt_tokens": 2304
+ }
+}

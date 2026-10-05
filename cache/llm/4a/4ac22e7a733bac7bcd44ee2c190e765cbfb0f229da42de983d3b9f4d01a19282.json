@@ -1,0 +1,21 @@
+{
+ "key": "4ac22e7a733bac7bcd44ee2c190e765cbfb0f229da42de983d3b9f4d01a19282",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:2:0",
+    "quote": "The recommended dose of JANUVIA is 100 mg once daily. JANUVIA can be taken with or without food."
+   }
+  ],
+  "reasoning": "The label excerpt titled '2.1 Recommended Dosing' states that the recommended dose of JANUVIA is 100 mg once daily, matching the claim exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 160,
+  "prompt_tokens": 1972
+ }
+}

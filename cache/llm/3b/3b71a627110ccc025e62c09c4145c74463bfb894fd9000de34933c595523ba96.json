@@ -1,0 +1,25 @@
+{
+ "key": "3b71a627110ccc025e62c09c4145c74463bfb894fd9000de34933c595523ba96",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:18",
+    "quote": "The mean changes from baseline to week 30 were -1.2 kg, -3.5 kg, and -6 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:18",
+    "quote": "The mean baseline body weight was 89.9 kg, 92.7 kg, and 92.5 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively."
+   }
+  ],
+  "reasoning": "The excerpts provide data on weight change but do not include any specific statement or numerical result showing a reduction in HbA1c. Therefore the claim that the drug lowers A1C cannot be supported by the provided label excerpts. The weight‑loss claim is supported by the weight‑change data, but the overall claim requires both elements to be supported.",
+  "verdict": "unsupported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 384,
+  "prompt_tokens": 2415
+ }
+}

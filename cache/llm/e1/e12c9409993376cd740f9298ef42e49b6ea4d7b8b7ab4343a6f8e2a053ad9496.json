@@ -1,0 +1,25 @@
+{
+ "key": "e12c9409993376cd740f9298ef42e49b6ea4d7b8b7ab4343a6f8e2a053ad9496",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals."
+   },
+   {
+    "chunk_id": "ozempic:v20:40:5",
+    "quote": "Use OZEMPIC 1 time each week, on the same day each week, at any time of the day."
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC is taken once a day, but the FDA label excerpts consistently state that it is administered once weekly. The claim also mentions “at any time, with or without meals,” which is consistent with the label, but the daily dosing frequency is incorrect.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 253,
+  "prompt_tokens": 2304
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "key": "1303773a4a27b95a2a3b4b6d57ce9b51f893850f75f072cb261984b7fbce6e8c",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   },
+   {
+    "chunk_id": "zepbound:v40:81:0",
+    "quote": "Only patients who lost ≥5% body weight during the 12-week intensive lifestyle lead-in period entered the 72-week randomized treatment period."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND helps teens 12 and older with obesity lose weight with a reduced-calorie diet and increased physical activity. However, the label excerpts only mention adults with obesity or overweight in the presence of at least one weight-related comorbid condition, and do not include any information about teens or weight loss in this population. Additionally, the excerpts mention a standard lifestyle instruction every 12 weeks on reduced-calorie diet and increased physical activity, but do not specify that this is the only way to achieve weight loss with ZEPBOUND.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 259,
+  "prompt_tokens": 1731
+ }
+}

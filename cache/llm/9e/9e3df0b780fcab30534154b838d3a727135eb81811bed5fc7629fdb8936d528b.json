@@ -1,0 +1,24 @@
+{
+ "key": "9e3df0b780fcab30534154b838d3a727135eb81811bed5fc7629fdb8936d528b",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:41:1",
+    "quote": "Change from baseline (adjusted mean) ... | −0.9 | −0.8 | −0.2"
+   }
+  ],
+  "reasoning": "The claim states a 1.9% HbA1c reduction with FARXIGA 10 mg, but the label excerpt shows a change of –0.9% (Table 7) for a 24‑week monotherapy trial. No excerpt provides a 1.9% reduction or a 0.2% reduction for placebo. Therefore the factual elements are not supported by the label.",
+  "verdict": "unsupported",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 343,
+  "prompt_tokens": 2343
+ }
+}

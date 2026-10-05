@@ -1,0 +1,25 @@
+{
+ "key": "4f096534ee3b1a77ee834e27d8bf2f7742315030e15788925f7dab77d7421063",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:1:0",
+    "quote": "- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:2",
+    "quote": "- to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus who are at high risk for these events."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who are at high risk for these events. This is directly supported by the Medication Guide and the Indications and Usage section.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 192,
+  "prompt_tokens": 1761
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "key": "4b271f76892fce20020d64fd8cba435dcf59b152ab255cb202b2e1c51a4de80b",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:58:5",
+    "quote": "FARXIGA is not for people with certain genetic forms of polycystic kidney disease, or who are taking or have recently received immunosuppressive therapy to treat kidney disease. FARXIGA is not expected to work if you have these conditions."
+   }
+  ],
+  "reasoning": "The claim states that FARXIGA protects kidney function in people with polycystic kidney disease. However, the label excerpts explicitly state that FARXIGA is not expected to work in people with certain genetic forms of polycystic kidney disease (id: farxiga:v49:58:5). This directly contradicts the claim.",
+  "verdict": "contradicted",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 184,
+  "prompt_tokens": 2138
+ }
+}

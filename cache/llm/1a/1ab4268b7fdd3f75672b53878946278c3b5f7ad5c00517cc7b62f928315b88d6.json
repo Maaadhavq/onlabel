@@ -1,0 +1,21 @@
+{
+ "key": "1ab4268b7fdd3f75672b53878946278c3b5f7ad5c00517cc7b62f928315b88d6",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:3:0",
+    "quote": "Administer LANTUS subcutaneously once daily at any time of day but at the same time every day."
+   }
+  ],
+  "reasoning": "The claim states that LANTUS is injected once daily, at any time of day but at the same time every day. This exact wording is found in excerpt id \"lantus:v35:3:0\" under General Dosing Instructions. No additional conditions or qualifiers are omitted.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 161,
+  "prompt_tokens": 2082
+ }
+}

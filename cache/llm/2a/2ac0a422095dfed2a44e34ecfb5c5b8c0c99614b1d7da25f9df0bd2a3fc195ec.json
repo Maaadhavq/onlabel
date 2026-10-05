@@ -1,0 +1,25 @@
+{
+ "key": "2ac0a422095dfed2a44e34ecfb5c5b8c0c99614b1d7da25f9df0bd2a3fc195ec",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "- Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals."
+   },
+   {
+    "chunk_id": "ozempic:v20:40:5",
+    "quote": "- Use OZEMPIC 1 time each week, on the same day each week, at any time of the day. - OZEMPIC may be taken with or without food."
+   }
+  ],
+  "reasoning": "All elements of the claim, including frequency, timing, and food interaction, are explicitly stated in the administration instructions in the label excerpts. The claim is fully supported by the provided text.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 165,
+  "prompt_tokens": 2172
+ }
+}

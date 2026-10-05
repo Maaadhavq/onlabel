@@ -1,0 +1,21 @@
+{
+ "key": "2adc0c10f61b4673dba80e600110a428be3f4a8758367c6ea1a5d529cc0415cb",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "| Study 1 (Obesity or overweight with comorbidity) | Study 2 (Type 2 diabetes with obesity or overweight) | Study 3 (Obesity or overweight with comorbidity following at least 5% weight loss with diet) | | SAXENDA N=2487 | Placebo N=1244 | SAXENDA N=423 | Placebo N=212 | SAXENDA N=212 | Placebo N=210 | - Percent change from baseline (LSMean) | -7.4 | -3 | -5.4 | -1.7 | -4.9 | 0.3 |"
+   }
+  ],
+  "reasoning": "The claim states that in a 56-week study of adults with obesity or overweight with a weight-related condition, SAXENDA lost an average of 7.4% body weight compared to 3% with placebo. This information is found in Table 4, which shows for Study 1 (Obesity or overweight with comorbidity), the Percent change from baseline (LSMean) for SAXENDA was -7.4 and for Placebo was -3. The population and timeframe (56 weeks) are also supported by the claim.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 303,
+  "prompt_tokens": 2527
+ }
+}

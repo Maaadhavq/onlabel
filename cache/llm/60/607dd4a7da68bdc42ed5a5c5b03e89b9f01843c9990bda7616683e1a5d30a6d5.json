@@ -1,0 +1,27 @@
+{
+ "key": "607dd4a7da68bdc42ed5a5c5b03e89b9f01843c9990bda7616683e1a5d30a6d5",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:3:0",
+    "quote": "10 mg orally once daily in the morning, taken with or without food."
+   },
+   {
+    "chunk_id": "jardiance:v31:6:0",
+    "quote": "10 mg pale yellow, round, biconvex and bevel-edged, film-coated tablets debossed with \"S 10\" on one side and the Boehringer Ingelheim company symbol on the other side."
+   }
+  ],
+  "reasoning": "The claim states that JARDIANCE is taken as 10 mg once daily in the morning, with or without food. This is supported by the label excerpts, specifically excerpt id \"jardiance:v31:3:0\" section \"JARDIANCE | 2 DOSAGE AND ADMINISTRATION > 2.2 Recommended Dosage\", which states that the recommended dosage of JARDIANCE is 10 mg orally once daily in the morning, taken with or without food. Additionally, excerpt id \"jardiance:v31:6:0\" section \"JARDIANCE | 3 DOSAGE FORMS AND STRENGTHS\" lists the 10 mg tablet as one of the available strengths.",
+  "verdict": "supported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 287,
+  "prompt_tokens": 1723
+ }
+}

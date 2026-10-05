@@ -1,0 +1,29 @@
+{
+ "key": "293e8d8dec5c4c6fffb5ae6dfed8ce4ecde51241602cfa1b2aba3e87470e0065",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:74:0",
+    "quote": "SURPASS-1 (NCT03954834) was a 40-week double-blind trial that randomized 478 adult patients with type 2 diabetes mellitus with inadequate glycemic control with diet and exercise to subcutaneous MOUNJARO 5 mg, MOUNJARO 10 mg, MOUNJARO 15 mg, or placebo once weekly."
+   },
+   {
+    "chunk_id": "mounjaro:v40:74:2",
+    "quote": "Table 4: Results at Week 40 in a Trial of MOUNJARO as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus with Inadequate Glycemic Control with Diet and Exercise\n\nModified Intent-to-Treat (mITT) Population (N) | 113 | 121 | 121 | 120\nHbA1c (%) |\n\nChange at Week 40 | -0.1 | -1.8 | -1.7 | -1.7"
+   },
+   {
+    "chunk_id": "mounjaro:v40:74:1",
+    "quote": "Table 4: Results at Week 40 in a Trial of MOUNJARO as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus with Inadequate Glycemic Control with Diet and Exercise"
+   }
+  ],
+  "reasoning": "The claim states that in a 40-week trial of MOUNJARO monotherapy in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.8% with 5 mg and 0.1% with placebo. The label excerpts (specifically Table 4 in excerpt 74:2) Table 4 shows the Change at Week 40 for HbA1c (%) for Placebo as -0.1 and MOUNJARO 5 mg as -1.8. This matches the claim exactly. The population and timeframe are also supported by excerpt 74:0 and 74:2.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 468,
+  "prompt_tokens": 2997
+ }
+}

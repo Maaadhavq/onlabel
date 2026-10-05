@@ -1,0 +1,25 @@
+{
+ "key": "3351274d890fa59a3e89099ced49813aa185ec177423bd9995e95371b4781a11",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in: - Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity."
+   },
+   {
+    "chunk_id": "saxenda:v22:35:1",
+    "quote": "SAXENDA is an injectable prescription medicine used for adults with obesity or overweight (excess weight) who also have weight related medical problems, and children aged 12 to 17 years with a body weight above 132 pounds (60 kg) and obesity to help them lose weight and keep the weight off."
+   }
+  ],
+  "reasoning": "All elements of the claim, including the diet/activity requirement, the target population (adults and children 12+ weighing >60kg with obesity), and the goal of weight loss and maintenance, are explicitly stated in the indications and medication guide.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 236,
+  "prompt_tokens": 1943
+ }
+}

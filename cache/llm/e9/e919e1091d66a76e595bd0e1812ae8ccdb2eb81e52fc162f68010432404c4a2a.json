@@ -1,0 +1,28 @@
+{
+ "key": "e919e1091d66a76e595bd0e1812ae8ccdb2eb81e52fc162f68010432404c4a2a",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:11:0",
+    "quote": "Hypoglycemia is the most common adverse reaction associated with insulins, including LANTUS."
+   },
+   {
+    "chunk_id": "lantus:v35:66:3",
+    "quote": "LANTUS may cause serious side effects that can lead to death, including: - low blood sugar (hypoglycemia)."
+   }
+  ],
+  "reasoning": "The claim states LANTUS does not cause low blood sugar, but the label explicitly lists low blood sugar (hypoglycemia) as a common adverse reaction and side effect. This directly conflicts with the claim.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 267,
+  "prompt_tokens": 2114
+ }
+}

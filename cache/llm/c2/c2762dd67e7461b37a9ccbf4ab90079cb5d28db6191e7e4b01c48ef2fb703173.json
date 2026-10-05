@@ -1,0 +1,25 @@
+{
+ "key": "c2762dd67e7461b37a9ccbf4ab90079cb5d28db6191e7e4b01c48ef2fb703173",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:0:0",
+    "quote": "to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "jardiance:v31:76:4",
+    "quote": "JARDIANCE significantly reduced the risk of first occurrence of primary composite endpoint of CV death, non-fatal myocardial infarction, or non-fatal stroke (HR: 0.86; 95% CI: 0.74, 0.99). The treatment effect was due to a significant reduction in the risk of CV death in subjects randomized to empagliflozin (HR: 0.62; 95% CI: 0.49, 0.77), with no change in the risk of non-fatal myocardial infarction or non-fatal stroke (see Table 15 and Figures 5 and 6)."
+   }
+  ],
+  "reasoning": "The claim states that JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes and established cardiovascular disease. This is supported by the Indications and Usage section of the label, which states that JARDIANCE is indicated to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease. Additionally, the Clinical Studies section provides evidence from the EMPA-REG OUTCOME trial, which showed that JARDIANCE significantly reduced the risk of cardiovascular death in this population.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 340,
+  "prompt_tokens": 2034
+ }
+}

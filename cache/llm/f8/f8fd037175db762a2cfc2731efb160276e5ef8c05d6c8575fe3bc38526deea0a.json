@@ -1,0 +1,27 @@
+{
+ "key": "f8fd037175db762a2cfc2731efb160276e5ef8c05d6c8575fe3bc38526deea0a",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:0:1",
+    "quote": "- FARXIGA is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus [see Warnings and Precautions (5.1)]."
+   },
+   {
+    "chunk_id": "farxiga:v49:58:5",
+    "quote": "- FARXIGA is not for use to improve blood sugar (glucose) control in people with type 1 diabetes."
+   }
+  ],
+  "reasoning": "The claim states that FARXIGA improves blood sugar control in people with type 1 diabetes, but the label explicitly states it is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 170,
+  "prompt_tokens": 3093
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "key": "37c9814dceb17af03443449eb8ae3e1f5b9cb4362917a8ec44fad465e5aa9d45",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:15",
+    "quote": "For Study 5, the primary efficacy parameter was mean percent change in body weight from randomization (Week 20) to Week 68."
+   },
+   {
+    "chunk_id": "wegovy:v19:40:15",
+    "quote": "From randomization (week 20) to Week 68, treatment with WEGOVY injection resulted in a statistically significant reduction in body weight compared with placebo (Table 9)."
+   },
+   {
+    "chunk_id": "wegovy:v19:40:15",
+    "quote": "Table 9. Changes in Body Weight at Week 68 in Study 5 (Obesity or Overweight with Comorbidity After 20-week Run-in) with WEGOVY 2.4 mg Injection"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:16",
+    "quote": "Table 9. Changes in Body Weight at Week 68 in Study 5 (Obesity or Overweight with Comorbidity After 20-week Run-in) with WEGOVY 2.4 mg Injection"
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY tablets help adults lose 30% of their body weight. The label excerpts provide information on the efficacy of WEGOVY in reducing body weight, but they do not support the claim that adults can lose 30% of their body weight. The excerpts mention that in Study 5, the primary efficacy parameter was mean percent change in body weight from randomization (Week 20) to Week 68, and that treatment with WEGOVY injection resulted in a statistically significant reduction in body weight compared with placebo. However, the excerpts do not provide any information on the magnitude of weight loss. Table 9 shows the changes in body weight at Week 68, but it only shows the mean percent change from Week 20, which is 6.9% for WEGOVY and -7.9% for placebo. There is no information on the percentage of patients who lost 30% of their body weight. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 476,
+  "prompt_tokens": 2112
+ }
+}

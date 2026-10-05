@@ -1,0 +1,27 @@
+{
+ "key": "fef4890b0210585b166ccfd6515a320e3ec49bfb2b764e1f1184b945eb8cdad0",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "2",
+    "quote": "In general, the reduction in glycated hemoglobin (HbA1c) with LANTUS was similar to that with NPH insulin."
+   },
+   {
+    "chunk_id": "3",
+    "quote": "The LANTUS group had a smaller mean reduction from baseline in HbA1c compared to the NPH insulin group,"
+   }
+  ],
+  "reasoning": "The claim states that LANTUS lowers A1C far more than NPH insulin. However, the excerpts do not support this claim. In fact, the excerpts state that the reduction in glycated hemoglobin (HbA1c) with LANTUS was similar to that with NPH insulin (excerpt 2), and that the LANTUS group had a smaller mean reduction from baseline in HbA1c compared to the NPH insulin group (excerpt 3). Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 225,
+  "prompt_tokens": 1867
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "key": "d899cf39b8d040d22df7d69c08a75e57a81afca403a30adb05cabc564d5c11d1",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:35:4",
+    "quote": "SAXENDA is injected 1 time each day, at any time during the day."
+   },
+   {
+    "chunk_id": "saxenda:v22:2:0",
+    "quote": "Inject SAXENDA subcutaneously once daily at any time of day, without regard to the timing of meals."
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA is injected once a week, but the label excerpts provided (specifically in the Medication Guide and Dosage and Administration sections) explicitly state that SAXENDA is injected once daily. Therefore, the claim is contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 168,
+  "prompt_tokens": 2112
+ }
+}

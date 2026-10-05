@@ -1,0 +1,23 @@
+{
+ "key": "c84f3171cdeade2d3ec35971649a4dd0d0b8f922af5dfedff01c20b579bfe4d4",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals."
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC is taken once a day, at any time, with or without meals. However, the label excerpts state that OZEMPIC is administered once weekly, on the same day each week, at any time of the day, with or without meals. This indicates that the claim is incorrect and contradicts the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 157,
+  "prompt_tokens": 2039
+ }
+}

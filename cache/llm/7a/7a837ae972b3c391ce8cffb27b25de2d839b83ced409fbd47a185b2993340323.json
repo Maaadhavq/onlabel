@@ -1,0 +1,31 @@
+{
+ "key": "7a837ae972b3c391ce8cffb27b25de2d839b83ced409fbd47a185b2993340323",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:74:0",
+    "quote": "monotherapy with MOUNJARO 5 mg, 10 mg and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with placebo (see Table 4)."
+   },
+   {
+    "chunk_id": "mounjaro:v40:74:2",
+    "quote": "Table 4: Results at Week 40 in a Trial of MOUNJARO as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus with Inadequate Glycemic Control with Diet and Exercise"
+   },
+   {
+    "chunk_id": "mounjaro:v40:74:2",
+    "quote": "Difference from placebo (95% CI) | -- | -1.7 (-2.0, -1.4) | -1.6 (-1.9, -1.3) | -1.6 (-1.9, -1.3)"
+   }
+  ],
+  "reasoning": "The claim states that in a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.8% with MOUNJARO 5 mg, compared with 0.1% with placebo. The label excerpts provide information about a 40-week trial (SURPASS-1) where patients with type 2 diabetes mellitus with inadequate glycemic control with diet and exercise were randomized to subcutaneous MOUNJARO 5 mg, 10 mg, 15 mg, or placebo once weekly. The excerpts state that monotherapy with MOUNJARO 5 mg, 10 mg, and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with placebo (see Table 4). Table 4 shows the results at Week 40, and the difference from placebo for MOUNJARO 5 mg is -1.7 (-2.0, -1.4) for HbA1c. This value is not 2.8%, so the claim is not supported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 487,
+  "prompt_tokens": 2870
+ }
+}

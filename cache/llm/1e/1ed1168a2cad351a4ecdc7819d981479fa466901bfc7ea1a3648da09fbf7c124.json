@@ -1,0 +1,25 @@
+{
+ "key": "1ed1168a2cad351a4ecdc7819d981479fa466901bfc7ea1a3648da09fbf7c124",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:41:1",
+    "quote": "Change from baseline (adjusted mean Least squares mean adjusted for baseline value. ) | −0.9 | −0.8 | −0.2"
+   },
+   {
+    "chunk_id": "farxiga:v49:41:1",
+    "quote": "Difference from placebo (adjusted mean) (95% CI) | −0.7 p-value <0.0001 versus placebo. Sensitivity analyses yielded smaller estimates of treatment difference with placebo. (−1.0, −0.4) | −0.5 (−0.8, −0.2) |"
+   }
+  ],
+  "reasoning": "The claim states that in a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 0.9% with FARXIGA 10 mg, compared with 0.2% with placebo. The label excerpts provide a table (Table 7) that shows the results of a 24-week trial of FARXIGA monotherapy in adults with type 2 diabetes. The table states that the change from baseline in HbA1c was -0.9% for FARXIGA 10 mg, which matches the claim. However, the table also states that the change from baseline in HbA1c was -0.2% for placebo, which is less than the 0.2% stated in the claim. Therefore, the claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 347,
+  "prompt_tokens": 2128
+ }
+}

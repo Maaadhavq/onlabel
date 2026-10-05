@@ -1,0 +1,25 @@
+{
+ "key": "2da81a3b645dd80e6f6ba03583c166dd8173b5c19d47e481b011b4c0a7b1e7b9",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "trulicity:v62:82:2",
+    "quote": "along with diet and exercise to improve blood sugar (glucose) in adults and children 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim is supported by the Indications and Usage section and the Medication Guide, which both state that TRULICITY is indicated/used along with diet and exercise to improve glycemic/blood sugar control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 186,
+  "prompt_tokens": 1803
+ }
+}

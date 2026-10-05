@@ -1,0 +1,27 @@
+{
+ "key": "b30b26ce4d086dcc64416597e023878b930db3b78ae8210af7130546d193ba85",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity:\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   },
+   {
+    "chunk_id": "zepbound:v40:106:2",
+    "quote": "ZEPBOUND is an injectable prescription medicine used with a reduced-calorie diet and increased physical activity to help adults with: - obesity, or some adults with overweight who also have weight-related medical problems, to lose excess body weight and keep the weight off."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND helps adults with obesity lose excess weight and keep it off. The FDA label indicates that ZEPBOUND is indicated to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight who have at least one weight‑related comorbid condition. The claim omits the requirement for a weight‑related comorbid condition, so it is not fully supported without that qualifier.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 424,
+  "prompt_tokens": 1665
+ }
+}

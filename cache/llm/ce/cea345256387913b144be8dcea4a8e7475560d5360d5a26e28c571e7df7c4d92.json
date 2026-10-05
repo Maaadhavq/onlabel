@@ -1,0 +1,25 @@
+{
+ "key": "cea345256387913b144be8dcea4a8e7475560d5360d5a26e28c571e7df7c4d92",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:1:0",
+    "quote": "as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:2",
+    "quote": "along with diet and exercise to improve blood sugar (glucose) in adults with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS tablets improve blood sugar control in adults with type 2 diabetes, which is supported by the excerpts. The excerpts from the INDICATIONS AND USAGE section (id: rybelsus:v14:1:0) and the MEDICATION GUIDE (id: rybelsus:v14:43:2) both mention that RYBELSUS tablets are indicated to improve glycemic control in adults with type 2 diabetes mellitus, along with diet and exercise. This matches the claim's statement. Therefore, the verdict is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 242,
+  "prompt_tokens": 1781
+ }
+}

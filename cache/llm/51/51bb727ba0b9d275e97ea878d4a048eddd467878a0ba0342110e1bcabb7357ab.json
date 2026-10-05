@@ -1,0 +1,23 @@
+{
+ "key": "51bb727ba0b9d275e97ea878d4a048eddd467878a0ba0342110e1bcabb7357ab",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "VICTOZA is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus,"
+   }
+  ],
+  "reasoning": "The label excerpts state VICTOZA is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus. There is no indication or data provided for type 1 diabetes, so the claim promotes a use not covered by the label.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 283,
+  "prompt_tokens": 2668
+ }
+}

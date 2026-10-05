@@ -1,0 +1,23 @@
+{
+ "key": "b2c67b439fa96a2d538c9fc36c8d175459dddb4541910a85d24fb3497c106c30",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:2:0",
+    "quote": "- The recommended starting dosage of MOUNJARO is 2.5 mg injected subcutaneously once weekly [see Dosage and Administration (2.2)]."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO starts at 15 mg, which contradicts the label. The label states the recommended starting dosage is 2.5 mg once weekly. 15 mg is the maximum dosage for adults.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 129,
+  "prompt_tokens": 1839
+ }
+}

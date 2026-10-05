@@ -1,0 +1,21 @@
+{
+ "key": "02f08d9c820f0086d62453a22b3f0f63125c16b35dc95418e4353215f8f74f65",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:82:1",
+    "quote": "For Study 3, the primary efficacy parameters were mean percent change in body weight from randomization (Week 0) to Week 72 and the percentage of patients achieving ≥5% weight reduction from randomization (Week 0) to Week 72. Amongst randomized patients who already lost ≥5% body weight during the 12-week intensive lifestyle lead-in period, subsequent treatment with ZEPBOUND resulted in a statistically significant reduction in body weight compared to placebo from randomization (Week 0) to Week 72. A greater proportion of patients treated with ZEPBOUND achieved at least 5%, 10%, 15%, and 20% weight reduction from Week 0 to Week 72 compared to placebo (see Table 4)."
+   }
+  ],
+  "reasoning": "The excerpts state that in Study 3, ZEPBOUND produced a statistically significant greater mean percent change in body weight versus placebo over 72 weeks and that a greater proportion of patients achieved ≥5%, 10%, 15%, and 20% weight reduction compared with placebo.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 511,
+  "prompt_tokens": 1927
+ }
+}

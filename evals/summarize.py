@@ -10,7 +10,7 @@ from collections import Counter
 from datetime import UTC, datetime
 from pathlib import Path
 
-from evals.common import REPORTS, load_claims
+from evals.common import REPORTS, load_claims, wilson
 
 SUMMARY = Path("web/src/evals/summary.json")
 EVALS_MD = Path("EVALS.md")
@@ -125,13 +125,15 @@ def markdown(s: dict) -> str:
          "|---|---|---|---|---|---|"]
     for v in s["verify"]:
         on, off = v["guards_on"], v["guards_off"]
-        ci = on.get("false_approval_ci")
+        # A bootstrap of zero events is the point 0 again; use the Wilson interval for those.
+        ci = wilson(0, on["n_violative"]) if on["false_approvals"] == 0 else on.get("false_approval_ci")
         ci_txt = f" (95% CI {pct(ci[0])} to {pct(ci[1])})" if ci else ""
         L.append(f"| {v['name']} | {v['split']} ({v['n']}) | {on['false_approvals']}/{on['n_violative']}{ci_txt} | "
                  f"{off['false_approvals']}/{off['n_violative']} | {on['traced_faithful']}/{on['n_faithful']} | "
                  f"{pct(on['human_review'])} |")
     L += ["", ("Intervals are 95% cluster-bootstrap intervals over fact cards (claims written from one card share "
-          "their evidence). Per-claim results: `reports/verify_*.md`."), ""]
+          "their evidence); with no violative claim traced, the Wilson interval. Per-claim results: "
+          "`reports/verify_*.md`."), ""]
     for v in s["verify"]:
         if v["stopped_by_guards"]:
             L.append(f"- {v['name']}: the guards stopped {len(v['stopped_by_guards'])} violative claims the model "

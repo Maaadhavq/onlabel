@@ -1,0 +1,24 @@
+{
+ "key": "1adb7dbd4a4d0af64d0c4f179ae9579dc5c5cbeacf31cd252355c716f12ef887",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:76:5",
+    "quote": "CV death | 137 (5.9%) | 172 (3.7%) | 0.62 (0.49, 0.77)"
+   }
+  ],
+  "reasoning": "The claim states that 1.7% of patients taking JARDIANCE died of cardiovascular causes, but the label excerpt Table 15 reports CV death as 172 (3.7%) of JARDIANCE patients. This conflicts with the claim's figure. Therefore the claim is contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 271,
+  "prompt_tokens": 2353
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "key": "d41ee9747a4f506efd581b1b8ab635daa69c44432003d2e0484a5a63cf1f4425",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:34:1",
+    "quote": "In this 52-week trial, 746 adult patients with type 2 diabetes mellitus were randomized to VICTOZA 1.2 mg, VICTOZA 1.8 mg, or glimepiride 8 mg."
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Table 3. Results of a 52-week Monotherapy Trial in Adults with Type 2 Diabetes Mellitus"
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Change from baseline (adjusted mean) | -1.1 | -0.8 | - -0.5"
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Difference from glimepiride arm (adjusted mean) | -0.6** | -0.3* |"
+   }
+  ],
+  "reasoning": "The claim states that in a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 1.1%, compared with 0.5% for glimepiride 8 mg. The label excerpts provide information on a 52-week trial in adults with type 2 diabetes, but the specific doses and outcomes mentioned in the claim are not directly supported by the excerpts. The excerpts mention a 52-week trial, but the specific doses and outcomes mentioned in the claim are not directly supported by the excerpts. The claim is not supported by the label excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 381,
+  "prompt_tokens": 2335
+ }
+}

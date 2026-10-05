@@ -1,0 +1,23 @@
+{
+ "key": "ee44c77787de2e9648cb3bbb344c86c9e8fb7d3e06cff70b1b055086b7dbf7a1",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3 | Study 3 (Obesity or overweight with comorbidity following at least 5% weight loss with diet) | SAXENDA N=212 | Placebo N=210 | Percent change from baseline (LSMean) | -5.4 | -1.7 | Difference from placebo - (LSMean) (95% CI) | -3.7 (-4.7; -2.7) |"
+   }
+  ],
+  "reasoning": "The claim states that people taking SAXENDA lost an average of 12.4% of their body weight, compared with 3% with placebo. The label excerpts provide information on the results of Study 3, which is a 56-week trial. According to Table 4 in excerpt saxenda:v22:31:7, the percent change from baseline (LSMean) for SAXENDA in Study 3 is -5.4, and for placebo it is -1.7. The difference from placebo is -3.7 (-4.7; -2.7). This information does not support the claim that the average weight loss for SAXENDA is 12.4%.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 308,
+  "prompt_tokens": 2333
+ }
+}

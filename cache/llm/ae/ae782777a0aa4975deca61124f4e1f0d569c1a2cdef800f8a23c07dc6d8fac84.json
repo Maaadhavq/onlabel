@@ -1,0 +1,29 @@
+{
+ "key": "ae782777a0aa4975deca61124f4e1f0d569c1a2cdef800f8a23c07dc6d8fac84",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:2:0",
+    "quote": "Take one RYBELSUS or OZEMPIC tablet orally once daily on an empty stomach in the morning with water (up to 4 ounces of water)."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:5",
+    "quote": "Take 1 RYBELSUS or OZEMPIC tablet by mouth on an empty stomach in the morning with water (no more than 4 ounces)."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:5",
+    "quote": "Do not take RYBELSUS or OZEMPIC tablets with any other liquids besides water."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS should be taken once daily on an empty stomach in the morning with up to 4 ounces of water. The label excerpts provided (rybelsus:v14:2:0) and (rybelsus:v14:43:5) both explicitly state this administration instruction.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 240,
+  "prompt_tokens": 2091
+ }
+}

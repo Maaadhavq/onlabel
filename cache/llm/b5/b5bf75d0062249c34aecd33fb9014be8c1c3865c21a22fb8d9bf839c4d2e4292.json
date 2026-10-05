@@ -1,0 +1,23 @@
+{
+ "key": "b5bf75d0062249c34aecd33fb9014be8c1c3865c21a22fb8d9bf839c4d2e4292",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "TRULICITY® is indicated: - As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY improves blood sugar control in adults with type 1 diabetes, but the label excerpts list the indication only for adults (and pediatric patients) with type 2 diabetes mellitus. No excerpt supports use in type 1 diabetes, making the claim an off‑label use.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 278,
+  "prompt_tokens": 2327
+ }
+}

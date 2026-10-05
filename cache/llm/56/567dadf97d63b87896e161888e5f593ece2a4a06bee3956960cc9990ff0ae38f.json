@@ -1,0 +1,33 @@
+{
+ "key": "567dadf97d63b87896e161888e5f593ece2a4a06bee3956960cc9990ff0ae38f",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   },
+   {
+    "chunk_id": "zepbound:v40:78:0",
+    "quote": "The efficacy of ZEPBOUND for weight reduction in conjunction with a reduced-calorie diet and increased physical activity was studied in two randomized, double-blind, placebo-controlled fixed-dosage trials (Study 1 and Study 2) in adults aged 18 years and older."
+   },
+   {
+    "chunk_id": "zepbound:v40:84:1",
+    "quote": "The trial enrolled 783 adult patients (aged 18 years and older) with obesity (BMI ≥30 kg/m^2), or with overweight (BMI 27 to <30 kg/m^2) and at least one weight-related comorbid condition, such as dyslipidemia, hypertension, obstructive sleep apnea, or CV disease;"
+   },
+   {
+    "chunk_id": "zepbound:v40:78:1",
+    "quote": "Study 1 (NCT04184622) was a 72-week trial that enrolled 2,539 adult patients with obesity (BMI ≥30 kg/m^2), or with overweight (BMI 27 to <30 kg/m^2) and at least one weight-related comorbid condition, such as dyslipidemia, hypertension, obstructive sleep apnea, or CV disease;"
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND helps adults with obesity, or with overweight and at least one weight-related condition, lose excess weight and keep it off. The label excerpts provide evidence that ZEPBOUND is indicated for weight reduction in conjunction with a reduced-calorie diet and increased physical activity in adults with obesity or overweight in the presence of at least one weight-related comorbid condition. The excerpts also describe the clinical studies that support the efficacy of ZEPBOUND for weight reduction. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 471,
+  "prompt_tokens": 1871
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "key": "00b28b79aca081db531a4fa0afb0ea611d4f43cd4bf396b6c761025cd4fbe39f",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:36:0",
+    "quote": "In this study, 9,340 adult patients with inadequately controlled type 2 diabetes mellitus and atherosclerotic cardiovascular disease (CVD) were randomized to VICTOZA 1.8 mg or placebo for a median duration of 3.5 years."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "The study compared the risk of major adverse cardiovascular events between VICTOZA and placebo when these were added to, and used concomitantly with, background standard of care treatments for type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "The primary endpoint, major adverse cardiac events (MACE), was the time to first occurrence of a three part composite outcome which included; cardiovascular death, non-fatal myocardial infarction and non-fatal stroke."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Table 13. Treatment Effect for the Primary Composite Endpoint, MACE, and its Components in the LEADER Trial (Patients with Type 2 Diabetes Mellitus and Atherosclerotic CVD)"
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "| VICTOZA N=4668 | Placebo N=4672 | Hazard Ratio (95% CI)"
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (MACE) (time to first occurrence) | 608 (13.0%) | 694 (14.9%) | 0.87 (0.78; 0.97)"
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "p-value for superiority (2-sided) 0.011"
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA reduces the risk of heart attack and stroke in adults with type 2 diabetes. The label excerpts provide evidence for this claim. The LEADER trial, a multi-national, multi-center, placebo-controlled, double-blind trial, compared the risk of major adverse cardiovascular events between VICTOZA and placebo in adult patients with inadequately controlled type 2 diabetes mellitus and atherosclerotic cardiovascular disease. The trial found that VICTOZA reduced the risk of major adverse cardiovascular events, including heart attack and stroke, compared to placebo. The excerpts provide the necessary information to support the claim, including the population (adults with type 2 diabetes and atherosclerotic cardiovascular disease), the treatment (VICTOZA 1.8 mg), and the outcome (reduced risk of heart attack and stroke).",
+  "verdict": "supported",
+  "violations": [
+   "overstated_efficacy"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 668,
+  "prompt_tokens": 1828
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "key": "2e91e5cdbc8ef739c9d01868a249c78b237dcb4eb00c6e04c0d78c01cdfcbfe7",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:2:0",
+    "quote": "Administer WEGOVY in combination with a reduced‑calorie diet and increased physical activity."
+   },
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:"
+   }
+  ],
+  "reasoning": "The claim states that the drug should be used with a reduced‑calorie diet and increased physical activity. The FDA label excerpts explicitly include this instruction in the dosage and administration section (\"Administer WEGOVY in combination with a reduced‑calorie diet and increased physical activity.\") and in the indications section (\"WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:\"). Therefore every element of the claim is present in the label and no qualifier is omitted.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 290,
+  "prompt_tokens": 2382
+ }
+}

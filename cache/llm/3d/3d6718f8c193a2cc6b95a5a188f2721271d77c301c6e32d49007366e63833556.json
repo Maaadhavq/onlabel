@@ -1,0 +1,43 @@
+{
+ "key": "3d6718f8c193a2cc6b95a5a188f2721271d77c301c6e32d49007366e63833556",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "The LANTUS group had a smaller mean reduction from baseline in HbA1c compared to the NPH insulin group, which may be explained by the lower daily basal insulin doses in the LANTUS group (Table 11)."
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "Table 11: Type 2 Diabetes Mellitus – Adults"
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "HbA1c"
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "Adjusted mean change from baseline"
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "-0.5"
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "-0.4"
+   }
+  ],
+  "reasoning": "The claim states that in a 52-week study in adults with type 2 diabetes taking oral medicines, A1C fell by 0.5% with LANTUS and by 0.4% with NPH insulin. The label excerpts provide a table (Table 11) that shows the adjusted mean change from baseline in HbA1c for LANTUS and NPH insulin in combination with oral agents for 52 weeks. The table shows that the adjusted mean change from baseline in HbA1c for LANTUS is -0.5 and for NPH insulin is -0.4. This supports the claim.",
+  "verdict": "supported",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 383,
+  "prompt_tokens": 1986
+ }
+}

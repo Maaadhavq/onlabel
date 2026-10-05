@@ -1,0 +1,29 @@
+{
+ "key": "c5e8d7520584cd2750d0c42d77909e1c6283f1d649cf1a4ebf314a5f062294d9",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:8",
+    "quote": "mean baseline body weight was 106 kg and mean BMI was 38 kg/m^2."
+   },
+   {
+    "chunk_id": "wegovy:v19:40:19",
+    "quote": "Table 11. Changes in Body Weight at Week 64 in Study 7 with WEGOVY 25 mg Tablets"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:19",
+    "quote": "- % change from baseline (LSMean)^3 | -2.4 | -13.6"
+   }
+  ],
+  "reasoning": "The claim states that in a 64-week study of adults with obesity, or overweight with a weight-related condition, people taking WEGOVY 25 mg tablets lost an average of 13.6% of their body weight, compared with 2.4% with placebo. The label excerpts provide evidence for this claim. Study 7, a 64-week trial, enrolled 307 patients with obesity or overweight and at least one weight-related comorbid condition. The primary efficacy parameters were mean percent change in body weight and the percentages of patients achieving greater than or equal to 5% weight loss from baseline to Week 64. After 64 weeks, treatment with WEGOVY 25 mg tablets resulted in a statistically significant reduction in body weight compared with placebo. Table 11 shows that the mean percent change in body weight was -13.6% for WEGOVY 25 mg tablets and -2.4% for placebo. Therefore, the claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 363,
+  "prompt_tokens": 2132
+ }
+}

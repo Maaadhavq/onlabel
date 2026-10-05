@@ -1,0 +1,34 @@
+{
+ "key": "33f9169fb9ef2a9a5c2ca8beb4bce46555f03f573fd543efb0dfa3e0c6a35e3c",
+ "model_key": "groq/qwen3.8-27b",
+ "prompt_version": "split-v1",
+ "response": {
+  "claims": [
+   {
+    "kind": "indication",
+    "text": "Wegovy is approved for weight loss in children as young as 8."
+   },
+   {
+    "kind": "efficacy",
+    "text": "In clinical trials, adults lost an average of 14.9% of their body weight at 68 weeks."
+   },
+   {
+    "kind": "efficacy",
+    "text": "Wegovy also reduces the risk of heart attack and stroke."
+   },
+   {
+    "kind": "safety",
+    "text": "Unlike other options, Wegovy has no serious side effects."
+   },
+   {
+    "kind": "dosing",
+    "text": "Use it with a reduced-calorie diet and increased physical activity."
+   }
+  ]
+ },
+ "schema": "ClaimList",
+ "usage": {
+  "completion_tokens": 145,
+  "prompt_tokens": 227
+ }
+}

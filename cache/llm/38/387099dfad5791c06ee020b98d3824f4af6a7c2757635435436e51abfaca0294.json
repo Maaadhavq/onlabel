@@ -1,0 +1,31 @@
+{
+ "key": "387099dfad5791c06ee020b98d3824f4af6a7c2757635435436e51abfaca0294",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:12:0",
+    "quote": "It is unknown whether ZEPBOUND causes thyroid C-cell tumors, including MTC, in humans as human relevance of tirzepatide-induced rodent thyroid C-cell tumors has not been determined."
+   },
+   {
+    "chunk_id": "zepbound:v40:12:1",
+    "quote": "Significantly elevated serum calcitonin values may indicate MTC and patients with MTC usually have calcitonin values >50 ng/L."
+   },
+   {
+    "chunk_id": "zepbound:v40:106:1",
+    "quote": "Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND does not cause thyroid cancer, but the label excerpts mention the risk of thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in patients treated with ZEPBOUND. The excerpts also mention that it is unknown whether ZEPBOUND causes thyroid C-cell tumors in humans, but the risk is considered to be a potential concern.",
+  "verdict": "unsupported",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 291,
+  "prompt_tokens": 1826
+ }
+}

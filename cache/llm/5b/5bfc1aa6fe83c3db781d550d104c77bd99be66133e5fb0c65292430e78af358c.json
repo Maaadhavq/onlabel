@@ -1,0 +1,35 @@
+{
+ "key": "5bfc1aa6fe83c3db781d550d104c77bd99be66133e5fb0c65292430e78af358c",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:34:1",
+    "quote": "In this 52-week trial, 746 adult patients with type 2 diabetes mellitus were randomized to VICTOZA 1.2 mg, VICTOZA 1.8 mg, or glimepiride 8 mg."
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Table 3. Results of a 52-week Monotherapy Trial in Adults with Type 2 Diabetes Mellitus\n| VICTOZA 1.8 mg | VICTOZA 1.2 mg | - Glimepiride 8 mg\nIntent-to-Treat Population (N) | 246 | 251 | - 248\nHbA1c (%) (Mean) | | |\nBaseline | 8.2 | 8.2 | - 8.2\nChange from baseline (adjusted mean) | -1.1 | -0.8 | - -0.5"
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Table 3. Results of a 52-week Monotherapy Trial in Adults with Type 2 Diabetes Mellitus\n| VICTOZA Difference from glimepid 8 mg arm (adjusted mean) | -0.6** | -0.3* |"
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Table VICTOZA 1.8 1.2 mg | - Glimepiride 8 mg\nHbA1c (%) (Mean) Change from baseline (adjusted mean) | -1.1 | -0.8 | - -0.5"
+   }
+  ],
+  "reasoning": "The claim states that in a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 2.1%, compared with 0.5% for glimepiride 8 mg. According to Table 3 in excerpt victoza:v31:34:2, Table 3. Results of a 52-week Monotherapy Trial in Adults with Type 2 Diabetes Mellitus, Table 1.8 mg arm, 1.8 mg arm, HbA1c (%) (Mean) Change from baseline (adjusted mean) is -1.1. The claim'gradents' the reduction in A1C is 2.1%, which is not in the label. The glimepiride 8 mg arm, HbA1c (%) (Mean) Change from body baseline (adjusted mean) change from baseline (adjusted mean) is -0.5. The claim is contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 646,
+  "prompt_tokens": 2695
+ }
+}

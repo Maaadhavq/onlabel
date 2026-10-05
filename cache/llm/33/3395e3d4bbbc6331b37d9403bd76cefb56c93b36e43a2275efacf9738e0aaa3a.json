@@ -1,0 +1,29 @@
+{
+ "key": "3395e3d4bbbc6331b37d9403bd76cefb56c93b36e43a2275efacf9738e0aaa3a",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:2:0",
+    "quote": "Inject SAXENDA subcutaneously once daily at any time of day, without regard to the timing of meals."
+   },
+   {
+    "chunk_id": "saxenda:v22:35:4",
+    "quote": "SAXENDA is injected 1 time each day, at any time during the day."
+   },
+   {
+    "chunk_id": "saxenda:v22:35:4",
+    "quote": "SAXENDA may be taken with or without food."
+   }
+  ],
+  "reasoning": "The claim that SAXENDA is injected once daily at any time of day, regardless of when you eat, is fully supported by the label excerpts. The label explicitly states that it is injected once daily at any time of day and can be taken with or without food.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 194,
+  "prompt_tokens": 2597
+ }
+}

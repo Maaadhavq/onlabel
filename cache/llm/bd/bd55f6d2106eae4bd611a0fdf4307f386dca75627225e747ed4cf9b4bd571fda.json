@@ -1,0 +1,21 @@
+{
+ "key": "bd55f6d2106eae4bd611a0fdf4307f386dca75627225e747ed4cf9b4bd571fda",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:2:0",
+    "quote": "The recommended dose of JANUVIA is 100 mg once daily."
+   }
+  ],
+  "reasoning": "The claim states the recommended dose of JANUVIA is 100 mg once daily, which is explicitly stated in the excerpt 'januvia:v71:2:0'.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 98,
+  "prompt_tokens": 1767
+ }
+}

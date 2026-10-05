@@ -1,0 +1,16 @@
+{
+ "key": "9c23be220b5bd5d64334197b22a30cad6bf4e76936d2d13be8b60fe15be0689a",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The label excerpts provide data on weight loss efficacy and indications but contain no statement that ZEPBOUND is the most effective weight‑loss medicine available. The claim references a purported label statement that is not present in the excerpts, so the claim cannot be supported by the provided evidence.",
+  "verdict": "unsupported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 145,
+  "prompt_tokens": 2274
+ }
+}

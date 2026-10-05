@@ -1,0 +1,25 @@
+{
+ "key": "9781aa7e0a265f3826fe9ffc8b218f7e12f8600d55f6a30b74a08387afc2a171",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."
+   },
+   {
+    "chunk_id": "ozempic:v20:40:2",
+    "quote": "to reduce the risk of kidney disease worsening, kidney failure (end‑stage kidney disease), and death due to cardiovascular disease in adults with type 2 diabetes mellitus and chronic kidney disease."
+   }
+  ],
+  "reasoning": "The claim states that Ozempic reduces the risk of kidney failure. The FDA label excerpts explicitly state that Ozempic is indicated to reduce the risk of kidney disease worsening, kidney failure (end‑stage kidney disease), and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease. The clinical study excerpt also reports a reduction in the incidence of kidney failure. All factual elements of the claim are present in the excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 299,
+  "prompt_tokens": 2093
+ }
+}

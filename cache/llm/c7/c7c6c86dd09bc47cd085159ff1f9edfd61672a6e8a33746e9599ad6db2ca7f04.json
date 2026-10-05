@@ -1,0 +1,25 @@
+{
+ "key": "c7c6c86dd09bc47cd085159ff1f9edfd61672a6e8a33746e9599ad6db2ca7f04",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:43:2",
+    "quote": "RYBELSUS and OZEMPIC tablets are prescription medicines used: - along with diet and exercise to improve blood sugar (glucose) in adults with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "rybelsus:v14:1:0",
+    "quote": "RYBELSUS and OZEMPIC tablets are indicated: - as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS tablets improve blood sugar control in adults with type 2 diabetes along with diet and exercise. The label excerpts provided include this exact information.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 169,
+  "prompt_tokens": 1755
+ }
+}

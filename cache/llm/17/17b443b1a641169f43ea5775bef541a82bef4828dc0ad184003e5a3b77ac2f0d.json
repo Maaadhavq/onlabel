@@ -1,0 +1,16 @@
+{
+ "key": "17b443b1a641169f43ea5775bef541a82bef4828dc0ad184003e5a3b77ac2f0d",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim asserts that Ozempic has the most approved uses among GLP‑1 agents for adults with type 2 diabetes. The provided label excerpts describe Ozempic’s indications and clinical studies, but they do not compare Ozempic to other GLP‑1 drugs or state that it has the greatest number of approved uses. Therefore the claim cannot be verified or refuted based on the excerpts alone.",
+  "verdict": "unsupported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 170,
+  "prompt_tokens": 1954
+ }
+}

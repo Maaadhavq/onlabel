@@ -1,0 +1,21 @@
+{
+ "key": "a23df340bb54957ee877cc712c0b17900cfa49ae0fac2990b0b873328e34ba1c",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:51:2",
+    "quote": "Table 6: Glycemic Parameters in 18- and 24-Week Placebo-Controlled Studies of JANUVIA in Patients with Type 2 DiabetesIntent-to-treat population using last observation on study prior to metformin rescue therapy. | 18-Week Study | 24-Week Study | JANUVIA 100 mg | Placebo | JANUVIA 100 mg | Placebo | A1C (%) | N = 193 | N = 103 | N = 229 | N = 244 | Baseline (mean) | 8.0 | 8.1 | 8.0 | 8.0 | Change from baseline (adjusted mean Least squares means adjusted for prior antihyperglycemic therapy status and baseline value. ) | -0.5 | 0.1 | -0.6 | 0.2"
+   }
+  ],
+  "reasoning": "The claim states that in a 24-week study in adults with type 2 diabetes, A1C fell by 0.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo. The label excerpts provided (specifically Table 6 in excerpt januvia:v71:51:2) Table 6: Glycemic Parameters in 18- and 24-Week Placebo-Controlled Studies of JANUVIA in Patients with Type 2 Diabetes, shows that in the 24-week study, the Change from baseline (adjusted mean) for JANUVIA 100 mg was -0.6 and for Placebo was 0.2. This matches the change in A1C-related data in thetext. The population and timeframe-wise,-0.06% fall and 0 importance of 0.2% rise in the 24-week 24-week study in patients with type 2 diabetes. Therefore, the claim is supported. ",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 458,
+  "prompt_tokens": 1985
+ }
+}

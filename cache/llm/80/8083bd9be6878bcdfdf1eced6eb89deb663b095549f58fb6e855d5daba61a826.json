@@ -1,0 +1,23 @@
+{
+ "key": "8083bd9be6878bcdfdf1eced6eb89deb663b095549f58fb6e855d5daba61a826",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "OZEMPIC is indicated: - as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC improves blood sugar control in adults with type 1 or type 2 diabetes, but the label excerpts provided only support an indication for type 2 diabetes mellitus. Promoting a use for type 1 diabetes is an off-label use according to the provided text.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 135,
+  "prompt_tokens": 1933
+ }
+}

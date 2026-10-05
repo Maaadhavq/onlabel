@@ -1,0 +1,28 @@
+{
+ "key": "c9831c52dc1546b2d57bdfd995b0640e8a5d10e5d5b31e1d03bca56c0f8411a9",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "- Percent change from baseline (LSMean) | -7.4 | -3 | -5.4 | -1.7 | -4.9 | 0.3"
+   },
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3"
+   }
+  ],
+  "reasoning": "The label excerpts provide percent change from baseline for Study 3 as -4.9% for SAXENDA and 0.3% for placebo (Table 4). No excerpt reports an average weight loss of 12.4% with SAXENDA or 3% with placebo, so the claim’s numbers are not supported by the label.",
+  "verdict": "unsupported",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 398,
+  "prompt_tokens": 2642
+ }
+}

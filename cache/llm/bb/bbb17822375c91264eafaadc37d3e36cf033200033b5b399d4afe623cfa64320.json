@@ -1,0 +1,29 @@
+{
+ "key": "bbb17822375c91264eafaadc37d3e36cf033200033b5b399d4afe623cfa64320",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "Adjusted mean change from baseline | -0.5 | -0.4"
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "Treatment duration | 52 weeks"
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "Treatment in combination with | Oral agents"
+   }
+  ],
+  "reasoning": "The claim matches the data from Study E, a 52‑week trial in adults with type 2 diabetes on oral agents, where the adjusted mean HbA1c change was –0.5% for LANTUS and –0.4% for NPH insulin as shown in Table 11.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 317,
+  "prompt_tokens": 2265
+ }
+}

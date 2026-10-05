@@ -1,0 +1,28 @@
+{
+ "key": "17c3c77c2cde2eec24a09fc131dde4cf813f2fcf4a8f08f8b980e139d7f52656",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:52:9",
+    "quote": "After 52 weeks, JANUVIA and glipizide had similar mean reductions from baseline in A1C in the intent-to-trial analysis (Table 9)."
+   },
+   {
+    "chunk_id": "januvia:v71:51:1",
+    "quote": "Treatment with JANUVIA at 100 mg daily provided significant improvements in A1C ... compared to placebo (Table 6)."
+   }
+  ],
+  "reasoning": "The label excerpts provide data comparing JANUVIA to placebo and to glipizide, but do not contain any information indicating that JANUVIA lowers A1C more than all other oral diabetes medicines. Therefore the claim is not supported by the provided excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 329,
+  "prompt_tokens": 2160
+ }
+}

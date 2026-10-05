@@ -1,0 +1,21 @@
+{
+ "key": "7a227b44496b7c62142e7e03aadbdc8e69bff637328eed3c429b1daf703d0ed3",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity:\n\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition.\n- to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity."
+   }
+  ],
+  "reasoning": "The claim exactly matches the FDA label excerpt that states the indication, population, and requirement for a reduced‑calorie diet and increased physical activity.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 176,
+  "prompt_tokens": 2156
+ }
+}

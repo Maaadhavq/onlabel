@@ -1,0 +1,25 @@
+{
+ "key": "d81fb76ee4404f3b9d3c817c7f157d4f478beda632eff5c3daf74bc86884079e",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:3:0",
+    "quote": "Adults | ... | - 10 mg orally once daily in the morning, taken with or without food."
+   },
+   {
+    "chunk_id": "jardiance:v31:3:1",
+    "quote": "Pediatric patients aged 10 years and older | Glycemic control in type 2 diabetes mellitus | - 10 mg orally once daily in the morning, taken with or without food."
+   }
+  ],
+  "reasoning": "The claim states the dosage as 10 mg once daily in the morning, with or without food. The label excerpts Table 1 list the recommended dosage for adults (and pediatric patients ≥10 years) as \"10 mg orally once daily in the morning, taken with or without food.\" This matches the claim exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 282,
+  "prompt_tokens": 2008
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "key": "7c9d3a0c2c1f166de0f74d66496be7fba50d9dfd6ec6a29aae3e6bdfc9082fad",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:34:1",
+    "quote": "In this 52-week trial, 746 adult patients with type 2 diabetes mellitus were randomized to VICTOZA 1.2 mg, VICTOZA 1.8 mg, or glimepiride 8 mg."
+   },
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "| VICTOZA 1.8 mg | VICTOZA 1.2 mg | - Glimepiride 8 mg\n| Intent-to-Treat Population (N) | 246 | 251 | - 248\n| HbA1c (%) (Mean) |\n| Baseline | 8.2 | 8.2 | - 8.2\n| Change from baseline (adjusted mean) | -1.1 | -0.8 | - -0.5"
+   }
+  ],
+  "reasoning": "The claim states that in a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 1.1%, compared with 0.5% for glimepiride 8 mg. The label excerpts provided (victoza:v31:34:2) excerpting Table 3 (which is referenced in victoza:v31:34:1) and the data in the table in victova:v31:34:2 shows that in a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg had a change from baseline (adjusted mean) change from baseline (adjusted mean) of -1.1 and glimepiride 8 mg had a change froms baseline (adjusted mean) of -0.5. This matches the claim. ",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 426,
+  "prompt_tokens": 2435
+ }
+}

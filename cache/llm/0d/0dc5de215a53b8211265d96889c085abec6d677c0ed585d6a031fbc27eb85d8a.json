@@ -1,0 +1,25 @@
+{
+ "key": "0dc5de215a53b8211265d96889c085abec6d677c0ed585d6a031fbc27eb85d8a",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "ozempic:v20:40:2",
+    "quote": "- to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus with known heart disease."
+   }
+  ],
+  "reasoning": "The claim is supported by the indications section and the Medication Guide, which explicitly state that OZEMPIC is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 192,
+  "prompt_tokens": 1849
+ }
+}

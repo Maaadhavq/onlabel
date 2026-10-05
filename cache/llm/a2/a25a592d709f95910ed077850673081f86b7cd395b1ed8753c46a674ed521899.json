@@ -1,0 +1,23 @@
+{
+ "key": "a25a592d709f95910ed077850673081f86b7cd395b1ed8753c46a674ed521899",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "VICTOZA is indicated: - as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus,"
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA is used for type 1 diabetes, but the label excerpts provided state that the drug is indicated for type 2 diabetes mellitus in adults and pediatric patients aged 10 years and older. Therefore, the claim is off-label.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 142,
+  "prompt_tokens": 2460
+ }
+}

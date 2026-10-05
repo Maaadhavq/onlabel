@@ -1,0 +1,21 @@
+{
+ "key": "141aacfbd9c26bbb07c0550949e1e4beca7109730986cf352653d8c58a73fa2e",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:51:2",
+    "quote": "Table 6: Glycemic Parameters in 18- and 24-Week Placebo-Controlled Studies of JANUVIA in Patients with Type 2 DiabetesIntent-to-treat population using last observation on study prior to metformin rescue therapy.\n| 24-Week Study\n| JANUVIA 100 mg | Placebo\nA1C (%) | N = 229 | N = 244\nBaseline (mean) | 8.0 | 8.0\nChange from baseline (adjusted mean Least squares means adjusted for prior antihyperglycemic therapy status and baseline value. ) | -0.6 | 0.2"
+   }
+  ],
+  "reasoning": "The claim matches the data in Table 6 for the 24‑week study, which shows a change from baseline A1C of –0.6% for JANUVIA 100 mg and +0.2% for placebo in patients with type 2 diabetes. The study population and duration are consistent with the claim.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 386,
+  "prompt_tokens": 2177
+ }
+}

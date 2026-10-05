@@ -1,0 +1,25 @@
+{
+ "key": "a6f8436fd6580bf5e062b90f2cd538d1efad5e2ebd2833e94e40685c5bc7ee10",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:5",
+    "quote": "Table 4. Results at Week 56 in a Trial of OZEMPIC Compared to Sitagliptin in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin and/or Thiazolidinediones\n| OZEMPIC 0.5 mg | OZEMPIC 1 mg | Sitagliptin\nIntent-to-Treat (ITT) Population (N) | 409 | 409 | 407\n- Baseline (mean) | 8 | 8 | 8.2\n- Change at week 56 | -1.3 | -1.5 | -0.7\n- Difference from sitagliptin - [95% CI] | -0.6 [-0.7, -0.4] | -0.8 [-0.9, -0.6] |"
+   },
+   {
+    "chunk_id": "ozempic:v20:35:4",
+    "quote": "In a 56-week, double-blind trial (NCT01930188), 1231 patients with type 2 diabetes mellitus were randomized to OZEMPIC 0.5 mg once weekly, OZEMPIC 1 mg once weekly, or sitagliptin 100 mg once daily, all in combination with metformin (94%) and/or thiazolidinediones (6%)."
+   }
+  ],
+  "reasoning": "The claim is supported by Table 4 in excerpt ozempic:v20:35:5, which shows that in a 56-week trial of OZEMPIC 1 mg, the change at week 56 for HbA1c was -1.5%, compared to -0.7% for sitagliptin, in a population of adults with type 2 diabetes in combination with metformin and/or thiazolidinediones.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 441,
+  "prompt_tokens": 2355
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "key": "fbe867d7ba85cbb6ea38717d8bdf5ea91c10b74ab156b6767417d4e941c6c27d",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "It is not known if WEGOVY will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people."
+   },
+   {
+    "chunk_id": "wegovy:v19:9:0",
+    "quote": "It is unknown whether WEGOVY causes thyroid C-cell tumors, including MTC, in humans, as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY has been proven not to cause thyroid tumors in people, but the label excerpts state that it is unknown whether WEGOVY causes thyroid C-cell tumors, including MTC, in humans. This is a direct contradiction of the possible risk.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 198,
+  "prompt_tokens": 1792
+ }
+}

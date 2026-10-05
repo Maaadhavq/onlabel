@@ -1,0 +1,23 @@
+{
+ "key": "7c73919f8890b785b095d3b7216fb29fa29cdf002a39e613f8b6699eb7bd94ba",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO is used for children as young as 6, but the label excerpts provided indicate that the indication and clinical studies for pediatric patients are for those 10 years of age and older. Therefore, the claim is off-label.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 134,
+  "prompt_tokens": 2544
+ }
+}

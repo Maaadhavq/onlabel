@@ -1,0 +1,23 @@
+{
+ "key": "f471c3674e2c32a06fe8280d500674d47d047e7986d503125dedcf7a24ddd948",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "| Study 3 (Obesity or overweight with comorbidity following at least 5% weight loss with diet) | SAXENDA N=212 | Placebo N=210 | - Percent change from baseline (LSMean) | -4.9 | 0.3 |"
+   }
+  ],
+  "reasoning": "The claim states that in a 56-week study of adults with obesity or overweight with a weight-related condition, SAXENDA lost an average of 12.4% of body weight compared to 3% with placebo. However, the label excerpts provided (specifically Table 4 in excerpt saxenda:v22:31:7) Table 4 shows that for Study 3 (the 56-week trial for this population), the SAXENDA group's mean percent change from baseline (LSMean) LSMean is -4.9% and the placebo group's mean percent change from baseline (LSMean) LSMean is 0.3%. The claim's numbers (12.4% and 3%) do not match the table values for Study 3. Therefore, the claim is contradicted by the study 3 results in the table.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 299,
+  "prompt_tokens": 2528
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "key": "fbb1a82c5bdbc14044ea5d7cd2b6f5e45eeb36e51f0115913d49a519112d6baf",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "The recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week."
+   },
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "After one week at the 0.6 mg once daily dosage, increase the dosage to 1.2 mg injected subcutaneously once daily."
+   },
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "If additional glycemic control is required, increase the dosage to the maximum recommended dosage of 1.8 mg injected subcutaneously once daily after at least one week of treatment with the 1.2 mg once daily dosage."
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA is a once-weekly injection, but the label excerpts state that the recommended dosage is 0.6 mg injected subcutaneously once daily for one week, and then increased to 1.2 mg or 1.8 mg once daily. There is no mention of a once-weekly injection in the label excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 281,
+  "prompt_tokens": 1789
+ }
+}

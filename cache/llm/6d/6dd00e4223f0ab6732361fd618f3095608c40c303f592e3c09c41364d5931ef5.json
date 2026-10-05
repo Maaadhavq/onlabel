@@ -1,0 +1,25 @@
+{
+ "key": "6dd00e4223f0ab6732361fd618f3095608c40c303f592e3c09c41364d5931ef5",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "mounjaro:v40:46:0",
+    "quote": "The safety and effectiveness of MOUNJARO as an adjunct to diet and exercise to improve glycemic control in pediatric patients 10 years of age and older with type 2 diabetes mellitus have been established."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO improves blood sugar control in adults and children 10 years and older with type 2 diabetes. The label excerpts support this claim for adults, as stated in the Indications and Usage section (excerpt id: mounjaro:v40:1:0). For children 10 years and older, the claim is supported by the Pediatric Use section (excerpt id: mounjaro:v40:46:0), which states that the safety and effectiveness of MOUNJARO have been established in pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 281,
+  "prompt_tokens": 1775
+ }
+}

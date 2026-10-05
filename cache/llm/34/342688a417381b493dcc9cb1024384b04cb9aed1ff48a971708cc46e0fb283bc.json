@@ -1,0 +1,27 @@
+{
+ "key": "342688a417381b493dcc9cb1024384b04cb9aed1ff48a971708cc46e0fb283bc",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "- to reduce excess body weight and maintain weight reduction long term in:\n  - adults and pediatric patients aged 12 years and older with obesity."
+   },
+   {
+    "chunk_id": "wegovy:v19:28:0",
+    "quote": "The safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY injection helps children as young as 8 with obesity lose excess weight, but the label excerpts provided indicate that the indication for pediatric patients is for those aged 12 years and older. Therefore, the claim is off-label.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 201,
+  "prompt_tokens": 2290
+ }
+}

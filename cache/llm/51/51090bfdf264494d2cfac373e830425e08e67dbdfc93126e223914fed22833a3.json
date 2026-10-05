@@ -1,0 +1,18 @@
+{
+ "key": "51090bfdf264494d2cfac373e830425e08e67dbdfc93126e223914fed22833a3",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim states that in a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 1.9% with FARXIGA 10 mg, compared with 0.2% with placebo. However, the provided excerpts do not mention a 24-week trial of FARXIGA alone in adults with type 2 diabetes where FARXIGA 10 mg resulted in a 1.9% reduction in A1C compared to placebo. The closest trial mentioned is the one in excerpt id=",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 146,
+  "prompt_tokens": 2091
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "key": "220273ebf62d8392d2486cf13bb3f56e1d735b9f4f131a7eef6eb1bb4a982869",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:1",
+    "quote": "- to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."
+   },
+   {
+    "chunk_id": "wegovy:v19:39:0",
+    "quote": "Study 1 (NCT03574597) was a multi-national, multi-center, placebo-controlled, double-blind trial to determine the effect of WEGOVY injection relative to placebo on major adverse CV events (MACE) when added to current standard of care, which included management of CV risk factors and individualized healthy lifestyle counseling (including diet and physical activity) in adults with established CV disease and either obesity or overweight."
+   },
+   {
+    "chunk_id": "wegovy:v19:39:5",
+    "quote": "Composite of CV death, non-fatal myocardial infarction, or non-fatal stroke^1 | 701 (8%) | 569 (6.5%) | 0.8 (0.72; 0.9)^*,2"
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY injection reduces the risk of cardiovascular death, heart attack, and stroke in adults with established cardiovascular disease and either obesity or overweight. The label excerpts provide evidence to support this claim. Specifically, excerpt 'wegovy:v19:1:1' states that WEGOVY injection is indicated to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight. Excerpt 'wegovy:v19:39:0' describes a clinical trial that evaluated the effect of WEGOVY injection on major adverse CV events in adults with established CV disease and either obesity or overweight. The trial results, presented in excerpt 'wegovy:v19:39:5', show that WEGOVY injection reduced the risk of major adverse CV events compared to placebo. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 476,
+  "prompt_tokens": 2032
+ }
+}

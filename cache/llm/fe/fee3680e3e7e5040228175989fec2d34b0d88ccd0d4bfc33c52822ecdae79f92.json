@@ -1,0 +1,21 @@
+{
+ "key": "fee3680e3e7e5040228175989fec2d34b0d88ccd0d4bfc33c52822ecdae79f92",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:75:2",
+    "quote": "Table 5: Results at Week 40 in a Trial of MOUNJARO versus Semaglutide 1 mg in Adult Patients with Type 2 Diabetes Mellitus Added to Metformin\n| Semaglutide 1 mg | MOUNJARO 5 mg | MOUNJARO 10 mg | MOUNJARO 15 mg\n| Modified Intent-to-Treat (mITT) Population (N) | 468 | 470 | 469 | 469\n| HbA1c (%) | | | |\n| Baseline (mean) | 8.3 | 8.3 | 8.3 | 8.3\n| Change at Week 40 | -1.9 | -2.0 | -2.2 | -2.3\n| Difference from semaglutide (95% CI) | -- | -0.2 (-0.3, -0.0) | -0.4 (-0.5, -0.3) | -0.5 (-0.6, -0.3)"
+   }
+  ],
+  "reasoning": "The claim states that in SURPASS‑2 MOUNJARO gave a greater HbA1c reduction than semaglutide 1 mg. The label excerpts provide the exact comparison: Table 5 shows a change at Week 40 of –1.9 % for semaglutide 1 mg versus –2.2 % for MOUNJARO 10 mg and –2.3 % for MOUNJARO 15 mg, with a statistically significant difference. All elements of the claim (study name, drug, dose, outcome, and superiority) are present in the excerpts, so the claim is fully supported.\n",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 511,
+  "prompt_tokens": 2850
+ }
+}

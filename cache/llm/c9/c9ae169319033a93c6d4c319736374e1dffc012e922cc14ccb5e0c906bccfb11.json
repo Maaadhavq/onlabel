@@ -1,0 +1,33 @@
+{
+ "key": "c9ae169319033a93c6d4c319736374e1dffc012e922cc14ccb5e0c906bccfb11",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:79:3",
+    "quote": "ZEPBOUND 15 mg N = 630 | Placebo N = 315 | ... % Change from baseline | -20.9 | -3.2 | ..."
+   },
+   {
+    "chunk_id": "zepbound:v40:79:1",
+    "quote": "Among patients treated with ZEPBOUND 10 mg and 15 mg, greater proportions of patients achieved at least 10%, 15%, and 20% weight reduction compared to placebo (see Table 2)."
+   },
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity: ... to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   },
+   {
+    "chunk_id": "zepbound:v40:79:3",
+    "quote": "Table 2: Changes in Body Weight at Week 72 in Studies 1 and 2 in Patients with Obesity or Overweight"
+   }
+  ],
+  "reasoning": "The claim states that people taking ZEPBOUND 15 mg lost an average of 20.9% of their body weight, compared with 3.1% with placebo. The label excerpts provide a table (Table 2) that shows the changes in body weight at Week 72 in Studies 1 and 2. The table includes a row for ZEPBOUND 15 mg, which states that the average body weight loss was -20.9% compared to placebo. This matches the claim. However, the claim does not mention that the study was of adults with obesity or overweight, and that the weight loss was in a 72-week study. The label excerpts provide this information in the Indications and Usage section and in the Clinical Studies section, respectively. Therefore, the claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 447,
+  "prompt_tokens": 2228
+ }
+}

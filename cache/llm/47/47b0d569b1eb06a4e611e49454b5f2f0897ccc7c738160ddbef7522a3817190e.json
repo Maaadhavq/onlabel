@@ -1,0 +1,27 @@
+{
+ "key": "47b0d569b1eb06a4e611e49454b5f2f0897ccc7c738160ddbef7522a3817190e",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:2:0",
+    "quote": "The recommended dose of JANUVIA is 100 mg once daily."
+   },
+   {
+    "chunk_id": "januvia:v71:4:0",
+    "quote": "- 100 mg tablets are beige, round, film-coated tablets with \"277\" on one side."
+   }
+  ],
+  "reasoning": "The claim states that the recommended dose of JANUVIA is 100 mg once daily, which is supported by multiple excerpts, including the 'DOSAGE AND ADMINISTRATION' section (januvia:v71:2:0) and the 'DOSAGE FORMS AND STRENGTHS' section (januvia:v71:4:0).",
+  "verdict": "supported",
+  "violations": [
+   "overstated_efficacy"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 192,
+  "prompt_tokens": 1684
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "key": "b62b09d43e4d762b5c50d0b0deef08f9c21022a667467000cff1a8b80486b2ac",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:35:1",
+    "quote": "It is not known if SAXENDA is safe and effective in children aged 12 to 17 years with type 2 diabetes."
+   },
+   {
+    "chunk_id": "saxenda:v22:35:1",
+    "quote": "SAXENDA is an injectable prescription medicine used for adults with obesity or overweight (excess weight) who also have weight related medical problems, and children aged 12 to 17 years with a body weight above 132 pounds (60 kg) and obesity to help them lose weight and keep the weight off."
+   }
+  ],
+  "reasoning": "The label states it is not known if SAXENDA is safe and effective in children aged 12 to 17 years with type 2 diabetes, and the medication guide explicitly says it is not known if safe and effective in that population. Therefore the claim that it is \"proven safe and effective\" for teens with type 2 diabetes is not supported and promotes an unapproved use.",
+  "verdict": "off_label",
+  "violations": [
+   "overstated_efficacy",
+   "omitted_qualifier",
+   "broadened_indication",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 389,
+  "prompt_tokens": 2669
+ }
+}

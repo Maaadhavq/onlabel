@@ -1,0 +1,31 @@
+{
+ "key": "d12ce8028da573137fb4437a3be73e5f1c5884f012fea448e0d3a779ddadbbbd",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:0",
+    "quote": "The efficacy of OZEMPIC was compared with placebo, sitagliptin, exenatide extended-release (ER), and insulin glargine."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:1",
+    "quote": "In a 30-week double-blind trial (NCT02054897), 388 patients with type 2 diabetes mellitus inadequately controlled with diet and exercise were randomized to OZEMPIC 0.5 mg or OZEMPIC 1 mg once weekly or placebo."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:7",
+    "quote": "Treatment with OZEMPIC 1 mg once weekly for 56 weeks resulted in a statistically significant reduction in HbA1c compared to exenatide 2 mg once weekly (see Table 5)."
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC lowers A1C more than any other type 2 diabetes medicine. However, the label excerpts do not provide a direct comparison of OZEMPIC with other type 2 diabetes medicines. The excerpts do mention that OZEMPIC has been compared with placebo, sitagliptin, exenatide extended-release (ER), and insulin glargine in clinical trials, but they do not provide a statement that OZEMPIC lowers A1C more than any other type 2 diabetes medicine. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 355,
+  "prompt_tokens": 2197
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "key": "e9c6445d02fa9e1313c53ce2553aaccb8414f216ee1177c2f5f7dc29826b28a5",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:8:0",
+    "quote": "LANTUS is contraindicated:\n\n- During episodes of hypoglycemia [see Warnings and Precautions (5.3)]"
+   },
+   {
+    "chunk_id": "lantus:v35:66:0",
+    "quote": "Who should not use LANTUS? Do not use LANTUS if you: - are having an episode of low blood sugar (hypoglycemia)."
+   }
+  ],
+  "reasoning": "The claim states that LANTUS can be used safely during an episode of low blood sugar. The FDA label excerpts explicitly state that LANTUS is contraindicated during episodes of hypoglycemia and that it should not be used if the patient is having an episode of low blood sugar. Therefore the claim is directly contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 250,
+  "prompt_tokens": 2149
+ }
+}

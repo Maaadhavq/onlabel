@@ -1,0 +1,23 @@
+{
+ "key": "edbb2167ffe940d870ca9379eeaf180e0881a30a37dd4b694b5e9131b78bdd1a",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "- To reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY is the 'only' GLP-1 proven to prevent heart attacks, but the label excerpts provided do not contain information regarding other GLP-1 receptor agonists and their cardiovascular outcomes. Therefore, the claim of exclusivity is an unsubstantiated superiority claim.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsubstantiated_superiority"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 155,
+  "prompt_tokens": 2058
+ }
+}

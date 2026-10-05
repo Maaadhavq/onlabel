@@ -1,0 +1,21 @@
+{
+ "key": "41507a81ad7f850984e74a6679d2388c3e07dab482fce97c80d5e640fc53b4cb",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "The recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week."
+   }
+  ],
+  "reasoning": "The label states the recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week. The claim matches this wording exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 198,
+  "prompt_tokens": 1921
+ }
+}

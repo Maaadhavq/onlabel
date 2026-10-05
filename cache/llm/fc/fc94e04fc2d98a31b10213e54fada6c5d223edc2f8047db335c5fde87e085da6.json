@@ -1,0 +1,23 @@
+{
+ "key": "fc94e04fc2d98a31b10213e54fada6c5d223edc2f8047db335c5fde87e085da6",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "VICTOZA contains liraglutide. Coadministration with other liraglutide-containing products is not recommended."
+   }
+  ],
+  "reasoning": "The claim suggests that VICTOZA can be combined with other liraglutide products for extra benefit, but the label explicitly states that coadministration with other liraglutide-containing products is not recommended.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 118,
+  "prompt_tokens": 1976
+ }
+}

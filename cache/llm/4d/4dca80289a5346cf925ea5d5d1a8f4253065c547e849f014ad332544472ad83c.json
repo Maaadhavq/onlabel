@@ -1,0 +1,23 @@
+{
+ "key": "4dca80289a5346cf925ea5d5d1a8f4253065c547e849f014ad332544472ad83c",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:6:0",
+    "quote": "VICTOZA is contraindicated in patients with a: - personal or family history of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)"
+   }
+  ],
+  "reasoning": "The claim states that medical review confirmed VICTOZA is safe for patients with Multiple Endocrine Neoplasia syndrome type 2. However, the label excerpts clearly state that VICTOZA is contraindicated in patients with MEN 2, indicating that it is not safe for these patients.",
+  "verdict": "contradicted",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 172,
+  "prompt_tokens": 2540
+ }
+}

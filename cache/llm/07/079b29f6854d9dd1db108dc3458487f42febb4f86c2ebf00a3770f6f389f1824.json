@@ -1,0 +1,22 @@
+{
+ "key": "079b29f6854d9dd1db108dc3458487f42febb4f86c2ebf00a3770f6f389f1824",
+ "model_key": "groq/qwen3.8-27b",
+ "prompt_version": "split-v1",
+ "response": {
+  "claims": [
+   {
+    "kind": "indication",
+    "text": "ZEPBOUND helps adults with obesity lose excess weight and keep it off."
+   },
+   {
+    "kind": "efficacy",
+    "text": "In a 72-week study, people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight."
+   }
+  ]
+ },
+ "schema": "ClaimList",
+ "usage": {
+  "completion_tokens": 78,
+  "prompt_tokens": 211
+ }
+}

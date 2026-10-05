@@ -1,0 +1,13 @@
+{
+ "key": "05fee9aa8a0635bc841476bd11263c4899b2c9b65be276b5d8868272f5da985a",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "WEGOVY may cause serious side effects, including possible thyroid tumors and serious hypersensitivity reactions such as anaphylaxis and angioedema."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 58,
+  "prompt_tokens": 1171
+ }
+}

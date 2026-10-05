@@ -1,0 +1,31 @@
+{
+ "key": "5eefb31dd357ea5f47124abdec512033adc373d760e9b1e36d316398361e3c38",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "ozempic:v20:36:0",
+    "quote": "The primary endpoint, MACE, was the time to first occurrence of a three-part composite outcome which included cardiovascular death, non-fatal myocardial infarction and non-fatal stroke."
+   },
+   {
+    "chunk_id": "ozempic:v20:36:3",
+    "quote": "0.74 (0.58, 0.95)"
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC lowers the risk of heart attack and stroke for adults with type 2 diabetes. The label excerpts indicate that OZEMPIC is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease. The SUSTAIN 6 trial also supports this claim, showing a hazard ratio of 0.74 for the composite outcome of cardiovascular death, non-fatal myocardial infarction, and non-fatal stroke. However, the claim does not specify that the risk reduction is only for adults with established cardiovascular disease, which is a requirement for the indication. Therefore, the claim is supported with a qualifier.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 356,
+  "prompt_tokens": 1777
+ }
+}

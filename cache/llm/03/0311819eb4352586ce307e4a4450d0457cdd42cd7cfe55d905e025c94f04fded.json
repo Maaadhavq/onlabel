@@ -1,0 +1,21 @@
+{
+ "key": "0311819eb4352586ce307e4a4450d0457cdd42cd7cfe55d905e025c94f04fded",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:3:0",
+    "quote": "Administer LANTUS subcutaneously once daily at any time of day but at the same time every day."
+   }
+  ],
+  "reasoning": "The claim states LANTUS is injected three times a day with meals, but the label specifies administration once daily. The dosage instructions explicitly require once‑daily dosing, not multiple daily injections.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 244,
+  "prompt_tokens": 1996
+ }
+}

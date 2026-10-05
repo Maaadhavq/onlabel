@@ -1,0 +1,27 @@
+{
+ "key": "d3fb35efbc8189e960dd686ca14d1acf3938650cd2d3e4542501f8640814f926",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "To reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   },
+   {
+    "chunk_id": "trulicity:v62:82:2",
+    "quote": "to reduce the risk of major cardiovascular events such as death, heart attack, or stroke in adults with type 2 diabetes mellitus with known heart disease or multiple cardiovascular risk factors."
+   }
+  ],
+  "reasoning": "The label indicates the cardiovascular risk reduction is limited to adults with type 2 diabetes who have established cardiovascular disease or multiple cardiovascular risk factors, which the claim does not specify. Therefore the claim needs the qualifying condition.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 378,
+  "prompt_tokens": 1622
+ }
+}

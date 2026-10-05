@@ -1,0 +1,31 @@
+{
+ "key": "98686977c0841373ed348b51fe9d295b8e4b4cc353fbd502f3b9fc5e6adedadc",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:12:0",
+    "quote": "It is unknown whether ZEPBOUND causes thyroid C-cell tumors, including MTC, in humans as human relevance of tirzepatide-induced rodent thyroid C-cell tumors has not been determined."
+   },
+   {
+    "chunk_id": "zepbound:v40:12:1",
+    "quote": "Routine monitoring of serum calcitonin or using thyroid ultrasound is of uncertain value for early detection of MTC in patients treated with ZEPBOUND."
+   },
+   {
+    "chunk_id": "zepbound:v40:0:0",
+    "quote": "It is unknown whether ZEPBOUND causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of tirzepatide-induced rodent thyroid C-cell tumors has not been determined."
+   }
+  ],
+  "reasoning": "The label excerpts state that it is unknown whether ZEPBOUND causes thyroid C‑cell tumors, including medullary thyroid carcinoma, in humans. They do not assert that ZEPBOUND does not cause thyroid cancer. Therefore the claim that ZEPBOUND does not cause thyroid cancer is not supported by the label.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 355,
+  "prompt_tokens": 2093
+ }
+}

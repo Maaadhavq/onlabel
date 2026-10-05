@@ -1,0 +1,27 @@
+{
+ "key": "8c428567931fbdf625f010d8ad53953318559008c259c63e249c9b619f0c62c9",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:0:0",
+    "quote": "- In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures. It is unknown whether RYBELSUS and OZEMPIC tablets cause thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined [see Warnings and Precautions (5.1), Nonclinical Toxicology (13.1)]."
+   },
+   {
+    "chunk_id": "rybelsus:v14:8:0",
+    "quote": "In mice and rats, semaglutide caused a dose-dependent and treatment-duration-dependent increase in the incidence of thyroid C-cell tumors (adenomas and carcinomas) after lifetime exposure at clinically relevant plasma exposures [see Nonclinical Toxicology (13.1)]. It is unknown whether RYBELSUS and OZEMPIC tablets cause thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined."
+   }
+  ],
+  "reasoning": "The label excerpts explicitly state that semaglutide (the active ingredient in RYBELSUS) causes thyroid C‑cell tumors in rodents and that the human relevance is unknown, and that patients should be counseled about the potential risk for medullary thyroid carcinoma (MTC). The claim that RYBELSUS carries no risk of thyroid tumors directly contradicts these statements.",
+  "verdict": "contradicted",
+  "violations": [
+   "missing_risk_information"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 550,
+  "prompt_tokens": 2292
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "key": "dd30ad2f647f9f4dc5d926cd1d811a41a0e3501adf53a7bcaf5238147a8f7b8c",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:0:0",
+    "quote": "To reduce the risk of sustained eGFR decline, end-stage kidney disease, cardiovascular (CV) death, and hospitalization for heart failure in adults with chronic kidney disease at risk of progression."
+   }
+  ],
+  "reasoning": "The claim is directly supported by the Indications and Usage section of the label, which explicitly states the drug is indicated to reduce the risk of sustained eGFR decline, end-stage kidney disease, cardiovascular (CV) death, and hospitalization for heart failure in adults with chronic kidney disease at risk of progression.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 140,
+  "prompt_tokens": 1815
+ }
+}

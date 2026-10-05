@@ -1,0 +1,24 @@
+{
+ "key": "cec165e5cea3a0200ab3a0c5ab651e3e77fc7840a53a73bd00871f4f006185ee",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "To reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   }
+  ],
+  "reasoning": "The label states that TRULICITY reduces the risk of major adverse cardiovascular events, which includes non‑fatal myocardial infarction, but it does not claim that TRULICITY is the only GLP‑1 agonist proven to prevent heart attacks. Therefore the claim of exclusivity is not supported by the excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim",
+   "overstated_efficacy"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 440,
+  "prompt_tokens": 2479
+ }
+}

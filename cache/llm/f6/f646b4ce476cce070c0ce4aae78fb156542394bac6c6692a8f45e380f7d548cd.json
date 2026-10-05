@@ -1,0 +1,27 @@
+{
+ "key": "f646b4ce476cce070c0ce4aae78fb156542394bac6c6692a8f45e380f7d548cd",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:68:1",
+    "quote": "At the 26-week placebo-controlled time point, the HbA1c change was 0.1%, -1.0%, -1.2%, and -0.6% for placebo, TRULICITY 0.75 mg, TRULICITY 1.5 mg, and sitagliptin, respectively."
+   },
+   {
+    "chunk_id": "trulicity:v62:67:1",
+    "quote": "Treatment with TRULICITY 0.75 mg and 1.5 mg once weekly resulted in reduction in HbA1c from baseline at 26-weeks (Table 4)."
+   }
+  ],
+  "reasoning": "The provided label excerpts give HbA1c changes for TRULICITY 1.5 mg (e.g., -1.2% in a combination trial) but do not report a 1.8% reduction nor provide a metformin reduction of 0.6% in a 26‑week monotherapy trial. No excerpt contains the specific numbers claimed.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 501,
+  "prompt_tokens": 2668
+ }
+}

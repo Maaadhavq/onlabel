@@ -1,0 +1,27 @@
+{
+ "key": "f81e839a0b9e23e60c3280674736e86e2c4e7dc6503883f7d605ecd6fcabd651",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:38:1",
+    "quote": "Change at Week 26 | -0.3 | -1.2 | -1.4"
+   },
+   {
+    "chunk_id": "rybelsus:v14:38:1",
+    "quote": "Difference from placebo - [95% CI] | | -0.9 [-1.1; -0.6] | -1.1 [-1.3; -0.9]"
+   }
+  ],
+  "reasoning": "The claim states that in a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.4% with the 14 mg tablet, compared with 0.3% with placebo. The label excerpts provide information on clinical trials, but none of them directly support the claim. However, Table 4 in excerpt id=",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 229,
+  "prompt_tokens": 2453
+ }
+}

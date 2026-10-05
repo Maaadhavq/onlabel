@@ -1,0 +1,23 @@
+{
+ "key": "1c719ceafb4a104146b1cb880ae2357e63c0b8421a9cd2c725d8adb2dbdeaef6",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:5:0",
+    "quote": "MOUNJARO is contraindicated in patients with: - A personal or family history of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2) [see Warnings and Precautions (5.1)]."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma, but the label explicitly states that it is contraindicated in such patients.",
+  "verdict": "contradicted",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 139,
+  "prompt_tokens": 1760
+ }
+}

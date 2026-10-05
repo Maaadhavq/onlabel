@@ -1,0 +1,18 @@
+{
+ "key": "01e3e2b03d288c27f04eaf6798b19a8983ebb46bbfca66271ecdd4ae37e0b27d",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim states that people with a family history of medullary thyroid carcinoma can safely use WEGOVY. However, the label excerpts clearly state that WEGOVY is contraindicated in patients with a personal or family history of MTC or in patients with MEN 2. This indicates that the claim is contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 109,
+  "prompt_tokens": 1934
+ }
+}

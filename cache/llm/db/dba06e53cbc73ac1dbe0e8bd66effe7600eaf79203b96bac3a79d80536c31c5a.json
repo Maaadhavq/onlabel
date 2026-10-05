@@ -1,0 +1,33 @@
+{
+ "key": "dba06e53cbc73ac1dbe0e8bd66effe7600eaf79203b96bac3a79d80536c31c5a",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Cardiovascular death | 219 (4.7%) | 278 (6%) | 0.78 (0.66;0.93)"
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Non-fatal myocardial infarction | 281 (6.0%) | 317 (6.8%) | 0.88 (0.75;1.03)"
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Non-fatal stroke | 159 (3.4%) | 177 (3.8%) | 0.89 (0.72;1.11)"
+   }
+  ],
+  "reasoning": "The indication section states VICTOZA is to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes and established cardiovascular disease. The trial data show hazard ratios <1 for each component, confirming risk reduction.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 454,
+  "prompt_tokens": 2205
+ }
+}

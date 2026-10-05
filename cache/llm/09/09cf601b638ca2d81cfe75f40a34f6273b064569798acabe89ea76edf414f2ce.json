@@ -1,0 +1,31 @@
+{
+ "key": "09cf601b638ca2d81cfe75f40a34f6273b064569798acabe89ea76edf414f2ce",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "VICTOZA is indicated: - as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus,"
+   },
+   {
+    "chunk_id": "victoza:v31:34:5",
+    "quote": "The mean age of participants was 57 years, and the mean duration of diabetes was 7 years. Participants were 58.2% male, 87.1% White and 2.4% Black or African American. The mean BMI was 31.0 kg/m^2."
+   },
+   {
+    "chunk_id": "victoza:v31:34:25",
+    "quote": "Table 10. Results of a 26-week Trial of VICTOZA as Add-on to Metformin and Thiazolidinedione in Adult Patients with Type 2 Diabetes Mellitus"
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA improves blood sugar control in people with type 1 diabetes, but the label excerpts only mention type 2 diabetes mellitus. There is no mention of type 1 diabetes in the indications or clinical studies sections.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 299,
+  "prompt_tokens": 2396
+ }
+}

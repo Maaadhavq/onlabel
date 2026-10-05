@@ -1,0 +1,31 @@
+{
+ "key": "6cb5f1a5684f7f9cb07e6ca8c9c3fbf918f3ae099484e3cff7e09f7a2d5c5109",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."
+   },
+   {
+    "chunk_id": "wegovy:v19:1:1",
+    "quote": "to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:2",
+    "quote": "reduce the risk of major cardiovascular events such as death, heart attack, or stroke in adults with known heart disease and with either obesity or overweight."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY reduces the risk of heart attack and stroke, but the label excerpts only support this claim for adults with established CV disease and either obesity or overweight. The excerpts do not mention the general population or all adults.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 265,
+  "prompt_tokens": 2302
+ }
+}

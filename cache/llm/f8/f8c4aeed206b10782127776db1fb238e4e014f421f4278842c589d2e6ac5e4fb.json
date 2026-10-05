@@ -1,0 +1,27 @@
+{
+ "key": "f8c4aeed206b10782127776db1fb238e4e014f421f4278842c589d2e6ac5e4fb",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:8:0",
+    "quote": "It is unknown whether RYBELSUS and OZEMPIC tablets cause thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:1",
+    "quote": "Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS carries no risk of thyroid tumors, but the label excerpts mention the potential risk of thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in patients treated with RYBELSUS. The excerpts also mention that it is unknown whether RYBELSUS causes thyroid C-cell tumors in humans, but that cases of MTC have been reported in patients treated with another GLP-1 receptor agonist, liraglutide. Furthermore, the Medication Guide warns patients about the potential risk of thyroid tumors, including cancer, and advises them to report symptoms to their physician.",
+  "verdict": "unsupported",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 308,
+  "prompt_tokens": 2045
+ }
+}

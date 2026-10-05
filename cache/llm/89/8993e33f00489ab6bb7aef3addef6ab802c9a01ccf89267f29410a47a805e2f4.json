@@ -1,0 +1,18 @@
+{
+ "key": "8993e33f00489ab6bb7aef3addef6ab802c9a01ccf89267f29410a47a805e2f4",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim states to take RYBELSUS once daily with breakfast, but the label excerpts specify to take RYBELSUS on an empty stomach in the morning with water.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 75,
+  "prompt_tokens": 2099
+ }
+}

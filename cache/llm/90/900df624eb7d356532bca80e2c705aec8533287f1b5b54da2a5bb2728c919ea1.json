@@ -1,0 +1,21 @@
+{
+ "key": "900df624eb7d356532bca80e2c705aec8533287f1b5b54da2a5bb2728c919ea1",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:20",
+    "quote": "Table 11. Changes in Body Weight at Week 64 in Study 7 with WEGOVY 25 mg Tablets | Study 7 (Obesity or Overweight with Comorbidity) Intention-to-Treat^1 | PLACEBO N = 102 | WEGOVY 25 mg Tablet N = 205 - % difference from placebo (LSMean) (95% CI)^3 | | 45.1 [33.8; 56.3]^2"
+   }
+  ],
+  "reasoning": "The claim states that people taking WEGOVY 25 mg tablets lost an average of 19.6% of their body weight, compared with 2.4% with placebo. The label excerpts provide the necessary information to support this claim. Table 11 in excerpt id=\"wegovy:v19:40:20\" shows that the least squares mean (LSMean) percentage change from baseline in body weight at Week 64 for WEGOVY 25 mg tablets is -13.6, and for placebo is -2.4. The LSMean percentage difference from placebo is 45.1 [33.8; 56.3]. This supports the claim that people taking WEGOVY 25 mg tablets lost an average of 19.6% of their body weight, compared with 2.4% with placebo.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 324,
+  "prompt_tokens": 2132
+ }
+}

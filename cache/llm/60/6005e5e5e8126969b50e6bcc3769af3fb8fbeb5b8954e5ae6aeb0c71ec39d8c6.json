@@ -1,0 +1,31 @@
+{
+ "key": "6005e5e5e8126969b50e6bcc3769af3fb8fbeb5b8954e5ae6aeb0c71ec39d8c6",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:0:0",
+    "quote": "Liraglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures in both genders of rats and mice."
+   },
+   {
+    "chunk_id": "saxenda:v22:6:0",
+    "quote": "Liraglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors (adenomas and/or carcinomas) at clinically relevant exposures in both genders of rats and mice"
+   },
+   {
+    "chunk_id": "saxenda:v22:35:2",
+    "quote": "In studies with rats and mice, SAXENDA and medicines that work like SAXENDA caused thyroid tumors, including thyroid cancer."
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA has no risk of thyroid tumors, but the label excerpts state that liraglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures in both genders of rats and mice. Additionally, the excerpts mention that it is unknown whether SAXENDA causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans. Furthermore, the excerpts state that cases of MTC in patients treated with liraglutide have been reported in the postmarketing period, and that it is not known if SAXENDA will cause thyroid tumors or MTC in people. Therefore, the claim is contradicted by the label excerpts.",
+  "verdict": "contradicted",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 337,
+  "prompt_tokens": 1956
+ }
+}

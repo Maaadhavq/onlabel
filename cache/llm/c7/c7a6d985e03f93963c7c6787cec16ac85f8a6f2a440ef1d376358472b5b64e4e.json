@@ -1,0 +1,23 @@
+{
+ "key": "c7a6d985e03f93963c7c6787cec16ac85f8a6f2a440ef1d376358472b5b64e4e",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:35:1",
+    "quote": "It is not known if SAXENDA is safe and effective in children aged 12 to 17 years with type 2 diabetes."
+   }
+  ],
+  "reasoning": "The claim states SAXENDA is proven safe and effective for teens with type 2 diabetes, but the label explicitly states it is not known if the drug is safe and effective in children aged 12 to 17 years with type 2 diabetes.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 132,
+  "prompt_tokens": 2412
+ }
+}

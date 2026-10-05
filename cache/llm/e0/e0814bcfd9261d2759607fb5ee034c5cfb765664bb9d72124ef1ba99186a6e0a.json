@@ -1,0 +1,21 @@
+{
+ "key": "e0814bcfd9261d2759607fb5ee034c5cfb765664bb9d72124ef1ba99186a6e0a",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity: - to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   }
+  ],
+  "reasoning": "The claim is supported by the Indications and Usage section, better described as a combination of the Indications and Usage and Clinical Studies section. The claim'ss elements (diet/exercise, population, and weight reduction/maintenance) are all explicitly stated in excerpt zepbound:v40:1:0 and and the Clinical Studies section.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 164,
+  "prompt_tokens": 1991
+ }
+}

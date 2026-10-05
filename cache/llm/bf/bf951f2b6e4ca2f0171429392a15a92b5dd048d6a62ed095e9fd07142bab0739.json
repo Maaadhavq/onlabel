@@ -1,0 +1,25 @@
+{
+ "key": "bf951f2b6e4ca2f0171429392a15a92b5dd048d6a62ed095e9fd07142bab0739",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity."
+   },
+   {
+    "chunk_id": "saxenda:v22:21:0",
+    "quote": "The safety and effectiveness of SAXENDA as an adjunct to a reduced-calorie diet and increased physical activity for chronic weight management have been established in pediatric patients aged 12 years and older with body weight above 60 kg and an initial BMI corresponding to 30 kg/m^2 or greater for adults (obese) by international cut-offs."
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA helps adults and children 12 and older who weigh more than 60 kg and have obesity lose excess weight and keep it off. The label excerpts support this claim, as they indicate that SAXENDA is indicated for adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity. The excerpts also mention that the safety and effectiveness of SAXENDA have been established in pediatric patients aged 12 years and older with body weight above 60 kg and an initial BMI corresponding to 30 kg/m^2 or greater for adults (obese) by international cut-offs. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 307,
+  "prompt_tokens": 1855
+ }
+}

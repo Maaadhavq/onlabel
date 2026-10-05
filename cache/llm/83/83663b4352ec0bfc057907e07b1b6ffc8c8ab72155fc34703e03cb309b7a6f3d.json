@@ -1,0 +1,27 @@
+{
+ "key": "83663b4352ec0bfc057907e07b1b6ffc8c8ab72155fc34703e03cb309b7a6f3d",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:1:0",
+    "quote": "as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:2",
+    "quote": "It is not known if RYBELSUS and OZEMPIC tablets are safe and effective for use in children."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS tablets improve blood sugar control in adults and children with type 2 diabetes. The label excerpts indicate that RYBELSUS tablets are indicated for improving glycemic control in adults with type 2 diabetes mellitus, but there is no mention of children. The claim is therefore off-label for children.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 201,
+  "prompt_tokens": 1867
+ }
+}

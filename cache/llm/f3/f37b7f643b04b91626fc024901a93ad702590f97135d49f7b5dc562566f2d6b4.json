@@ -1,0 +1,25 @@
+{
+ "key": "f37b7f643b04b91626fc024901a93ad702590f97135d49f7b5dc562566f2d6b4",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:3:0",
+    "quote": "Administer LANTUS subcutaneously once daily at any time of day but at the same time every day."
+   },
+   {
+    "chunk_id": "lantus:v35:66:2",
+    "quote": "You may take LANTUS at any time during the day but you must take it at the same time every day."
+   }
+  ],
+  "reasoning": "The claim is supported by the label excerpts, which explicitly state that LANTUS should be administered subcutaneously once daily at any time of day but at the same time every day.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 145,
+  "prompt_tokens": 1809
+ }
+}

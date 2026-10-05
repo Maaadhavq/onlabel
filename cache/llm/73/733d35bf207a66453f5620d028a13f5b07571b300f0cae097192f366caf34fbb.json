@@ -1,0 +1,25 @@
+{
+ "key": "733d35bf207a66453f5620d028a13f5b07571b300f0cae097192f366caf34fbb",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:2",
+    "quote": "Change at week 30 | - -0.1 | - -1.4 | - -1.6"
+   },
+   {
+    "chunk_id": "ozempic:v20:35:2",
+    "quote": "Difference from placebo [95% - CI] | | - -1.2 [-1.5, -0.9] | - -1.4 [-1.7, -1.1]"
+   }
+  ],
+  "reasoning": "The claim states that in a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.6% with OZEMPIC 1 mg, compared with 0.1% with placebo. The label excerpts provide a table (Table 3) that shows the results of a 30-week trial of OZEMPIC as monotherapy in adult patients with type 2 diabetes mellitus inadequately controlled with diet and exercise. The table shows that the change in HbA1c at week 30 was -0.1% for placebo, -1.4% for OZEMPIC 0.5 mg, and -1.6% for OZEMPIC 1 mg. The claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 315,
+  "prompt_tokens": 2331
+ }
+}

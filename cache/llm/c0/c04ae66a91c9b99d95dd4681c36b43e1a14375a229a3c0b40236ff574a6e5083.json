@@ -1,0 +1,13 @@
+{
+ "key": "c04ae66a91c9b99d95dd4681c36b43e1a14375a229a3c0b40236ff574a6e5083",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Wegovy injection, used with a reduced‑calorie diet and increased physical activity, is indicated to reduce the risk of major adverse cardiovascular events (CV death, non‑fatal myocardial infarction, or non‑fatal stroke) in adults with established cardiovascular disease and either obesity or overweight."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 78,
+  "prompt_tokens": 1696
+ }
+}

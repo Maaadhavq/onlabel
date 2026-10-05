@@ -1,0 +1,23 @@
+{
+ "key": "831d6adfc3085c73176c3ea5bffaa8e3d50b612c3e3d60c2d25eea16d079bdc0",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:79:3",
+    "quote": "Table 2: Changes in Body Weight at Week 72 in Studies 1 and 2 in Patients with Obesity or Overweight % Change from baseline | -3.1 | -15.0 | -19.5 | -20.9 | -3.2 | -12.8 | -14.7"
+   }
+  ],
+  "reasoning": "The claim states that people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight, compared with 3.1% with placebo. However, the label excerpts do not support this claim. Table 2 in excerpt zepbound:v40:79:3 shows the % change from baseline for ZEPBOUND 15 mg as -20.9, not 25.9. The claim is also contradicted by excerpt zepbound:v40:79:1, which states that ZEPBOUND resulted in a statistically significant reduction in body weight compared with placebo, but does not provide a specific percentage for ZEPBOUND 15 mg. Therefore, the verdict is: contradicted.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 268,
+  "prompt_tokens": 2228
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "key": "bde5e76ee4601217ae7a67153671f283aff06b1ba6048356286aa17cd0bf4f7c",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:2:0",
+    "quote": "The recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly."
+   },
+   {
+    "chunk_id": "trulicity:v62:2:0",
+    "quote": "The maximum recommended dosage is 4.5 mg injected subcutaneously once weekly."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY is injected once daily, but the label excerpts do not support this claim. The recommended starting dosage is 0.75 mg injected subcutaneously once weekly, and the maximum recommended dosage is 4.5 mg injected subcutaneously once weekly. There is no mention of injecting TRULICITY once daily in the label excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 194,
+  "prompt_tokens": 1551
+ }
+}

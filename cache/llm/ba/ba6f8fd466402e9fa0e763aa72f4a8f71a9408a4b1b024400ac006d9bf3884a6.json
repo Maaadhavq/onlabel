@@ -1,0 +1,25 @@
+{
+ "key": "ba6f8fd466402e9fa0e763aa72f4a8f71a9408a4b1b024400ac006d9bf3884a6",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "To reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   },
+   {
+    "chunk_id": "trulicity:v62:77:0",
+    "quote": "The primary endpoint was the time to the first occurrence of a composite 3-component Major Adverse Cardiovascular Events (MACE) outcome, which included CV death, non-fatal myocardial infarction (MI), and non-fatal stroke."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY reduces the risk of heart attack and stroke in adults with type 2 diabetes. The label excerpts provide evidence that TRULICITY is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors. This matches the claim. Additionally, the REWIND trial excerpt provides specific details about the trial, including the population, treatment, and outcome, which supports the claim. Therefore, the claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 304,
+  "prompt_tokens": 1333
+ }
+}

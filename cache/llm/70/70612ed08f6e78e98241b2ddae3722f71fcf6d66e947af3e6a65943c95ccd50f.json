@@ -1,0 +1,13 @@
+{
+ "key": "70612ed08f6e78e98241b2ddae3722f71fcf6d66e947af3e6a65943c95ccd50f",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "In a 72‑week study, patients treated with ZEPBOUND had a statistically significant greater mean percent change in body weight compared to placebo, and a greater proportion achieved at least 5%, 10%, 15%, and 20% weight reduction from baseline."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 158,
+  "prompt_tokens": 740
+ }
+}

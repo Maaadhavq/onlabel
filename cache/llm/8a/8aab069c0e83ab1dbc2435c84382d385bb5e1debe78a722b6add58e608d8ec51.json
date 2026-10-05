@@ -1,0 +1,27 @@
+{
+ "key": "8aab069c0e83ab1dbc2435c84382d385bb5e1debe78a722b6add58e608d8ec51",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:51:2",
+    "quote": "Table 6: Glycemic Parameters in 18- and 24-Week Placebo-Controlled Studies of JANUVIA in Patients with Type 2 DiabetesIntent-to-treat population using last observation on study prior to metformin rescue therapy."
+   },
+   {
+    "chunk_id": "januvia:v71:51:2",
+    "quote": "| 24-Week Study | 24-Week Study |  | JANUVIA 100 mg | Placebo |  | A1C (%) | N = 229 | N = 244 |  | Change from baseline (adjusted mean Least squares means adjusted for prior antihyperglycemic therapy status and baseline value. ) | -0.6 | 0.2 |  | Difference from placebo (adjusted mean) (95% CI) | -0.8 (-1.0, -0.6) |"
+   }
+  ],
+  "reasoning": "The claim states that in a 24-week study in adults with type 2 diabetes, A1C fell by 1.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo. The label excerpts provide a table (Table 6) that shows the results of a 24-week study. The table states that the adjusted mean change from baseline in A1C was -0.6% for JANUVIA 100 mg and 0.2% for placebo. The claim's figure of 1.6% is not supported by the label excerpts. However, the claim's figure of 0.2% is supported by the label excerpts. Therefore, the claim is partially supported, but it is overstated in its claim of a 1.6% reduction in A1C with JANUVIA 100 mg.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "overstated_efficacy"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 426,
+  "prompt_tokens": 1883
+ }
+}

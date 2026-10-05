@@ -1,0 +1,25 @@
+{
+ "key": "c840ae262603a2624d3d5fd9e10bdbd4dabf7eb00e131b17167c08907a2dd314",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:76:5",
+    "quote": "CV death | 137 (5.9%) | 172 (3.7%) | 0.62 (0.49, 0.77)"
+   },
+   {
+    "chunk_id": "jardiance:v31:76:0",
+    "quote": "The effect of JARDIANCE on cardiovascular (CV) risk in adult patients with type 2 diabetes mellitus and established, stable, atherosclerotic CV disease was evaluated in the EMPA-REG OUTCOME trial"
+   }
+  ],
+  "reasoning": "The claim states the percentages for cardiovascular death in the EMPA-REG OUTCOME trial, which are directly reported in Table 15 of the label excerpts as 3.7% for JARDIANCE and 5.9% for placebo. The claim’s population (adults with type 2 diabetes and atherosclerotic cardiovascular disease) matches the study description in the label.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 291,
+  "prompt_tokens": 2353
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "key": "259e6f92df6f38a72ddcac8905f6741f63ab29774e2417fa68b6c0b34feb6410",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in:"
+   },
+   {
+    "chunk_id": "saxenda:v22:31:0",
+    "quote": "The safety and efficacy of SAXENDA for chronic weight management in conjunction with reduced caloric intake and increased physical activity were studied in three 56-week, randomized, double-blind, placebo-controlled trials."
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA helps adults and teens with obesity lose excess weight and keep it off. The label excerpts indicate that SAXENDA is indicated for adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity, and for adults with overweight in the presence of at least one weight-related comorbid condition. The excerpts also mention that the safety and efficacy of SAXENDA for chronic weight management in conjunction with reduced caloric intake and increased physical activity were studied in three 56-week, randomized, double-blind, placebo-controlled trials. However, the claim does not specify that the weight loss is in conjunction with a reduced calorie diet and increased physical activity, which is a requirement for the use of SAXENDA. Therefore, the claim is not entirely supported by the label excerpts.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 318,
+  "prompt_tokens": 1823
+ }
+}

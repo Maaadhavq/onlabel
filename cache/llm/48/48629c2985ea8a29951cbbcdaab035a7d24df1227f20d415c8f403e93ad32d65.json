@@ -1,0 +1,31 @@
+{
+ "key": "48629c2985ea8a29951cbbcdaab035a7d24df1227f20d415c8f403e93ad32d65",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:106:1",
+    "quote": "ZEPBOUND may cause serious side effects, including: - Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rats, ZEPBOUND and medicines that work like ZEPBOUND caused thyroid tumors, including thyroid cancer. It is not known if ZEPBOUND will cause thyroid tumors, or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people."
+   },
+   {
+    "chunk_id": "zepbound:v40:12:0",
+    "quote": "Counsel patients regarding the potential risk for MTC with the use of ZEPBOUND and inform them of symptoms of thyroid tumors (e.g., a mass in the neck, dysphagia, dyspnea, hoarseness)."
+   },
+   {
+    "chunk_id": "zepbound:v40:0:0",
+    "quote": "It is unknown whether ZEPBOUND causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of tirzepatide-induced rodent thyroid C-cell tumors has not been determined [see Warnings and Precautions (5.1) and Nonclinical Toxicology (13.1)]."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND does not cause thyroid cancer, but the label excerpts state that it is unknown if the drug causes thyroid tumors or cancer in humans. Furthermore, the label explicitly mentions a potential risk for MTC and advises counseling patients regarding this risk.",
+  "verdict": "contradicted",
+  "violations": [
+   "minimized_risk"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 371,
+  "prompt_tokens": 1826
+ }
+}

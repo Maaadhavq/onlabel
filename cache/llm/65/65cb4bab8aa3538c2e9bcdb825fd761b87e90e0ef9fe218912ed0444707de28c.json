@@ -1,0 +1,21 @@
+{
+ "key": "65cb4bab8aa3538c2e9bcdb825fd761b87e90e0ef9fe218912ed0444707de28c",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:99:0",
+    "quote": "Adults taking WEGOVY tablets lost 30% of their body weight."
+   }
+  ],
+  "reasoning": "The label excerpt states that adults taking WEGOVY tablets lost 30% of their body weight, which matches the claim verbatim. No additional qualifiers or conditions are required, and no other excerpts contradict or omit information.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 164,
+  "prompt_tokens": 2416
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "key": "726ab55c22d61b20fcd745a479014c0b34cc77bff37deeecebcf09e33b162249",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:36:0",
+    "quote": "In this study, 9,340 adult patients with inadequately controlled type 2 diabetes mellitus and atherosclerotic cardiovascular disease (CVD) were randomized to VICTOZA 1.8 mg or placebo for a median duration of 3.5 years."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "The estimated hazard ratio (95% CI) for time to first MACE was 0.87 (0.78, 0.97)."
+   },
+   {
+    "chunk_id": "victoza:v31:36:3",
+    "quote": "VICTOZA significantly reduced the occurrence of MACE. The estimated hazard ratio (95% CI) for time to first MACE was 0.87 (0.78, 0.97)."
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes and established cardiovascular disease. The label excerpts provide evidence for this claim. The LEADER trial, a multi-national, multi-center, placebo-controlled, double-blind trial, was conducted to test the efficacy of VICTOZA in reducing the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease. The trial included 9,340 adult patients who were randomized to VICTOZA 1.8 mg or placebo for a median duration of 3.5 years. The primary endpoint was the time to first occurrence of a three-part composite outcome, which included cardiovascular death, non-fatal myocardial infarction, and non-fatal stroke. The results of the trial showed that VICTOZA significantly reduced the occurrence of MACE, with a hazard ratio of 0.87 (0.78, 0.97) for time to first MACE. Additionally, the estimated hazard ratio for time to all-cause death for VICTOZA compared to placebo was 0.85 (0.74, 0.97). Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 510,
+  "prompt_tokens": 1935
+ }
+}

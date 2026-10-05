@@ -1,0 +1,27 @@
+{
+ "key": "5d2b808fd5dfe0fa10c8d25e40bba721dd3e233653338c83ccb05ee7808be5ab",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:3:1",
+    "quote": "10 mg orally once daily in the morning, taken with or without food."
+   },
+   {
+    "chunk_id": "jardiance:v31:92:7",
+    "quote": "Take JARDIANCE by mouth 1 time in the morning each day, with or without food."
+   }
+  ],
+  "reasoning": "The claim states that JARDIANCE is taken twice a day with meals, but the label excerpts do not support this claim. The recommended dosage for adults is 10 mg orally once daily in the morning, taken with or without food, and there is no mention of taking it twice a day. Additionally, the Medication Guide advises taking JARDIANCE by mouth 1 time in the morning each day, with or without food.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 204,
+  "prompt_tokens": 2025
+ }
+}

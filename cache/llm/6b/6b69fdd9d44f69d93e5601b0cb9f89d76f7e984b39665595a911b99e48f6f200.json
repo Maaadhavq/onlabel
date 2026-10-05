@@ -1,0 +1,35 @@
+{
+ "key": "6b69fdd9d44f69d93e5601b0cb9f89d76f7e984b39665595a911b99e48f6f200",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:8:0",
+    "quote": "WEGOVY is contraindicated in the following conditions:\n\n- a personal or family history of MTC or in patients with MEN 2 [see Warnings and Precautions ( 5.1 )]."
+   },
+   {
+    "chunk_id": "wegovy:v19:0:0",
+    "quote": "WEGOVY is contraindicated in patients with a personal or family history of MTC or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2) [see Contraindications ( 4 )]."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "Do not use WEGOVY if you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC), or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:3",
+    "quote": "Do not use WEGOVY if: - you or any of your family have ever had a type of thyroid cancer called MTC or if you have an endocrine system condition called MEN 2."
+   }
+  ],
+  "reasoning": "The claim states that people with a family history of medullary thyroid carcinoma can safely use WEGOVY, but the label explicitly contraindicates its use in patients with a personal or family history of MTC. Therefore, the claim is directly contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "minimized_risk"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 347,
+  "prompt_tokens": 1867
+ }
+}

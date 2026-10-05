@@ -1,0 +1,25 @@
+{
+ "key": "f7d0b9d66a508bfbd54cc8199c477d57c8b814a7c50505581a9afeb81a12d219",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:67:2",
+    "quote": "Change from baseline | -0.7 | -0.8 | -0.6"
+   },
+   {
+    "chunk_id": "trulicity:v62:67:1",
+    "quote": "Treatment with TRULICITY 0.75 mg and 1.5 mg once weekly resulted in reduction in HbA1c from baseline at 26‑weeks"
+   }
+  ],
+  "reasoning": "The monotherapy trial excerpt provides the 26‑week change from baseline for HbA1c: TRULICITY 1.5 mg reduced HbA1c by –0.8% and metformin reduced it by –0.6%, matching the claim. The population is adult patients with type 2 diabetes, as stated in the section heading.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 341,
+  "prompt_tokens": 2530
+ }
+}

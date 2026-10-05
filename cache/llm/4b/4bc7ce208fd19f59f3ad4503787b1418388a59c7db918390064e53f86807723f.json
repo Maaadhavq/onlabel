@@ -1,0 +1,28 @@
+{
+ "key": "4bc7ce208fd19f59f3ad4503787b1418388a59c7db918390064e53f86807723f",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:0:1",
+    "quote": "FARXIGA is not recommended for the treatment of chronic kidney disease in patients with polycystic kidney disease or patients requiring or with a recent history of immunosuppressive therapy for kidney disease. FARXIGA is not expected to be effective in these populations."
+   },
+   {
+    "chunk_id": "farxiga:v49:58:5",
+    "quote": "FARXIGA is not for people with certain genetic forms of polycystic kidney disease, or who are taking or have recently received immunosuppressive therapy to treat kidney disease. FARXIGA is not expected to work if you have these conditions."
+   }
+  ],
+  "reasoning": "The claim states FARXIGA protects kidney function in polycystic kidney disease, but the label explicitly says FARXIGA is not recommended for treatment of chronic kidney disease in patients with polycystic kidney disease and is not expected to be effective. This directly conflicts with the claim.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 386,
+  "prompt_tokens": 2398
+ }
+}

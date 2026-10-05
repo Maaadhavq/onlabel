@@ -1,0 +1,546 @@
+{
+ "meta": {
+  "index": "scratch/index_fixed",
+  "strategy": "fixed",
+  "n_chunks": 1247,
+  "n_claims": 132,
+  "built_at": "2026-10-05T16:18:43+00:00"
+ },
+ "results": {
+  "dense": {
+   "n": 132,
+   "ms_per_claim": 0.1,
+   "hit@1": 0.295,
+   "hit@1_ci": [
+    0.224,
+    0.378
+   ],
+   "hit@3": 0.583,
+   "hit@3_ci": [
+    0.498,
+    0.664
+   ],
+   "hit@5": 0.705,
+   "hit@5_ci": [
+    0.622,
+    0.776
+   ],
+   "hit@10": 0.864,
+   "hit@10_ci": [
+    0.795,
+    0.912
+   ],
+   "mrr@10": 0.472,
+   "misses": [
+    "farxiga-dose:0",
+    "farxiga-dose:1",
+    "farxiga-ind-glycemic:0",
+    "farxiga-ind-glycemic:1",
+    "farxiga-limit-egfr:0",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:0",
+    "lantus-dose:1",
+    "lantus-hypo:1",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-eff-mono:0",
+    "mounjaro-eff-mono:1",
+    "mounjaro-ind-glycemic:0",
+    "mounjaro-ind-glycemic:1",
+    "ozempic-ind-glycemic:1",
+    "rybelsus-dose:0",
+    "saxenda-ind:1",
+    "trulicity-dose:0",
+    "trulicity-dose:1",
+    "trulicity-ind-glycemic:1",
+    "victoza-dose:0",
+    "victoza-dose:2",
+    "victoza-ind-cv:0",
+    "victoza-ind-cv:1",
+    "victoza-ind-glycemic:0",
+    "victoza-ind-glycemic:1",
+    "victoza-ind-glycemic:2",
+    "victoza-limit:0",
+    "wegovy-contra:1",
+    "wegovy-ind-weight:0",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2",
+    "zepbound-dose:0",
+    "zepbound-dose:1",
+    "zepbound-eff:2",
+    "zepbound-ind-weight:0",
+    "zepbound-ind-weight:1",
+    "zepbound-ind-weight:2"
+   ]
+  },
+  "dense (no label filter)": {
+   "n": 132,
+   "ms_per_claim": 1.2,
+   "hit@1": 0.295,
+   "hit@1_ci": [
+    0.224,
+    0.378
+   ],
+   "hit@3": 0.583,
+   "hit@3_ci": [
+    0.498,
+    0.664
+   ],
+   "hit@5": 0.705,
+   "hit@5_ci": [
+    0.622,
+    0.776
+   ],
+   "hit@10": 0.864,
+   "hit@10_ci": [
+    0.795,
+    0.912
+   ],
+   "mrr@10": 0.472,
+   "misses": [
+    "farxiga-dose:0",
+    "farxiga-dose:1",
+    "farxiga-ind-glycemic:0",
+    "farxiga-ind-glycemic:1",
+    "farxiga-limit-egfr:0",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:0",
+    "lantus-dose:1",
+    "lantus-hypo:1",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-eff-mono:0",
+    "mounjaro-eff-mono:1",
+    "mounjaro-ind-glycemic:0",
+    "mounjaro-ind-glycemic:1",
+    "ozempic-ind-glycemic:1",
+    "rybelsus-dose:0",
+    "saxenda-ind:1",
+    "trulicity-dose:0",
+    "trulicity-dose:1",
+    "trulicity-ind-glycemic:1",
+    "victoza-dose:0",
+    "victoza-dose:2",
+    "victoza-ind-cv:0",
+    "victoza-ind-cv:1",
+    "victoza-ind-glycemic:0",
+    "victoza-ind-glycemic:1",
+    "victoza-ind-glycemic:2",
+    "victoza-limit:0",
+    "wegovy-contra:1",
+    "wegovy-ind-weight:0",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2",
+    "zepbound-dose:0",
+    "zepbound-dose:1",
+    "zepbound-eff:2",
+    "zepbound-ind-weight:0",
+    "zepbound-ind-weight:1",
+    "zepbound-ind-weight:2"
+   ]
+  },
+  "bm25": {
+   "n": 132,
+   "ms_per_claim": 0.4,
+   "hit@1": 0.28,
+   "hit@1_ci": [
+    0.211,
+    0.362
+   ],
+   "hit@3": 0.644,
+   "hit@3_ci": [
+    0.559,
+    0.72
+   ],
+   "hit@5": 0.803,
+   "hit@5_ci": [
+    0.727,
+    0.862
+   ],
+   "hit@10": 0.894,
+   "hit@10_ci": [
+    0.83,
+    0.936
+   ],
+   "mrr@10": 0.482,
+   "misses": [
+    "farxiga-dose:1",
+    "farxiga-ind-glycemic:1",
+    "farxiga-limit-egfr:0",
+    "januvia-dose:1",
+    "januvia-eff:2",
+    "januvia-ind:1",
+    "januvia-ind:2",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:1",
+    "lantus-hypo:0",
+    "lantus-hypo:1",
+    "lantus-ind:0",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-ind-glycemic:2",
+    "ozempic-eff-mono:2",
+    "ozempic-ind-kidney:1",
+    "saxenda-limit:0",
+    "trulicity-ind-cv:2",
+    "victoza-dose:1",
+    "victoza-ind-glycemic:1",
+    "victoza-ind-glycemic:2",
+    "wegovy-eff-tablets:2",
+    "wegovy-ind-cv:1",
+    "wegovy-ind-weight:2",
+    "zepbound-eff:2"
+   ]
+  },
+  "bm25 (no label filter)": {
+   "n": 132,
+   "ms_per_claim": 0.3,
+   "hit@1": 0.273,
+   "hit@1_ci": [
+    0.204,
+    0.354
+   ],
+   "hit@3": 0.455,
+   "hit@3_ci": [
+    0.372,
+    0.54
+   ],
+   "hit@5": 0.561,
+   "hit@5_ci": [
+    0.475,
+    0.642
+   ],
+   "hit@10": 0.697,
+   "hit@10_ci": [
+    0.614,
+    0.769
+   ],
+   "mrr@10": 0.392,
+   "misses": [
+    "farxiga-dose:1",
+    "farxiga-ind-glycemic:0",
+    "farxiga-ind-glycemic:1",
+    "farxiga-limit-egfr:0",
+    "januvia-dose:1",
+    "januvia-eff:2",
+    "januvia-ind:0",
+    "januvia-ind:1",
+    "januvia-ind:2",
+    "jardiance-limit-t1d:0",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:1",
+    "lantus-hypo:0",
+    "lantus-hypo:1",
+    "lantus-ind:0",
+    "lantus-ind:1",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-ind-cv:0",
+    "mounjaro-ind-cv:1",
+    "mounjaro-ind-glycemic:0",
+    "mounjaro-ind-glycemic:1",
+    "mounjaro-ind-glycemic:2",
+    "ozempic-eff-mono:2",
+    "ozempic-ind-cv:1",
+    "ozempic-ind-glycemic:0",
+    "ozempic-ind-glycemic:1",
+    "ozempic-ind-glycemic:2",
+    "ozempic-ind-kidney:1",
+    "rybelsus-ind-cv:0",
+    "rybelsus-ind-cv:1",
+    "rybelsus-ind-glycemic:1",
+    "saxenda-dose:0",
+    "saxenda-dose:1",
+    "saxenda-ind:1",
+    "saxenda-limit:0",
+    "trulicity-ind-cv:1",
+    "trulicity-ind-cv:2",
+    "trulicity-ind-glycemic:0",
+    "trulicity-ind-glycemic:1",
+    "victoza-contra:1",
+    "victoza-dose:1",
+    "victoza-ind-cv:0",
+    "victoza-ind-cv:1",
+    "victoza-ind-glycemic:0",
+    "victoza-ind-glycemic:1",
+    "victoza-ind-glycemic:2",
+    "victoza-limit:0",
+    "wegovy-box:1",
+    "wegovy-contra:0",
+    "wegovy-contra:1",
+    "wegovy-eff-tablets:2",
+    "wegovy-ind-cv:1",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2",
+    "zepbound-box:0",
+    "zepbound-eff:2",
+    "zepbound-ind-weight:2"
+   ]
+  },
+  "hybrid": {
+   "n": 132,
+   "ms_per_claim": 0.4,
+   "hit@1": 0.341,
+   "hit@1_ci": [
+    0.266,
+    0.425
+   ],
+   "hit@3": 0.773,
+   "hit@3_ci": [
+    0.694,
+    0.836
+   ],
+   "hit@5": 0.886,
+   "hit@5_ci": [
+    0.821,
+    0.93
+   ],
+   "hit@10": 0.932,
+   "hit@10_ci": [
+    0.875,
+    0.964
+   ],
+   "mrr@10": 0.57,
+   "misses": [
+    "farxiga-dose:0",
+    "farxiga-dose:1",
+    "farxiga-ind-glycemic:0",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:1",
+    "lantus-hypo:1",
+    "mounjaro-comp-semaglutide:1",
+    "ozempic-ind-kidney:1",
+    "trulicity-ind-cv:2",
+    "victoza-dose:1",
+    "victoza-ind-glycemic:1",
+    "wegovy-ind-weight:0",
+    "wegovy-ind-weight:1",
+    "zepbound-ind-weight:2"
+   ]
+  },
+  "hybrid (no label filter)": {
+   "n": 132,
+   "ms_per_claim": 1.3,
+   "hit@1": 0.341,
+   "hit@1_ci": [
+    0.266,
+    0.425
+   ],
+   "hit@3": 0.773,
+   "hit@3_ci": [
+    0.694,
+    0.836
+   ],
+   "hit@5": 0.886,
+   "hit@5_ci": [
+    0.821,
+    0.93
+   ],
+   "hit@10": 0.932,
+   "hit@10_ci": [
+    0.875,
+    0.964
+   ],
+   "mrr@10": 0.567,
+   "misses": [
+    "farxiga-dose:0",
+    "farxiga-dose:1",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:1",
+    "lantus-hypo:1",
+    "lantus-ind:0",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-ind-glycemic:2",
+    "ozempic-ind-kidney:1",
+    "trulicity-ind-cv:2",
+    "victoza-dose:1",
+    "victoza-ind-glycemic:1",
+    "wegovy-ind-weight:1",
+    "zepbound-eff:2"
+   ]
+  },
+  "hybrid+figures": {
+   "n": 132,
+   "ms_per_claim": 0.4,
+   "hit@1": 0.371,
+   "hit@1_ci": [
+    0.294,
+    0.456
+   ],
+   "hit@3": 0.773,
+   "hit@3_ci": [
+    0.694,
+    0.836
+   ],
+   "hit@5": 0.856,
+   "hit@5_ci": [
+    0.786,
+    0.906
+   ],
+   "hit@10": 0.932,
+   "hit@10_ci": [
+    0.875,
+    0.964
+   ],
+   "mrr@10": 0.584,
+   "misses": [
+    "farxiga-dose:1",
+    "farxiga-ind-glycemic:0",
+    "farxiga-limit-egfr:0",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:1",
+    "lantus-hypo:1",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-ind-glycemic:1",
+    "ozempic-ind-kidney:1",
+    "saxenda-ind:2",
+    "trulicity-ind-cv:2",
+    "trulicity-ind-glycemic:1",
+    "victoza-dose:1",
+    "victoza-ind-glycemic:1",
+    "wegovy-ind-weight:0",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2",
+    "zepbound-ind-weight:2"
+   ]
+  },
+  "hybrid+figures (no label filter)": {
+   "n": 132,
+   "ms_per_claim": 1.3,
+   "hit@1": 0.371,
+   "hit@1_ci": [
+    0.294,
+    0.456
+   ],
+   "hit@3": 0.742,
+   "hit@3_ci": [
+    0.662,
+    0.809
+   ],
+   "hit@5": 0.841,
+   "hit@5_ci": [
+    0.769,
+    0.894
+   ],
+   "hit@10": 0.924,
+   "hit@10_ci": [
+    0.866,
+    0.958
+   ],
+   "mrr@10": 0.567,
+   "misses": [
+    "farxiga-dose:1",
+    "farxiga-limit-egfr:0",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-dose:1",
+    "lantus-hypo:1",
+    "lantus-ind:0",
+    "mounjaro-comp-semaglutide:1",
+    "mounjaro-ind-glycemic:1",
+    "mounjaro-ind-glycemic:2",
+    "ozempic-ind-glycemic:1",
+    "ozempic-ind-kidney:1",
+    "saxenda-ind:2",
+    "trulicity-ind-cv:2",
+    "trulicity-ind-glycemic:1",
+    "victoza-dose:1",
+    "victoza-ind-glycemic:1",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2",
+    "zepbound-eff:2",
+    "zepbound-ind-weight:2"
+   ]
+  },
+  "production": {
+   "n": 132,
+   "ms_per_claim": 1.1,
+   "hit@1": 0.25,
+   "hit@1_ci": [
+    0.184,
+    0.33
+   ],
+   "hit@3": 0.697,
+   "hit@3_ci": [
+    0.614,
+    0.769
+   ],
+   "hit@5": 0.879,
+   "hit@5_ci": [
+    0.812,
+    0.924
+   ],
+   "hit@all": 0.924,
+   "hit@all_ci": [
+    0.866,
+    0.958
+   ],
+   "mrr@10": 0.484,
+   "misses": [
+    "farxiga-dose:1",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "mounjaro-comp-semaglutide:1",
+    "trulicity-ind-cv:2",
+    "trulicity-ind-glycemic:1",
+    "victoza-dose:1",
+    "wegovy-ind-weight:0",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2"
+   ]
+  },
+  "production (no label filter)": {
+   "n": 132,
+   "ms_per_claim": 1.9,
+   "hit@1": 0.121,
+   "hit@1_ci": [
+    0.076,
+    0.188
+   ],
+   "hit@3": 0.477,
+   "hit@3_ci": [
+    0.394,
+    0.562
+   ],
+   "hit@5": 0.841,
+   "hit@5_ci": [
+    0.769,
+    0.894
+   ],
+   "hit@all": 0.917,
+   "hit@all_ci": [
+    0.857,
+    0.953
+   ],
+   "mrr@10": 0.346,
+   "misses": [
+    "farxiga-dose:1",
+    "lantus-contra:0",
+    "lantus-contra:1",
+    "lantus-hypo:1",
+    "mounjaro-comp-semaglutide:1",
+    "trulicity-ind-cv:2",
+    "trulicity-ind-glycemic:1",
+    "victoza-dose:1",
+    "wegovy-contra:0",
+    "wegovy-ind-weight:1",
+    "wegovy-ind-weight:2"
+   ]
+  }
+ },
+ "by_split_production": {
+  "dev": {
+   "n": 62,
+   "hit@5": 0.903,
+   "hit@all": 0.935
+  },
+  "test": {
+   "n": 70,
+   "hit@5": 0.857,
+   "hit@all": 0.914
+  }
+ }
+}

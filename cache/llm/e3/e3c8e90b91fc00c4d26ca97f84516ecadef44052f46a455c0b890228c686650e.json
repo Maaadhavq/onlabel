@@ -1,0 +1,31 @@
+{
+ "key": "e3c8e90b91fc00c4d26ca97f84516ecadef44052f46a455c0b890228c686650e",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:34:0",
+    "quote": "VICTOZA 0.6 mg is not effective for glycemic control and is intended only as a starting dose to reduce gastrointestinal intolerance [see Dosage and Administration (2)]."
+   },
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "The 0.6 mg once daily dosage is intended to reduce the risk of gastrointestinal adverse reactions [see Warnings and Precautions (5.6), Adverse Reactions (6.1)] during initial titration and is not effective for glycemic control in adults."
+   },
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "The recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week."
+   }
+  ],
+  "reasoning": "The claim states that the 0.6 mg dose of VICTOZA is effective for lowering blood sugar in adults, but the label excerpts state that the 0.6 mg dose is not effective for glycemic control and is intended only as a starting dose to reduce gastrointestinal intolerance.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 263,
+  "prompt_tokens": 1655
+ }
+}

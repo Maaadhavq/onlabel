@@ -1,0 +1,23 @@
+{
+ "key": "626958ba0c6f2a7dec0ed4142ccc383bb83b7dc0013bcda54ac902e31db31300",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:3:0",
+    "quote": "Administer LANTUS subcutaneously once daily at any time of day but at the same time every day."
+   }
+  ],
+  "reasoning": "The claim states that LANTUS is injected once daily, at any time of day but at the same time every day. This is supported by the excerpts, specifically excerpt id=\"lantus:v35:3:0\" section \"LANTUS | 2 DOSAGE AND ADMINISTRATION > 2.2 General Dosing Instructions\", which states: \"Administer LANTUS subcutaneously once daily at any time of day but at the same time every day.\"",
+  "verdict": "supported",
+  "violations": [
+   "missing_risk_information"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 175,
+  "prompt_tokens": 1793
+ }
+}

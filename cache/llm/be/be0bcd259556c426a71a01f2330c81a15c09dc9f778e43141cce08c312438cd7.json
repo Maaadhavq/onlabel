@@ -1,0 +1,37 @@
+{
+ "key": "be0bcd259556c426a71a01f2330c81a15c09dc9f778e43141cce08c312438cd7",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "MOUNJARO^® is indicated: - as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "mounjaro:v40:46:0",
+    "quote": "The safety and effectiveness of MOUNJARO as an adjunct to diet and exercise to improve glycemic control in pediatric patients 10 years of age and older with type 2 diabetes mellitus have been established."
+   },
+   {
+    "chunk_id": "mounjaro:v40:73:0",
+    "quote": "The effectiveness of MOUNJARO as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus was established in five trials."
+   },
+   {
+    "chunk_id": "mounjaro:v40:74:0",
+    "quote": ""
+   },
+   {
+    "chunk_id": "mounjaro:v40:79:0",
+    "quote": ""
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO improves blood sugar control in adults and children 10 years and older with type 2 diabetes along with diet and exercise. The label excerpts (mounjaro:v40:1:0) and (mounjaro:v40:46:0) excerpts confirm this indication and the adjunct to diet and exercise component. The claim is supported by theing excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 334,
+  "prompt_tokens": 1813
+ }
+}

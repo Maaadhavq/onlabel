@@ -1,0 +1,25 @@
+{
+ "key": "9b9a69f61039cd6280a9a3c07634452a3cdceee98b62880424a2ccc7c9ea3840",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:0:0",
+    "quote": "- In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures. It is unknown whether WEGOVY causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans as human relevance of semaglutide-induced rodent thyroid C-cell tumors has not been determined [see Warnings and Precautions ( 5.1 ), Nonclinical Toxicology ( 13.1 )]."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "In studies with rodents, WEGOVY and other medicines that work like WEGOVY caused thyroid tumors, including thyroid cancer. It is not known if WEGOVY will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people."
+   }
+  ],
+  "reasoning": "The claim states that semaglutide caused thyroid C-cell tumors in rodents and that it is unknown if WEGOVY causes these tumors, including MTC, in humans. This is directly supported by multiple excerpts, including the Boxed Warning and the Medication Guide.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 268,
+  "prompt_tokens": 1815
+ }
+}

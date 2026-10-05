@@ -1,0 +1,23 @@
+{
+ "key": "9ef9cbfc656ea5503074f0e913cc1575805ffce70c085e3e342de2c070438e02",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:11:0",
+    "quote": "Hypoglycemia is the most common adverse reaction associated with insulins, including LANTUS."
+   }
+  ],
+  "reasoning": "The claim states that low blood sugar (hypoglycemia) is the most common side effect of insulins, including LANTUS. The label excerpts provide several mentions of hypoglycemia as a common side effect, but they do not explicitly state that it is the most common side effect. The excerpt in 5.3 Hypoglycemia (id: lantus:v35:11:0) states that hypoglycemia is the most common adverse reaction associated with insulins, including LANTUS, but this is a general statement and does not specify that it is the most common side effect of LANTUS specifically.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 214,
+  "prompt_tokens": 1806
+ }
+}

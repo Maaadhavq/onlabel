@@ -1,0 +1,23 @@
+{
+ "key": "9ad10c7f2519ef55e2aa523eecc9e3ae4eb7347a72e9cc02c07bc9e1117b0e0f",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:3:0",
+    "quote": "For patients with moderate renal impairment (eGFR greater than or equal to 30 mL/min/1.73 m^2 to less than 45 mL/min/1.73 m^2), the dose of JANUVIA is 50 mg once daily. For patients with severe renal impairment (eGFR less than 30 mL/min/1.73 m^2) or with end-stage renal disease (ESRD) requiring hemodialysis or peritoneal dialysis, the dose of JANUVIA is 25 mg once daily."
+   }
+  ],
+  "reasoning": "The claim states that JANUVIA needs no dose change for people with kidney problems, but the label explicitly provides different doses (50 mg and 25 mg) for patients with moderate or severe renal impairment. Therefore, the claim is contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 222,
+  "prompt_tokens": 1806
+ }
+}

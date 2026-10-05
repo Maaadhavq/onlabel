@@ -1,0 +1,25 @@
+{
+ "key": "482db0f75ad79ee93b66da07c82329876a121f8e22cdbc1ac338c5a2a0131ba5",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "- To reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   },
+   {
+    "chunk_id": "trulicity:v62:82:2",
+    "quote": "- to reduce the risk of major cardiovascular events such as death, heart attack, or stroke in adults with type 2 diabetes mellitus with known heart disease or multiple cardiovascular risk factors."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who have established cardiovascular disease or multiple cardiovascular risk factors. This matches the indication and clinical study results provided in the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 196,
+  "prompt_tokens": 1643
+ }
+}

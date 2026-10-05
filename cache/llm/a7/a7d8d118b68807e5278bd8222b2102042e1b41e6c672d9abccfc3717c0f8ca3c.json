@@ -1,0 +1,29 @@
+{
+ "key": "a7d8d118b68807e5278bd8222b2102042e1b41e6c672d9abccfc3717c0f8ca3c",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3 ... - Percent change from baseline (LSMean) | -7.4 | -3 ... p < 0.0001 compared to placebo."
+   },
+   {
+    "chunk_id": "saxenda:v22:31:6",
+    "quote": "After 56 weeks, treatment with SAXENDA resulted in a statistically significant reduction in weight compared with placebo."
+   }
+  ],
+  "reasoning": "The label excerpts only provide data comparing SAXENDA to placebo, showing statistically significant weight loss versus placebo. There is no information comparing SAXENDA to other prescription weight‑loss medicines, so the claim that it delivers more weight loss than any other prescription drug is not supported by the provided excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "overstated_efficacy",
+   "unsubstantiated_superiority",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 343,
+  "prompt_tokens": 2889
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "key": "729d6dbf9d353d8eecdf5187be62f326a88b4610bf4313028c731baed25bf6a8",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:1",
+    "quote": "patients with type 2 diabetes mellitus inadequately controlled with diet and exercise"
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC improves blood sugar control in adults with type 1 or type 2 diabetes, along with diet and exercise. The label excerpts indicate that OZEMPIC is indicated to improve glycemic control in adults with type 2 diabetes mellitus, as an adjunct to diet and exercise. However, there is no mention of type 1 diabetes in the excerpts. Therefore, the claim is partially supported for type 2 diabetes, but unsupported for type 1 diabetes.",
+  "verdict": "unsupported",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 221,
+  "prompt_tokens": 1892
+ }
+}

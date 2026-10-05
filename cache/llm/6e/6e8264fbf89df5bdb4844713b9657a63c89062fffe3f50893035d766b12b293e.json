@@ -1,0 +1,29 @@
+{
+ "key": "6e8264fbf89df5bdb4844713b9657a63c89062fffe3f50893035d766b12b293e",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction (MI), or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."
+   },
+   {
+    "chunk_id": "mounjaro:v40:80:4",
+    "quote": "95.3% confidence interval for the MACE-3 composite endpoint of CV death, non-fatal MI, or non-fatal stroke"
+   },
+   {
+    "chunk_id": "mounjaro:v40:98:2",
+    "quote": "to reduce the risk of major cardiovascular events such as heart attack, stroke, or death in adults with type 2 diabetes mellitus who are at high risk for these events."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes who are at high risk for these events. The label excerpts provide evidence to support this claim. Excerpt 1 (INDICATIONS AND USAGE) states that MOUNJARO is indicated to reduce the risk of major adverse cardiovascular events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events. Excerpt 3 (SURPASS-CVOT) describes the trial that demonstrated the efficacy of MOUNJARO in reducing the risk of major adverse cardiovascular events. Excerpt 4 (Mounjaro Medication Guide) also states that MOUNJARO is used to reduce the risk of major cardiovascular events such as heart attack, stroke, or death in adults with type 2 diabetes mellitus who are at high risk for these events. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 435,
+  "prompt_tokens": 1756
+ }
+}

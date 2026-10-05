@@ -1,0 +1,23 @@
+{
+ "key": "66c81d0864148401f0fa86c1140a521d3ea51672c75b434df38b8a57ca428b86",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:2:0",
+    "quote": "In adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus, the recommended starting dosage of FARXIGA is 5 mg orally once daily to improve glycemic control."
+   }
+  ],
+  "reasoning": "The claim states that FARXIGA starts at 10 mg twice daily for blood sugar control. However, the label excerpts do not support this claim. The recommended starting dosage for glycemic control in adults with type 2 diabetes mellitus is 5 mg orally once daily (excerpt id: farxiga:v49:2:0). The dosage can be increased to 10 mg orally once daily for additional glycemic control, but there is no mention of taking it twice daily. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 201,
+  "prompt_tokens": 1914
+ }
+}

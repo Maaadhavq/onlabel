@@ -1,0 +1,25 @@
+{
+ "key": "1c701bbf6b41b9c69e8deedc0419777c2217ac9fa8dd5c7a61226c0a08b78fbe",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:\n\n- to reduce excess body weight and maintain weight reduction long term in:\n  - adults and pediatric patients aged 12 years and older with obesity."
+   },
+   {
+    "chunk_id": "wegovy:v19:28:0",
+    "quote": "The safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established."
+   }
+  ],
+  "reasoning": "The FDA label excerpts state that Wegovy injection is indicated in combination with a reduced‑calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in adults and pediatric patients aged 12 years and older with obesity. This matches every element of the claim.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 325,
+  "prompt_tokens": 2522
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "key": "909f558063c20529f8024abfac6ee6a881b71750cf66445d65ffd9581b14ba61",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:8:0",
+    "quote": "LANTUS is contraindicated: - During episodes of hypoglycemia [see Warnings and Precautions (5.3)]"
+   }
+  ],
+  "reasoning": "The claim is supported by the Contraindications section of the label, which explicitly states that LANTUS is contraindicated during episodes of hypoglycemia.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 91,
+  "prompt_tokens": 1525
+ }
+}

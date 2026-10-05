@@ -1,0 +1,27 @@
+{
+ "key": "d85e77bc0ccc0c47ceee9f4a3f7388eb3467c05022611385849722de56b025f0",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:63:2",
+    "quote": "JANUVIA is not for people with type 1 diabetes."
+   },
+   {
+    "chunk_id": "januvia:v71:1:0",
+    "quote": "JANUVIA should not be used in patients with type 1 diabetes."
+   }
+  ],
+  "reasoning": "The claim states that JANUVIA helps people with type 1 diabetes control their blood sugar, but the label excerpts clearly state that JANUVIA is not for people with type 1 diabetes (excerpt 1, section 'What is JANUVIA?' and excerpt 3, section 'Limitations of Use').",
+  "verdict": "contradicted",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 176,
+  "prompt_tokens": 1607
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "key": "0967d42e66733ec6aeacaff3a92359346dcc7d3c1a0e74a6c5136e07e7f54ce6",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:2:0",
+    "quote": "The recommended starting dosage of MOUNJARO is 2.5 mg injected subcutaneously once weekly [see Dosage and Administration (2.2)]."
+   },
+   {
+    "chunk_id": "mounjaro:v40:2:1",
+    "quote": "The day of weekly administration can be changed, if necessary, as long as the time between the two doses is at least 3 days (72 hours)."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO starts at 2.5 mg, injected once weekly. The label excerpts provide information on the recommended starting dosage and escalation schedule, which matches the claim. The excerpts also mention that the day of weekly administration can be changed, but this does not contradict the claim. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 220,
+  "prompt_tokens": 1957
+ }
+}

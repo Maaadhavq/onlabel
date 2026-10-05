@@ -1,0 +1,24 @@
+{
+ "key": "e45363e5b6be346da199f4343d0b1e79e4fc88aac7d902650b2cf409a2893f94",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:34:2",
+    "quote": "Change from baseline (adjusted mean) | -1.1 | -0.8 | - -0.5"
+   }
+  ],
+  "reasoning": "The label table shows the adjusted mean change in HbA1c for VICTOZA 1.8 mg as -1.1% and for glimepiride 8 mg as -0.5%, not the 2.1% reduction claimed for VICTOZA. Therefore the claim’s numeric values conflict with the FDA label.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 352,
+  "prompt_tokens": 2842
+ }
+}

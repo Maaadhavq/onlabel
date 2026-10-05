@@ -1,0 +1,31 @@
+{
+ "key": "d43133b65ffdca64db85be5fd5e779d6b17cf06a81a14e19cfb781efb4817a0b",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:106:2",
+    "quote": "ZEPBOUND is an injectable prescription medicine used with a reduced-calorie diet and increased physical activity to help adults with: - obesity, or some adults with overweight who also have weight-related medical problems, to lose excess body weight and keep the weight off."
+   },
+   {
+    "chunk_id": "zepbound:v40:106:2",
+    "quote": "ZEPBOUND contains tirzepatide and should not be used with other tirzepatide-containing products or any GLP-1 receptor agonist medicines."
+   },
+   {
+    "chunk_id": "zepbound:v40:2:0",
+    "quote": "Coadministration with other tirzepatide-containing products or with any glucagon-like peptide-1 (GLP-1) receptor agonist is not recommended."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND is the most effective weight-loss medicine available, but the label excerpts do not provide any information that supports this claim. The excerpts mention that ZEPBOUND resulted in a statistically significant reduction in body weight compared to placebo, but they do not compare ZEPBOUND to other weight-loss medicines. Furthermore, the label excerpts state that ZEPBOUND should not be used with other tirzepatide-containing products or any GLP-1 receptor agonist medicines, which suggests that ZEPBOUND may not be the most effective weight-loss medicine available.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 340,
+  "prompt_tokens": 2007
+ }
+}

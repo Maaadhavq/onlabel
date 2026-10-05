@@ -1,0 +1,25 @@
+{
+ "key": "dc00c403e63943f5d59f6233a758202134e55a8cc08444e80d3a2ea1af33558b",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:74:2",
+    "quote": "Change at Week 40 | -0.1 | -1.8 | -1.7 | -1.7"
+   },
+   {
+    "chunk_id": "mounjaro:v40:74:2",
+    "quote": "Table 4: Results at Week 40 in a Trial of MOUNJARO as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus with Inadequate Glycemic Control with Diet and Exercise"
+   }
+  ],
+  "reasoning": "The claim states that in a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.8% with MOUNJARO 5 mg, compared with 0.1% with placebo. The label excerpts provide information about a 40-week trial of MOUNJARO as monotherapy in adult patients with type 2 diabetes mellitus with inadequate glycemic control with diet and exercise. Table 4 in excerpt mounjaro:v40:74:2 shows the results at Week 40, which includes the change in HbA1c for MOUNJARO 5 mg and placebo. The table states that the change in HbA1c for MOUNJARO 5 mg is -1.8%, and for placebo is -0.1%. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 340,
+  "prompt_tokens": 2870
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "key": "eea1f7b92384e98806ac95205b036fcc075268f87c5bbfc3e8fe8e3f3fa6567d",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:67:1",
+    "quote": "The difference in observed effect size between TRULICITY 0.75 mg and 1.5 mg, respectively, and metformin excluded the pre-specified non-inferiority margin of 0.4%."
+   }
+  ],
+  "reasoning": "The claim states that in a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 1.8%, compared with 0.6% for metformin. The label excerpts do not provide a direct comparison between TRULICITY 1.5 mg and metformin for A1C reduction. However, excerpt 'trulicity:v62:67:1' mentions that the difference in observed effect size between TRULICITY 0.75 mg and 1.5 mg, respectively, and metformin excluded the pre-specified non-inferiority margin of 0.4%. This implies that TRULICITY 1.5 mg is non-inferior to metformin, but it does not provide a direct comparison of the A1C reduction. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 287,
+  "prompt_tokens": 2400
+ }
+}

@@ -1,0 +1,3933 @@
+{
+ "meta": {
+  "model": "ollama/llama3.1-8b",
+  "split": "all",
+  "n_claims": 132,
+  "n_requested": 132,
+  "stopped": null,
+  "tokens": 301136,
+  "tokens_per_claim": 2281,
+  "live": 128,
+  "cached": 4,
+  "median_latency_s": 12.74
+ },
+ "overall": {
+  "guards_on": {
+   "n": 132,
+   "n_faithful": 54,
+   "n_violative": 78,
+   "false_approvals": 3,
+   "false_approval_rate": 0.038,
+   "false_approval_ci": [
+    0.0,
+    0.086
+   ],
+   "traced_faithful": 23,
+   "supported_recall": 0.426,
+   "supported_recall_ci": [
+    0.298,
+    0.561
+   ],
+   "violative_named": 0.782,
+   "human_review": 0.28,
+   "violation_tag_match": 0.318
+  },
+  "guards_off": {
+   "n": 132,
+   "n_faithful": 54,
+   "n_violative": 78,
+   "false_approvals": 9,
+   "false_approval_rate": 0.115,
+   "false_approval_ci": [
+    0.053,
+    0.19
+   ],
+   "traced_faithful": 48,
+   "supported_recall": 0.889,
+   "supported_recall_ci": [
+    0.796,
+    0.964
+   ],
+   "violative_named": 0.833,
+   "human_review": 0.0,
+   "violation_tag_match": 0.318
+  }
+ },
+ "by_split": {
+  "dev": {
+   "guards_on": {
+    "n": 62,
+    "n_faithful": 26,
+    "n_violative": 36,
+    "false_approvals": 2,
+    "false_approval_rate": 0.056,
+    "false_approval_ci": [
+     0.0,
+     0.143
+    ],
+    "traced_faithful": 13,
+    "supported_recall": 0.5,
+    "supported_recall_ci": [
+     0.308,
+     0.692
+    ],
+    "violative_named": 0.778,
+    "human_review": 0.258,
+    "violation_tag_match": 0.387
+   },
+   "guards_off": {
+    "n": 62,
+    "n_faithful": 26,
+    "n_violative": 36,
+    "false_approvals": 4,
+    "false_approval_rate": 0.111,
+    "false_approval_ci": [
+     0.028,
+     0.211
+    ],
+    "traced_faithful": 23,
+    "supported_recall": 0.885,
+    "supported_recall_ci": [
+     0.75,
+     1.0
+    ],
+    "violative_named": 0.861,
+    "human_review": 0.0,
+    "violation_tag_match": 0.387
+   }
+  },
+  "test": {
+   "guards_on": {
+    "n": 70,
+    "n_faithful": 28,
+    "n_violative": 42,
+    "false_approvals": 1,
+    "false_approval_rate": 0.024,
+    "false_approval_ci": [
+     0.0,
+     0.071
+    ],
+    "traced_faithful": 10,
+    "supported_recall": 0.357,
+    "supported_recall_ci": [
+     0.185,
+     0.538
+    ],
+    "violative_named": 0.786,
+    "human_review": 0.3,
+    "violation_tag_match": 0.257
+   },
+   "guards_off": {
+    "n": 70,
+    "n_faithful": 28,
+    "n_violative": 42,
+    "false_approvals": 5,
+    "false_approval_rate": 0.119,
+    "false_approval_ci": [
+     0.029,
+     0.214
+    ],
+    "traced_faithful": 25,
+    "supported_recall": 0.893,
+    "supported_recall_ci": [
+     0.769,
+     1.0
+    ],
+    "violative_named": 0.81,
+    "human_review": 0.0,
+    "violation_tag_match": 0.257
+   }
+  }
+ },
+ "by_op": {
+  "faithful": {
+   "n": 54,
+   "supported": 23,
+   "needs_qualifier": 2,
+   "unsupported": 4,
+   "contradicted": 0,
+   "off_label": 0,
+   "needs_human_review": 25,
+   "named": 23
+  },
+  "drop_qualifier": {
+   "n": 15,
+   "supported": 3,
+   "needs_qualifier": 5,
+   "unsupported": 1,
+   "contradicted": 0,
+   "off_label": 2,
+   "needs_human_review": 4,
+   "named": 8
+  },
+  "broaden": {
+   "n": 16,
+   "supported": 0,
+   "needs_qualifier": 0,
+   "unsupported": 9,
+   "contradicted": 3,
+   "off_label": 4,
+   "needs_human_review": 0,
+   "named": 16
+  },
+  "inflate": {
+   "n": 11,
+   "supported": 0,
+   "needs_qualifier": 1,
+   "unsupported": 6,
+   "contradicted": 0,
+   "off_label": 0,
+   "needs_human_review": 4,
+   "named": 6
+  },
+  "superiority": {
+   "n": 8,
+   "supported": 0,
+   "needs_qualifier": 0,
+   "unsupported": 8,
+   "contradicted": 0,
+   "off_label": 0,
+   "needs_human_review": 0,
+   "named": 8
+  },
+  "absolute": {
+   "n": 1,
+   "supported": 0,
+   "needs_qualifier": 0,
+   "unsupported": 1,
+   "contradicted": 0,
+   "off_label": 0,
+   "needs_human_review": 0,
+   "named": 1
+  },
+  "deny_risk": {
+   "n": 6,
+   "supported": 0,
+   "needs_qualifier": 0,
+   "unsupported": 3,
+   "contradicted": 3,
+   "off_label": 0,
+   "needs_human_review": 0,
+   "named": 6
+  },
+  "contradict": {
+   "n": 9,
+   "supported": 0,
+   "needs_qualifier": 0,
+   "unsupported": 3,
+   "contradicted": 4,
+   "off_label": 0,
+   "needs_human_review": 2,
+   "named": 7
+  },
+  "wrong_dose": {
+   "n": 12,
+   "supported": 0,
+   "needs_qualifier": 1,
+   "unsupported": 7,
+   "contradicted": 2,
+   "off_label": 0,
+   "needs_human_review": 2,
+   "named": 9
+  }
+ },
+ "confusion": {
+  "faithful -> supported": 23,
+  "drop_qualifier -> supported": 3,
+  "broaden -> unsupported": 9,
+  "faithful -> needs_human_review": 25,
+  "drop_qualifier -> off_label": 2,
+  "faithful -> needs_qualifier": 2,
+  "deny_risk -> contradicted": 3,
+  "contradict -> needs_human_review": 2,
+  "inflate -> needs_human_review": 4,
+  "superiority -> unsupported": 8,
+  "wrong_dose -> contradicted": 2,
+  "drop_qualifier -> needs_human_review": 4,
+  "drop_qualifier -> unsupported": 1,
+  "drop_qualifier -> needs_qualifier": 5,
+  "inflate -> unsupported": 6,
+  "absolute -> unsupported": 1,
+  "broaden -> off_label": 4,
+  "faithful -> unsupported": 4,
+  "wrong_dose -> needs_human_review": 2,
+  "deny_risk -> unsupported": 3,
+  "contradict -> contradicted": 4,
+  "wrong_dose -> unsupported": 7,
+  "contradict -> unsupported": 3,
+  "broaden -> contradicted": 3,
+  "inflate -> needs_qualifier": 1,
+  "wrong_dose -> needs_qualifier": 1
+ },
+ "claims": [
+  {
+   "id": "wegovy-ind-weight:0",
+   "card": "wegovy-ind-weight",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with a reduced-calorie diet and increased physical activity, WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term, along with a reduced-calorie diet and increased physical activity. The label excerpts provide evidence for this claim, specifically excerpt #8.4 Pediatric Use, which states that the safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established. Additionally, excerpt #14.3 Weight Reduction and Long-term Maintenance Study of WEGOVY Injection in Pediatric Patients Aged 12 Years and Older with Obesity provides details on a clinical trial that supports the claim, including a 68-week, double-blind, placebo-controlled trial in 201 pediatric patients aged 12 years and older with obesity. The trial showed that treatment with WEGOVY injection resulted in a statistically significant reduction in percent BMI compared with placebo, and greater proportions of patients treated with WEGOVY injection achieved ≥5% reduction in baseline BMI than those treated with placebo.",
+   "tokens": 2715,
+   "latency_s": 0.02,
+   "source": "cache"
+  },
+  {
+   "id": "wegovy-ind-weight:1",
+   "card": "wegovy-ind-weight",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term. The label excerpts provide evidence for this claim, specifically excerpt #wegovy:v19:28:0, which states that the safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established. Additionally, excerpt #wegovy:v19:41:1 provides data on the efficacy of WEGOVY injection in pediatric patients aged 12 years and older with obesity, including a statistically significant reduction in percent BMI compared with placebo after 68 weeks.",
+   "tokens": 2512,
+   "latency_s": 0.01,
+   "source": "cache"
+  },
+  {
+   "id": "wegovy-ind-weight:2",
+   "card": "wegovy-ind-weight",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with a reduced-calorie diet and increased physical activity, WEGOVY injection helps children as young as 8 with obesity lose excess weight.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that WEGOVY injection helps children as young as 8 with obesity lose excess weight, along with a reduced-calorie diet and increased physical activity. However, the label excerpts do not support this claim. The only indication for pediatric patients is for those aged 12 years and older with obesity, as stated in excerpt 3. There is no mention of children as young as 8. Furthermore, the claim implies that WEGOVY injection is effective for weight loss in children, but the label excerpts only mention the safety and effectiveness of WEGOVY injection in pediatric patients aged 12 years and older with obesity, as stated in excerpt 3. Therefore, the claim is unsupported.",
+   "tokens": 2469,
+   "latency_s": 0.01,
+   "source": "cache"
+  },
+  {
+   "id": "wegovy-ind-cv:0",
+   "card": "wegovy-ind-cv",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with a reduced-calorie diet and increased physical activity, WEGOVY injection reduces the risk of cardiovascular death, heart attack and stroke in adults with established cardiovascular disease and either obesity or overweight.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that WEGOVY injection reduces the risk of cardiovascular death, heart attack, and stroke in adults with established cardiovascular disease and either obesity or overweight. The label excerpts provide evidence to support this claim. Specifically, excerpt 'wegovy:v19:1:1' states that WEGOVY injection is indicated to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight. Excerpt 'wegovy:v19:39:0' describes a clinical trial that evaluated the effect of WEGOVY injection on major adverse CV events in adults with established CV disease and either obesity or overweight. The trial results, presented in excerpt 'wegovy:v19:39:5', show that WEGOVY injection reduced the risk of major adverse CV events compared to placebo. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2508,
+   "latency_s": 0.01,
+   "source": "cache"
+  },
+  {
+   "id": "wegovy-ind-cv:1",
+   "card": "wegovy-ind-cv",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "WEGOVY reduces the risk of heart attack and stroke.",
+   "status": "off_label",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that WEGOVY reduces the risk of heart attack and stroke, but the label excerpts only support this claim for adults with established CV disease and either obesity or overweight. The excerpts do not mention the general population or all adults.",
+   "tokens": 2567,
+   "latency_s": 8.78,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-box:0",
+   "card": "wegovy-box",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "safety",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In studies in rodents, semaglutide caused thyroid C-cell tumors, and it is unknown whether WEGOVY causes these tumors, including medullary thyroid carcinoma, in humans.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 4,
+   "reasoning": "The claim states that semaglutide caused thyroid C-cell tumors in rodents and that it is unknown whether WEGOVY causes these tumors in humans. The label excerpts provide similar information, stating that semaglutide caused thyroid C-cell tumors in rodents and that the human relevance of this finding has not been determined. The excerpts also mention that cases of MTC have been reported in patients treated with liraglutide, another GLP-1 receptor agonist, but that the data are insufficient to establish or exclude a causal relationship between MTC and GLP-1 receptor agonist use in humans. The claim does not mention the cases of MTC in patients treated with liraglutide, so it is not entirely supported by the label excerpts.",
+   "tokens": 2366,
+   "latency_s": 14.99,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-box:1",
+   "card": "wegovy-box",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "safety",
+   "op": "deny_risk",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk"
+   ],
+   "text": "WEGOVY has been proven not to cause thyroid tumors in people.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that WEGOVY has been proven not to cause thyroid tumors in people. However, the label excerpts do not provide any evidence that WEGOVY has been proven to not cause thyroid tumors. In fact, the excerpts state that semaglutide caused a dose-dependent and treatment-duration-dependent increase in the incidence of thyroid C-cell tumors in rodents, and that the human relevance of this finding has not been determined. Additionally, the label warns of the potential risk for MTC with the use of WEGOVY and informs patients of symptoms of thyroid tumors. Therefore, the claim is contradicted by the label excerpts.",
+   "tokens": 2199,
+   "latency_s": 10.76,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-contra:0",
+   "card": "wegovy-contra",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "safety",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Do not use WEGOVY if you or a family member have ever had medullary thyroid carcinoma (MTC), or if you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim is supported because the label excerpts state that WEGOVY is contraindicated in patients with a personal or family history of MTC or in patients with MEN 2, which matches the claim's wording.",
+   "tokens": 2154,
+   "latency_s": 6.56,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-contra:1",
+   "card": "wegovy-contra",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "People with a family history of medullary thyroid carcinoma can safely use WEGOVY.",
+   "status": "needs_human_review",
+   "model_verdict": "contradicted",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [
+    "violation_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that people with a family history of medullary thyroid carcinoma can safely use WEGOVY. However, the label excerpts clearly state that WEGOVY is contraindicated in patients with a personal or family history of MTC or in patients with MEN 2. This indicates that the claim is contradicted by the label.",
+   "tokens": 2043,
+   "latency_s": 4.19,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-eff-tablets:0",
+   "card": "wegovy-eff-tablets",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 64-week study of adults with obesity, or overweight with a weight-related condition, people taking WEGOVY 25 mg tablets lost an average of 13.6% of their body weight, compared with 2.4% with placebo.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that in a 64-week study of adults with obesity, or overweight with a weight-related condition, people taking WEGOVY 25 mg tablets lost an average of 13.6% of their body weight, compared with 2.4% with placebo. The label excerpts provide evidence for this claim. Study 7, a 64-week trial, enrolled 307 patients with obesity or overweight and at least one weight-related comorbid condition. The primary efficacy parameters were mean percent change in body weight and the percentages of patients achieving greater than or equal to 5% weight loss from baseline to Week 64. After 64 weeks, treatment with WEGOVY 25 mg tablets resulted in a statistically significant reduction in body weight compared with placebo. Table 11 shows that the mean percent change in body weight was -13.6% for WEGOVY 25 mg tablets and -2.4% for placebo. Therefore, the claim is supported.",
+   "tokens": 2495,
+   "latency_s": 10.69,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-eff-tablets:1",
+   "card": "wegovy-eff-tablets",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 64-week study of adults with obesity, or overweight with a weight-related condition, people taking WEGOVY 25 mg tablets lost an average of 19.6% of their body weight, compared with 2.4% with placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that people taking WEGOVY 25 mg tablets lost an average of 19.6% of their body weight, compared with 2.4% with placebo. The label excerpts provide the necessary information to support this claim. Table 11 in excerpt id=\"wegovy:v19:40:20\" shows that the least squares mean (LSMean) percentage change from baseline in body weight at Week 64 for WEGOVY 25 mg tablets is -13.6, and for placebo is -2.4. The LSMean percentage difference from placebo is 45.1 [33.8; 56.3]. This supports the claim that people taking WEGOVY 25 mg tablets lost an average of 19.6% of their body weight, compared with 2.4% with placebo.",
+   "tokens": 2456,
+   "latency_s": 9.72,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-eff-tablets:2",
+   "card": "wegovy-eff-tablets",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "WEGOVY tablets help adults lose more weight than any other weight-loss medicine.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that WEGOVY tablets help adults lose more weight than any other weight-loss medicine. However, the label excerpts do not provide a direct comparison with other weight-loss medicines. Instead, they provide information on the efficacy of WEGOVY tablets in reducing body weight in adults with obesity or overweight. Specifically, Table 11 in Study 7 shows that patients treated with WEGOVY 25 mg tablets achieved a statistically significant reduction in body weight compared to placebo, with a mean percent change from baseline of -13.6% and a percentage of patients losing greater than or equal to 10% body weight of 59.8%. However, this information does not provide a direct comparison with other weight-loss medicines. Therefore, the claim is unsupported.",
+   "tokens": 3230,
+   "latency_s": 12.91,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-dose:0",
+   "card": "wegovy-dose",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "WEGOVY injection starts at 0.25 mg, given once weekly.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that WEGOVY injection starts at 0.25 mg, given once weekly. The label excerpts provide information on the recommended starting dosage and dosage escalation of WEGOVY injection. According to Table 1 in the label excerpts, the recommended starting dosage is indeed 0.25 mg administered subcutaneously once weekly. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2458,
+   "latency_s": 7.93,
+   "source": "live"
+  },
+  {
+   "id": "wegovy-dose:1",
+   "card": "wegovy-dose",
+   "label": "wegovy",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "WEGOVY injection is given once daily, starting at 0.25 mg.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that WEGOVY injection is given once daily, starting at 0.25 mg. However, the label excerpts state that WEGOVY injection is given once weekly, starting at 0.25 mg. The claim is incorrect about the frequency of administration.",
+   "tokens": 2377,
+   "latency_s": 5.74,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-glycemic:0",
+   "card": "ozempic-ind-glycemic",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, OZEMPIC improves blood sugar control in adults with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that OZEMPIC improves blood sugar control in adults with type 2 diabetes, along with diet and exercise. The label excerpts support this claim, as they indicate that OZEMPIC is used to improve glycemic control in adults with type 2 diabetes mellitus, as an adjunct to diet and exercise (Excerpt 1). Additionally, Excerpt 3 states that OZEMPIC is used to improve blood sugar (glucose) in adults with type 2 diabetes mellitus, along with diet and exercise. Therefore, the claim is supported.",
+   "tokens": 2106,
+   "latency_s": 8.08,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-glycemic:1",
+   "card": "ozempic-ind-glycemic",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "OZEMPIC improves blood sugar control in adults with type 2 diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that OZEMPIC improves blood sugar control in adults with type 2 diabetes. The label excerpts provide evidence of this claim in several sections. Specifically, excerpt ozempic:v20:1:0 lists 'improve glycemic control in adults with type 2 diabetes mellitus' as an indication for OZEMPIC. Excerpt ozempic:v20:35:0 discusses the efficacy of OZEMPIC in patients with type 2 diabetes mellitus, stating that it produced a 'clinically relevant reduction from baseline in HbA1c compared with placebo.' Excerpt ozempic:v20:35:1 provides more detail on a specific trial, where patients with type 2 diabetes mellitus inadequately controlled with diet and exercise were randomized to OZEMPIC 0.5 mg or OZEMPIC 1 mg once weekly or placebo. The results of this trial are presented in Table 3, which shows a statistically significant reduction in HbA1c compared with placebo. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2269,
+   "latency_s": 17.05,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-glycemic:2",
+   "card": "ozempic-ind-glycemic",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with diet and exercise, OZEMPIC improves blood sugar control in adults with type 1 or type 2 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that OZEMPIC improves blood sugar control in adults with type 1 or type 2 diabetes, along with diet and exercise. The label excerpts indicate that OZEMPIC is indicated to improve glycemic control in adults with type 2 diabetes mellitus, as an adjunct to diet and exercise. However, there is no mention of type 1 diabetes in the excerpts. Therefore, the claim is partially supported for type 2 diabetes, but unsupported for type 1 diabetes.",
+   "tokens": 2113,
+   "latency_s": 7.35,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-kidney:0",
+   "card": "ozempic-ind-kidney",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In adults with type 2 diabetes and chronic kidney disease, OZEMPIC reduces the risk of sustained eGFR decline, end-stage kidney disease and cardiovascular death.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that OZEMPIC reduces the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes and chronic kidney disease. The label excerpts provide evidence for this claim, specifically excerpt #ozempic:v20:37:2, which states that OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m^2, chronic renal replacement therapy, renal death, CV death. Additionally, excerpt #ozempic:v20:37:4 provides data on the individual components of the primary composite endpoint, including sustained eGFR decline, end-stage kidney disease, and cardiovascular death. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2367,
+   "latency_s": 10.5,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-kidney:1",
+   "card": "ozempic-ind-kidney",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "OZEMPIC reduces the risk of kidney failure.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that OZEMPIC reduces the risk of kidney failure, but the label excerpts only mention reducing the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease. The claim does not specify the population or the specific risk being reduced, so it is not supported by the label excerpts.",
+   "tokens": 1842,
+   "latency_s": 5.39,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-kidney:2",
+   "card": "ozempic-ind-kidney",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "OZEMPIC protects kidney function in adults with chronic kidney disease, whether or not they have diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that OZEMPIC protects kidney function in adults with chronic kidney disease, whether or not they have diabetes. However, the label excerpts only mention the protection of kidney function in adults with type 2 diabetes mellitus and chronic kidney disease. There is no mention of OZEMPIC's effect on kidney function in adults with chronic kidney disease without diabetes. Therefore, the claim is not supported by the label excerpts.",
+   "tokens": 1980,
+   "latency_s": 12.18,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-cv:0",
+   "card": "ozempic-ind-cv",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "OZEMPIC reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes and established cardiovascular disease.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that OZEMPIC reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes and established cardiovascular disease. The label excerpts provide evidence for this claim in the 'INDICATIONS AND USAGE' section, which states that OZEMPIC is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease. Additionally, the 'Medication Guide' section provides a similar statement. The 'Cardiovascular Outcomes Trial' section provides further evidence, including a table showing the hazard ratio of major adverse cardiovascular events (MACE) between OZEMPIC and placebo, which is 0.74 (0.58, 0.95). This indicates that OZEMPIC reduces the risk of MACE by 26% compared to placebo. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2185,
+   "latency_s": 15.16,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-ind-cv:1",
+   "card": "ozempic-ind-cv",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "OZEMPIC lowers the risk of heart attack and stroke for adults with type 2 diabetes.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that OZEMPIC lowers the risk of heart attack and stroke for adults with type 2 diabetes. The label excerpts indicate that OZEMPIC is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease. The SUSTAIN 6 trial also supports this claim, showing a hazard ratio of 0.74 for the composite outcome of cardiovascular death, non-fatal myocardial infarction, and non-fatal stroke. However, the claim does not specify that the risk reduction is only for adults with established cardiovascular disease, which is a requirement for the indication. Therefore, the claim is supported with a qualifier.",
+   "tokens": 2133,
+   "latency_s": 11.93,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-eff-mono:0",
+   "card": "ozempic-eff-mono",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.6% with OZEMPIC 1 mg, compared with 0.1% with placebo.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that in a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.6% with OZEMPIC 1 mg, compared with 0.1% with placebo. The label excerpts provide a table (Table 3) that shows the results of a 30-week trial of OZEMPIC as monotherapy in adult patients with type 2 diabetes mellitus inadequately controlled with diet and exercise. The table shows that the change in HbA1c at week 30 was -0.1% for placebo, -1.4% for OZEMPIC 0.5 mg, and -1.6% for OZEMPIC 1 mg. The claim is supported by the label excerpts.",
+   "tokens": 2646,
+   "latency_s": 10.59,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-eff-mono:1",
+   "card": "ozempic-eff-mono",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.6% with OZEMPIC 1 mg, compared with 0.1% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that in a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.6% with OZEMPIC 1 mg, compared with 0.1% with placebo. The label excerpts provide a table (Table 3) that shows the results of a 30-week trial of OZEMPIC as monotherapy in adult patients with type 2 diabetes mellitus inadequately controlled with diet and exercise. The table shows that the difference from placebo for OZEMPIC 1 mg is -1.4 [-1.7, -1.1] for HbA1c, not A1C. The claim is referring to A1C, but the label excerpts use HbA1c. The claim is also referring to a 2.6% reduction, but the label excerpts show a -1.4% reduction for OZEMPIC 1 mg. Therefore, the claim is unsupported.",
+   "tokens": 2672,
+   "latency_s": 12.38,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-eff-mono:2",
+   "card": "ozempic-eff-mono",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "OZEMPIC lowers A1C more than any other type 2 diabetes medicine.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that OZEMPIC lowers A1C more than any other type 2 diabetes medicine. However, the label excerpts do not provide a direct comparison of OZEMPIC with other type 2 diabetes medicines. The excerpts do mention that OZEMPIC has been compared with placebo, sitagliptin, exenatide extended-release (ER), and insulin glargine in clinical trials, but they do not provide a statement that OZEMPIC lowers A1C more than any other type 2 diabetes medicine. Therefore, the claim is unsupported.",
+   "tokens": 2552,
+   "latency_s": 14.72,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-comp-sitagliptin:0",
+   "card": "ozempic-comp-sitagliptin",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "comparative",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 56-week trial in adults with type 2 diabetes also taking metformin and/or a thiazolidinedione, OZEMPIC 1 mg lowered A1C by 1.5%, compared with 0.7% for sitagliptin.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that OZEMPIC 1 mg lowered A1C by 1.5% compared to sitagliptin, but the label excerpts only provide data for OZEMPIC 1 mg lowering A1C by 1.5% compared to sitagliptin in a specific trial, but the claim does not specify which trial. However, the excerpts do provide a table (Table 4) that shows the results of a trial comparing OZEMPIC 1 mg to sitagliptin, and the table shows that OZEMPIC 1 mg lowered A1C by 1.5% compared to sitagliptin. Therefore, the claim is supported.",
+   "tokens": 2481,
+   "latency_s": 7.93,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-comp-sitagliptin:1",
+   "card": "ozempic-comp-sitagliptin",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "comparative",
+   "op": "absolute",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted",
+    "needs_qualifier"
+   ],
+   "expected_violations": [
+    "unsupported_absolute_claim",
+    "overstated_efficacy"
+   ],
+   "text": "OZEMPIC lowers A1C more than sitagliptin in every patient with type 2 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that OZEMPIC lowers A1C more than sitagliptin in every patient with type 2 diabetes. However, the label excerpts only provide data from a specific trial (NCT01930188) where OZEMPIC 0.5 mg and 1 mg once weekly were compared to sitagliptin 100 mg once daily. The excerpts do not provide data on whether OZEMPIC is more effective than sitagliptin in every patient with type 2 diabetes, but rather in a specific population (patients with type 2 diabetes mellitus in combination with metformin and/or thiazolidinediones).",
+   "tokens": 2418,
+   "latency_s": 10.24,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-dose:0",
+   "card": "ozempic-dose",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "OZEMPIC is taken once a week, on the same day each week, at any time of day, with or without meals.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that OZEMPIC is taken once a week, on the same day each week, at any time of day, with or without meals. This is supported by the label excerpts, specifically excerpt id='ozempic:v20:2:0' section='OZEMPIC | 2 DOSAGE AND ADMINISTRATION > 2.1 Important Administration Instructions', which states: 'Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals.'",
+   "tokens": 2321,
+   "latency_s": 10.52,
+   "source": "live"
+  },
+  {
+   "id": "ozempic-dose:1",
+   "card": "ozempic-dose",
+   "label": "ozempic",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "OZEMPIC is taken once a day, at any time, with or without meals.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "overstated_efficacy",
+    "unsubstantiated_superiority",
+    "broadened_indication",
+    "omitted_qualifier",
+    "minimized_risk",
+    "missing_risk_information",
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 4,
+   "reasoning": "The claim states that OZEMPIC is taken once a day, at any time, with or without meals. However, the label excerpts state that OZEMPIC should be administered once weekly, on the same day each week, at any time of the day, with or without meals. This indicates that the claim is contradicted by the label excerpts.",
+   "tokens": 2483,
+   "latency_s": 12.95,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-ind-glycemic:0",
+   "card": "rybelsus-ind-glycemic",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, RYBELSUS tablets improve blood sugar control in adults with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that RYBELSUS tablets improve blood sugar control in adults with type 2 diabetes, which is supported by the excerpts. The excerpts from the INDICATIONS AND USAGE section (id: rybelsus:v14:1:0) and the MEDICATION GUIDE (id: rybelsus:v14:43:2) both mention that RYBELSUS tablets are indicated to improve glycemic control in adults with type 2 diabetes mellitus, along with diet and exercise. This matches the claim's statement. Therefore, the verdict is supported.",
+   "tokens": 2023,
+   "latency_s": 8.87,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-ind-glycemic:1",
+   "card": "rybelsus-ind-glycemic",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with diet and exercise, RYBELSUS tablets improve blood sugar control in adults and children with type 2 diabetes.",
+   "status": "off_label",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that RYBELSUS tablets improve blood sugar control in adults and children with type 2 diabetes. The label excerpts indicate that RYBELSUS tablets are indicated for improving glycemic control in adults with type 2 diabetes mellitus, but there is no mention of children. The claim is therefore off-label for children.",
+   "tokens": 2068,
+   "latency_s": 8.47,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-ind-cv:0",
+   "card": "rybelsus-ind-cv",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "RYBELSUS reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who are at high risk for these events.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that RYBELSUS reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes who are at high risk for these events. The label excerpts provide evidence to support this claim. Excerpt 1 (INDICATIONS AND USAGE) states that RYBELSUS is indicated to reduce the risk of major adverse cardiovascular events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events. Excerpt 3 (MEDICATION GUIDE) also states that RYBELSUS is used to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus who are at high risk for these events. Excerpt 4 (Table 10) provides data from Trial 7, which shows that semaglutide tablets 14 mg reduced the risk of MACE (composite of CV death, non-fatal MI, non-fatal stroke) compared to placebo. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2166,
+   "latency_s": 14.08,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-ind-cv:1",
+   "card": "rybelsus-ind-cv",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "RYBELSUS reduces the risk of heart attack and stroke in adults with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that RYBELSUS reduces the risk of heart attack and stroke in adults with type 2 diabetes. The label excerpts provide evidence that RYBELSUS is indicated to reduce the risk of major adverse cardiovascular events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events. The excerpts also mention a clinical trial (Trial 7) that demonstrated a significant reduction in the occurrence of MACE, including heart attack and stroke, in patients with type 2 diabetes and established cardiovascular disease. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2026,
+   "latency_s": 17.05,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-eff-mono:0",
+   "card": "rybelsus-eff-mono",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.4% with the 14 mg tablet, compared with 0.3% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that in a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.4% with the 14 mg tablet, compared with 0.3% with placebo. The label excerpts provide information on clinical trials, but none of them directly support the claim. However, Table 4 in excerpt id=",
+   "tokens": 2682,
+   "latency_s": 18.67,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-eff-mono:1",
+   "card": "rybelsus-eff-mono",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.4% with the 14 mg tablet, compared with 0.3% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that in a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.4% with the 14 mg tablet, compared with 0.3% with placebo. However, the label excerpts do not contain information about a 26-week trial with semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise. The closest information is in Table 4 of Trial 1, which shows the results of a 26-week trial of semaglutide tablets in adult patients with type 2 diabetes mellitus inadequately controlled with diet and exercise. However, this table does not contain the specific information about the 14 mg tablet and placebo. Therefore, the claim is unsupported.",
+   "tokens": 2752,
+   "latency_s": 7.6,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-dose:0",
+   "card": "rybelsus-dose",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Take one RYBELSUS tablet once daily on an empty stomach in the morning, with up to 4 ounces of water.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states to take one RYBELSUS tablet once daily on an empty stomach in the morning, with up to 4 ounces of water. This is supported by the excerpts, specifically excerpt id='rybelsus:v14:2:0' section='2.1 Important Administration Instructions' which states 'Take one RYBELSUS or OZEMPIC tablet orally once daily on an empty stomach in the morning with water (up to 4 ounces of water)'.",
+   "tokens": 2282,
+   "latency_s": 8.09,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-dose:1",
+   "card": "rybelsus-dose",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "Take RYBELSUS once daily with breakfast.",
+   "status": "needs_human_review",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "violation_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states to take RYBELSUS once daily with breakfast, but the label excerpts specify to take RYBELSUS on an empty stomach in the morning with water.",
+   "tokens": 2174,
+   "latency_s": 4.84,
+   "source": "live"
+  },
+  {
+   "id": "rybelsus-box:0",
+   "card": "rybelsus-box",
+   "label": "rybelsus",
+   "split": "dev",
+   "kind": "safety",
+   "op": "deny_risk",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk"
+   ],
+   "text": "Because RYBELSUS is a tablet, it carries no risk of thyroid tumors.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that RYBELSUS carries no risk of thyroid tumors, but the label excerpts mention the potential risk of thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in patients treated with RYBELSUS. The excerpts also mention that it is unknown whether RYBELSUS causes thyroid C-cell tumors in humans, but that cases of MTC have been reported in patients treated with another GLP-1 receptor agonist, liraglutide. Furthermore, the Medication Guide warns patients about the potential risk of thyroid tumors, including cancer, and advises them to report symptoms to their physician.",
+   "tokens": 2353,
+   "latency_s": 13.64,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-ind-glycemic:0",
+   "card": "mounjaro-ind-glycemic",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, MOUNJARO improves blood sugar control in adults and children 10 years and older with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that MOUNJARO improves blood sugar control in adults and children 10 years and older with type 2 diabetes. The label excerpts support this claim for adults, as stated in the Indications and Usage section (excerpt id: mounjaro:v40:1:0). For children 10 years and older, the claim is supported by the Pediatric Use section (excerpt id: mounjaro:v40:46:0), which states that the safety and effectiveness of MOUNJARO have been established in pediatric patients 10 years of age and older with type 2 diabetes mellitus.",
+   "tokens": 2056,
+   "latency_s": 12.15,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-ind-glycemic:1",
+   "card": "mounjaro-ind-glycemic",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with diet and exercise, MOUNJARO improves blood sugar control in children as young as 6 with type 2 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that MOUNJARO improves blood sugar control in children as young as 6 with type 2 diabetes, along with diet and exercise. However, the label excerpts only indicate that MOUNJARO is approved for use in pediatric patients 10 years of age and older with type 2 diabetes mellitus, as an adjunct to diet and exercise. There is no evidence to support the claim that MOUNJARO is effective in children as young as 6.",
+   "tokens": 2656,
+   "latency_s": 11.52,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-ind-glycemic:2",
+   "card": "mounjaro-ind-glycemic",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "MOUNJARO is approved for chronic weight management in adults with obesity.",
+   "status": "off_label",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that MOUNJARO is approved for chronic weight management in adults with obesity. However, the provided label excerpts do not mention chronic weight management or obesity as an indication for MOUNJARO. The excerpts only mention type 2 diabetes mellitus as the approved indication for MOUNJARO.",
+   "tokens": 2455,
+   "latency_s": 12.25,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-ind-cv:0",
+   "card": "mounjaro-ind-cv",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "MOUNJARO reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who are at high risk for these events.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that MOUNJARO reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes who are at high risk for these events. The label excerpts provide evidence to support this claim. Excerpt 1 (INDICATIONS AND USAGE) states that MOUNJARO is indicated to reduce the risk of major adverse cardiovascular events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events. Excerpt 3 (SURPASS-CVOT) describes the trial that demonstrated the efficacy of MOUNJARO in reducing the risk of major adverse cardiovascular events. Excerpt 4 (Mounjaro Medication Guide) also states that MOUNJARO is used to reduce the risk of major cardiovascular events such as heart attack, stroke, or death in adults with type 2 diabetes mellitus who are at high risk for these events. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2191,
+   "latency_s": 20.54,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-ind-cv:1",
+   "card": "mounjaro-ind-cv",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "MOUNJARO reduces the risk of heart attack and stroke.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "unsubstantiated_superiority"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that MOUNJARO reduces the risk of heart attack and stroke. The label excerpts provide information on the SURPASS-CVOT trial, which compared MOUNJARO to dulaglutide in adults with type 2 diabetes mellitus and established cardiovascular disease. The trial found that MOUNJARO was non-inferior to dulaglutide for reducing the occurrence of MACE-3, which includes heart attack and stroke. The estimated hazard ratio for time to first MACE was 0.92 (95.3% CI: 0.83, 1.01) for MOUNJARO compared to dulaglutide. This suggests that MOUNJARO does reduce the risk of heart attack and stroke, but the label also notes that superiority to dulaglutide was not established.",
+   "tokens": 2363,
+   "latency_s": 13.1,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-eff-mono:0",
+   "card": "mounjaro-eff-mono",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.8% with MOUNJARO 5 mg, compared with 0.1% with placebo.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that in a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.8% with MOUNJARO 5 mg, compared with 0.1% with placebo. The label excerpts provide information about a 40-week trial of MOUNJARO as monotherapy in adult patients with type 2 diabetes mellitus with inadequate glycemic control with diet and exercise. Table 4 in excerpt mounjaro:v40:74:2 shows the results at Week 40, which includes the change in HbA1c for MOUNJARO 5 mg and placebo. The table states that the change in HbA1c for MOUNJARO 5 mg is -1.8%, and for placebo is -0.1%. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 3210,
+   "latency_s": 17.76,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-eff-mono:1",
+   "card": "mounjaro-eff-mono",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.8% with MOUNJARO 5 mg, compared with 0.1% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that in a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.8% with MOUNJARO 5 mg, compared with 0.1% with placebo. The label excerpts provide information about a 40-week trial (SURPASS-1) where patients with type 2 diabetes mellitus with inadequate glycemic control with diet and exercise were randomized to subcutaneous MOUNJARO 5 mg, 10 mg, 15 mg, or placebo once weekly. The excerpts state that monotherapy with MOUNJARO 5 mg, 10 mg, and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with placebo (see Table 4). Table 4 shows the results at Week 40, and the difference from placebo for MOUNJARO 5 mg is -1.7 (-2.0, -1.4) for HbA1c. This value is not 2.8%, so the claim is not supported.",
+   "tokens": 3357,
+   "latency_s": 21.76,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-comp-semaglutide:0",
+   "card": "mounjaro-comp-semaglutide",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "comparative",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 40-week trial in adults with type 2 diabetes taking metformin, MOUNJARO 15 mg lowered A1C by 2.3%, compared with 1.9% for semaglutide 1 mg.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that in a 40-week trial in adults with type 2 diabetes taking metformin, MOUNJARO 15 mg lowered A1C by 2.3%, compared with 1.9% for semaglutide 1 mg. The label excerpts provide a table (Table 5) that shows the results of a 40-week trial in adults with type 2 diabetes taking metformin. The table shows that the change in HbA1c at Week 40 for MOUNJARO 15 mg is -2.3% and for semaglutide 1 mg is -1.9%. The claim is supported by the label excerpts.",
+   "tokens": 3097,
+   "latency_s": 12.81,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-comp-semaglutide:1",
+   "card": "mounjaro-comp-semaglutide",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "comparative",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "MOUNJARO is the most effective type 2 diabetes medicine available.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that MOUNJARO is the most effective type 2 diabetes medicine available. However, the provided label excerpts do not contain any information that directly compares MOUNJARO to other type 2 diabetes medicines or states that it is the most effective. The excerpts do mention that MOUNJARO resulted in a statistically significant reduction in HbA1c compared to placebo in several clinical trials, but this does not necessarily mean that it is the most effective medicine available.",
+   "tokens": 2640,
+   "latency_s": 12.14,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-contra:0",
+   "card": "mounjaro-contra",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "safety",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "MOUNJARO should not be used in patients with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that MOUNJARO should not be used in patients with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2. The label excerpts provide a clear contraindication for these conditions in patients taking MOUNJARO, as stated in the Contraindications section (excerpt id: mounjaro:v40:5:0) and the Warning section (excerpt id: mounjaro:v40:0:0). The excerpts explicitly state that MOUNJARO is contraindicated in patients with a personal or family history of MTC or in patients with MEN 2, which matches the claim exactly.",
+   "tokens": 2142,
+   "latency_s": 11.14,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-contra:1",
+   "card": "mounjaro-contra",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma. However, the label excerpts clearly state that MOUNJARO is contraindicated in patients with a personal or family history of MTC (see excerpts 4, 5, and 0).",
+   "tokens": 2111,
+   "latency_s": 12.78,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-dose:0",
+   "card": "mounjaro-dose",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "MOUNJARO starts at 2.5 mg, injected once weekly.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that MOUNJARO starts at 2.5 mg, injected once weekly. The label excerpts provide information on the recommended starting dosage and escalation schedule, which matches the claim. The excerpts also mention that the day of weekly administration can be changed, but this does not contradict the claim. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2177,
+   "latency_s": 11.68,
+   "source": "live"
+  },
+  {
+   "id": "mounjaro-dose:1",
+   "card": "mounjaro-dose",
+   "label": "mounjaro",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "MOUNJARO starts at 15 mg, injected once weekly.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that MOUNJARO starts at 15 mg, injected once weekly. The label excerpts provide information on the recommended starting dosage and escalation schedule, which states that the recommended starting dosage is 2.5 mg injected subcutaneously once weekly. This does not support the claim.",
+   "tokens": 1936,
+   "latency_s": 7.21,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-ind-weight:0",
+   "card": "zepbound-ind-weight",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "With a reduced-calorie diet and increased physical activity, ZEPBOUND helps adults with obesity, or with overweight and at least one weight-related condition, lose excess weight and keep it off.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 4,
+   "reasoning": "The claim states that ZEPBOUND helps adults with obesity, or with overweight and at least one weight-related condition, lose excess weight and keep it off. The label excerpts provide evidence that ZEPBOUND is indicated for weight reduction in conjunction with a reduced-calorie diet and increased physical activity in adults with obesity or overweight in the presence of at least one weight-related comorbid condition. The excerpts also describe the clinical studies that support the efficacy of ZEPBOUND for weight reduction. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2342,
+   "latency_s": 21.55,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-ind-weight:1",
+   "card": "zepbound-ind-weight",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "ZEPBOUND helps adults with obesity lose excess weight and keep it off.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that ZEPBOUND helps adults with obesity lose excess weight and keep it off, but the label excerpts indicate that ZEPBOUND is only indicated for weight reduction in combination with a reduced-calorie diet and increased physical activity, and that it is not known if ZEPBOUND is safe and effective for use in children. The claim does not mention the need for a reduced-calorie diet and increased physical activity, and it does not specify the population of adults with obesity. Therefore, the claim is not entirely supported by the label excerpts.",
+   "tokens": 1658,
+   "latency_s": 12.74,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-ind-weight:2",
+   "card": "zepbound-ind-weight",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "With a reduced-calorie diet and increased physical activity, ZEPBOUND helps teens 12 and older with obesity lose weight.",
+   "status": "off_label",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication",
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that ZEPBOUND helps teens 12 and older with obesity lose weight with a reduced-calorie diet and increased physical activity. However, the label excerpts only mention adults with obesity or overweight in the presence of at least one weight-related comorbid condition, and do not include any information about teens or weight loss in this population. Additionally, the excerpts mention a standard lifestyle instruction every 12 weeks on reduced-calorie diet and increased physical activity, but do not specify that this is the only way to achieve weight loss with ZEPBOUND.",
+   "tokens": 1990,
+   "latency_s": 14.28,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-ind-osa:0",
+   "card": "zepbound-ind-osa",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "With a reduced-calorie diet and increased physical activity, ZEPBOUND treats moderate to severe obstructive sleep apnea in adults with obesity.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "cited_unknown_excerpt",
+    "cited_unknown_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that ZEPBOUND treats moderate to severe obstructive sleep apnea in adults with obesity, which is supported by the Indications and Usage section of the label (excerpt id: zepbound:v40:1:0). However, the claim also mentions a reduced-calorie diet and increased physical activity, which is not explicitly stated in the Indications and Usage section. Instead, it is mentioned in the Patient Medication Guide (excerpt id: zepbound:v106:2:0) and in the Clinical Studies section (excerpt id: zepbound:v40:84:1:0). Therefore, the claim is supported, but it needs a qualifier to specify that the treatment is in combination with a reduced-calorie diet and increased physical activity.",
+   "tokens": 2107,
+   "latency_s": 18.27,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-ind-osa:1",
+   "card": "zepbound-ind-osa",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "ZEPBOUND treats sleep apnea.",
+   "status": "off_label",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that ZEPBOUND treats sleep apnea, but the label excerpts only indicate that ZEPBOUND is indicated to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity, and that it was evaluated in clinical studies for this indication. The excerpts do not state that ZEPBOUND is approved to treat sleep apnea in general, but only in adults with obesity. Therefore, the claim is off-label.",
+   "tokens": 1743,
+   "latency_s": 13.49,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-eff:0",
+   "card": "zepbound-eff",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 72-week study of adults with obesity or overweight, people taking ZEPBOUND 15 mg lost an average of 20.9% of their body weight, compared with 3.1% with placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "claim_figures_not_in_quotes:20.9,3.1"
+   ],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that people taking ZEPBOUND 15 mg lost an average of 20.9% of their body weight, compared with 3.1% with placebo. The label excerpts provide a table (Table 2) that shows the changes in body weight at Week 72 in Studies 1 and 2. The table includes a row for ZEPBOUND 15 mg, which states that the average body weight loss was -20.9% compared to placebo. This matches the claim. However, the claim does not mention that the study was of adults with obesity or overweight, and that the weight loss was in a 72-week study. The label excerpts provide this information in the Indications and Usage section and in the Clinical Studies section, respectively. Therefore, the claim is supported.",
+   "tokens": 2675,
+   "latency_s": 24.57,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-eff:1",
+   "card": "zepbound-eff",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 72-week study of adults with obesity or overweight, people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight, compared with 3.1% with placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "contradicted",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "violation_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight, compared with 3.1% with placebo. However, the label excerpts do not support this claim. Table 2 in excerpt zepbound:v40:79:3 shows the % change from baseline for ZEPBOUND 15 mg as -20.9, not 25.9. The claim is also contradicted by excerpt zepbound:v40:79:1, which states that ZEPBOUND resulted in a statistically significant reduction in body weight compared with placebo, but does not provide a specific percentage for ZEPBOUND 15 mg. Therefore, the verdict is: contradicted.",
+   "tokens": 2496,
+   "latency_s": 16.32,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-eff:2",
+   "card": "zepbound-eff",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "efficacy",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "ZEPBOUND works better than any other weight-loss medicine.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that ZEPBOUND works better than any other weight-loss medicine, but the label excerpts do not provide any comparative efficacy data. The excerpts only mention that ZEPBOUND resulted in a statistically significant reduction in body weight compared to placebo, but do not compare it to other weight-loss medicines.",
+   "tokens": 1991,
+   "latency_s": 19.03,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-dose:0",
+   "card": "zepbound-dose",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "ZEPBOUND starts at 2.5 mg once weekly for 4 weeks.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that ZEPBOUND starts at 2.5 mg once weekly for 4 weeks. The label excerpt from 'ZEPBOUND | 2 DOSAGE AND ADMINISTRATION > 2.1 Recommended Dose Escalation Schedule' supports this claim, stating that the recommended starting dosage of ZEPBOUND for all indications is 2.5 mg injected subcutaneously once weekly for 4 weeks.",
+   "tokens": 2346,
+   "latency_s": 9.24,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-dose:1",
+   "card": "zepbound-dose",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "You can stay on the 2.5 mg starting dose of ZEPBOUND as your long-term maintenance dose.",
+   "status": "needs_human_review",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [
+    "violation_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that the 2.5 mg starting dose can be used as the long-term maintenance dose, but the excerpts state that the 2.5 mg dosage is for treatment initiation and not approved as a maintenance dosage.",
+   "tokens": 2084,
+   "latency_s": 7.32,
+   "source": "live"
+  },
+  {
+   "id": "zepbound-box:0",
+   "card": "zepbound-box",
+   "label": "zepbound",
+   "split": "dev",
+   "kind": "safety",
+   "op": "deny_risk",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk"
+   ],
+   "text": "ZEPBOUND does not cause thyroid cancer.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that ZEPBOUND does not cause thyroid cancer, but the label excerpts mention the risk of thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in patients treated with ZEPBOUND. The excerpts also mention that it is unknown whether ZEPBOUND causes thyroid C-cell tumors in humans, but the risk is considered to be a potential concern.",
+   "tokens": 2117,
+   "latency_s": 12.49,
+   "source": "live"
+  },
+  {
+   "id": "victoza-ind-glycemic:0",
+   "card": "victoza-ind-glycemic",
+   "label": "victoza",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes. The label excerpts support this claim for adults, as stated in the Indications and Usage section (excerpt id: victoza:v31:1:0). For children 10 years and older, the excerpts state that the safety and effectiveness of VICTOZA have been established in pediatric patients 10 years of age and older (excerpt id: victoza:v31:23:0).",
+   "tokens": 1995,
+   "latency_s": 14.49,
+   "source": "live"
+  },
+  {
+   "id": "victoza-ind-glycemic:1",
+   "card": "victoza-ind-glycemic",
+   "label": "victoza",
+   "split": "test",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes. The label excerpts provide evidence for this claim, specifically excerpt 'victoza:v31:35:0' which describes a 26-week clinical trial in pediatric patients 10 years and older with type 2 diabetes mellitus, and excerpt 'victoza:v31:1:0' which lists the indication for VICTOZA as improving glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus.",
+   "tokens": 2002,
+   "latency_s": 14.85,
+   "source": "live"
+  },
+  {
+   "id": "victoza-ind-glycemic:2",
+   "card": "victoza-ind-glycemic",
+   "label": "victoza",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with diet and exercise, VICTOZA improves blood sugar control in people with type 1 diabetes.",
+   "status": "off_label",
+   "model_verdict": "off_label",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that VICTOZA improves blood sugar control in people with type 1 diabetes, but the label excerpts only mention type 2 diabetes mellitus. There is no mention of type 1 diabetes in the indications or clinical studies sections.",
+   "tokens": 2695,
+   "latency_s": 21.64,
+   "source": "live"
+  },
+  {
+   "id": "victoza-ind-cv:0",
+   "card": "victoza-ind-cv",
+   "label": "victoza",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "VICTOZA reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes and established cardiovascular disease.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that VICTOZA reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes and established cardiovascular disease. The label excerpts provide evidence for this claim. The LEADER trial, a multi-national, multi-center, placebo-controlled, double-blind trial, was conducted to test the efficacy of VICTOZA in reducing the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease. The trial included 9,340 adult patients who were randomized to VICTOZA 1.8 mg or placebo for a median duration of 3.5 years. The primary endpoint was the time to first occurrence of a three-part composite outcome, which included cardiovascular death, non-fatal myocardial infarction, and non-fatal stroke. The results of the trial showed that VICTOZA significantly reduced the occurrence of MACE, with a hazard ratio of 0.87 (0.78, 0.97) for time to first MACE. Additionally, the estimated hazard ratio for time to all-cause death for VICTOZA compared to placebo was 0.85 (0.74, 0.97). Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2445,
+   "latency_s": 19.81,
+   "source": "live"
+  },
+  {
+   "id": "victoza-ind-cv:1",
+   "card": "victoza-ind-cv",
+   "label": "victoza",
+   "split": "test",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "VICTOZA reduces the risk of heart attack and stroke in adults with type 2 diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "overstated_efficacy"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "quote_not_found_in_excerpt",
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 5,
+   "reasoning": "The claim states that VICTOZA reduces the risk of heart attack and stroke in adults with type 2 diabetes. The label excerpts provide evidence for this claim. The LEADER trial, a multi-national, multi-center, placebo-controlled, double-blind trial, compared the risk of major adverse cardiovascular events between VICTOZA and placebo in adult patients with inadequately controlled type 2 diabetes mellitus and atherosclerotic cardiovascular disease. The trial found that VICTOZA reduced the risk of major adverse cardiovascular events, including heart attack and stroke, compared to placebo. The excerpts provide the necessary information to support the claim, including the population (adults with type 2 diabetes and atherosclerotic cardiovascular disease), the treatment (VICTOZA 1.8 mg), and the outcome (reduced risk of heart attack and stroke).",
+   "tokens": 2496,
+   "latency_s": 23.94,
+   "source": "live"
+  },
+  {
+   "id": "victoza-comp-glimepiride:0",
+   "card": "victoza-comp-glimepiride",
+   "label": "victoza",
+   "split": "test",
+   "kind": "comparative",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 1.1%, compared with 0.5% for glimepiride 8 mg.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that in a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 1.1%, compared with 0.5% for glimepiride 8 mg. The label excerpts provide information on a 52-week trial in adults with type 2 diabetes, but the specific doses and outcomes mentioned in the claim are not directly supported by the excerpts. The excerpts mention a 52-week trial, but the specific doses and outcomes mentioned in the claim are not directly supported by the excerpts. The claim is not supported by the label excerpts.",
+   "tokens": 2716,
+   "latency_s": 15.34,
+   "source": "live"
+  },
+  {
+   "id": "victoza-comp-glimepiride:1",
+   "card": "victoza-comp-glimepiride",
+   "label": "victoza",
+   "split": "test",
+   "kind": "comparative",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 2.1%, compared with 0.5% for glimepiride 8 mg.",
+   "status": "needs_human_review",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "violation_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that in a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 2.1%, compared with 0.5% for glimepiride 8 mg. The label excerpts provide a 52-week trial in adults with type 2 diabetes, but the dose of VICTOZA is 1.2 mg or 1.8 mg, not just 1.8 mg. The table (Table 3) shows the results of the trial, but it does not provide the exact A1C reduction for VICTOZA 1.8 mg compared to glimepiride 8 mg. However, it does show that the difference in A1C reduction between VICTOZA 1.8 mg and glimepiride 8 mg is -0.6% (p-value <0.0001).",
+   "tokens": 2781,
+   "latency_s": 10.27,
+   "source": "live"
+  },
+  {
+   "id": "victoza-dose:0",
+   "card": "victoza-dose",
+   "label": "victoza",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "VICTOZA starts at 0.6 mg, injected once daily for one week.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that VICTOZA starts at 0.6 mg, injected once daily for one week. The label excerpts provide the same information in excerpt #victoza:v31:2:0, which states that the recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week. The excerpts also provide the same information in excerpt #victoza:v31:2:1, which states that the recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily.",
+   "tokens": 1879,
+   "latency_s": 10.12,
+   "source": "live"
+  },
+  {
+   "id": "victoza-dose:1",
+   "card": "victoza-dose",
+   "label": "victoza",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "VICTOZA is a once-weekly injection.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that VICTOZA is a once-weekly injection, but the label excerpts state that the recommended dosage is 0.6 mg injected subcutaneously once daily for one week, and then increased to 1.2 mg or 1.8 mg once daily. There is no mention of a once-weekly injection in the label excerpts.",
+   "tokens": 2070,
+   "latency_s": 15.81,
+   "source": "live"
+  },
+  {
+   "id": "victoza-dose:2",
+   "card": "victoza-dose",
+   "label": "victoza",
+   "split": "test",
+   "kind": "dosing",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "Even the 0.6 mg starting dose of VICTOZA lowers blood sugar in adults.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that even the 0.6 mg starting dose of VICTOZA lowers blood sugar in adults. However, the label excerpts state that VICTOZA 0.6 mg is not effective for glycemic control and is intended only as a starting dose to reduce gastrointestinal intolerance.",
+   "tokens": 1767,
+   "latency_s": 23.36,
+   "source": "live"
+  },
+  {
+   "id": "victoza-limit:0",
+   "card": "victoza-limit",
+   "label": "victoza",
+   "split": "test",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "For extra benefit, VICTOZA can be combined with other liraglutide products.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that VICTOZA can be combined with other liraglutide products for extra benefit. However, the label excerpt from section 1 INDICATIONS AND USAGE states that coadministration with other liraglutide-containing products is not recommended. This directly contradicts the claim.",
+   "tokens": 2114,
+   "latency_s": 17.87,
+   "source": "live"
+  },
+  {
+   "id": "victoza-contra:0",
+   "card": "victoza-contra",
+   "label": "victoza",
+   "split": "test",
+   "kind": "safety",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "VICTOZA should not be used by people with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that VICTOZA should not be used by people with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2. The label excerpts provide a clear contraindication for these conditions, stating that VICTOZA is contraindicated in patients with a personal or family history of MTC and in patients with MEN 2. This matches the claim exactly, with no additional information or qualifications needed.",
+   "tokens": 2491,
+   "latency_s": 23.09,
+   "source": "live"
+  },
+  {
+   "id": "victoza-contra:1",
+   "card": "victoza-contra",
+   "label": "victoza",
+   "split": "test",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "VICTOZA is safe for patients with Multiple Endocrine Neoplasia syndrome type 2.",
+   "status": "needs_human_review",
+   "model_verdict": "contradicted",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "violation_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that VICTOZA is safe for patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2), but the label excerpts explicitly state that VICTOZA is contraindicated in patients with MEN 2. This is a direct conflict between the claim and the label.",
+   "tokens": 2711,
+   "latency_s": 26.85,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-ind:0",
+   "card": "saxenda-ind",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "With a reduced-calorie diet and increased physical activity, SAXENDA helps adults and children 12 and older who weigh more than 60 kg and have obesity lose excess weight and keep it off.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that SAXENDA helps adults and children 12 and older who weigh more than 60 kg and have obesity lose excess weight and keep it off. The label excerpts support this claim, as they indicate that SAXENDA is indicated for adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity. The excerpts also mention that the safety and effectiveness of SAXENDA have been established in pediatric patients aged 12 years and older with body weight above 60 kg and an initial BMI corresponding to 30 kg/m^2 or greater for adults (obese) by international cut-offs. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2162,
+   "latency_s": 25.85,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-ind:1",
+   "card": "saxenda-ind",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "SAXENDA helps adults and teens with obesity lose excess weight and keep it off.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that SAXENDA helps adults and teens with obesity lose excess weight and keep it off. The label excerpts indicate that SAXENDA is indicated for adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity, and for adults with overweight in the presence of at least one weight-related comorbid condition. The excerpts also mention that the safety and efficacy of SAXENDA for chronic weight management in conjunction with reduced caloric intake and increased physical activity were studied in three 56-week, randomized, double-blind, placebo-controlled trials. However, the claim does not specify that the weight loss is in conjunction with a reduced calorie diet and increased physical activity, which is a requirement for the use of SAXENDA. Therefore, the claim is not entirely supported by the label excerpts.",
+   "tokens": 2141,
+   "latency_s": 24.63,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-ind:2",
+   "card": "saxenda-ind",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "With a reduced-calorie diet and increased physical activity, SAXENDA helps children 6 and older with obesity lose weight.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "broadened_indication",
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that SAXENDA helps children 6 and older with obesity lose weight with a reduced-calorie diet and increased physical activity. The label excerpts indicate that SAXENDA is indicated for pediatric patients aged 12 years and older with obesity, but there is no mention of children aged 6 and older. Additionally, the claim does not specify the population or condition for which the weight loss is being claimed. The label excerpts provide information on the safety and efficacy of SAXENDA in pediatric patients aged 12 years and older, but do not support the claim for children aged 6 and older.",
+   "tokens": 2556,
+   "latency_s": 17.27,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-limit:0",
+   "card": "saxenda-limit",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "SAXENDA is proven safe and effective for teens with type 2 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that SAXENDA is proven safe and effective for teens with type 2 diabetes. However, the label excerpts do not support this claim. The excerpts mention that it is not known if SAXENDA is safe and effective in children aged 12 to 17 years with type 2 diabetes (excerpt id: saxenda:v22:35:1). This suggests that the safety and efficacy of SAXENDA in this population has not been established. Therefore, the claim is unsupported.",
+   "tokens": 2620,
+   "latency_s": 15.7,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-eff:0",
+   "card": "saxenda-eff",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 56-week study of adults with obesity, or overweight with a weight-related condition, people taking SAXENDA lost an average of 7.4% of their body weight, compared with 3% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that people taking SAXENDA lost an average of 7.4% of their body weight, compared with 3% with placebo, in a 56-week study of adults with obesity, or overweight with a weight-related condition. The label excerpts provide information on Study 3, which is a 56-week trial that enrolled 422 patients with obesity or overweight and at least one weight-related comorbid condition. The mean age was 46 years, and the mean baseline body weight was 99.6 kg. The study found that patients taking SAXENDA lost an average of 5.4% of their body weight, compared with 1.7% with placebo. The claim is not supported by the label excerpts because it states a different average weight loss for SAXENDA (7.4%) compared to the actual average weight loss found in Study 3 (5.4%).",
+   "tokens": 2702,
+   "latency_s": 22.51,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-eff:1",
+   "card": "saxenda-eff",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 56-week study of adults with obesity, or overweight with a weight-related condition, people taking SAXENDA lost an average of 12.4% of their body weight, compared with 3% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that people taking SAXENDA lost an average of 12.4% of their body weight, compared with 3% with placebo. The label excerpts provide information on the results of Study 3, which is a 56-week trial. According to Table 4 in excerpt saxenda:v22:31:7, the percent change from baseline (LSMean) for SAXENDA in Study 3 is -5.4, and for placebo it is -1.7. The difference from placebo is -3.7 (-4.7; -2.7). This information does not support the claim that the average weight loss for SAXENDA is 12.4%.",
+   "tokens": 2641,
+   "latency_s": 23.78,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-eff:2",
+   "card": "saxenda-eff",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "SAXENDA delivers more weight loss than any other prescription weight-loss medicine.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that SAXENDA delivers more weight loss than any other prescription weight-loss medicine. However, the label excerpts do not provide a direct comparison of SAXENDA to other prescription weight-loss medicines. The excerpts do provide data on the weight loss achieved with SAXENDA in three clinical studies, but they do not provide data on the weight loss achieved with other prescription weight-loss medicines. Therefore, the claim is unsupported.",
+   "tokens": 2859,
+   "latency_s": 20.3,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-dose:0",
+   "card": "saxenda-dose",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "SAXENDA is injected once daily at any time of day, regardless of when you eat.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that SAXENDA is injected once daily at any time of day, regardless of when you eat. This is supported by the label excerpt <excerpt id=\"saxenda:v22:2:0\" section=\"SAXENDA | 2 DOSAGE AND ADMINISTRATION > 2.1 Important Administration Instructions\">, which states: \"Inject SAXENDA subcutaneously once daily at any time of day, without regard to the timing of meals.\"",
+   "tokens": 2671,
+   "latency_s": 20.39,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-dose:1",
+   "card": "saxenda-dose",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "SAXENDA is injected once a week.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that SAXENDA is injected once a week, but the excerpts do not support this claim. The excerpts provide instructions for administration, but they specify that SAXENDA should be injected once daily, not once a week. The excerpts also provide information on dosage escalation and titration, but they do not mention injecting SAXENDA once a week.",
+   "tokens": 2219,
+   "latency_s": 16.04,
+   "source": "live"
+  },
+  {
+   "id": "saxenda-box:0",
+   "card": "saxenda-box",
+   "label": "saxenda",
+   "split": "test",
+   "kind": "safety",
+   "op": "deny_risk",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk"
+   ],
+   "text": "SAXENDA has no risk of thyroid tumors.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that SAXENDA has no risk of thyroid tumors, but the label excerpts mention the risk of thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in patients treated with SAXENDA. The excerpts also mention that cases of MTC have been reported in patients treated with liraglutide, and that it is unknown whether SAXENDA will cause thyroid tumors or MTC in humans. Therefore, the claim is contradicted by the label excerpts.",
+   "tokens": 2281,
+   "latency_s": 19.97,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-ind-glycemic:0",
+   "card": "trulicity-ind-glycemic",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, TRULICITY improves blood sugar control in adults and children 10 years and older with type 2 diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that TRULICITY improves blood sugar control in adults and children 10 years and older with type 2 diabetes, along with diet and exercise. The label excerpts support this claim, as they state that TRULICITY is indicated to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus, as an adjunct to diet and exercise.",
+   "tokens": 1965,
+   "latency_s": 23.21,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-ind-glycemic:1",
+   "card": "trulicity-ind-glycemic",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with diet and exercise, TRULICITY improves blood sugar control in adults with type 1 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that TRULICITY improves blood sugar control in adults with type 1 diabetes, but the label excerpts only mention type 2 diabetes. There is no mention of type 1 diabetes in any of the excerpts.",
+   "tokens": 2187,
+   "latency_s": 28.34,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-ind-cv:0",
+   "card": "trulicity-ind-cv",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "TRULICITY reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who have established cardiovascular disease or multiple cardiovascular risk factors.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that TRULICITY reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes who have established cardiovascular disease or multiple cardiovascular risk factors. The label excerpts provide evidence for this claim. Excerpt 1 states that TRULICITY is indicated to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors. Excerpt 3 states that a cardiovascular outcomes trial was conducted in adult patients with type 2 diabetes mellitus and established cardiovascular disease or multiple cardiovascular risk factors, and that TRULICITY significantly reduced the risk of first occurrence of primary composite endpoint of CV death, non-fatal MI, or non-fatal stroke. Excerpt 4 provides the results of the trial, including a hazard ratio of 0.88 (95% CI 0.79, 0.99) for the primary composite endpoint. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2046,
+   "latency_s": 24.76,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-ind-cv:1",
+   "card": "trulicity-ind-cv",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "TRULICITY reduces the risk of heart attack and stroke in adults with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that TRULICITY reduces the risk of heart attack and stroke in adults with type 2 diabetes. The label excerpts provide evidence that TRULICITY is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors. This matches the claim. Additionally, the REWIND trial excerpt provides specific details about the trial, including the population, treatment, and outcome, which supports the claim. Therefore, the claim is supported.",
+   "tokens": 1637,
+   "latency_s": 15.58,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-ind-cv:2",
+   "card": "trulicity-ind-cv",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "indication",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "TRULICITY is the only GLP-1 proven to prevent heart attacks.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that TRULICITY is the only GLP-1 proven to prevent heart attacks. However, the label excerpts do not provide any information that supports this claim. The excerpts do mention that TRULICITY reduces the risk of major adverse cardiovascular events, but they do not state that it is the only GLP-1 to do so. Furthermore, the excerpts do not provide any information about the efficacy of other GLP-1s in preventing heart attacks. Therefore, the claim is unsupported.",
+   "tokens": 2132,
+   "latency_s": 9.37,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-comp-metformin:0",
+   "card": "trulicity-comp-metformin",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "comparative",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 0.8%, compared with 0.6% for metformin.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that in a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 0.8%, compared with 0.6% for metformin. The label excerpts provide information on a 26-week trial in adults with type 2 diabetes, but the specific doses and efficacy values mentioned in the claim are not directly stated. However, Table 4 in excerpt 'trulicity:v62:67:2' provides the necessary information. The table shows the change from baseline in HbA1c for TRULICITY 1.5 mg and metformin, which are -0.8% and -0.6%, respectively. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2574,
+   "latency_s": 19.21,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-comp-metformin:1",
+   "card": "trulicity-comp-metformin",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "comparative",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 1.8%, compared with 0.6% for metformin.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that in a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 1.8%, compared with 0.6% for metformin. The label excerpts do not provide a direct comparison between TRULICITY 1.5 mg and metformin for A1C reduction. However, excerpt 'trulicity:v62:67:1' mentions that the difference in observed effect size between TRULICITY 0.75 mg and 1.5 mg, respectively, and metformin excluded the pre-specified non-inferiority margin of 0.4%. This implies that TRULICITY 1.5 mg is non-inferior to metformin, but it does not provide a direct comparison of the A1C reduction. Therefore, the claim is unsupported.",
+   "tokens": 2687,
+   "latency_s": 18.55,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-dose:0",
+   "card": "trulicity-dose",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "TRULICITY starts at 0.75 mg, injected once weekly.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that TRULICITY starts at 0.75 mg, injected once weekly. The label excerpts provide information on the dosage and administration of TRULICITY, but they do not explicitly state that the starting dose is 0.75 mg. However, excerpt #trulicity:v62:2:0, section 2.1 Adult Dosage, states that the recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly. This excerpt does not mention any other starting dose, but it does mention that the dosage may be increased to 1.5 mg after 4 weeks. Therefore, the claim is supported.",
+   "tokens": 1978,
+   "latency_s": 13.24,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-dose:1",
+   "card": "trulicity-dose",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "TRULICITY is injected once daily.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that TRULICITY is injected once daily, but the label excerpts do not support this claim. The recommended starting dosage is 0.75 mg injected subcutaneously once weekly, and the maximum recommended dosage is 4.5 mg injected subcutaneously once weekly. There is no mention of injecting TRULICITY once daily in the label excerpts.",
+   "tokens": 1745,
+   "latency_s": 9.03,
+   "source": "live"
+  },
+  {
+   "id": "trulicity-box:0",
+   "card": "trulicity-box",
+   "label": "trulicity",
+   "split": "test",
+   "kind": "safety",
+   "op": "deny_risk",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk"
+   ],
+   "text": "Unlike insulin, TRULICITY carries no risk of thyroid tumors.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that TRULICITY carries no risk of thyroid tumors, but the label excerpts mention the risk of thyroid C-cell tumors in rats and the unknown human relevance of this finding. The excerpts also mention a case of medullary thyroid carcinoma (MTC) in a patient treated with TRULICITY and the potential risk of MTC with the use of TRULICITY. Therefore, the claim is contradicted by the label excerpts.",
+   "tokens": 2179,
+   "latency_s": 12.16,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-ind-hf:0",
+   "card": "jardiance-ind-hf",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "JARDIANCE reduces the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that JARDIANCE reduces the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure. The label excerpt id=jardiance:v31:0:0, section=JARDIANCE | 1 INDICATIONS AND USAGE, indicates that JARDIANCE is indicated to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure. This matches the claim exactly.",
+   "tokens": 2086,
+   "latency_s": 11.25,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-ind-hf:1",
+   "card": "jardiance-ind-hf",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "JARDIANCE prevents heart failure in everyone with type 2 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JARDIANCE prevents heart failure in everyone with type 2 diabetes. However, the label excerpts indicate that JARDIANCE is not expected to be effective in patients with type 2 diabetes who have an eGFR less than 30 mL/min/1.73 m^2 (excerpt id: jardiance:v31:1:0). Additionally, the label excerpts do not support the claim that JARDIANCE prevents heart failure in everyone with type 2 diabetes, as they only indicate that JARDIANCE reduces the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure (excerpt id: jardiance:v31:0:0).",
+   "tokens": 2174,
+   "latency_s": 15.7,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-ind-cv:0",
+   "card": "jardiance-ind-cv",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes and established cardiovascular disease.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes and established cardiovascular disease. This is supported by the Indications and Usage section of the label, which states that JARDIANCE is indicated to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease. Additionally, the Clinical Studies section provides evidence from the EMPA-REG OUTCOME trial, which showed that JARDIANCE significantly reduced the risk of cardiovascular death in this population.",
+   "tokens": 2374,
+   "latency_s": 19.64,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-ind-cv:1",
+   "card": "jardiance-ind-cv",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes. The label excerpt id='jardiance:v31:0:0' indicates that JARDIANCE is indicated to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease. This matches the claim. However, the label excerpt id='jardiance:v31:37:1' states that the safety and effectiveness of JARDIANCE have not been established in pediatric patients to reduce the risk of cardiovascular death in patients with type 2 diabetes mellitus and established cardiovascular disease. This implies that the claim is only supported for adults, not pediatric patients. Therefore, the claim is supported with a qualifier.",
+   "tokens": 2307,
+   "latency_s": 16.58,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-limit-t1d:0",
+   "card": "jardiance-limit-t1d",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "JARDIANCE is a good option to improve blood sugar control in people with type 1 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "omitted_qualifier",
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JARDIANCE is a good option to improve blood sugar control in people with type 1 diabetes. However, the label excerpts clearly state that JARDIANCE is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus (see excerpt id: jardiance:v31:1:0). Furthermore, the excerpts warn that JARDIANCE may increase the risk of diabetic ketoacidosis in these patients (see excerpt id: jardiance:v31:8:0).",
+   "tokens": 2107,
+   "latency_s": 15.43,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-eff-cv:0",
+   "card": "jardiance-eff-cv",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a cardiovascular outcomes trial in adults with type 2 diabetes and atherosclerotic cardiovascular disease, 3.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that 3.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo. The label excerpts provide the necessary information to support this claim. Specifically, excerpt #jardiance:v31:76:5 states that in the EMPA-REG OUTCOME trial, 3.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo. This matches the claim exactly.",
+   "tokens": 2271,
+   "latency_s": 12.7,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-eff-cv:1",
+   "card": "jardiance-eff-cv",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a cardiovascular outcomes trial in adults with type 2 diabetes and atherosclerotic cardiovascular disease, 1.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "claim_figures_not_in_quotes:1.7"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that 1.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo. The label excerpts provide the necessary information to support this claim. Specifically, excerpt id=",
+   "tokens": 2212,
+   "latency_s": 8.87,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-dose:0",
+   "card": "jardiance-dose",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "JARDIANCE is taken as 10 mg once daily in the morning, with or without food.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JARDIANCE is taken as 10 mg once daily in the morning, with or without food. This is supported by the label excerpts, specifically excerpt id \"jardiance:v31:3:0\" section \"JARDIANCE | 2 DOSAGE AND ADMINISTRATION > 2.2 Recommended Dosage\", which states that the recommended dosage of JARDIANCE is 10 mg orally once daily in the morning, taken with or without food. Additionally, excerpt id \"jardiance:v31:6:0\" section \"JARDIANCE | 3 DOSAGE FORMS AND STRENGTHS\" lists the 10 mg tablet as one of the available strengths.",
+   "tokens": 2010,
+   "latency_s": 16.18,
+   "source": "live"
+  },
+  {
+   "id": "jardiance-dose:1",
+   "card": "jardiance-dose",
+   "label": "jardiance",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "JARDIANCE is taken twice a day with meals.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JARDIANCE is taken twice a day with meals, but the label excerpts do not support this claim. The recommended dosage for adults is 10 mg orally once daily in the morning, taken with or without food, and there is no mention of taking it twice a day. Additionally, the Medication Guide advises taking JARDIANCE by mouth 1 time in the morning each day, with or without food.",
+   "tokens": 2229,
+   "latency_s": 12.24,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-ind-ckd:0",
+   "card": "farxiga-ind-ckd",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "FARXIGA reduces the risk of sustained eGFR decline, end-stage kidney disease, cardiovascular death and hospitalization for heart failure in adults with chronic kidney disease at risk of progression.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim is supported because the label excerpts state that FARXIGA reduces the risk of sustained eGFR decline, end-stage kidney disease, cardiovascular death, and hospitalization for heart failure in adults with chronic kidney disease at risk of progression. This is stated in the Indications and Usage section of the label, which is excerpted as id=\"farxiga:v49:0:0\" and id=\"farxiga:v49:19:1\". The excerpts also provide a specific dosage of 10 mg orally once daily, as stated in excerpt id=\"farxiga:v49:3:0\". The claim does not mention any specific population or condition that is excluded from the indication, so there is no need to add a qualifier.",
+   "tokens": 2150,
+   "latency_s": 11.73,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-ind-ckd:1",
+   "card": "farxiga-ind-ckd",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "FARXIGA protects kidney function in people with polycystic kidney disease.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that FARXIGA protects kidney function in people with polycystic kidney disease. However, the label excerpts explicitly state that FARXIGA is not expected to work in people with certain genetic forms of polycystic kidney disease (id: farxiga:v49:58:5). This directly contradicts the claim.",
+   "tokens": 2322,
+   "latency_s": 6.38,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-ind-glycemic:0",
+   "card": "farxiga-ind-glycemic",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, FARXIGA improves blood sugar control in adults and children 10 years and older with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that FARXIGA improves blood sugar control in adults and children 10 years and older with type 2 diabetes. The label excerpts support this claim, as they indicate that FARXIGA is indicated to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus (Excerpt 1). Additionally, Excerpt 3 states that the safety and effectiveness of FARXIGA for glycemic control in type 2 diabetes mellitus have been established in pediatric patients aged 10 years and older. The claim does not specify a dosage, but Excerpt 2 provides the recommended starting dosage of FARXIGA for this indication, which is 5 mg orally once daily.",
+   "tokens": 2087,
+   "latency_s": 8.72,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-ind-glycemic:1",
+   "card": "farxiga-ind-glycemic",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "Along with diet and exercise, FARXIGA improves blood sugar control in people with type 1 diabetes.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that FARXIGA improves blood sugar control in people with type 1 diabetes, but the label excerpts explicitly state that FARXIGA is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus. This is stated in the Limitations of Use section of the label.",
+   "tokens": 3313,
+   "latency_s": 6.42,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-limit-egfr:0",
+   "card": "farxiga-limit-egfr",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "indication",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "FARXIGA controls blood sugar well even in people with type 2 diabetes whose eGFR is below 30.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "unsupported_absolute_claim",
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that FARXIGA controls blood sugar well even in people with type 2 diabetes whose eGFR is below 30. However, the label excerpts indicate that FARXIGA is not recommended for use to improve glycemic control in patients with type 2 diabetes mellitus with an eGFR less than 45 mL/min/1.73 m^2. FARXIGA is likely to be ineffective in this setting based upon its mechanism of action. Therefore, the claim is contradicted by the label excerpts.",
+   "tokens": 2901,
+   "latency_s": 9.88,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-eff:0",
+   "card": "farxiga-eff",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 0.9% with FARXIGA 10 mg, compared with 0.2% with placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "claim_figures_not_in_quotes:24"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that in a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 0.9% with FARXIGA 10 mg, compared with 0.2% with placebo. The label excerpts provide a table (Table 7) that shows the results of a 24-week trial of FARXIGA monotherapy in adults with type 2 diabetes. The table states that the change from baseline in HbA1c was -0.9% for FARXIGA 10 mg, which matches the claim. However, the table also states that the change from baseline in HbA1c was -0.2% for placebo, which is less than the 0.2% stated in the claim. Therefore, the claim is supported.",
+   "tokens": 2475,
+   "latency_s": 10.19,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-eff:1",
+   "card": "farxiga-eff",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 1.9% with FARXIGA 10 mg, compared with 0.2% with placebo.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that in a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 1.9% with FARXIGA 10 mg, compared with 0.2% with placebo. However, the provided excerpts do not mention a 24-week trial of FARXIGA alone in adults with type 2 diabetes where FARXIGA 10 mg resulted in a 1.9% reduction in A1C compared to placebo. The closest trial mentioned is the one in excerpt id=",
+   "tokens": 2237,
+   "latency_s": 4.88,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-dose:0",
+   "card": "farxiga-dose",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "For blood sugar control, FARXIGA starts at 5 mg once daily.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that FARXIGA starts at 5 mg once daily for blood sugar control. The label excerpts provide information on the recommended dosage for glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus. According to excerpt id=\"farxiga:v49:2:0\", the recommended starting dosage of FARXIGA is 5 mg orally once daily to improve glycemic control. Therefore, the claim is supported by the label excerpts.",
+   "tokens": 2108,
+   "latency_s": 6.56,
+   "source": "live"
+  },
+  {
+   "id": "farxiga-dose:1",
+   "card": "farxiga-dose",
+   "label": "farxiga",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "For blood sugar control, FARXIGA starts at 10 mg twice daily.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that FARXIGA starts at 10 mg twice daily for blood sugar control. However, the label excerpts do not support this claim. The recommended starting dosage for glycemic control in adults with type 2 diabetes mellitus is 5 mg orally once daily (excerpt id: farxiga:v49:2:0). The dosage can be increased to 10 mg orally once daily for additional glycemic control, but there is no mention of taking it twice daily. Therefore, the claim is unsupported.",
+   "tokens": 2115,
+   "latency_s": 10.34,
+   "source": "live"
+  },
+  {
+   "id": "januvia-ind:0",
+   "card": "januvia-ind",
+   "label": "januvia",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Along with diet and exercise, JANUVIA improves blood sugar control in adults with type 2 diabetes.",
+   "status": "supported",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that JANUVIA improves blood sugar control in adults with type 2 diabetes, which is supported by the label excerpts. The excerpt from section 14.1 Monotherapy (id: januvia:v71:51:0) states that treatment with JANUVIA produced clinically significant improvements in hemoglobin A1C, fasting plasma glucose (FPG) and 2-hour post-prandial glucose (PPG) compared to placebo. Additionally, the excerpt from section 14.2 Combination Therapy (id: januvia:v71:52:2) shows a table (Table 7) that demonstrates the efficacy of JANUVIA in combination with metformin. The claim does not specify the population, dose, or timeframe, but the excerpts provide sufficient information to support the claim. Therefore, the verdict is: supported.",
+   "tokens": 2119,
+   "latency_s": 13.15,
+   "source": "live"
+  },
+  {
+   "id": "januvia-ind:1",
+   "card": "januvia-ind",
+   "label": "januvia",
+   "split": "test",
+   "kind": "indication",
+   "op": "drop_qualifier",
+   "gold": "needs_qualifier",
+   "accept": [
+    "needs_qualifier",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "omitted_qualifier",
+    "broadened_indication"
+   ],
+   "text": "JANUVIA improves blood sugar control in adults with type 2 diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that JANUVIA improves blood sugar control in adults with type 2 diabetes. The label excerpt from section 14.1 Monotherapy (id: januvia:v71:51:0) states that patients with inadequate glycemic control (A1C 7% to 10%) after a washout period were randomized to receive JANUVIA, and that patients who failed to meet specific glycemic goals during the studies were treated with metformin rescue, added on to placebo or JANUVIA. This excerpt supports the claim that JANUVIA improves blood sugar control in adults with type 2 diabetes.",
+   "tokens": 1904,
+   "latency_s": 12.41,
+   "source": "live"
+  },
+  {
+   "id": "januvia-ind:2",
+   "card": "januvia-ind",
+   "label": "januvia",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "JANUVIA helps people with type 1 diabetes control their blood sugar.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "broadened_indication"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that JANUVIA helps people with type 1 diabetes control their blood sugar, but the label excerpts clearly state that JANUVIA is not for people with type 1 diabetes (excerpt 1, section 'What is JANUVIA?' and excerpt 3, section 'Limitations of Use').",
+   "tokens": 1771,
+   "latency_s": 9.8,
+   "source": "live"
+  },
+  {
+   "id": "januvia-limit-pancreatitis:0",
+   "card": "januvia-limit-pancreatitis",
+   "label": "januvia",
+   "split": "test",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "JANUVIA is safe for people with a history of pancreatitis.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that JANUVIA is safe for people with a history of pancreatitis, but the label excerpts state that it is unknown whether patients with a history of pancreatitis are at increased risk for the development of pancreatitis while using JANUVIA.",
+   "tokens": 1644,
+   "latency_s": 8.26,
+   "source": "live"
+  },
+  {
+   "id": "januvia-eff:0",
+   "card": "januvia-eff",
+   "label": "januvia",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 24-week study in adults with type 2 diabetes, A1C fell by 0.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that in a 24-week study in adults with type 2 diabetes, A1C fell by 0.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo. The label excerpts provide a table (Table 6) that shows the results of a 24-week study in patients with type 2 diabetes. The table states that the change from baseline in A1C was -0.6% for JANUVIA 100 mg and 0.2% for placebo. This matches the claim. Therefore, the claim is supported.",
+   "tokens": 2191,
+   "latency_s": 15.71,
+   "source": "live"
+  },
+  {
+   "id": "januvia-eff:1",
+   "card": "januvia-eff",
+   "label": "januvia",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "inflate",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "overstated_efficacy"
+   ],
+   "text": "In a 24-week study in adults with type 2 diabetes, A1C fell by 1.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "overstated_efficacy"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that in a 24-week study in adults with type 2 diabetes, A1C fell by 1.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo. The label excerpts provide a table (Table 6) that shows the results of a 24-week study. The table states that the adjusted mean change from baseline in A1C was -0.6% for JANUVIA 100 mg and 0.2% for placebo. The claim's figure of 1.6% is not supported by the label excerpts. However, the claim's figure of 0.2% is supported by the label excerpts. Therefore, the claim is partially supported, but it is overstated in its claim of a 1.6% reduction in A1C with JANUVIA 100 mg.",
+   "tokens": 2309,
+   "latency_s": 16.85,
+   "source": "live"
+  },
+  {
+   "id": "januvia-eff:2",
+   "card": "januvia-eff",
+   "label": "januvia",
+   "split": "test",
+   "kind": "efficacy",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "JANUVIA lowers A1C more than any other oral diabetes medicine.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that JANUVIA lowers A1C more than any other oral diabetes medicine. However, the excerpts do not provide any direct comparison of JANUVIA to other oral diabetes medicines. The excerpts do mention that JANUVIA provided significant improvements in A1C in combination therapy with metformin and rosiglitazone, but this is not a direct comparison to other oral diabetes medicines. Furthermore, the excerpts mention that the 200 mg daily dose did not provide greater glycemic efficacy than the 100 mg daily dose, which suggests that the efficacy of JANUVIA may not be dose-dependent. Therefore, the claim is unsupported.",
+   "tokens": 2246,
+   "latency_s": 17.89,
+   "source": "live"
+  },
+  {
+   "id": "januvia-dose:0",
+   "card": "januvia-dose",
+   "label": "januvia",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "The recommended dose of JANUVIA is 100 mg once daily.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "overstated_efficacy"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that the recommended dose of JANUVIA is 100 mg once daily, which is supported by multiple excerpts, including the 'DOSAGE AND ADMINISTRATION' section (januvia:v71:2:0) and the 'DOSAGE FORMS AND STRENGTHS' section (januvia:v71:4:0).",
+   "tokens": 1876,
+   "latency_s": 10.65,
+   "source": "live"
+  },
+  {
+   "id": "januvia-dose:1",
+   "card": "januvia-dose",
+   "label": "januvia",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "JANUVIA needs no dose change for people with kidney problems.",
+   "status": "needs_qualifier",
+   "model_verdict": "needs_qualifier",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that JANUVIA needs no dose change for people with kidney problems. However, the label excerpts provide specific guidance on dosage adjustments for patients with renal impairment. According to excerpt id=\"januvia:v71:3:0\", patients with an eGFR greater than or equal to 45 mL/min/1.73 m^2 to less than 90 mL/min/1.73 m^2 do not require a dosage adjustment, but patients with moderate renal impairment (eGFR greater than or equal to 30 mL/min/1.73 m^2 to less than 45 mL/min/1.73 m^2) require a dose of 50 mg once daily, and patients with severe renal impairment (eGFR less than 30 mL/min/1.73 m^2) or with end-stage renal disease (ESRD) require a dose of 25 mg once daily. Therefore, the claim is not entirely accurate, as it does not account for the specific dosage adjustments required for patients with renal impairment.",
+   "tokens": 2262,
+   "latency_s": 22.75,
+   "source": "live"
+  },
+  {
+   "id": "lantus-ind:0",
+   "card": "lantus-ind",
+   "label": "lantus",
+   "split": "test",
+   "kind": "indication",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "LANTUS improves blood sugar control in adults and children with diabetes.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [],
+   "flags": [
+    "cited_unknown_excerpt",
+    "cited_unknown_excerpt",
+    "supported_without_grounded_quote"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that LANTUS improves blood sugar control in adults and children with diabetes. The label excerpts provide evidence for this claim, specifically excerpt 0, which states that LANTUS is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus. Additionally, excerpt 38 provides evidence for the safety and effectiveness of LANTUS in pediatric patients with diabetes mellitus. The claim is supported by the label excerpts.",
+   "tokens": 1758,
+   "latency_s": 10.72,
+   "source": "live"
+  },
+  {
+   "id": "lantus-ind:1",
+   "card": "lantus-ind",
+   "label": "lantus",
+   "split": "test",
+   "kind": "indication",
+   "op": "broaden",
+   "gold": "off_label",
+   "accept": [
+    "off_label",
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "broadened_indication"
+   ],
+   "text": "LANTUS can be used to treat diabetic ketoacidosis.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that LANTUS can be used to treat diabetic ketoacidosis, but the label excerpts explicitly state that LANTUS is not recommended for this condition. This is stated in the Indications and Usage section, which is a clear and direct statement about the intended use of the medication.",
+   "tokens": 1772,
+   "latency_s": 8.45,
+   "source": "live"
+  },
+  {
+   "id": "lantus-contra:0",
+   "card": "lantus-contra",
+   "label": "lantus",
+   "split": "test",
+   "kind": "safety",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Do not use LANTUS during episodes of low blood sugar (hypoglycemia).",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "overstated_efficacy",
+    "unsubstantiated_superiority",
+    "broadened_indication",
+    "omitted_qualifier",
+    "minimized_risk",
+    "missing_risk_information",
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states to not use LANTUS during episodes of low blood sugar (hypoglycemia). The label excerpt from section 4 CONTRAINDICATIONS explicitly states that LANTUS is contraindicated during episodes of hypoglycemia. This directly supports the claim.",
+   "tokens": 1745,
+   "latency_s": 9.91,
+   "source": "live"
+  },
+  {
+   "id": "lantus-contra:1",
+   "card": "lantus-contra",
+   "label": "lantus",
+   "split": "test",
+   "kind": "safety",
+   "op": "contradict",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk",
+    "broadened_indication"
+   ],
+   "text": "LANTUS can be used safely during an episode of low blood sugar.",
+   "status": "contradicted",
+   "model_verdict": "contradicted",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that LANTUS can be used safely during an episode of low blood sugar, but the label excerpts explicitly state that LANTUS is contraindicated during episodes of hypoglycemia. This directly contradicts the claim.",
+   "tokens": 1985,
+   "latency_s": 9.94,
+   "source": "live"
+  },
+  {
+   "id": "lantus-hypo:0",
+   "card": "lantus-hypo",
+   "label": "lantus",
+   "split": "test",
+   "kind": "safety",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "Low blood sugar (hypoglycemia) is the most common side effect of insulins, including LANTUS.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that low blood sugar (hypoglycemia) is the most common side effect of insulins, including LANTUS. The label excerpts provide several mentions of hypoglycemia as a common side effect, but they do not explicitly state that it is the most common side effect. The excerpt in 5.3 Hypoglycemia (id: lantus:v35:11:0) states that hypoglycemia is the most common adverse reaction associated with insulins, including LANTUS, but this is a general statement and does not specify that it is the most common side effect of LANTUS specifically.",
+   "tokens": 2020,
+   "latency_s": 15.06,
+   "source": "live"
+  },
+  {
+   "id": "lantus-hypo:1",
+   "card": "lantus-hypo",
+   "label": "lantus",
+   "split": "test",
+   "kind": "safety",
+   "op": "deny_risk",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "unsupported"
+   ],
+   "expected_violations": [
+    "minimized_risk"
+   ],
+   "text": "LANTUS does not cause low blood sugar.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 2,
+   "reasoning": "The claim states that LANTUS does not cause low blood sugar, but the excerpts from the label state that hypoglycemia is a common adverse reaction associated with insulins, including LANTUS, and that LANTUS may cause serious side effects that can lead to death, including low blood sugar (hypoglycemia).",
+   "tokens": 2049,
+   "latency_s": 13.98,
+   "source": "live"
+  },
+  {
+   "id": "lantus-comp-nph:0",
+   "card": "lantus-comp-nph",
+   "label": "lantus",
+   "split": "test",
+   "kind": "comparative",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "In a 52-week study in adults with type 2 diabetes taking oral medicines, A1C fell by 0.5% with LANTUS and by 0.4% with NPH insulin.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "omitted_qualifier"
+   ],
+   "flags": [
+    "quote_not_found_in_excerpt",
+    "quote_not_found_in_excerpt",
+    "quote_not_found_in_excerpt",
+    "claim_figures_not_in_quotes:0.4,0.5,52",
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 3,
+   "reasoning": "The claim states that in a 52-week study in adults with type 2 diabetes taking oral medicines, A1C fell by 0.5% with LANTUS and by 0.4% with NPH insulin. The label excerpts provide a table (Table 11) that shows the adjusted mean change from baseline in HbA1c for LANTUS and NPH insulin in combination with oral agents for 52 weeks. The table shows that the adjusted mean change from baseline in HbA1c for LANTUS is -0.5 and for NPH insulin is -0.4. This supports the claim.",
+   "tokens": 2369,
+   "latency_s": 24.33,
+   "source": "live"
+  },
+  {
+   "id": "lantus-comp-nph:1",
+   "card": "lantus-comp-nph",
+   "label": "lantus",
+   "split": "test",
+   "kind": "comparative",
+   "op": "superiority",
+   "gold": "unsupported",
+   "accept": [
+    "unsupported",
+    "contradicted"
+   ],
+   "expected_violations": [
+    "unsubstantiated_superiority"
+   ],
+   "text": "LANTUS lowers A1C far more than NPH insulin.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [
+    "cited_unknown_excerpt",
+    "cited_unknown_excerpt"
+   ],
+   "quotes_kept": 0,
+   "reasoning": "The claim states that LANTUS lowers A1C far more than NPH insulin. However, the excerpts do not support this claim. In fact, the excerpts state that the reduction in glycated hemoglobin (HbA1c) with LANTUS was similar to that with NPH insulin (excerpt 2), and that the LANTUS group had a smaller mean reduction from baseline in HbA1c compared to the NPH insulin group (excerpt 3). Therefore, the claim is unsupported.",
+   "tokens": 2092,
+   "latency_s": 15.3,
+   "source": "live"
+  },
+  {
+   "id": "lantus-dose:0",
+   "card": "lantus-dose",
+   "label": "lantus",
+   "split": "test",
+   "kind": "dosing",
+   "op": "faithful",
+   "gold": "supported",
+   "accept": [
+    "supported"
+   ],
+   "expected_violations": [],
+   "text": "LANTUS is injected once daily, at any time of day but at the same time every day.",
+   "status": "needs_human_review",
+   "model_verdict": "supported",
+   "violations": [
+    "missing_risk_information"
+   ],
+   "flags": [
+    "supported_but_lists_violations"
+   ],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that LANTUS is injected once daily, at any time of day but at the same time every day. This is supported by the excerpts, specifically excerpt id=\"lantus:v35:3:0\" section \"LANTUS | 2 DOSAGE AND ADMINISTRATION > 2.2 General Dosing Instructions\", which states: \"Administer LANTUS subcutaneously once daily at any time of day but at the same time every day.\"",
+   "tokens": 1968,
+   "latency_s": 12.61,
+   "source": "live"
+  },
+  {
+   "id": "lantus-dose:1",
+   "card": "lantus-dose",
+   "label": "lantus",
+   "split": "test",
+   "kind": "dosing",
+   "op": "wrong_dose",
+   "gold": "contradicted",
+   "accept": [
+    "contradicted",
+    "off_label",
+    "unsupported"
+   ],
+   "expected_violations": [],
+   "text": "LANTUS is injected three times a day with meals.",
+   "status": "unsupported",
+   "model_verdict": "unsupported",
+   "violations": [
+    "unsupported_absolute_claim"
+   ],
+   "flags": [],
+   "quotes_kept": 1,
+   "reasoning": "The claim states that LANTUS is injected three times a day with meals, but the label excerpts do not support this claim. The excerpts state that LANTUS should be administered subcutaneously once daily at any time of day but at the same time every day (excerpt id: lantus:v35:3:0).",
+   "tokens": 1851,
+   "latency_s": 8.6,
+   "source": "live"
+  }
+ ]
+}

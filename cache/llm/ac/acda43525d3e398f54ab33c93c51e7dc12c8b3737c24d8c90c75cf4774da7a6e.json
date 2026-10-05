@@ -1,0 +1,23 @@
+{
+ "key": "acda43525d3e398f54ab33c93c51e7dc12c8b3737c24d8c90c75cf4774da7a6e",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in: - Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity. - Adults with overweight in the presence of \\u0026amp; obesity."
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA helps adults and teens with obesity to lose weight and keep it off, which is supported by the safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of safety and efficacy of SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in: - Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity. - Adults with overweight in the presence of at least one weight-related comorbid condition. saxenda:v22:1:0",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 1468,
+  "prompt_tokens": 3880
+ }
+}

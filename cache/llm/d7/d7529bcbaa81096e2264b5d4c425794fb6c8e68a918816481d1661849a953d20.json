@@ -1,0 +1,23 @@
+{
+ "key": "d7529bcbaa81096e2264b5d4c425794fb6c8e68a918816481d1661849a953d20",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:2",
+    "quote": "Table 3. Results at Week 30 in a Trial of OZEMPIC as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise\n| - Placebo | - OZEMPIC - 0.5 mg | - OZEMPIC - 1 mg\n- Intent-to-Treat (ITT) Population (N) | - 129 | - 128 | - 130\n- Baseline (mean) | - 8 | - 8.1 | - 8.1\n- Change at week 30 | - -0.1 | - -1.4 | - -1.6\n- Difference from placebo [95% - CI] | | - -1.2 [-1.5, -0.9] | - -1.4 [-1.7, -1.1]\n- Patients (%) achieving HbA1c <7% | - 28 | - 73 | - 70\n- FPG (mg/dL) | | |\n- Baseline (mean) | - 174 | - 174 | - 179\n- Change at week 30 | - -15 | - -44 | - -44"
+   }
+  ],
+  "reasoning": "The claim states that in a 30-week trial of OZEMPIC alone (monotherapy) in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.6% with 1 mg, compared to 0.1% with placebo. However, the label excerpts (Table 3) Table 3. Results at Week 30 in a Trial of OZEMPIC as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise shows the change at week 30 for OZEMPIC 1 mg was -1.6% and placebo was -0.1%. The claim's 2.6% figure is incorrect based on the provided text.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 488,
+  "prompt_tokens": 2365
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "key": "7e5db2985fb2d5b49ad277affd9878bd3846c10840004acca81c13bfb559b104",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "Inject VICTOZA subcutaneously once daily at any time of day, independently of meals."
+   },
+   {
+    "chunk_id": "victoza:v31:4:0",
+    "quote": "Inject VICTOZA subcutaneously once daily at any time of day, independently of meals."
+   }
+  ],
+  "reasoning": "The claim states VICTOZA is administered once weekly, but the label excerpts specify subcutaneous injection once daily for adult patients. This directly conflicts with the claim.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 251,
+  "prompt_tokens": 2081
+ }
+}

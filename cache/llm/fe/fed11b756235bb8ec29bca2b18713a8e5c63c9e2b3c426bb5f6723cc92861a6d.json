@@ -1,0 +1,21 @@
+{
+ "key": "fed11b756235bb8ec29bca2b18713a8e5c63c9e2b3c426bb5f6723cc92861a6d",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:67:2",
+    "quote": "Table 4: Results at Week 26 in a Trial of TRULICITY as Monotherapy in Adult Patients with Type 2 Diabetes Mellitusa\n| Intent-to-Treat (ITT) Population (N) | 270 | 269 | 268\nHbA1c (%) (Mean)\nBaseline | 7.6 | 7.6 | 7.6\nChange from baseline | -0.7 | -0.8 | -0.6"
+   }
+  ],
+  "reasoning": "The claim states that in a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 0.8%, compared with 0.6% for metformin. The label excerpts provide information on a 26-week trial in adults with type 2 diabetes, but the specific doses and efficacy values mentioned in the claim are not directly stated. However, Table 4 in excerpt 'trulicity:v62:67:2' provides the necessary information. The table shows the change from baseline in HbA1c for TRULICITY 1.5 mg and metformin, which are -0.8% and -0.6%, respectively. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 314,
+  "prompt_tokens": 2260
+ }
+}

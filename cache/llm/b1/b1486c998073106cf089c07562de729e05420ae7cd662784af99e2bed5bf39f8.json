@@ -1,0 +1,27 @@
+{
+ "key": "b1486c998073106cf089c07562de729e05420ae7cd662784af99e2bed5bf39f8",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:0:0",
+    "quote": "to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "jardiance:v31:37:1",
+    "quote": "The safety and effectiveness of JARDIANCE have not been established in pediatric patients to reduce the risk of:"
+   }
+  ],
+  "reasoning": "The claim states that JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes. The label excerpt id='jardiance:v31:0:0' indicates that JARDIANCE is indicated to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease. This matches the claim. However, the label excerpt id='jardiance:v31:37:1' states that the safety and effectiveness of JARDIANCE have not been established in pediatric patients to reduce the risk of cardiovascular death in patients with type 2 diabetes mellitus and established cardiovascular disease. This implies that the claim is only supported for adults, not pediatric patients. Therefore, the claim is supported with a qualifier.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 277,
+  "prompt_tokens": 2030
+ }
+}

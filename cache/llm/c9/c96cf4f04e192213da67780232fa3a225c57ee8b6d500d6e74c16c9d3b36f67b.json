@@ -1,0 +1,23 @@
+{
+ "key": "c96cf4f04e192213da67780232fa3a225c57ee8b6d500d6e74c16c9d3b36f67b",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "MOUNJARO^® is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction (MI), or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO is approved for chronic weight management in adults with obesity. However, the provided label excerpts (Indications and Usage section) only list indications for glycemic control in type 2 diabetes mellitus and reducing cardiovascular risk in adults with type 2 diabetes. There is no mention of weight management or obesity as an approved indication in the provided text.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 215,
+  "prompt_tokens": 2190
+ }
+}

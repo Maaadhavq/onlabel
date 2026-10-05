@@ -1,0 +1,24 @@
+{
+ "key": "0a12ec41342df74db4d3d0a17a857483aa8aeb73f51123caa2e67bc6d109efe8",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."
+   }
+  ],
+  "reasoning": "The label states that OZEMPIC reduces the risk of kidney failure only in adults with type 2 diabetes mellitus and chronic kidney disease. The claim omits this population qualifier, thereby extending the benefit to all patients. This omission broadens the indication beyond what the label supports.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 293,
+  "prompt_tokens": 2058
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "key": "19174de51bceb8c83c1c2e80d4d21ec9b3d24bd50855bd33c2916c4acaed218f",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "TRULICITY^ is indicated: - As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY improves blood sugar control in adults with type 1 diabetes, but the label excerpts only mention type 2 diabetes. There is no mention of type 1 diabetes in any of the excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 145,
+  "prompt_tokens": 2042
+ }
+}

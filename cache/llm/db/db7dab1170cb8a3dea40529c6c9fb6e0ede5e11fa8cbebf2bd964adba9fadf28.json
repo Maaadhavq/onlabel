@@ -1,0 +1,31 @@
+{
+ "key": "db7dab1170cb8a3dea40529c6c9fb6e0ede5e11fa8cbebf2bd964adba9fadf28",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3"
+   },
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "In Study 3, statistically significantly more patients randomized to SAXENDA than placebo had not gained more than 0.5% of body weight from randomization to Week 56."
+   },
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "p < 0.0001 compared to placebo."
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA delivers more weight loss than any other prescription weight-loss medicine. However, the label excerpts do not provide a direct comparison of SAXENDA to other prescription weight-loss medicines. The excerpts do provide data on the weight loss achieved with SAXENDA in three clinical studies, but they do not provide data on the weight loss achieved with other prescription weight-loss medicines. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 259,
+  "prompt_tokens": 2600
+ }
+}

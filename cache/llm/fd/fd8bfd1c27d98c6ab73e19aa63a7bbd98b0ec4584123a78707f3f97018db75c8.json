@@ -1,0 +1,27 @@
+{
+ "key": "fd8bfd1c27d98c6ab73e19aa63a7bbd98b0ec4584123a78707f3f97018db75c8",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:2:0",
+    "quote": "The recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly."
+   },
+   {
+    "chunk_id": "trulicity:v62:5:0",
+    "quote": "Administer TRULICITY once weekly, any time of day, with or without food."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY is injected once daily, but the label excerpts state that the medication is administered once weekly. This is a direct contradiction of the frequency of administration.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 150,
+  "prompt_tokens": 1591
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "key": "5a780c3d3a12e6956aa52ee01f72533405d4d50a3e47f273476006b43cce6cfa",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "victoza:v31:36:4",
+    "quote": "Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (MACE) (time to first occurrence) | 608 (13.0%) | 694 (14.9%) | 0.87 (0.78; 0.97)"
+   }
+  ],
+  "reasoning": "The claim states VICTOZA reduces heart attack and stroke risk in all adults with type 2 diabetes, but the label indicates this benefit is only for adults with type 2 diabetes and established cardiovascular disease. The label provides hazard ratios showing reduction, but the required population qualifier is missing.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier",
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 447,
+  "prompt_tokens": 2099
+ }
+}

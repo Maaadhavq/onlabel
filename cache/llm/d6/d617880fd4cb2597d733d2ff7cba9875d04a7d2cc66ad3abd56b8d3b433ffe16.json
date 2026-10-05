@@ -1,0 +1,24 @@
+{
+ "key": "d617880fd4cb2597d733d2ff7cba9875d04a7d2cc66ad3abd56b8d3b433ffe16",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in:\n\n- Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity."
+   }
+  ],
+  "reasoning": "The indication section states SAXENDA is indicated for pediatric patients aged 12 years and older, not for children as young as 6 years. The claim extends use to children 6 and older, which is not supported by the label and therefore is an off‑label, broadened indication.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 327,
+  "prompt_tokens": 2607
+ }
+}

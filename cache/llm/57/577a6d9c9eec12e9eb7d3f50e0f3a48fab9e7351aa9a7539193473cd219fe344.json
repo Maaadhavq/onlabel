@@ -1,0 +1,29 @@
+{
+ "key": "577a6d9c9eec12e9eb7d3f50e0f3a48fab9e7351aa9a7539193473cd219fe344",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."
+   },
+   {
+    "chunk_id": "rybelsus:v14:40:0",
+    "quote": "The primary endpoint, major adverse cardiovascular events (MACE), was the time to first occurrence of a three-part composite outcome which included CV death, non-fatal myocardial infarction (MI) and non-fatal stroke."
+   },
+   {
+    "chunk_id": "rybelsus:v14:40:2",
+    "quote": "Semaglutide tablets significantly reduced the occurrence of MACE. The estimated hazard ratio for time to first MACE was 0.86 (95% CI: 0.77, 0.96) over the median follow-up duration of 49.6 months and 49.4 months for patients randomized to RYBELSUS and placebo, respectively."
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS reduces the risk of heart attack and stroke in adults with type 2 diabetes. The label excerpts provide evidence that RYBELSUS is indicated to reduce the risk of major adverse cardiovascular events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events. The excerpts also mention a clinical trial (Trial 7) that demonstrated a significant reduction in the occurrence of MACE, including heart attack and stroke, in patients with type 2 diabetes and established cardiovascular disease. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 409,
+  "prompt_tokens": 1617
+ }
+}

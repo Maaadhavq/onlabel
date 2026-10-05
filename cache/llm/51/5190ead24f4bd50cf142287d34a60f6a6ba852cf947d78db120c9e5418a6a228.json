@@ -1,0 +1,25 @@
+{
+ "key": "5190ead24f4bd50cf142287d34a60f6a6ba852cf947d78db120c9e5418a6a228",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:2:0",
+    "quote": "Inject SAXENDA subcutaneously once daily at any time of day, without regard to the timing of meals."
+   },
+   {
+    "chunk_id": "saxenda:v22:35:4",
+    "quote": "SAXENDA is injected 1 time each day, at any time during the day."
+   }
+  ],
+  "reasoning": "The claim states SAXENDA is injected once a week, but the label excerpts specify daily injection. Both the dosage instructions and medication guide describe once‑daily administration.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 308,
+  "prompt_tokens": 2326
+ }
+}

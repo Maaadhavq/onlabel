@@ -1,0 +1,23 @@
+{
+ "key": "130b08c2ad2727bea854b3cb706c65068c7f6fbd0fde77a725d627e200482d00",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:1:0",
+    "quote": "Limitations of Use\nLANTUS is not recommended for the treatment of diabetic ketoacidosis."
+   }
+  ],
+  "reasoning": "The claim states that LANTUS can be used to treat diabetic ketoacidosis, but the label excerpts explicitly state that LANTUS is not recommended for this condition. This is stated in the Indications and Usage section, which is a clear and direct statement about the intended use of the medication.",
+  "verdict": "contradicted",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 138,
+  "prompt_tokens": 1634
+ }
+}

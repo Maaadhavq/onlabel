@@ -1,0 +1,29 @@
+{
+ "key": "1d7af86fd5ad0416423adc160f440a9188d2bad63dcae73f050dd9655866293c",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "ozempic:v20:40:2",
+    "quote": "to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus with known heart disease."
+   },
+   {
+    "chunk_id": "ozempic:v20:36:3",
+    "quote": "Composite of cardiovascular death, non-fatal myocardial infarction, non-fatal stroke (time to first occurrence)"
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes and established cardiovascular disease. The label excerpts provide evidence for this claim in the 'INDICATIONS AND USAGE' section, which states that OZEMPIC is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease. Additionally, the 'Medication Guide' section provides a similar statement. The 'Cardiovascular Outcomes Trial' section provides further evidence, including a table showing the hazard ratio of major adverse cardiovascular events (MACE) between OZEMPIC and placebo, which is 0.74 (0.58, 0.95). This indicates that OZEMPIC reduces the risk of MACE by 26% compared to placebo. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 401,
+  "prompt_tokens": 1784
+ }
+}

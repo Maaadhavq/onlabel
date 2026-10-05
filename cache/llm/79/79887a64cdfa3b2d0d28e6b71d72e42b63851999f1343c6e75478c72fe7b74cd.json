@@ -1,0 +1,23 @@
+{
+ "key": "79887a64cdfa3b2d0d28e6b71d72e42b63851999f1343c6e75478c72fe7b74cd",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:3:0",
+    "quote": "- The 2.5 mg dosage is for treatment initiation and is not approved as a maintenance dosage."
+   }
+  ],
+  "reasoning": "The claim states that the 2.5 mg dose is a long-term maintenance dose, but the label explicitly states that the 2.5 mg dosage is for treatment initiation and is not approved as a maintenance dosage. Furthermore, the recommended maintenance dosages are 5 mg, 10 mg, or 15 mg.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 137,
+  "prompt_tokens": 2100
+ }
+}

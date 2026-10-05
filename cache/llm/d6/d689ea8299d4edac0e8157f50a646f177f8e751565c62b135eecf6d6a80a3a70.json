@@ -1,0 +1,25 @@
+{
+ "key": "d689ea8299d4edac0e8157f50a646f177f8e751565c62b135eecf6d6a80a3a70",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "0",
+    "quote": "LANTUS is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus."
+   },
+   {
+    "chunk_id": "38",
+    "quote": "The safety and effectiveness of LANTUS to improve glycemic control in pediatric patients with diabetes mellitus have been established."
+   }
+  ],
+  "reasoning": "The claim states that LANTUS improves blood sugar control in adults and children with diabetes. The label excerpts provide evidence for this claim, specifically excerpt 0, which states that LANTUS is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus. Additionally, excerpt 38 provides evidence for the safety and effectiveness of LANTUS in pediatric patients with diabetes mellitus. The claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 193,
+  "prompt_tokens": 1565
+ }
+}

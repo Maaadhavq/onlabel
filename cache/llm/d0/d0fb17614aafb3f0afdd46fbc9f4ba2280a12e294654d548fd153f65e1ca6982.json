@@ -1,0 +1,25 @@
+{
+ "key": "d0fb17614aafb3f0afdd46fbc9f4ba2280a12e294654d548fd153f65e1ca6982",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:37:2",
+    "quote": "OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m^2, chronic renal replacement therapy, renal death, CV death (HR 0.76 [95% CI 0.66, 0.88], p=0.0003) as shown in Table 10 and Figure 7."
+   },
+   {
+    "chunk_id": "ozempic:v20:37:4",
+    "quote": "Table 10: Analyses of the Primary and Secondary Endpoints and their Individual Components in FLOW Trial"
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC reduces the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes and chronic kidney disease. The label excerpts provide evidence for this claim, specifically excerpt #ozempic:v20:37:2, which states that OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m^2, chronic renal replacement therapy, renal death, CV death. Additionally, excerpt #ozempic:v20:37:4 provides data on the individual components of the primary composite endpoint, including sustained eGFR decline, end-stage kidney disease, and cardiovascular death. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 363,
+  "prompt_tokens": 2004
+ }
+}

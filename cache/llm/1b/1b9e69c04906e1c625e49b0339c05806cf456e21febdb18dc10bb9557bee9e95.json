@@ -1,0 +1,25 @@
+{
+ "key": "1b9e69c04906e1c625e49b0339c05806cf456e21febdb18dc10bb9557bee9e95",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:0:0",
+    "quote": "JANUVIA^® is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "januvia:v71:63:2",
+    "quote": "JANUVIA is a prescription medicine used along with diet and exercise to lower blood sugar in adults with type 2 diabetes."
+   }
+  ],
+  "reasoning": "The claim states that JANUVIA improves blood sugar control in adults with type 2 diabetes along with diet and exercise. This is directly supported by the indication section and the Medication Guide.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 154,
+  "prompt_tokens": 1865
+ }
+}

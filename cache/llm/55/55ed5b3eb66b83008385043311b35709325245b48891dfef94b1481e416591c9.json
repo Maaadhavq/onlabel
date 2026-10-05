@@ -1,0 +1,21 @@
+{
+ "key": "55ed5b3eb66b83008385043311b35709325245b48891dfef94b1481e416591c9",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:41:1",
+    "quote": "Change from baseline (adjusted mean) | −0.9 | … | −0.2"
+   }
+  ],
+  "reasoning": "The claim states that in a 24‑week trial of FARXIGA monotherapy in adults with type 2 diabetes, A1C fell by 0.9% with FARXIGA 10 mg compared with 0.2% with placebo. Table 7 shows a change from baseline of –0.9 for FARXIGA 10 mg and –0.2 for placebo at week 24, matching the claim exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 211,
+  "prompt_tokens": 2390
+ }
+}

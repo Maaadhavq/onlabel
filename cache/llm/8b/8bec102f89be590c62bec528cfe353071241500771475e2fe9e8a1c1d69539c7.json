@@ -1,0 +1,29 @@
+{
+ "key": "8bec102f89be590c62bec528cfe353071241500771475e2fe9e8a1c1d69539c7",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:28:0",
+    "quote": "The safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established."
+   },
+   {
+    "chunk_id": "wegovy:v19:41:1",
+    "quote": "The primary endpoint was percent change in BMI from baseline to Week 68. After 68 weeks, treatment with WEGOVY injection resulted in a statistically significant reduction in percent BMI compared with placebo. Greater proportions of patients treated with WEGOVY injection achieved ≥5% reduction in baseline BMI than those treated with placebo as shown in Table 18."
+   },
+   {
+    "chunk_id": "wegovy:v19:41:1",
+    "quote": "Table 18. Changes in Weight and BMI at Week 68 in Pediatric Patients with Obesity Aged 12 Years and Older in Study 10 with WEGOVY 2.4 mg Injection in Study 10"
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term, along with a reduced-calorie diet and increased physical activity. The label excerpts provide evidence for this claim, specifically excerpt #8.4 Pediatric Use, which states that the safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established. Additionally, excerpt #14.3 Weight Reduction and Long-term Maintenance Study of WEGOVY Injection in Pediatric Patients Aged 12 Years and Older with Obesity provides details on a clinical trial that supports the claim, including a 68-week, double-blind, placebo-controlled trial in 201 pediatric patients aged 12 years and older with obesity. The trial showed that treatment with WEGOVY injection resulted in a statistically significant reduction in percent BMI compared with placebo, and greater proportions of patients treated with WEGOVY injection achieved ≥5% reduction in baseline BMI than those treated with placebo.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 492,
+  "prompt_tokens": 2223
+ }
+}

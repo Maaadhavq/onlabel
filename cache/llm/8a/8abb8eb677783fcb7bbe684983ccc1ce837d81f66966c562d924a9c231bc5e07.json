@@ -1,0 +1,21 @@
+{
+ "key": "8abb8eb677783fcb7bbe684983ccc1ce837d81f66966c562d924a9c231bc5e07",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:76:5",
+    "quote": "CV death | 137 (5.9%) | 172 (3.7%) | 0.62 (0.49, 0.77)"
+   }
+  ],
+  "reasoning": "The claim states that 1.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo. The label excerpts provide the necessary information to support this claim. Specifically, excerpt id=",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 131,
+  "prompt_tokens": 2081
+ }
+}

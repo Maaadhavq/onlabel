@@ -1,0 +1,23 @@
+{
+ "key": "de5f1d56a9a1ab303d431a15cfe1756ff091a047d9835be7308ba82f472eb9a8",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:1:0",
+    "quote": "- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA reduces the risk of heart attack and stroke in adults with type 2 diabetes. However, the label excerpts provided indicate that the cardiovascular risk reduction benefit is mainy for a specific subset of adults with type 2 diabetes (those with established cardiovascular disease). The claim leaves out this necessary qualifier. ",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 157,
+  "prompt_tokens": 1895
+ }
+}

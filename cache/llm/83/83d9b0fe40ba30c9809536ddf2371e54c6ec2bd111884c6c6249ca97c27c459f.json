@@ -1,0 +1,23 @@
+{
+ "key": "83d9b0fe40ba30c9809536ddf2371e54c6ec2bd111884c6c6249ca97c27c459f",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:76:5",
+    "quote": "| CV death | 137 (5.9%) | 172 (3.7%) | 0.62 (0.49, 0.77)"
+   }
+  ],
+  "reasoning": "The claim states that 1.7% of patients taking JARDIANCE died of cardiovascular causes, but the label excerpts (Table 15) Table 15 shows that CV death was 3.7% for the enough-to-be-called-a-cardiovascular-death rate for JARDIANCEing (N=4,687) group. Wait, let me re-read the label. Table 15 shows CV death for Placebo N=2,333 is 137 (5.9%) and JARDIANCE N=4,687 is 172 (3.7%). The claim says 1.7% for JARDIANCE. This is a contradiction. The claim also mentions the placebo group's CV death rate is 5.9%, which matches the label. However, the JARDIANCE rate of 1.7% is not supported and contradicts the label's 3.7%.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 295,
+  "prompt_tokens": 2116
+ }
+}

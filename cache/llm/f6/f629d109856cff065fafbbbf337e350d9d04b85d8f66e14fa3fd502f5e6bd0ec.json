@@ -1,0 +1,23 @@
+{
+ "key": "f629d109856cff065fafbbbf337e350d9d04b85d8f66e14fa3fd502f5e6bd0ec",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:75:2",
+    "quote": "Change at Week 40 | -2.3 | -1.9"
+   }
+  ],
+  "reasoning": "The claim states that in a 40-week trial in adults with type 2 diabetes taking metformin, MOUNJARO 15 mg lowered A1C by 2.3%, compared with 1.9% for semaglutide 1 mg. The label excerpts provide a table (Table 5) that shows the results of a 40-week trial in adults with type 2 diabetes taking metformin. The table shows that the change in HbA1c at Week 40 for MOUNJARO 15 mg is -2.3% and for semaglutide 1 mg is -1.9%. The claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 217,
+  "prompt_tokens": 2880
+ }
+}

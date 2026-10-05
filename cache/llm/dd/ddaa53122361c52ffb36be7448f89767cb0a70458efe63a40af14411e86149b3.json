@@ -1,0 +1,23 @@
+{
+ "key": "ddaa53122361c52ffb36be7448f89767cb0a70458efe63a40af14411e86149b3",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:74:2",
+    "quote": "Change at Week 40 | -0.1 | -1.8 | -1.7 | -1.7"
+   }
+  ],
+  "reasoning": "The claim states that in a 40-week trial of MOUNJARO monotherapy, A1C fell by 2.8% with 5 mg compared to 0.1% with placebo. However, Table 4 in the label excerpts, which covers monotherapy, monotherapy 5 mg shows a change at Week 40 of -1.8% and placebo shows a change of -0.1%. The claim's 2.8% figure is not supported by the provided excerpts.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 187,
+  "prompt_tokens": 2997
+ }
+}

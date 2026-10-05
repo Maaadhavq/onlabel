@@ -1,0 +1,25 @@
+{
+ "key": "a063c99b118e96665cb18c9fb4ea10852e9586e0a615b1234ea1d7a05572f391",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:13",
+    "quote": "- % change from baseline (LSMean) | -2.4 | -14.9"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:13",
+    "quote": "Table 8. Changes in Body Weight at Week 68 in Studies 2, 3, and 4 with WEGOVY 2.4 mg Injection"
+   }
+  ],
+  "reasoning": "The claim states an average weight loss of 14.9% at 68 weeks in adults. Table 8 in the label shows a % change from baseline (LSMean) of -14.9 for the WEGOVY injection group at week 68, which matches the claim.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 374,
+  "prompt_tokens": 2791
+ }
+}

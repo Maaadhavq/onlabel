@@ -1,0 +1,21 @@
+{
+ "key": "6321c80de58b65dbf1067a6ac4f7e46b6d1b8f22fba68db0052ecd1ccce66bba",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:79:3",
+    "quote": "Table 2: Changes in Body Weight at Week 72 in Studies 1 and 2 in Patients with Obesity or Overweight\n% Change from baseline | -3.1 | -15.0 | -19.5 | -20.9 | -3.2 | -12.8 | -14.7"
+   }
+  ],
+  "reasoning": "The claim states that in a 72-week study of adults with obesity or overweight, ZEPBOUND 15 mg lost an average of 20.9% body weight compared to 3.1% with placebo. Table 2 in the label excerpts provided (zepbound:v40:79:3) and the claim's population and timeframe-related information is supported by the data in Table 2. The 20.9% and 3.1% figures are found in the row '% Change from baseline' and the column 'ZEPBOUND 15 mg N = 630' and 'Placebo N = 643' (or the second placebo group) placebos. The claim is supported. While thetabl-e is a-b-o-u-t weight reduction in patients with obesity or overweight, the claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 306,
+  "prompt_tokens": 2451
+ }
+}

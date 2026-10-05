@@ -1,0 +1,27 @@
+{
+ "key": "0fae4839d05a0bd5d12795bc55c992ec4321055c76e0f8b51ab49274a24f2158",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity."
+   },
+   {
+    "chunk_id": "zepbound:v40:87:1",
+    "quote": "In Studies 5 and 6, treatment with ZEPBOUND for 52 weeks resulted in a statistically significant reduction in AHI compared with placebo, and greater proportions of patients treated with ZEPBOUND achieved remission or mild non-symptomatic OSA compared to placebo."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND treats sleep apnea, but the label excerpts only indicate that ZEPBOUND is indicated to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity, and that it was evaluated in clinical studies for this indication. The excerpts do not state that ZEPBOUND is approved to treat sleep apnea in general, but only in adults with obesity. Therefore, the claim is off-label.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 246,
+  "prompt_tokens": 1497
+ }
+}

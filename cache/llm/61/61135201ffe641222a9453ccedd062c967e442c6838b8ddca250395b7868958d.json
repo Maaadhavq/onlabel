@@ -1,0 +1,25 @@
+{
+ "key": "61135201ffe641222a9453ccedd062c967e442c6838b8ddca250395b7868958d",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:41:1",
+    "quote": "Table 7: Results at Week 24 (LOCFLOCF: last observation (prior to rescue for rescued patients) carried forward.) in a Placebo-Controlled Trial of FARXIGA Monotherapy in Adults with Type 2 Diabetes Mellitus (Main Cohort AM Doses)\nEfficacy Parameter | FARXIGA 10 mg N=70 All randomized patients who took at least one dose of double-blind trial medication during the short-term double-blind period. | FARXIGA 5 mg N=64 | Placebo N=75\nHbA1c (%)\nBaseline (mean) | 8.0 | 7.8 | 7.8\nChange from baseline (adjusted mean Least squares mean adjusted for baseline value. ) | –0.9 | –0.8 | –0.2"
+   },
+   {
+    "chunk_id": "farxiga:v49:41:0",
+    "quote": "In one monotherapy trial, a total of 558 treatment-naive patients with inadequately controlled diabetes participated in a 24-week trial (NCT00528372). Following a 2-week diet and exercise placebo lead-in period, 485 patients with HbA1c — 7% and – 10% were randomized to FARXIGA 5 mg or FARXIGA 10 mg once daily in either the morning (QAM, main cohort) or evening (QPM), or placebo."
+   }
+  ],
+  "reasoning": "The claim is supported by the data in Table 7, which shows a 24-week trial of FARXIGA monotherapy in adults with type 2 diabetes, where the 10 mg dose (N=70) resulted in a -0.9% change from baseline in HbA1c, compared to a -0.2% change for the placebo group.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 466,
+  "prompt_tokens": 2200
+ }
+}

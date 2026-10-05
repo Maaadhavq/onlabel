@@ -1,0 +1,29 @@
+{
+ "key": "5f3f1eba79c8db03c6ebcc492daed10303ad8c72fba504b67807963370702bb4",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   },
+   {
+    "chunk_id": "trulicity:v62:66:1",
+    "quote": "TRULICITY significantly reduced the risk of first occurrence of primary composite endpoint of CV death, non-fatal MI, or non-fatal stroke [see Clinical Studies (14.5)]"
+   },
+   {
+    "chunk_id": "trulicity:v62:77:3",
+    "quote": "TRULICITY significantly reduced the risk of first occurrence of primary composite endpoint of CV death, non-fatal MI, or non-fatal stroke (HR: 0.88, 95% CI 0.79, 0.99)."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes who have established cardiovascular disease or multiple cardiovascular risk factors. The label excerpts provide evidence for this claim. Excerpt 1 states that TRULICITY is indicated to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors. Excerpt 3 states that a cardiovascular outcomes trial was conducted in adult patients with type 2 diabetes mellitus and established cardiovascular disease or multiple cardiovascular risk factors, and that TRULICITY significantly reduced the risk of first occurrence of primary composite endpoint of CV death, non-fatal MI, or non-fatal stroke. Excerpt 4 provides the results of the trial, including a hazard ratio of 0.88 (95% CI 0.79, 0.99) for the primary composite endpoint. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 443,
+  "prompt_tokens": 1603
+ }
+}

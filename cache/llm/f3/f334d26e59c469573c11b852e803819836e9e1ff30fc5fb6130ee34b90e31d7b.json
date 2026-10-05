@@ -1,0 +1,31 @@
+{
+ "key": "f334d26e59c469573c11b852e803819836e9e1ff30fc5fb6130ee34b90e31d7b",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "rybelsus:v14:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."
+   },
+   {
+    "chunk_id": "rybelsus:v14:43:2",
+    "quote": "to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus who are at high risk for these events."
+   },
+   {
+    "chunk_id": "rybelsus:v14:40:3",
+    "quote": "MACE: Composite of CV death, non-fatal MI, non-fatal stroke (time to first occurrence) | 668 (13.8%) | 579 (12%) | 0.86 (0.77, 0.96)"
+   }
+  ],
+  "reasoning": "The claim states that RYBELSUS reduces the risk of cardiovascular death, heart attack, and stroke in adults with type 2 diabetes who are at high risk for these events. The label excerpts provide evidence to support this claim. Excerpt 1 (INDICATIONS AND USAGE) states that RYBELSUS is indicated to reduce the risk of major adverse cardiovascular events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events. Excerpt 3 (MEDICATION GUIDE) also states that RYBELSUS is used to reduce the risk of major cardiovascular events such as heart attack, stroke or death in adults with type 2 diabetes mellitus who are at high risk for these events. Excerpt 4 (Table 10) provides data from Trial 7, which shows that semaglutide tablets 14 mg reduced the risk of MACE (composite of CV death, non-fatal MI, non-fatal stroke) compared to placebo. Therefore, the claim is supported by the label excerpts.",
+  "verdict": "supported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 470,
+  "prompt_tokens": 1696
+ }
+}

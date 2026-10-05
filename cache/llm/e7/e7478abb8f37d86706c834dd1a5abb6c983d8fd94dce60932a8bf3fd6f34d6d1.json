@@ -1,0 +1,27 @@
+{
+ "key": "e7478abb8f37d86706c834dd1a5abb6c983d8fd94dce60932a8bf3fd6f34d6d1",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:1:0",
+    "quote": "JANUVIA has not been studied in patients with a history of pancreatitis. It is unknown whether patients with a history of pancreatitis are at increased risk for the development of pancreatitis while using JANUVIA."
+   },
+   {
+    "chunk_id": "januvia:v71:6:0",
+    "quote": "It is unknown whether patients with a history of pancreatitis are at increased risk for the development of pancreatitis while using JANUVIA."
+   }
+  ],
+  "reasoning": "The label excerpts state that JANUVIA has not been studied in patients with a history of pancreatitis and that it is unknown whether such patients are at increased risk for pancreatitis while using JANUVIA. The claim asserts that JANUVIA is safe for people with a history of pancreatitis, which is not supported by the label information.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 253,
+  "prompt_tokens": 1805
+ }
+}

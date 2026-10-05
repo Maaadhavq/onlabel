@@ -1,0 +1,13 @@
+{
+ "key": "52b744edf2fd1a795d1c0ffc74e83adc42aec7a4c6c80f83d61e7b265c8a3d6e",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "ZEPBOUND, used with a reduced‑calorie diet and increased physical activity, is indicated to reduce excess body weight and help maintain weight loss long‑term in adults with obesity or in adults who are overweight and have at least one weight‑related comorbid condition."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 100,
+  "prompt_tokens": 1099
+ }
+}

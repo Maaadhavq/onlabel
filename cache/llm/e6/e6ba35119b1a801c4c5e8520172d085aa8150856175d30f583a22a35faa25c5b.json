@@ -1,0 +1,29 @@
+{
+ "key": "e6ba35119b1a801c4c5e8520172d085aa8150856175d30f583a22a35faa25c5b",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:6:0",
+    "quote": "- personal or family history of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2) [see Warnings and Precautions (5.1)]."
+   },
+   {
+    "chunk_id": "victoza:v31:40:3",
+    "quote": "Do not use VICTOZA if: - you or any of your family have ever had a type of thyroid cancer called medullary thyroid carcinoma (MTC) or if you have an endocrine system condition called Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)."
+   },
+   {
+    "chunk_id": "victoza:v31:7:0",
+    "quote": "VICTOZA is contraindicated in patients with a personal or family history of MTC or in patients with MEN 2."
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA should not be used by people with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2, which is directly supported by the Contraindications section and the Medication Guide. The label excerpts confirm that the drug is contraindicated in these populations.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 279,
+  "prompt_tokens": 2251
+ }
+}

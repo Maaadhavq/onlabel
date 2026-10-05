@@ -1,0 +1,25 @@
+{
+ "key": "3ec35fb9edd1a5d301a90fec4c10eefe3d165acfe0257f08a216ae5780db22b7",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:28:0",
+    "quote": "The safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established."
+   },
+   {
+    "chunk_id": "wegovy:v19:41:1",
+    "quote": "After 68 weeks, treatment with WEGOVY injection resulted in a statistically significant reduction in percent BMI compared with placebo."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term. The label excerpts provide evidence for this claim, specifically excerpt #wegovy:v19:28:0, which states that the safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established. Additionally, excerpt #wegovy:v19:41:1 provides data on the efficacy of WEGOVY injection in pediatric patients aged 12 years and older with obesity, including a statistically significant reduction in percent BMI compared with placebo after 68 weeks.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 301,
+  "prompt_tokens": 2211
+ }
+}

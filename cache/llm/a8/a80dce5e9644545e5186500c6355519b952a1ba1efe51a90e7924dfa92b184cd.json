@@ -1,0 +1,31 @@
+{
+ "key": "a80dce5e9644545e5186500c6355519b952a1ba1efe51a90e7924dfa92b184cd",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "victoza:v31:2:0",
+    "quote": "- The recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week. The 0.6 mg once daily dosage is intended to reduce the risk of gastrointestinal adverse reactions [see Warnings and Precautions (5.6), Adverse Reactions (6.1)] during initial titration and is not effective for glycemic control in adults."
+   },
+   {
+    "chunk_id": "victoza:v31:4:0",
+    "quote": "- Inject VICTOZA subcutaneously once daily at any time of day, independently of meals."
+   },
+   {
+    "chunk_id": "victoza:v31:40:5",
+    "quote": "- Use VICTOZA 1 time each day, at any time of the day."
+   }
+  ],
+  "reasoning": "The claim states that VICTOZA is a once-weekly injection, but the label excerpts provided show that the medication is administered as a subcutaneous injection once daily. The excerpts specifically state that the lapped-up dose is injected subcutaneously once daily. Therefore, the claim is contradicted by the label.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 268,
+  "prompt_tokens": 1797
+ }
+}

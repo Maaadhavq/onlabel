@@ -1,0 +1,27 @@
+{
+ "key": "a143cdee4595f70236de4a87971b0f3c471e8e6e6e3e2de3ce58b30dad5d32e3",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."
+   },
+   {
+    "chunk_id": "wegovy:v19:45:2",
+    "quote": "reduce the risk of major cardiovascular events such as death, heart attack, or stroke in adults with known heart disease and with either obesity or overweight."
+   }
+  ],
+  "reasoning": "The FDA label states that Wegovy reduces the risk of major adverse cardiovascular events, which includes non‑fatal myocardial infarction (heart attack) and non‑fatal stroke, but only in adults with established cardiovascular disease and either obesity or overweight, and in the context of a reduced‑calorie diet and increased physical activity. The claim omits these qualifying conditions.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 354,
+  "prompt_tokens": 2590
+ }
+}

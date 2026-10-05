@@ -1,0 +1,23 @@
+{
+ "key": "fbb850c8c11ab5f3accbcb08127b8e098f18845553c58114a80ec3bcbe3e64d9",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:19",
+    "quote": "Greater proportions of patients treated with WEGOVY 25 mg tablets achieved 5%, 10%, 15% and 20% weight loss than those treated with placebo as shown in Table 11."
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY tablets help adults lose more weight than any other weight-loss medicine, which is an unsubstantiated superiority claim. The provided label excerpts, while showing efficacy of WEGOVY 25 mg tablets compared to placebo, compared only to a placebo, not to other weight-loss medicines.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsubstantiated_superiority"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 163,
+  "prompt_tokens": 2862
+ }
+}

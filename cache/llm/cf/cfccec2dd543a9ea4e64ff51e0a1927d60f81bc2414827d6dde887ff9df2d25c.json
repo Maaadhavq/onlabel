@@ -1,0 +1,21 @@
+{
+ "key": "cfccec2dd543a9ea4e64ff51e0a1927d60f81bc2414827d6dde887ff9df2d25c",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:0:0",
+    "quote": "to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   }
+  ],
+  "reasoning": "The indication section explicitly states JARDIANCE is indicated to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease, matching the claim exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 199,
+  "prompt_tokens": 2310
+ }
+}

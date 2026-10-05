@@ -1,0 +1,18 @@
+{
+ "key": "44c8eb24bc48efd6d1c3220c818887ca053da198acd3351ecb5b32ba3e5256f8",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim states that SAXENDA is injected once daily at any time of day, regardless of when you eat. This is supported by the label excerpt <excerpt id=\"saxenda:v22:2:0\" section=\"SAXENDA | 2 DOSAGE AND ADMINISTRATION > 2.1 Important Administration Instructions\">, which states: \"Inject SAXENDA subcutaneously once daily at any time of day, without regard to the timing of meals.\"",
+  "verdict": "supported",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 131,
+  "prompt_tokens": 2540
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "key": "4216353ef1a1ea8f4be290f8abe6ae17e5402d94bc8b6698943493ba3fb087f6",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:0:0",
+    "quote": "JARDIANCE is indicated: - to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure. - to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease."
+   },
+   {
+    "chunk_id": "jardiance:v31:92:4",
+    "quote": "reduce the risk of cardiovascular death in adults with type 2 diabetes and who also have known cardiovascular disease."
+   }
+  ],
+  "reasoning": "The claim states that JARDIANCE prevents heart failure in everyone with type 2 diabetes, but the label indicates it is indicated to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure, and to reduce the risk of cardiovascular death in adults with type 2 diabetes and established cardiovascular disease. The claim's use of 'everyone' is an unsupported absolute claim and an off-label use for the general type 2 diabetes population without established cardiovascular disease or heart failure.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 246,
+  "prompt_tokens": 1948
+ }
+}

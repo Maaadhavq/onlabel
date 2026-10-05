@@ -1,0 +1,18 @@
+{
+ "key": "961c1fc3d27fc6f52d46ce6798402c8bf9e66d1c2f3ce72269841fa64b1d6f86",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim makes an absolute superiority claim regarding A1C reduction compared to any other oral diabetes medicine, but the label excerpts provided do not contain any data or statements supporting this comparative efficacy. In fact, one excerpt shows JANUVIA being non-inferior to glipizide, but not superior to all other oral medicines.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsubstantiated_superiority"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 96,
+  "prompt_tokens": 1938
+ }
+}

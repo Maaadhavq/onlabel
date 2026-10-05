@@ -1,0 +1,28 @@
+{
+ "key": "34376907fafb7d23df8d3004baea742911f227e9a867d5daf3fb056f728d111f",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:63:2",
+    "quote": "- JANUVIA is a prescription medicine used along with diet and exercise to lower blood sugar in adults with type 2 diabetes. - JANUVIA is not for people with type 1 diabetes."
+   },
+   {
+    "chunk_id": "januvia:v71:1:0",
+    "quote": "JANUVIA should not be used in patients with type 1 diabetes."
+   }
+  ],
+  "reasoning": "The claim states JANUVIA helps people with type 1 diabetes, but the label explicitly says JANUVIA is not for people with type 1 diabetes and should not be used in patients with type 1 diabetes.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "broadened_indication"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 282,
+  "prompt_tokens": 1871
+ }
+}

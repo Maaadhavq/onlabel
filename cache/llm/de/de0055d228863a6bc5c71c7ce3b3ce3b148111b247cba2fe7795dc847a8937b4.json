@@ -1,0 +1,23 @@
+{
+ "key": "de0055d228863a6bc5c71c7ce3b3ce3b148111b247cba2fe7795dc847a8937b4",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:3:0",
+    "quote": "Administer LANTUS subcutaneously once daily at any time of day but at the same time every day."
+   }
+  ],
+  "reasoning": "The claim states that LANTUS is injected three times a day with meals, but the label excerpts do not support this claim. The excerpts state that LANTUS should be administered subcutaneously once daily at any time of day but at the same time every day (excerpt id: lantus:v35:3:0).",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 146,
+  "prompt_tokens": 1705
+ }
+}

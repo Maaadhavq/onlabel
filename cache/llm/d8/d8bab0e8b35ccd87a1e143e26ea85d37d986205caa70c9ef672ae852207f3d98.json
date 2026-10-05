@@ -1,0 +1,24 @@
+{
+ "key": "d8bab0e8b35ccd87a1e143e26ea85d37d986205caa70c9ef672ae852207f3d98",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "farxiga:v49:0:1",
+    "quote": "- FARXIGA is not recommended for use to improve glycemic control in patients with type 2 diabetes mellitus with an eGFR less than 45 mL/min/1.73 m^2. FARXIGA is likely to be ineffective in this setting based upon its mechanism of action."
+   }
+  ],
+  "reasoning": "The claim states that FARXIGA controls blood sugar well in people with type 2 diabetes with an eGFR below 30, but the label explicitly states it is not recommended for glycemic control in patients with type 2 diabetes with an eGFR less than 45 mL/min/1.73 m^2. The label also notes it is likely to be ineffective in this setting.",
+  "verdict": "contradicted",
+  "violations": [
+   "broadened_indication",
+   "overstated_efficacy"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 194,
+  "prompt_tokens": 2575
+ }
+}

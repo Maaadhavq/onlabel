@@ -1,0 +1,41 @@
+{
+ "key": "a356f4f61d0fd295e95540c967a6fab10ad554cf2d06f88a6e5c203008b9bab3",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals."
+   },
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "Inject OZEMPIC subcutaneously in the abdomen, thigh, or upper arm."
+   },
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "The day of weekly administration can be changed if necessary as long as the time between two doses is at least 2 days (>48 hours)."
+   },
+   {
+    "chunk_id": "ozempic:v20:2:0",
+    "quote": "If a dose is missed, administer OZEMPIC as soon as possible within 5 days after the missed dose. If more than 5 days have passed, skip the missed dose and administer the next dose on the regularly scheduled day."
+   }
+  ],
+  "reasoning": "The claim states that OZEMPIC is taken once a day, at any time, with or without meals. However, the label excerpts state that OZEMPIC should be administered once weekly, on the same day each week, at any time of the day, with or without meals. This indicates that the claim is contradicted by the label excerpts.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "unsubstantiated_superiority",
+   "broadened_indication",
+   "omitted_qualifier",
+   "minimized_risk",
+   "missing_risk_information",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 366,
+  "prompt_tokens": 2117
+ }
+}

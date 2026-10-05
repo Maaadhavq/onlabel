@@ -1,0 +1,31 @@
+{
+ "key": "5d8bf49b9cfbf666f4c521452ecb3af1c688254b53869509c14cffbd9913d515",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity:"
+   },
+   {
+    "chunk_id": "zepbound:v40:79:1",
+    "quote": "After 72 weeks of treatment, ZEPBOUND resulted in a statistically significant reduction in body weight compared with placebo,"
+   },
+   {
+    "chunk_id": "zepbound:v40:2:0",
+    "quote": "Limitations of Use ZEPBOUND contains tirzepatide. Coadministration with other tirzepatide-containing products or with any glucagon-like peptide-1 (GLP-1) receptor agonist is not recommended."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND works better than any other weight-loss medicine, but the label excerpts do not provide any comparative efficacy data. The excerpts only mention that ZEPBOUND resulted in a statistically significant reduction in body weight compared to placebo, but do not compare it to other weight-loss medicines.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 256,
+  "prompt_tokens": 1735
+ }
+}

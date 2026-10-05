@@ -1,0 +1,31 @@
+{
+ "key": "dfec9e05cd8ddbc38d156d25ec289a302c5d19b89f5dd57a99fb407d02c3b24c",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "lantus:v35:52:0",
+    "quote": "In general, the reduction in glycated hemoglobin (HbA1c) with LANTUS was similar to that with NPH insulin."
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "The LANTUS group had a smaller mean reduction from baseline in HbA1c compared to the NPH insulin group, which may be explained by the lower daily basal insulin doses in the LANTUS group (Table 11)."
+   },
+   {
+    "chunk_id": "lantus:v35:55:3",
+    "quote": "Table 11: Type 2 Diabetes Mellitus – Adults\n| Study E | Study F | Study G | \n| LANTUS | NPH | LANTUS | NPH | LANTUS | NPH | \n| HbA1c | \n| Adjusted mean change from baseline | -0.5 | -0.4 | -0.4 | -0.6 | -0.6 | -0.8 | \n| LANTUS – NPH | -0.1 | +0.2 | +0.2 |"
+   }
+  ],
+  "reasoning": "The claim that LANTUS lowers A1C far more than NPH insulin is contradicted by the label excerpts, which state that the reduction in HbA1c was similar between the LANTUS and NPH groups, and in one specific study for type 2 diabetes, the LANTUS group actually had a smaller mean reduction from baseline in HbA1c compared to the NPH group.",
+  "verdict": "contradicted",
+  "violations": [
+   "unsubstantiated_superiority"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 375,
+  "prompt_tokens": 1947
+ }
+}

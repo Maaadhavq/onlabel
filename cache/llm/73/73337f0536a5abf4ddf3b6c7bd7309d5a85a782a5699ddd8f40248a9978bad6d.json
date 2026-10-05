@@ -1,0 +1,28 @@
+{
+ "key": "73337f0536a5abf4ddf3b6c7bd7309d5a85a782a5699ddd8f40248a9978bad6d",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity."
+   },
+   {
+    "chunk_id": "saxenda:v22:1:0",
+    "quote": "Limitations of Use"
+   }
+  ],
+  "reasoning": "The claim states that SAXENDA helps children 6 and older with obesity lose weight with a reduced-calorie diet and increased physical activity. The label excerpts indicate that SAXENDA is indicated for pediatric patients aged 12 years and older with obesity, but there is no mention of children aged 6 and older. Additionally, the claim does not specify the population or condition for which the weight loss is being claimed. The label excerpts provide information on the safety and efficacy of SAXENDA in pediatric patients aged 12 years and older, but do not support the claim for children aged 6 and older.",
+  "verdict": "unsupported",
+  "violations": [
+   "broadened_indication",
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 232,
+  "prompt_tokens": 2324
+ }
+}

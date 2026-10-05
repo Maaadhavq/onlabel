@@ -1,0 +1,27 @@
+{
+ "key": "255b4dcf14b6b49ced025a150f38e89c8438233c18ba94e6421a81658754cccd",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:2",
+    "quote": "Difference from placebo [95% - CI] | | - -1.2 [-1.5, -0.9] | - -1.4 [-1.7, -1.1]"
+   },
+   {
+    "chunk_id": "ozempic:v20:35:1",
+    "quote": "Monotherapy with OZEMPIC 0.5 mg and 1 mg once weekly for 30 weeks resulted in a statistically significant reduction in HbA1c compared with placebo (see Table 3)."
+   }
+  ],
+  "reasoning": "The claim states that in a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.6% with OZEMPIC 1 mg, compared with 0.1% with placebo. The label excerpts provide a table (Table 3) that shows the results of a 30-week trial of OZEMPIC as monotherapy in adult patients with type 2 diabetes mellitus inadequately controlled with diet and exercise. The table shows that the difference from placebo for OZEMPIC 1 mg is -1.4 [-1.7, -1.1] for HbA1c, not A1C. The claim is referring to A1C, but the label excerpts use HbA1c. The claim is also referring to a 2.6% reduction, but the label excerpts show a -1.4% reduction for OZEMPIC 1 mg. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 377,
+  "prompt_tokens": 2295
+ }
+}

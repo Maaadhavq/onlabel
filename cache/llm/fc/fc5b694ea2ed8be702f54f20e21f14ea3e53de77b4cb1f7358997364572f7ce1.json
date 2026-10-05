@@ -1,0 +1,23 @@
+{
+ "key": "fc5b694ea2ed8be702f54f20e21f14ea3e53de77b4cb1f7358997364572f7ce1",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:3:0",
+    "quote": "For patients with an estimated glomerular filtration rate [eGFR] greater than or equal to 45 mL/min/1.73 m^2 to less than 90 mL/min/1.73 m^2, no dosage adjustment for JANUVIA is required.\n\nFor patients with moderate renal impairment (eGFR greater than or equal to 30 mL/min/1.73 m^2 to less than 45 mL/min/1.73 m^2), the dose of JANUVIA is 50 mg once daily.\n\nFor patients with severe renal impairment (eGFR less than 30 mL/min/1.73 m^2) ... the dose of JANUVIA is 25 mg once daily."
+   }
+  ],
+  "reasoning": "The claim states no dose change is needed for people with kidney problems, but the label specifies dose reductions for moderate and severe renal impairment. Therefore the claim is only true for patients with eGFR ≥45 mL/min/1.73 m² and omits this qualifier.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 420,
+  "prompt_tokens": 2048
+ }
+}

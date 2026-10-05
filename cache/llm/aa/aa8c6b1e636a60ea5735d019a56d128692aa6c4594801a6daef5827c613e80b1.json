@@ -1,0 +1,25 @@
+{
+ "key": "aa8c6b1e636a60ea5735d019a56d128692aa6c4594801a6daef5827c613e80b1",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:2",
+    "quote": "Table 3. Results at Week 30 in a Trial of OZEMPIC as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise\n| - Placebo | - OZEMPIC - 0.5 mg | - OZEMPIC - 1 mg\n- Intent-to-Treat (ITT) Population (N) | - 129 | - 128 | - 130\n- Baseline (mean) | - 8 | - 8.1 | - 8.1\n- Change at week 30 | - -0.1 | - -1.4 | - -1.6"
+   },
+   {
+    "chunk_id": "ozempic:v20:35:1",
+    "quote": "In a 30-week double-blind trial (NCT02054897), 388 patients with type 2 diabetes mellitus inadequately controlled with diet and exercise were randomized to OZEMPIC 0.5 mg or OZEMPIC 1 mg once weekly or placebo."
+   }
+  ],
+  "reasoning": "The claim states that in a 30-week trial of OZEMPIC alone (monotherapy) in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.6% with 1 mg and 0.1% with placebo. Table 3 in excerpt ozempic:v20:35:2 shows these exact values for the 'Change at week 30' for the 1 mg dose and Placebo in the monotherapy trial. The population and timeframe are also supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 390,
+  "prompt_tokens": 2425
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "key": "246facb200ddb54b33c9b4dff084acab75462e2c8dca0d9ef79b7e1e9533bc3c",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "januvia:v71:0:0",
+    "quote": "JANUVIA^® is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "januvia:v71:1:0",
+    "quote": "JANUVIA should not be used in patients with type 1 diabetes."
+   }
+  ],
+  "reasoning": "The FDA label excerpts state that JANUVIA is indicated for adults with type 2 diabetes and explicitly says it is not for people with type 1 diabetes. The claim asserts the opposite, that it helps people with type 1 diabetes. This directly contradicts the label.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 257,
+  "prompt_tokens": 1884
+ }
+}

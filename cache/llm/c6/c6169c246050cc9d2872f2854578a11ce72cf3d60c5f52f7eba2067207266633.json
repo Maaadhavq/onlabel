@@ -1,0 +1,31 @@
+{
+ "key": "c6169c246050cc9d2872f2854578a11ce72cf3d60c5f52f7eba2067207266633",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity."
+   },
+   {
+    "chunk_id": "zepbound:v106:2:0",
+    "quote": "ZEPBOUND is an injectable prescription medicine used with a reduced-calorie diet and increased physical activity to help adults with: - obesity, or some adults with overweight who also have weight-related medical problems, to lose excess body weight and keep the weight off. - moderate to severe obstructive sleep apnea (OSA) and obesity to improve their OSA."
+   },
+   {
+    "chunk_id": "zepbound:v40:84:1:0",
+    "quote": "All patients received a standard lifestyle intervention which included instruction on a reduced-calorie diet (approximately 500 kcal/day deficit) and increased physical activity counseling (recommended minimum of 150 min/week) that began with the first dose of ZEPBOUND, during the lead-in period, and continued throughout the trial."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND treats moderate to severe obstructive sleep apnea in adults with obesity, which is supported by the Indications and Usage section of the label (excerpt id: zepbound:v40:1:0). However, the claim also mentions a reduced-calorie diet and increased physical activity, which is not explicitly stated in the Indications and Usage section. Instead, it is mentioned in the Patient Medication Guide (excerpt id: zepbound:v106:2:0) and in the Clinical Studies section (excerpt id: zepbound:v40:84:1:0). Therefore, the claim is supported, but it needs a qualifier to specify that the treatment is in combination with a reduced-calorie diet and increased physical activity.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 419,
+  "prompt_tokens": 1688
+ }
+}

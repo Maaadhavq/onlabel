@@ -1,0 +1,27 @@
+{
+ "key": "9945cf108b91327e0361d6cee1fff07da6c50e316a94583231fbeb691081192e",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:3",
+    "quote": "The mean age was 46 years (range 18 to 73), 81% were female, 84% were White, 13% were Black or African American, and 7% were Hispanic/Latino Ethnicity. Mean baseline body weight was 99.6 kg and mean BMI was 35.6 kg/m^2."
+   },
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "SAXENDA N=212 | Placebo N=210 - Percent change from baseline (LSMean) | -5.4 | -1.7"
+   }
+  ],
+  "reasoning": "The claim states that people taking SAXENDA lost an average of 7.4% of their body weight, compared with 3% with placebo, in a 56-week study of adults with obesity, or overweight with a weight-related condition. The label excerpts provide information on Study 3, which is a 56-week trial that enrolled 422 patients with obesity or overweight and at least one weight-related comorbid condition. The mean age was 46 years, and the mean baseline body weight was 99.6 kg. The study found that patients taking SAXENDA lost an average of 5.4% of their body weight, compared with 1.7% with placebo. The claim is not supported by the label excerpts because it states a different average weight loss for SAXENDA (7.4%) compared to the actual average weight loss found in Study 3 (5.4%).",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 369,
+  "prompt_tokens": 2333
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "key": "8c1a42766f7f8f08d9258470f9b8392f964266815486056b27bfda733b00646a",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:80:3",
+    "quote": "p=0.007 for noninferiority of MOUNJARO to dulaglutide"
+   },
+   {
+    "chunk_id": "mounjaro:v40:80:3",
+    "quote": "0.92 (0.83, 1.01)"
+   },
+   {
+    "chunk_id": "mounjaro:v40:80:2",
+    "quote": "superiority to dulaglutide was not established"
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO reduces the risk of heart attack and stroke. The label excerpts provide information on the SURPASS-CVOT trial, which compared MOUNJARO to dulaglutide in adults with type 2 diabetes mellitus and established cardiovascular disease. The trial found that MOUNJARO was non-inferior to dulaglutide for reducing the occurrence of MACE-3, which includes heart attack and stroke. The estimated hazard ratio for time to first MACE was 0.92 (95.3% CI: 0.83, 1.01) for MOUNJARO compared to dulaglutide. This suggests that MOUNJARO does reduce the risk of heart attack and stroke, but the label also notes that superiority to dulaglutide was not established.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "unsubstantiated_superiority"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 333,
+  "prompt_tokens": 2030
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "key": "b5fc1620e46c14e3f180816e024ed7b760f2e209e34978933c5e813cac7a5063",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "TRULICITY^® is indicated: - As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."
+   },
+   {
+    "chunk_id": "trulicity:v62:82:2",
+    "quote": "TRULICITY is an injectable prescription medicine that is used: - along with diet and exercise to improve blood sugar (glucose) in adults and children 10 years of age and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The label indicates TRULICITY is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus, which matches the claim. No additional qualifiers or restrictions are omitted.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 329,
+  "prompt_tokens": 2018
+ }
+}

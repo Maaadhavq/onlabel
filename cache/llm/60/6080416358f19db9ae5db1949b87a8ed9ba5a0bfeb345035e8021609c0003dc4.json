@@ -1,0 +1,21 @@
+{
+ "key": "6080416358f19db9ae5db1949b87a8ed9ba5a0bfeb345035e8021609c0003dc4",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:75:2",
+    "quote": "| Semaglutide 1 mg | MOUNJARO 5 mg | MOUNJARO 10 mg | MOUNJARO 15 mg\n| Modified Intent-to-Treat (mITT) Population (N) | 468 | 470 | 469 | 469\n| HbA1c (%) | | | |\n| Baseline (mean) | 8.3 | 8.3 | 8.3 | 8.3\n| Change at Week 40 | -1.9 | -2.0 | -2.2 | -2.3\n| Difference from semaglutide (95% CI) | -- | -0.2 (-0.3, -0.0) | -0.4 (-0.5, -0.3) | -0.5 (-0.6, -0.3)\n| Patients (%) achieving HbA1c <7% | 79 | 82 | 86 | 86"
+   }
+  ],
+  "reasoning": "The claim matches the data presented in Table 5 of the SURPASS‑2 study: the 10 mg and 15 mg doses of MOUNJARO produced a statistically significant greater reduction in HbA1c at week 40 versus semaglutide 1 mg, with differences of –0.4 % (95 % CI –0.5 to –0.3) and –0.5 % (95 % CI –0.6 to –0.3) respectively, and a p‑value <0.01 for superiority. All elements of the claim (population, doses, time point, statistical significance) are explicitly stated in the excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 504,
+  "prompt_tokens": 2793
+ }
+}

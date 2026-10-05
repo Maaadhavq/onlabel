@@ -1,0 +1,21 @@
+{
+ "key": "637cc6588097b6fe8d90da4a5a55a717ad7c2e03d7e5b61ae639252edbcd077b",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:18",
+    "quote": "The mean baseline body weight was 89.9 kg, 92.7 kg, and 92.5 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. The mean changes from baseline to week 30 were -1.2 kg, -3.5 kg, and -6 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. The difference from placebo (95% CI) for OZEMPIC 0.5 mg was -2.2 kg (-3.4, -1.1), and for OZEMPIC 1 mg was -4.7 kg (-5.8, -3.6)."
+   }
+  ],
+  "reasoning": "The claim exactly matches the data presented in excerpt ozempic:v20:35:18, which reports mean weight changes of –1.2 kg (placebo), –3.5 kg (0.5 mg), and –6 kg (1 mg) at week 30, and the corresponding differences from placebo with 95% CI –2.2 kg (–3.4, –1.1) and –4.7 kg (–5.8, –3.6). All elements of the claim are present in the excerpt.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 353,
+  "prompt_tokens": 2650
+ }
+}

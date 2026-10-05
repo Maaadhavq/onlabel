@@ -1,0 +1,25 @@
+{
+ "key": "57a730439609afaa445ad69df6dfa7e5f782e1c6d7d0553a8de98252de0c1dbc",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:19",
+    "quote": "Table 11. Changes in Body Weight at Week 64 in Study 7 with WEGOVY 25 mg Tablets\n| Study 7 (Obesity or Overweight with Comorbidity)\nIntention-to-Treat^1 | PLACEBO N = 102 | WEGOVY 25 mg Tablet N = 205\nBody Weight |\n- Baseline mean (kg) | 104.8 | 106.4\n- % change from baseline (LSMean)^3 | -2.4 | -13.6\n- % difference from placebo (LSMean) (95% CI)^3 | | -11.2 [-13.6; -8.8]^2"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:8",
+    "quote": "Study 7 was a 64-week trial that enrolled 307 patients with obesity (BMI greater than or equal to 30 kg/m^2) or with overweight (BMI 27-29.9 kg/m^2) and at least one weight-related comorbid condition, such as treated or untreated dyslipidemia or hypertension; patients with type 2 diabetes mellitus were excluded."
+   }
+  ],
+  "reasoning": "The claim is supported by the clinical study data in Table 11 of the label excerpts. The 64-week study (Study 7)enrolled adults with obesity or overweight with a weight-related condition, and the results for WEGOVY 25 mg tablets show a -13.6% change from baseline (LSMean) compared to -2.4% for placebo.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 395,
+  "prompt_tokens": 2269
+ }
+}

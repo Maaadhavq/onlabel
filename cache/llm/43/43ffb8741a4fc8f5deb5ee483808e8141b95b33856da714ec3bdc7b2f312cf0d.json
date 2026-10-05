@@ -1,0 +1,13 @@
+{
+ "key": "43ffb8741a4fc8f5deb5ee483808e8141b95b33856da714ec3bdc7b2f312cf0d",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "In adults with type 2 diabetes mellitus, treatment with OZEMPIC 0.5 mg or 1 mg as an adjunct to diet and exercise led to mean weight reductions of 3.5 kg and 6.0 kg, respectively, compared with 1.2 kg with placebo, over 30 weeks (difference from placebo: –2.2 kg [95% CI –3.4, –1.1] for 0.5 mg and –4.7 kg [95% CI –5.8, –3.6] for 1 mg)."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 175,
+  "prompt_tokens": 1097
+ }
+}

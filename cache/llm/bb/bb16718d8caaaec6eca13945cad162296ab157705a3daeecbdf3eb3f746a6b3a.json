@@ -1,0 +1,16 @@
+{
+ "key": "bb16718d8caaaec6eca13945cad162296ab157705a3daeecbdf3eb3f746a6b3a",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The label excerpts do not provide a specific mean percent weight loss of 25.9% for the 15 mg dose in a 72‑week study. The excerpts mention weight loss percentages in general and refer to tables, but the exact figure 25.9% is not quoted or implied.",
+  "verdict": "unsupported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 158,
+  "prompt_tokens": 1957
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "key": "5e33f38f7de4970e3e40505b595b878ece4cb29cf48f1425c1bafbea6b55a762",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:3:0",
+    "quote": "The recommended starting dosage of ZEPBOUND for all indications is 2.5 mg injected subcutaneously once weekly for 4 weeks."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND starts at 2.5 mg once weekly for 4 weeks. The label excerpt from 'ZEPBOUND | 2 DOSAGE AND ADMINISTRATION > 2.1 Recommended Dose Escalation Schedule' supports this claim, stating that the recommended starting dosage of ZEPBOUND for all indications is 2.5 mg injected subcutaneously once weekly for 4 weeks.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 165,
+  "prompt_tokens": 2181
+ }
+}

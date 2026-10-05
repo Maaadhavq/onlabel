@@ -1,0 +1,23 @@
+{
+ "key": "32eb4c592aa0ab94a60c7f5f22286152aa94473aad19c8c735f085e414a022bd",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity: - to reduce excess body weight and maintain weight reduction long term in: - adults and pediatric patients aged 12 years and older with obesity."
+   }
+  ],
+  "reasoning": "The claim is true only with the condition that it is used in combination with a reduced-calorie diet and increased physical activity, which the claim leaves out. The label excerpts state that WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in adults and pediatric patients aged 12 years and older with obesity. ",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 878,
+  "prompt_tokens": 5270
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "key": "0c28d53db84501c7f24ecd98a32a3479f0bfd0d1b39e4af68fbcaf968c62813d",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:2:0",
+    "quote": "The recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY starts at 0.75 mg, injected once weekly. The label excerpts provide information on the dosage and administration of TRULICITY, but they do not explicitly state that the starting dose is 0.75 mg. However, excerpt #trulicity:v62:2:0, section 2.1 Adult Dosage, states that the recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly. This excerpt does not mention any other starting dose, but it does mention that the dosage may be increased to 1.5 mg after 4 weeks. Therefore, the claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 213,
+  "prompt_tokens": 1765
+ }
+}

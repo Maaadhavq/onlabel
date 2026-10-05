@@ -1,0 +1,29 @@
+{
+ "key": "5fabb181955e7be53c754dba62acdc29784224e56b0e1b5dc468a0bccb6812b1",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:3:1",
+    "quote": "Recommended Dosage ... - 10 mg orally once daily in the morning, taken with or without food."
+   },
+   {
+    "chunk_id": "jardiance:v31:3:0",
+    "quote": "Recommended Dosage ... - 10 mg orally once daily in the morning, taken with or without food."
+   },
+   {
+    "chunk_id": "jardiance:v31:92:7",
+    "quote": "Take JARDIANCE by mouth 1 time in the morning each day, with or without food."
+   }
+  ],
+  "reasoning": "The claim states JARDIANCE is taken twice a day with meals, but the label excerpts specify the recommended dosage is taken once daily in the morning, with or without food. This directly conflicts with the claim.",
+  "verdict": "contradicted",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 355,
+  "prompt_tokens": 2304
+ }
+}

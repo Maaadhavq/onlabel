@@ -1,0 +1,27 @@
+{
+ "key": "b865d3f4ef638dd9c50f94d42436a36763288c669d0d0747ee7b40417be84e17",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:20",
+    "quote": "Table 11. Changes in Body Weight at Week 64 in Study 7 with WEGOVY 25 mg Tablets | Study 7 (Obesity or Overweight with Comorbidity) Intention-to-Treat^1 | PLACEBO N = 102 | WEGOVY 25 mg Tablet N = 205 - % difference from placebo (LSMean) (95% CI)^3 | | 45.1 [33.8; 56.3]^2"
+   },
+   {
+    "chunk_id": "wegovy:v19:40:20",
+    "quote": "Table 11. Changes in Body Weight at Week 64 in Study 7 with WEGOVY 25 mg Tablets | Study 7 (Obesity or Overweight with Comorbidity) Intention-to-Treat^1 | PLACEBO N = 102 | WEGOVY 25 mg Tablet N = 205 % of Patients losing greater than or equal to 10% body weight | 14.4 | 59.8"
+   }
+  ],
+  "reasoning": "The claim states that WEGOVY tablets help adults lose more weight than any other weight-loss medicine. However, the label excerpts do not provide a direct comparison with other weight-loss medicines. Instead, they provide information on the efficacy of WEGOVY tablets in reducing body weight in adults with obesity or overweight. Specifically, Table 11 in Study 7 shows that patients treated with WEGOVY 25 mg tablets achieved a statistically significant reduction in body weight compared to placebo, with a mean percent change from baseline of -13.6% and a percentage of patients losing greater than or equal to 10% body weight of 59.8%. However, this information does not provide a direct comparison with other weight-loss medicines. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 425,
+  "prompt_tokens": 2805
+ }
+}

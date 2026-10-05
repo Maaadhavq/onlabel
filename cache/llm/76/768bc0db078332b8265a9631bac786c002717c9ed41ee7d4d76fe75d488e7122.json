@@ -1,0 +1,25 @@
+{
+ "key": "768bc0db078332b8265a9631bac786c002717c9ed41ee7d4d76fe75d488e7122",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:3:0",
+    "quote": "- The recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly."
+   },
+   {
+    "chunk_id": "trulicity:v62:2:0",
+    "quote": "- The recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly. Follow the dosage escalation below to reduce the risk of gastrointestinal adverse reactions [see Warnings and Precautions (5.6) and Adverse Reactions (6.1)]."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY starts at 0.75 mg, injected once weekly. The label excerpts (trulicity:v62:3:0 and trulicity:v62:2:0) both state that the recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly. The claim is supported.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 221,
+  "prompt_tokens": 1791
+ }
+}

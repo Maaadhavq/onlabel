@@ -1,0 +1,27 @@
+{
+ "key": "e65419f470e17cf733f104d4746f9a8961c9e13a13123a23780ed3e5e17b319c",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "trulicity:v62:1:0",
+    "quote": "reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."
+   },
+   {
+    "chunk_id": "trulicity:v62:48:0",
+    "quote": "TRULICITY contains dulaglutide, which is a human GLP-1 receptor agonist with 90% amino acid sequence homology to endogenous human GLP-1 (7-37)."
+   }
+  ],
+  "reasoning": "The claim states that TRULICITY is the only GLP-1 proven to prevent heart attacks. The label excerpts indicate that TRULICITY is indicated to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors. However, the excerpts do not provide information on whether TRULICITY is the only GLP-1 proven to prevent heart attacks. Therefore, the claim is unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 288,
+  "prompt_tokens": 2202
+ }
+}

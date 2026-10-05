@@ -1,0 +1,18 @@
+{
+ "key": "1b214e77cf20a0abde4272c6fcc083f293d4423938e2ef7bd4dc1e4205b4f277",
+ "model_key": "ollama/llama3.1-8b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim states that WEGOVY is approved for children as young as 8, but the label excerpts do not support this claim. The excerpts mention pediatric patients aged 12 years and older with obesity, but there is no mention of children as young as 8. The claim is therefore unsupported.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 95,
+  "prompt_tokens": 2157
+ }
+}

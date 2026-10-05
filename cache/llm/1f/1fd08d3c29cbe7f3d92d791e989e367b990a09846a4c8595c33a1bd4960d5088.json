@@ -1,0 +1,28 @@
+{
+ "key": "1fd08d3c29cbe7f3d92d791e989e367b990a09846a4c8595c33a1bd4960d5088",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "jardiance:v31:0:0",
+    "quote": "JARDIANCE is indicated:\n- to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure."
+   },
+   {
+    "chunk_id": "jardiance:v31:0:0",
+    "quote": "- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus."
+   }
+  ],
+  "reasoning": "The label indicates JARDIANCE is indicated to reduce risk of hospitalization for heart failure only in adults with heart failure, not to prevent heart failure in all patients with type 2 diabetes. No excerpt supports a claim of preventing heart failure in the entire type 2 diabetes population.",
+  "verdict": "off_label",
+  "violations": [
+   "broadened_indication",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 362,
+  "prompt_tokens": 2203
+ }
+}

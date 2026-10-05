@@ -1,0 +1,13 @@
+{
+ "key": "0c0978137681e9fabf5bcd5231b7120e2474d9a39c19a2053846730c7e2c3eaa",
+ "model_key": "groq/gpt-oss-20b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "In SURPASS‑2, MOUNJARO 10 mg and 15 mg once weekly produced a statistically significant greater reduction in HbA1c at week 40 compared with semaglutide 1 mg once weekly."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 69,
+  "prompt_tokens": 1162
+ }
+}

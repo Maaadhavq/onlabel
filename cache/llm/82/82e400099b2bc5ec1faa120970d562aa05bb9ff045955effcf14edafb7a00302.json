@@ -1,0 +1,29 @@
+{
+ "key": "82e400099b2bc5ec1faa120970d562aa05bb9ff045955effcf14edafb7a00302",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "- Percent change from baseline (LSMean) | -7.4 | -3 | -5.4 | -1.7 | -4.9 | 0.3"
+   },
+   {
+    "chunk_id": "saxenda:v22:31:7",
+    "quote": "Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3"
+   },
+   {
+    "chunk_id": "saxenda:v22:31:3",
+    "quote": "Study 3 was a 56‑week trial that enrolled 422 patients with obesity (BMI greater than or equal to 30 kg/m^2) or with overweight (BMI 27‑29.9 kg/m^2) and at least one weight‑related comorbid condition"
+   }
+  ],
+  "reasoning": "The label provides Table 4 showing a percent change from baseline (LSMean) of -7.4% for SAXENDA and -3% for placebo at Week 56 in Study 1, which enrolled adults with obesity or overweight with a weight‑related comorbidity. This matches all elements of the claim.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 588,
+  "prompt_tokens": 2642
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "key": "2011512d5fd728e8b76765d68662951675e361bc6904ed6d10ae35b2489f05c9",
+ "model_key": "gemini/gemma-4-26b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "- to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity."
+   }
+  ],
+  "reasoning": "The claim states that ZEPBOUND treats sleep apnea, which is explicitly stated in the indications and usage section of the label. However, the claim fails to specify the population (adults with obesity) and the condition severity (moderate to severe OSA), and it also omits the required lifestyle modification qualifier.- The claim is true only with a condition the label attaches that the claim leaves out.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 146,
+  "prompt_tokens": 1539
+ }
+}
