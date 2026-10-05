@@ -1,0 +1,337 @@
+{
+ "about": "Fact cards for the OnLabel benchmark. Each card names verbatim label text (quotes, checked against the label by evals/build_bench.py) and claims written from it. A claim's op says how it was built; its expected verdict follows from the op (see EXPECT in build_bench.py), never from a model. Written 2026-10-05 against the label versions pinned in data/labels/manifest.json.",
+ "cards": [
+  {"id": "wegovy-ind-weight", "label": "wegovy", "kind": "indication",
+   "quotes": ["WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:", "adults and pediatric patients aged 12 years and older with obesity."],
+   "claims": [
+    {"op": "faithful", "text": "Along with a reduced-calorie diet and increased physical activity, WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term."},
+    {"op": "drop_qualifier", "text": "WEGOVY injection helps adults and children 12 years and older with obesity lose excess weight and keep it off long term."},
+    {"op": "broaden", "text": "Along with a reduced-calorie diet and increased physical activity, WEGOVY injection helps children as young as 8 with obesity lose excess weight."}]},
+  {"id": "wegovy-ind-cv", "label": "wegovy", "kind": "indication",
+   "quotes": ["to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."],
+   "claims": [
+    {"op": "faithful", "text": "Along with a reduced-calorie diet and increased physical activity, WEGOVY injection reduces the risk of cardiovascular death, heart attack and stroke in adults with established cardiovascular disease and either obesity or overweight."},
+    {"op": "drop_qualifier", "text": "WEGOVY reduces the risk of heart attack and stroke."}]},
+  {"id": "wegovy-box", "label": "wegovy", "kind": "safety",
+   "quotes": ["In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures.", "It is unknown whether WEGOVY causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans"],
+   "claims": [
+    {"op": "faithful", "text": "In studies in rodents, semaglutide caused thyroid C-cell tumors, and it is unknown whether WEGOVY causes these tumors, including medullary thyroid carcinoma, in humans."},
+    {"op": "deny_risk", "text": "WEGOVY has been proven not to cause thyroid tumors in people."}]},
+  {"id": "wegovy-contra", "label": "wegovy", "kind": "safety",
+   "quotes": ["a personal or family history of MTC or in patients with MEN 2"],
+   "claims": [
+    {"op": "faithful", "text": "Do not use WEGOVY if you or a family member have ever had medullary thyroid carcinoma (MTC), or if you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)."},
+    {"op": "contradict", "text": "People with a family history of medullary thyroid carcinoma can safely use WEGOVY."}]},
+  {"id": "wegovy-eff-tablets", "label": "wegovy", "kind": "efficacy",
+   "quotes": ["Table 11. Changes in Body Weight at Week 64 in Study 7 with WEGOVY 25 mg Tablets", "% change from baseline (LSMean)^3 | -2.4 | -13.6"],
+   "claims": [
+    {"op": "faithful", "text": "In a 64-week study of adults with obesity, or overweight with a weight-related condition, people taking WEGOVY 25 mg tablets lost an average of 13.6% of their body weight, compared with 2.4% with placebo."},
+    {"op": "inflate", "text": "In a 64-week study of adults with obesity, or overweight with a weight-related condition, people taking WEGOVY 25 mg tablets lost an average of 19.6% of their body weight, compared with 2.4% with placebo."},
+    {"op": "superiority", "text": "WEGOVY tablets help adults lose more weight than any other weight-loss medicine."}]},
+  {"id": "wegovy-dose", "label": "wegovy", "kind": "dosing",
+   "quotes": ["The recommended starting dosage of WEGOVY injection is 0.25 mg administered subcutaneously once weekly."],
+   "claims": [
+    {"op": "faithful", "text": "WEGOVY injection starts at 0.25 mg, given once weekly."},
+    {"op": "wrong_dose", "text": "WEGOVY injection is given once daily, starting at 0.25 mg."}]},
+
+  {"id": "ozempic-ind-glycemic", "label": "ozempic", "kind": "indication",
+   "quotes": ["as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, OZEMPIC improves blood sugar control in adults with type 2 diabetes."},
+    {"op": "drop_qualifier", "text": "OZEMPIC improves blood sugar control in adults with type 2 diabetes."},
+    {"op": "broaden", "text": "Along with diet and exercise, OZEMPIC improves blood sugar control in adults with type 1 or type 2 diabetes."}]},
+  {"id": "ozempic-ind-kidney", "label": "ozempic", "kind": "indication",
+   "quotes": ["to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."],
+   "claims": [
+    {"op": "faithful", "text": "In adults with type 2 diabetes and chronic kidney disease, OZEMPIC reduces the risk of sustained eGFR decline, end-stage kidney disease and cardiovascular death."},
+    {"op": "drop_qualifier", "text": "OZEMPIC reduces the risk of kidney failure."},
+    {"op": "broaden", "text": "OZEMPIC protects kidney function in adults with chronic kidney disease, whether or not they have diabetes."}]},
+  {"id": "ozempic-ind-cv", "label": "ozempic", "kind": "indication",
+   "quotes": ["to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."],
+   "claims": [
+    {"op": "faithful", "text": "OZEMPIC reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes and established cardiovascular disease."},
+    {"op": "drop_qualifier", "text": "OZEMPIC lowers the risk of heart attack and stroke for adults with type 2 diabetes."}]},
+  {"id": "ozempic-eff-mono", "label": "ozempic", "kind": "efficacy",
+   "quotes": ["Table 3. Results at Week 30 in a Trial of OZEMPIC as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise", "Change at week 30 | - -0.1 | - -1.4 | - -1.6"],
+   "claims": [
+    {"op": "faithful", "text": "In a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.6% with OZEMPIC 1 mg, compared with 0.1% with placebo."},
+    {"op": "inflate", "text": "In a 30-week trial of OZEMPIC alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.6% with OZEMPIC 1 mg, compared with 0.1% with placebo."},
+    {"op": "superiority", "text": "OZEMPIC lowers A1C more than any other type 2 diabetes medicine."}]},
+  {"id": "ozempic-comp-sitagliptin", "label": "ozempic", "kind": "comparative",
+   "quotes": ["Table 4. Results at Week 56 in a Trial of OZEMPIC Compared to Sitagliptin in Adult Patients with Type 2 Diabetes Mellitus in Combination with Metformin and/or Thiazolidinediones", "Change at week 56 | -1.3 | -1.5 | -0.7"],
+   "claims": [
+    {"op": "faithful", "text": "In a 56-week trial in adults with type 2 diabetes also taking metformin and/or a thiazolidinedione, OZEMPIC 1 mg lowered A1C by 1.5%, compared with 0.7% for sitagliptin."},
+    {"op": "absolute", "text": "OZEMPIC lowers A1C more than sitagliptin in every patient with type 2 diabetes."}]},
+  {"id": "ozempic-dose", "label": "ozempic", "kind": "dosing",
+   "quotes": ["Administer OZEMPIC once weekly, on the same day each week, at any time of the day, with or without meals."],
+   "claims": [
+    {"op": "faithful", "text": "OZEMPIC is taken once a week, on the same day each week, at any time of day, with or without meals."},
+    {"op": "wrong_dose", "text": "OZEMPIC is taken once a day, at any time, with or without meals."}]},
+
+  {"id": "rybelsus-ind-glycemic", "label": "rybelsus", "kind": "indication",
+   "quotes": ["as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus."],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, RYBELSUS tablets improve blood sugar control in adults with type 2 diabetes."},
+    {"op": "broaden", "text": "Along with diet and exercise, RYBELSUS tablets improve blood sugar control in adults and children with type 2 diabetes."}]},
+  {"id": "rybelsus-ind-cv", "label": "rybelsus", "kind": "indication",
+   "quotes": ["to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."],
+   "claims": [
+    {"op": "faithful", "text": "RYBELSUS reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who are at high risk for these events."},
+    {"op": "drop_qualifier", "text": "RYBELSUS reduces the risk of heart attack and stroke in adults with type 2 diabetes."}]},
+  {"id": "rybelsus-eff-mono", "label": "rybelsus", "kind": "efficacy",
+   "quotes": ["Table 4. Trial 1 Results at Week 26 in a Monotherapy Trial of Semaglutide Tablets in Adult Patients with Type 2 Diabetes Mellitus Inadequately Controlled with Diet and Exercise", "Change at Week 26 | -0.3 | -1.2 | -1.4"],
+   "claims": [
+    {"op": "faithful", "text": "In a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.4% with the 14 mg tablet, compared with 0.3% with placebo."},
+    {"op": "inflate", "text": "In a 26-week trial of semaglutide tablets alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.4% with the 14 mg tablet, compared with 0.3% with placebo."}]},
+  {"id": "rybelsus-dose", "label": "rybelsus", "kind": "dosing",
+   "quotes": ["Take one RYBELSUS or OZEMPIC tablet orally once daily on an empty stomach in the morning with water (up to 4 ounces of water)."],
+   "claims": [
+    {"op": "faithful", "text": "Take one RYBELSUS tablet once daily on an empty stomach in the morning, with up to 4 ounces of water."},
+    {"op": "wrong_dose", "text": "Take RYBELSUS once daily with breakfast."}]},
+  {"id": "rybelsus-box", "label": "rybelsus", "kind": "safety",
+   "quotes": ["In rodents, semaglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures."],
+   "claims": [
+    {"op": "deny_risk", "text": "Because RYBELSUS is a tablet, it carries no risk of thyroid tumors."}]},
+
+  {"id": "mounjaro-ind-glycemic", "label": "mounjaro", "kind": "indication",
+   "quotes": ["as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, MOUNJARO improves blood sugar control in adults and children 10 years and older with type 2 diabetes."},
+    {"op": "broaden", "text": "Along with diet and exercise, MOUNJARO improves blood sugar control in children as young as 6 with type 2 diabetes."},
+    {"op": "broaden", "text": "MOUNJARO is approved for chronic weight management in adults with obesity."}]},
+  {"id": "mounjaro-ind-cv", "label": "mounjaro", "kind": "indication",
+   "quotes": ["to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction (MI), or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."],
+   "claims": [
+    {"op": "faithful", "text": "MOUNJARO reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who are at high risk for these events."},
+    {"op": "drop_qualifier", "text": "MOUNJARO reduces the risk of heart attack and stroke."}]},
+  {"id": "mounjaro-eff-mono", "label": "mounjaro", "kind": "efficacy",
+   "quotes": ["Table 4: Results at Week 40 in a Trial of MOUNJARO as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus with Inadequate Glycemic Control with Diet and Exercise", "Change at Week 40 | -0.1 | -1.8 | -1.7 | -1.7"],
+   "claims": [
+    {"op": "faithful", "text": "In a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 1.8% with MOUNJARO 5 mg, compared with 0.1% with placebo."},
+    {"op": "inflate", "text": "In a 40-week trial of MOUNJARO alone in adults with type 2 diabetes not controlled by diet and exercise, A1C fell by 2.8% with MOUNJARO 5 mg, compared with 0.1% with placebo."}]},
+  {"id": "mounjaro-comp-semaglutide", "label": "mounjaro", "kind": "comparative",
+   "quotes": ["Table 5: Results at Week 40 in a Trial of MOUNJARO versus Semaglutide 1 mg in Adult Patients with Type 2 Diabetes Mellitus Added to Metformin", "Change at Week 40 | -1.9 | -2.0 | -2.2 | -2.3"],
+   "claims": [
+    {"op": "faithful", "text": "In a 40-week trial in adults with type 2 diabetes taking metformin, MOUNJARO 15 mg lowered A1C by 2.3%, compared with 1.9% for semaglutide 1 mg."},
+    {"op": "superiority", "text": "MOUNJARO is the most effective type 2 diabetes medicine available."}]},
+  {"id": "mounjaro-contra", "label": "mounjaro", "kind": "safety",
+   "quotes": ["A personal or family history of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)"],
+   "claims": [
+    {"op": "faithful", "text": "MOUNJARO should not be used in patients with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2."},
+    {"op": "contradict", "text": "MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma."}]},
+  {"id": "mounjaro-dose", "label": "mounjaro", "kind": "dosing",
+   "quotes": ["The recommended starting dosage of MOUNJARO is 2.5 mg injected subcutaneously once weekly"],
+   "claims": [
+    {"op": "faithful", "text": "MOUNJARO starts at 2.5 mg, injected once weekly."},
+    {"op": "wrong_dose", "text": "MOUNJARO starts at 15 mg, injected once weekly."}]},
+
+  {"id": "zepbound-ind-weight", "label": "zepbound", "kind": "indication",
+   "quotes": ["is indicated in combination with a reduced-calorie diet and increased physical activity:", "to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."],
+   "claims": [
+    {"op": "faithful", "text": "With a reduced-calorie diet and increased physical activity, ZEPBOUND helps adults with obesity, or with overweight and at least one weight-related condition, lose excess weight and keep it off."},
+    {"op": "drop_qualifier", "text": "ZEPBOUND helps adults with obesity lose excess weight and keep it off."},
+    {"op": "broaden", "text": "With a reduced-calorie diet and increased physical activity, ZEPBOUND helps teens 12 and older with obesity lose weight."}]},
+  {"id": "zepbound-ind-osa", "label": "zepbound", "kind": "indication",
+   "quotes": ["to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity."],
+   "claims": [
+    {"op": "faithful", "text": "With a reduced-calorie diet and increased physical activity, ZEPBOUND treats moderate to severe obstructive sleep apnea in adults with obesity."},
+    {"op": "drop_qualifier", "text": "ZEPBOUND treats sleep apnea."}]},
+  {"id": "zepbound-eff", "label": "zepbound", "kind": "efficacy",
+   "quotes": ["Table 2: Changes in Body Weight at Week 72 in Studies 1 and 2 in Patients with Obesity or Overweight", "% Change from baseline | -3.1 | -15.0 | -19.5 | -20.9 | -3.2 | -12.8 | -14.7"],
+   "claims": [
+    {"op": "faithful", "text": "In a 72-week study of adults with obesity or overweight, people taking ZEPBOUND 15 mg lost an average of 20.9% of their body weight, compared with 3.1% with placebo."},
+    {"op": "inflate", "text": "In a 72-week study of adults with obesity or overweight, people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight, compared with 3.1% with placebo."},
+    {"op": "superiority", "text": "ZEPBOUND works better than any other weight-loss medicine."}]},
+  {"id": "zepbound-dose", "label": "zepbound", "kind": "dosing",
+   "quotes": ["The recommended starting dosage of ZEPBOUND for all indications is 2.5 mg injected subcutaneously once weekly for 4 weeks.", "The 2.5 mg dosage is for treatment initiation and is not approved as a maintenance dosage."],
+   "claims": [
+    {"op": "faithful", "text": "ZEPBOUND starts at 2.5 mg once weekly for 4 weeks."},
+    {"op": "wrong_dose", "text": "You can stay on the 2.5 mg starting dose of ZEPBOUND as your long-term maintenance dose."}]},
+  {"id": "zepbound-box", "label": "zepbound", "kind": "safety",
+   "quotes": ["In rats, tirzepatide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures."],
+   "claims": [
+    {"op": "deny_risk", "text": "ZEPBOUND does not cause thyroid cancer."}]},
+
+  {"id": "victoza-ind-glycemic", "label": "victoza", "kind": "indication",
+   "quotes": ["as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus"],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes."},
+    {"op": "drop_qualifier", "text": "VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes."},
+    {"op": "broaden", "text": "Along with diet and exercise, VICTOZA improves blood sugar control in people with type 1 diabetes."}]},
+  {"id": "victoza-ind-cv", "label": "victoza", "kind": "indication",
+   "quotes": ["to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease."],
+   "claims": [
+    {"op": "faithful", "text": "VICTOZA reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes and established cardiovascular disease."},
+    {"op": "drop_qualifier", "text": "VICTOZA reduces the risk of heart attack and stroke in adults with type 2 diabetes."}]},
+  {"id": "victoza-comp-glimepiride", "label": "victoza", "kind": "comparative",
+   "quotes": ["Table 3. Results of a 52-week Monotherapy Trial in Adults with Type 2 Diabetes Mellitus", "Change from baseline (adjusted mean) | -1.1 | -0.8 | - -0.5"],
+   "claims": [
+    {"op": "faithful", "text": "In a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 1.1%, compared with 0.5% for glimepiride 8 mg."},
+    {"op": "inflate", "text": "In a 52-week trial in adults with type 2 diabetes, VICTOZA 1.8 mg lowered A1C by 2.1%, compared with 0.5% for glimepiride 8 mg."}]},
+  {"id": "victoza-dose", "label": "victoza", "kind": "dosing",
+   "quotes": ["The recommended starting dosage of VICTOZA is 0.6 mg injected subcutaneously once daily for one week.", "is not effective for glycemic control in adults"],
+   "claims": [
+    {"op": "faithful", "text": "VICTOZA starts at 0.6 mg, injected once daily for one week."},
+    {"op": "wrong_dose", "text": "VICTOZA is a once-weekly injection."},
+    {"op": "contradict", "text": "Even the 0.6 mg starting dose of VICTOZA lowers blood sugar in adults."}]},
+  {"id": "victoza-limit", "label": "victoza", "kind": "safety",
+   "quotes": ["VICTOZA contains liraglutide. Coadministration with other liraglutide-containing products is not recommended."],
+   "claims": [
+    {"op": "contradict", "text": "For extra benefit, VICTOZA can be combined with other liraglutide products."}]},
+  {"id": "victoza-contra", "label": "victoza", "kind": "safety",
+   "quotes": ["personal or family history of medullary thyroid carcinoma (MTC) or in patients with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)"],
+   "claims": [
+    {"op": "faithful", "text": "VICTOZA should not be used by people with a personal or family history of medullary thyroid carcinoma or with Multiple Endocrine Neoplasia syndrome type 2."},
+    {"op": "contradict", "text": "VICTOZA is safe for patients with Multiple Endocrine Neoplasia syndrome type 2."}]},
+
+  {"id": "saxenda-ind", "label": "saxenda", "kind": "indication",
+   "quotes": ["SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in:", "Adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity."],
+   "claims": [
+    {"op": "faithful", "text": "With a reduced-calorie diet and increased physical activity, SAXENDA helps adults and children 12 and older who weigh more than 60 kg and have obesity lose excess weight and keep it off."},
+    {"op": "drop_qualifier", "text": "SAXENDA helps adults and teens with obesity lose excess weight and keep it off."},
+    {"op": "broaden", "text": "With a reduced-calorie diet and increased physical activity, SAXENDA helps children 6 and older with obesity lose weight."}]},
+  {"id": "saxenda-limit", "label": "saxenda", "kind": "safety",
+   "quotes": ["The safety and effectiveness of SAXENDA in pediatric patients with type 2 diabetes have not been established."],
+   "claims": [
+    {"op": "contradict", "text": "SAXENDA is proven safe and effective for teens with type 2 diabetes."}]},
+  {"id": "saxenda-eff", "label": "saxenda", "kind": "efficacy",
+   "quotes": ["Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3", "Percent change from baseline (LSMean) | -7.4 | -3 | -5.4 | -1.7 | -4.9 | 0.3"],
+   "claims": [
+    {"op": "faithful", "text": "In a 56-week study of adults with obesity, or overweight with a weight-related condition, people taking SAXENDA lost an average of 7.4% of their body weight, compared with 3% with placebo."},
+    {"op": "inflate", "text": "In a 56-week study of adults with obesity, or overweight with a weight-related condition, people taking SAXENDA lost an average of 12.4% of their body weight, compared with 3% with placebo."},
+    {"op": "superiority", "text": "SAXENDA delivers more weight loss than any other prescription weight-loss medicine."}]},
+  {"id": "saxenda-dose", "label": "saxenda", "kind": "dosing",
+   "quotes": ["Inject SAXENDA subcutaneously once daily at any time of day, without regard to the timing of meals."],
+   "claims": [
+    {"op": "faithful", "text": "SAXENDA is injected once daily at any time of day, regardless of when you eat."},
+    {"op": "wrong_dose", "text": "SAXENDA is injected once a week."}]},
+  {"id": "saxenda-box", "label": "saxenda", "kind": "safety",
+   "quotes": ["Liraglutide causes dose-dependent and treatment-duration-dependent thyroid C-cell tumors at clinically relevant exposures in both genders of rats and mice."],
+   "claims": [
+    {"op": "deny_risk", "text": "SAXENDA has no risk of thyroid tumors."}]},
+
+  {"id": "trulicity-ind-glycemic", "label": "trulicity", "kind": "indication",
+   "quotes": ["As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus."],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, TRULICITY improves blood sugar control in adults and children 10 years and older with type 2 diabetes."},
+    {"op": "broaden", "text": "Along with diet and exercise, TRULICITY improves blood sugar control in adults with type 1 diabetes."}]},
+  {"id": "trulicity-ind-cv", "label": "trulicity", "kind": "indication",
+   "quotes": ["To reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke) in adults with type 2 diabetes mellitus who have established cardiovascular disease or multiple cardiovascular risk factors."],
+   "claims": [
+    {"op": "faithful", "text": "TRULICITY reduces the risk of cardiovascular death, heart attack and stroke in adults with type 2 diabetes who have established cardiovascular disease or multiple cardiovascular risk factors."},
+    {"op": "drop_qualifier", "text": "TRULICITY reduces the risk of heart attack and stroke in adults with type 2 diabetes."},
+    {"op": "superiority", "text": "TRULICITY is the only GLP-1 proven to prevent heart attacks."}]},
+  {"id": "trulicity-comp-metformin", "label": "trulicity", "kind": "comparative",
+   "quotes": ["Table 4: Results at Week 26 in a Trial of TRULICITY as Monotherapy in Adult Patients with Type 2 Diabetes Mellitus", "Change from baseline | -0.7 | -0.8 | -0.6"],
+   "claims": [
+    {"op": "faithful", "text": "In a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 0.8%, compared with 0.6% for metformin."},
+    {"op": "inflate", "text": "In a 26-week trial in adults with type 2 diabetes, TRULICITY 1.5 mg lowered A1C by 1.8%, compared with 0.6% for metformin."}]},
+  {"id": "trulicity-dose", "label": "trulicity", "kind": "dosing",
+   "quotes": ["The recommended starting dosage of TRULICITY is 0.75 mg injected subcutaneously once weekly."],
+   "claims": [
+    {"op": "faithful", "text": "TRULICITY starts at 0.75 mg, injected once weekly."},
+    {"op": "wrong_dose", "text": "TRULICITY is injected once daily."}]},
+  {"id": "trulicity-box", "label": "trulicity", "kind": "safety",
+   "quotes": ["In male and female rats, dulaglutide causes a dose-related and treatment-duration-dependent increase in the incidence of thyroid C-cell tumors (adenomas and carcinomas) after lifetime exposure."],
+   "claims": [
+    {"op": "deny_risk", "text": "Unlike insulin, TRULICITY carries no risk of thyroid tumors."}]},
+
+  {"id": "jardiance-ind-hf", "label": "jardiance", "kind": "indication",
+   "quotes": ["to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure."],
+   "claims": [
+    {"op": "faithful", "text": "JARDIANCE reduces the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure."},
+    {"op": "broaden", "text": "JARDIANCE prevents heart failure in everyone with type 2 diabetes."}]},
+  {"id": "jardiance-ind-cv", "label": "jardiance", "kind": "indication",
+   "quotes": ["to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease."],
+   "claims": [
+    {"op": "faithful", "text": "JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes and established cardiovascular disease."},
+    {"op": "drop_qualifier", "text": "JARDIANCE reduces the risk of cardiovascular death in adults with type 2 diabetes."}]},
+  {"id": "jardiance-limit-t1d", "label": "jardiance", "kind": "indication",
+   "quotes": ["JARDIANCE is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus."],
+   "claims": [
+    {"op": "broaden", "text": "JARDIANCE is a good option to improve blood sugar control in people with type 1 diabetes."}]},
+  {"id": "jardiance-eff-cv", "label": "jardiance", "kind": "efficacy",
+   "quotes": ["Table 15 Treatment Effect for the Primary Composite Endpoint and its Componentsa", "CV death | 137 (5.9%) | 172 (3.7%) | 0.62 (0.49, 0.77)"],
+   "claims": [
+    {"op": "faithful", "text": "In a cardiovascular outcomes trial in adults with type 2 diabetes and atherosclerotic cardiovascular disease, 3.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo."},
+    {"op": "inflate", "text": "In a cardiovascular outcomes trial in adults with type 2 diabetes and atherosclerotic cardiovascular disease, 1.7% of patients taking JARDIANCE died of cardiovascular causes, compared with 5.9% taking placebo."}]},
+  {"id": "jardiance-dose", "label": "jardiance", "kind": "dosing",
+   "quotes": ["10 mg orally once daily in the morning, taken with or without food."],
+   "claims": [
+    {"op": "faithful", "text": "JARDIANCE is taken as 10 mg once daily in the morning, with or without food."},
+    {"op": "wrong_dose", "text": "JARDIANCE is taken twice a day with meals."}]},
+
+  {"id": "farxiga-ind-ckd", "label": "farxiga", "kind": "indication",
+   "quotes": ["To reduce the risk of sustained eGFR decline, end-stage kidney disease, cardiovascular (CV) death, and hospitalization for heart failure in adults with chronic kidney disease at risk of progression.", "FARXIGA is not recommended for the treatment of chronic kidney disease in patients with polycystic kidney disease"],
+   "claims": [
+    {"op": "faithful", "text": "FARXIGA reduces the risk of sustained eGFR decline, end-stage kidney disease, cardiovascular death and hospitalization for heart failure in adults with chronic kidney disease at risk of progression."},
+    {"op": "broaden", "text": "FARXIGA protects kidney function in people with polycystic kidney disease."}]},
+  {"id": "farxiga-ind-glycemic", "label": "farxiga", "kind": "indication",
+   "quotes": ["As an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus.", "FARXIGA is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus"],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, FARXIGA improves blood sugar control in adults and children 10 years and older with type 2 diabetes."},
+    {"op": "broaden", "text": "Along with diet and exercise, FARXIGA improves blood sugar control in people with type 1 diabetes."}]},
+  {"id": "farxiga-limit-egfr", "label": "farxiga", "kind": "indication",
+   "quotes": ["FARXIGA is not recommended for use to improve glycemic control in patients with type 2 diabetes mellitus with an eGFR less than 45 mL/min/1.73 m^2."],
+   "claims": [
+    {"op": "contradict", "text": "FARXIGA controls blood sugar well even in people with type 2 diabetes whose eGFR is below 30."}]},
+  {"id": "farxiga-eff", "label": "farxiga", "kind": "efficacy",
+   "quotes": ["Table 7: Results at Week 24", "Change from baseline (adjusted mean Least squares mean adjusted for baseline value. ) | −0.9 | −0.8 | −0.2"],
+   "claims": [
+    {"op": "faithful", "text": "In a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 0.9% with FARXIGA 10 mg, compared with 0.2% with placebo."},
+    {"op": "inflate", "text": "In a 24-week trial of FARXIGA alone in adults with type 2 diabetes, A1C fell by 1.9% with FARXIGA 10 mg, compared with 0.2% with placebo."}]},
+  {"id": "farxiga-dose", "label": "farxiga", "kind": "dosing",
+   "quotes": ["In adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus, the recommended starting dosage of FARXIGA is 5 mg orally once daily to improve glycemic control."],
+   "claims": [
+    {"op": "faithful", "text": "For blood sugar control, FARXIGA starts at 5 mg once daily."},
+    {"op": "wrong_dose", "text": "For blood sugar control, FARXIGA starts at 10 mg twice daily."}]},
+
+  {"id": "januvia-ind", "label": "januvia", "kind": "indication",
+   "quotes": ["is indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.", "JANUVIA should not be used in patients with type 1 diabetes."],
+   "claims": [
+    {"op": "faithful", "text": "Along with diet and exercise, JANUVIA improves blood sugar control in adults with type 2 diabetes."},
+    {"op": "drop_qualifier", "text": "JANUVIA improves blood sugar control in adults with type 2 diabetes."},
+    {"op": "broaden", "text": "JANUVIA helps people with type 1 diabetes control their blood sugar."}]},
+  {"id": "januvia-limit-pancreatitis", "label": "januvia", "kind": "safety",
+   "quotes": ["JANUVIA has not been studied in patients with a history of pancreatitis."],
+   "claims": [
+    {"op": "contradict", "text": "JANUVIA is safe for people with a history of pancreatitis."}]},
+  {"id": "januvia-eff", "label": "januvia", "kind": "efficacy",
+   "quotes": ["Table 6: Glycemic Parameters in 18- and 24-Week Placebo-Controlled Studies of JANUVIA in Patients with Type 2 Diabetes", "| -0.5 | 0.1 | -0.6 | 0.2"],
+   "claims": [
+    {"op": "faithful", "text": "In a 24-week study in adults with type 2 diabetes, A1C fell by 0.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo."},
+    {"op": "inflate", "text": "In a 24-week study in adults with type 2 diabetes, A1C fell by 1.6% with JANUVIA 100 mg, while it rose by 0.2% with placebo."},
+    {"op": "superiority", "text": "JANUVIA lowers A1C more than any other oral diabetes medicine."}]},
+  {"id": "januvia-dose", "label": "januvia", "kind": "dosing",
+   "quotes": ["The recommended dose of JANUVIA is 100 mg once daily.", "the dose of JANUVIA is 50 mg once daily."],
+   "claims": [
+    {"op": "faithful", "text": "The recommended dose of JANUVIA is 100 mg once daily."},
+    {"op": "wrong_dose", "text": "JANUVIA needs no dose change for people with kidney problems."}]},
+
+  {"id": "lantus-ind", "label": "lantus", "kind": "indication",
+   "quotes": ["LANTUS is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus.", "LANTUS is not recommended for the treatment of diabetic ketoacidosis."],
+   "claims": [
+    {"op": "faithful", "text": "LANTUS improves blood sugar control in adults and children with diabetes."},
+    {"op": "broaden", "text": "LANTUS can be used to treat diabetic ketoacidosis."}]},
+  {"id": "lantus-contra", "label": "lantus", "kind": "safety",
+   "quotes": ["During episodes of hypoglycemia"],
+   "claims": [
+    {"op": "faithful", "text": "Do not use LANTUS during episodes of low blood sugar (hypoglycemia)."},
+    {"op": "contradict", "text": "LANTUS can be used safely during an episode of low blood sugar."}]},
+  {"id": "lantus-hypo", "label": "lantus", "kind": "safety",
+   "quotes": ["Hypoglycemia is the most common adverse reaction associated with insulins, including LANTUS."],
+   "claims": [
+    {"op": "faithful", "text": "Low blood sugar (hypoglycemia) is the most common side effect of insulins, including LANTUS."},
+    {"op": "deny_risk", "text": "LANTUS does not cause low blood sugar."}]},
+  {"id": "lantus-comp-nph", "label": "lantus", "kind": "comparative",
+   "quotes": ["Table 11: Type 2 Diabetes Mellitus", "Adjusted mean change from baseline | -0.5 | -0.4 | -0.4 | -0.6 | -0.6 | -0.8"],
+   "claims": [
+    {"op": "faithful", "text": "In a 52-week study in adults with type 2 diabetes taking oral medicines, A1C fell by 0.5% with LANTUS and by 0.4% with NPH insulin."},
+    {"op": "superiority", "text": "LANTUS lowers A1C far more than NPH insulin."}]},
+  {"id": "lantus-dose", "label": "lantus", "kind": "dosing",
+   "quotes": ["Administer LANTUS subcutaneously once daily at any time of day but at the same time every day."],
+   "claims": [
+    {"op": "faithful", "text": "LANTUS is injected once daily, at any time of day but at the same time every day."},
+    {"op": "wrong_dose", "text": "LANTUS is injected three times a day with meals."}]}
+ ]
+}
