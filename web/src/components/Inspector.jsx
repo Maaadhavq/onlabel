@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { STATUS, modelName, shortSection, statusOf, traceSteps, wordDiff } from "../review.js";
+import { STATUS, modelName, shortSection, statusOf, tidy, traceSteps, wordDiff } from "../review.js";
 import { Check, ChevronLeft, ChevronRight, Cross } from "./icons.jsx";
 
 const MATCH = {
@@ -146,10 +146,10 @@ function Evidence({ e }) {
       ) : e.kind === "boxed" ? (
         <div className="boxed">
           <p className="boxed-title">{e.section_path.split(" > ")[0]}</p>
-          <p>{e.before}<mark>{e.quote}</mark>{e.after}</p>
+          <p>{tidy(e.before)}<mark>{tidy(e.quote)}</mark>{tidy(e.after)}</p>
         </div>
       ) : (
-        <p className="excerpt">{e.before}<mark>{e.quote}</mark>{e.after}</p>
+        <p className="excerpt">{tidy(e.before)}<mark>{tidy(e.quote)}</mark>{tidy(e.after)}</p>
       )}
     </figure>
   );
@@ -168,12 +168,12 @@ function LabelTable({ table }) {
   return (
     <div className="table-wrap">
       <table className="label-table">
-        {table.caption && <caption>{table.caption}</caption>}
+        {table.caption && <caption>{tidy(table.caption)}</caption>}
         <thead>
           {table.header.map((row, r) => (
             <tr key={r}>
               {row.map((cell, i) => (
-                <th key={i} scope={span(row, i) > 1 ? "colgroup" : "col"} colSpan={span(row, i)}>{cell}</th>
+                <th key={i} scope={span(row, i) > 1 ? "colgroup" : "col"} colSpan={span(row, i)}>{tidy(cell)}</th>
               ))}
             </tr>
           ))}
@@ -182,7 +182,7 @@ function LabelTable({ table }) {
           {shown.map(({ row, i: r }) => (
             <tr key={r} className={table.highlight.includes(r) ? "hl" : undefined}>
               {row.map((cell, i) =>
-                i === 0 ? <th key={i} scope="row" style={{ fontWeight: 400 }}>{cell}</th> : <td key={i}>{cell}</td>,
+                i === 0 ? <th key={i} scope="row" style={{ fontWeight: 400 }}>{tidy(cell)}</th> : <td key={i}>{tidy(cell)}</td>,
               )}
             </tr>
           ))}

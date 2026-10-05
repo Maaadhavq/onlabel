@@ -3,7 +3,7 @@ import { ChevronDown, Code, Plus } from "./icons.jsx";
 
 export const REPO_URL = "https://github.com/Maaadhavq/onlabel";
 
-export default function Topbar({ samples, onOpenSample, onNew }) {
+export default function Topbar({ samples, onOpenSample, onNew, view }) {
   const [open, setOpen] = useState(false);
   const wrap = useRef(null);
   const firstItem = useRef(null);
@@ -52,6 +52,7 @@ export default function Topbar({ samples, onOpenSample, onNew }) {
             )}
           </div>
         )}
+        <a className="nav-link" href="#evals" aria-current={view === "evals" ? "page" : undefined}>How it was tested</a>
         <a className="nav-link" href={REPO_URL} target="_blank" rel="noreferrer"><Code /> Source</a>
       </nav>
     </header>

@@ -89,3 +89,18 @@ test("trace steps read as sentences, including routing and fallbacks", () => {
   assert.match(steps[2].detail, /2 of 3 quotes found in the label; 1 dropped/);
   assert.equal(steps.at(-1).detail, "Needs a qualifier: omitted qualifier");
 });
+
+test("label text reads cleanly: trademark marks and blank lines", async () => {
+  const { tidy } = await import("./review.js");
+  assert.equal(tidy("MOUNJARO^® is indicated:\n\n- as an adjunct"), "MOUNJARO® is indicated:\n- as an adjunct");
+  assert.equal(tidy("eGFR 30 mL/min/1.73 m^2"), "eGFR 30 mL/min/1.73 m^2");
+  assert.equal(tidy(undefined), "");
+});
+
+test("labels are named by their brands, device presentations left out", async () => {
+  const { labelName } = await import("./review.js");
+  assert.equal(labelName({ key: "mounjaro", products: ["MOUNJARO", "MOUNJARO KWIKPEN"] }), "MOUNJARO");
+  assert.equal(labelName({ key: "rybelsus", products: ["OZEMPIC", "RYBELSUS"] }), "RYBELSUS and OZEMPIC");
+  assert.equal(labelName({ key: "zepbound", drug: "ZEPBOUND", products: ["ZEPBOUND", "ZEPBOUND KWIKPEN"] }), "ZEPBOUND");
+  assert.equal(labelName({ key: "lantus" }), "LANTUS");
+});

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { formatDate, segments, statusOf } from "../review.js";
+import { formatDate, labelName, segments, statusOf } from "../review.js";
 import { Download } from "./icons.jsx";
 
 const MAX_CHARS = 4000;
@@ -73,7 +73,7 @@ export function ProofCard({ doc, sel, onSelect, onEdit, onDownload, hoverN, setH
 
   const parts = segments(doc.text, doc.claims);
   const labelText = (l) =>
-    `the ${(l.products || [l.key]).join(" and ")} label, version ${l.version}${l.effective_time ? `, effective ${formatDate(l.effective_time)}` : ""}`;
+    `the ${labelName(l)} label, version ${l.version}${l.effective_time ? `, effective ${formatDate(l.effective_time)}` : ""}`;
   const finished = doc.status === "done" && doc.claims.length > 0;
 
   return (
@@ -91,6 +91,13 @@ export function ProofCard({ doc, sel, onSelect, onEdit, onDownload, hoverN, setH
         </div>
       </div>
       {doc.note && doc.note !== "Synthetic test copy." && <p className="sample-note">{doc.note}</p>}
+      {doc.injection?.flagged && (
+        <div className="error-box" role="alert">
+          <strong>This copy contains instructions aimed at the reviewer</strong>
+          {" "}({doc.injection.findings.filter((f) => f.flags).map((f) => f.why).join("; ")}). Every claim is still
+          checked, but none can be traced: an approval the copy asks for is not an approval.
+        </div>
+      )}
       <p className="proof">
         {doc.claims.length === 0
           ? doc.text

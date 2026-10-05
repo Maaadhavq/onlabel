@@ -89,7 +89,7 @@ export function RiskBox({ check }) {
       {!check.ok && check.evidence?.quote && (
         <blockquote>
           <span className="excerpt-cap" style={{ display: "block", marginBottom: 4 }}>
-            {check.drug} · {check.evidence.section_path}
+            {[check.drug, check.evidence.section_path].filter(Boolean).join(" · ")}
           </span>
           {check.evidence.quote}
         </blockquote>

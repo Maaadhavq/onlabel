@@ -27,6 +27,23 @@ const MODEL_NAMES = {
 
 export const modelName = (key) => MODEL_NAMES[key] || key || "no model";
 
+// Label text as a reader expects it. The parser marks superscripts with "^" so "m^2" and
+// footnote marks survive, which reads oddly on a trademark sign; and a blank line inside a
+// quote would otherwise be highlighted as an empty bar.
+// A label's name as the API gives it (onlabel/data/corpus.py label_name): every brand on it,
+// the one it is filed under first, device presentations ("MOUNJARO KWIKPEN") left out. Older
+// stored samples carry only the product list.
+export function labelName(label) {
+  if (label.drug) return label.drug;
+  const names = (label.products || []).filter(Boolean);
+  if (!names.length) return (label.key || "").toUpperCase();
+  const brands = names.filter((p) => !names.some((q) => p !== q && p.startsWith(`${q} `)));
+  const key = (label.key || "").toLowerCase();
+  return brands.sort((a, b) => Number(a.toLowerCase() !== key) - Number(b.toLowerCase() !== key)).join(" and ");
+}
+
+export const tidy = (text) => (text || "").replace(/\^([®™])/g, "$1").replace(/\n\s*\n/g, "\n");
+
 export function emptyDoc(meta) {
   return {
     ...meta, // source, id, title, note, text, audience
@@ -36,6 +53,7 @@ export function emptyDoc(meta) {
     claims: [],
     reviews: {},
     checks: [],
+    injection: null,
     queuedAhead: 0,
     stats: null,
     error: null,
@@ -47,7 +65,7 @@ export function applyEvent(doc, event, data) {
     case "queued":
       return { ...doc, status: "queued", queuedAhead: data.ahead };
     case "start":
-      return { ...doc, status: "splitting", labels: data.labels || [], ambiguous: !!data.ambiguous };
+      return { ...doc, status: "splitting", labels: data.labels || [], ambiguous: !!data.ambiguous, injection: data.injection || null };
     case "claims":
       return { ...doc, status: "checking", claims: data.claims || [], splitBy: data.split_by, splitModel: data.split_model };
     case "claim":
@@ -104,6 +122,8 @@ export function traceSteps(review) {
         : (t.attempts || []).map(attemptText).join(". ") || "No model was reachable";
       const secs = t.ms ? `${(t.ms / 1000).toFixed(1)} s` : "";
       steps.push({ title: "Asked the judge", detail, meta: [secs, t.tokens ? `${t.tokens.toLocaleString()} tokens` : ""].filter(Boolean).join(" · ") });
+    } else if (t.step === "injection") {
+      steps.push({ title: "Held for a reviewer", detail: `Found in the copy: ${t.findings.join("; ")}. No claim from it can be traced`, meta: "" });
     } else if (t.step === "guards") {
       const dropped = t.proposed_quotes - t.kept_quotes;
       steps.push({

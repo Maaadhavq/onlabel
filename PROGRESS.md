@@ -6,11 +6,15 @@ OnLabel build plan, eval design, phases, and the interview kit.
 
 ## Current phase
 
-Product UI built (2026-10-05): the React workspace from the Claude Design canvas
-(https://claude.ai/artifact/ERqB5PYVKhHwGL645a5YDG), whole-document review streamed over
-SSE, claim routing, three stored samples with checked rewrites. Repo is public at
-https://github.com/Maaadhavq/onlabel; keys are in Madhav's local `.env`. Madhav asked to
-see the UI before the Render deploy, so the deploy waits for his go-ahead.
+Deployed and measured (2026-10-05). Live: https://onlabel-web.onrender.com (page) and
+https://onlabel-api.onrender.com (API, Render free, Singapore). Repo:
+https://github.com/Maaadhavq/onlabel. The API needs GROQ_API_KEY and GEMINI_API_KEY set in
+Render (onlabel-api, Environment); until then live checks return "reviewer decides" with
+"no key set" in the trace, which is the designed fallback.
+
+Phase 3 benchmark built and run: `evals/` (fact cards, retrieval eval, claim verification,
+red team, summary). Results: `EVALS.md` and the page's "How it was tested" view (#evals),
+both generated from `reports/*.json`.
 
 ## Findings that change assumptions (READ THESE)
 
@@ -99,27 +103,6 @@ show -9.6 and -16, so "in clinical trials, adults lost an average of 14.9%" gene
 study. An MLR reviewer would likely ask for a qualifier. The benchmark must define its labels
 (and accept needs_qualifier) before any accuracy number means anything.
 
-## Done this session (2026-10-05)
-
-- Repo scaffold: `pyproject.toml` (uv, Python 3.12), `.gitattributes`, `.gitignore`,
-  `.env.example`, `onlabel/env.py` (ported from mandate-retry-sequencer).
-- `onlabel/retrieval/encoder.py`: torch-free ONNX encoder (CLS pooling, L2 norm, one thread).
-- `onlabel/models.py` + `scripts/fetch_models.py`: pinned, hash-checked ONNX artefacts.
-- `scripts/probe_runtime.py`: memory and latency probe (native numbers in finding 1).
-- `onlabel/llm/registry.py`: every model ID in one place; `scripts/smoke_llm.py` checks
-  them against each provider's live model list.
-- `Dockerfile` + `.dockerignore`: runtime image (ONNX only).
-
-- Phase 1 skeleton: `onlabel/data/` (DailyMed client, SPL parser, chunker, corpus,
-  fetcher with manifest), `onlabel/retrieval/` (BM25, index with RRF + figure pinning,
-  build script), `onlabel/llm/` (cache, client), `onlabel/agent/` (ground, guards, judge,
-  verdict), `onlabel/review.py`, `onlabel/api/main.py`, `web/` (Vite + React page),
-  `render.yaml`. 42 tests, ruff clean. Labels: Wegovy v19, Ozempic v20, Mounjaro v40
-  (431 chunks). Browser-checked: sample claim -> verdict, grounded quotes, flags, trace.
-- Launch entries `onlabel-api` (:8060) and `onlabel-web` (:5180) in
-  `Downloads\.claude\launch.json`. Local `.env` routes the chain to Ollama after the
-  hosted models and keeps dev answers in `scratch/cache_api`.
-
 ### 13. Similarity search alone does not show the judge the governing section
 The first samples had three wrong verdicts. "Ozempic reduces the risk of kidney failure" was
 traced although the label limits it to adults with type 2 diabetes and CKD (the judge never
@@ -143,40 +126,102 @@ empty or unlocatable answers and asks the next model, never caching them. Gemma 
 OpenAI-compatible endpoint answers 500 to schemas with `$defs`, fine once inlined (11.5 s).
 In eval mode every call goes to the first model and waits: about 30 calls take 15 minutes.
 
-## Earlier in-flight notes (2026-10-05, stopped at the usage limit; items 1-5 now done)
+### 15. int8 embeddings depended on their batch-mates
+Renaming one label's chunks and rebuilding moved 1,504 of 1,595 vectors (cosine down to
+0.995): dynamic int8 quantisation picks one activation scale per batch, padding included, and
+the encoder batched passages sorted by length. Passages are now embedded one at a time, like
+queries, so a vector depends only on its text. Retrieval quality was unchanged (both indexes
+score 0.98 of claims with their label text in front of the judge), but builds are now
+reproducible and a single label can change without moving the rest.
 
-Product UI work, from the Claude Design canvas https://claude.ai/artifact/ERqB5PYVKhHwGL645a5YDG
-(Review workspace + First visit / Server waking up / Checking, live). Backend for it is built
-and tested (71 tests): `agent/document.py` (claim split, label detection, risk-information
-check), `agent/evidence.py`, `agent/rewrite.py`, `api/jobs.py`, `/documents` + SSE events +
-rewrite endpoints. A live run of the Wegovy spring email streamed all 6 claims in 70 s.
-Done just now: `$ref`-inlined strict schemas (Gemma 4 answered 500 with `$defs`, works
-inlined: 11.5 s), token estimate len/3.5 and the ledger settled to real usage.
+### 16. Routing let the boxed warning crowd out the contraindication
+Measured on the benchmark's dev split: "Do not use WEGOVY with a family history of MTC" never
+showed the judge the Contraindications section, because the safety route took the top two
+chunks across boxed warning, contraindications and precautions, and the thyroid sections won
+both slots. Routing now takes the best chunk of each governing section first. A second bug in
+the same code skipped a governing chunk that was the fifth similarity hit, then cut it at the
+six-excerpt limit. Indication claims: 48/55 with similarity alone, 55/55 with routing.
 
-Left, in order:
-1. `LLMClient.complete_json(accept=...)`: reject an empty or unlocatable answer, try the next
-   model, never cache it (Qwen once returned `{"claims": []}`, the split fell back to
-   sentences and checked a tagline as a claim). Delete `scratch/cache_api` after.
-2. `data/chunk.py::_units`: captions render as "- Table 8. ..."; strip "- " before the
-   "table" check, then rebuild the index (the 14.9% claim needs "Week 68" from the caption).
-3. Reviewer `k=5`; add `groq/qwen3.8-27b` to ONLABEL_LLM_CHAIN in Madhav's `.env` (edit the
-   line with a script, never print the file: it holds his keys).
-4. `scripts/make_samples.py`: 3 sample documents (Wegovy email, Ozempic banner, Mounjaro HCP
-   detail aid) -> `web/src/samples/*.json`.
-5. React workspace from the design (Public Sans / Source Serif 4 / IBM Plex Mono, highlighter
-   evidence, boxed-warning box, claims bar, tabs: evidence / checks / how it decided,
-   rewrite on demand, SSE with polling fallback, the three states).
-6. Commit, push, then the Render deploy (Madhav asked to see the UI first).
+### 17. Google's recitation filter blanks verbatim label quotes
+Gemma 4 on Google AI Studio returned `finish_reason: content_filter: RECITATION` with an empty
+answer, or a JSON answer cut off mid-string, on claims whose evidence is label text quoted
+word for word, which is the judge's whole job. The client now names the filter in the trace,
+retries a length-truncated answer with twice the room instead of "repairing" it, and the
+reviewer sends a blocked claim to a human. Gemma stays last in the chain.
+
+### 18. Prompt Guard misses injections written for this application
+On the red-team set Llama Prompt Guard 2 flagged 3 of 18 attacks (the classic "ignore previous
+instructions", including decoded base64 and the French one); patterns written for MLR copy
+flagged 15 of 18, with no false alarm on 18 benign copy lines for either. Llama 3.1 8B traced
+2 attacks (a fake SYSTEM line, an embedded verdict object); the guards could not catch them
+because the quotes were real, and the injection check held both. The patterns and attacks share
+an author, so 15/18 is an upper bound.
+
+### 19. Section-aware chunks matter more than any search setting
+Fixed 180-word windows: 0.70 of claims with their label text in the top 5 for dense search
+and 0.92 in what the judge sees, against 0.85 and 0.98 for section chunks.
+
+### 20. Copy that denies a boxed-warning risk passed the risk check
+The first live check on Render: "TRULICITY carries no risk of thyroid tumors" counted as
+mentioning the boxed warning. A denial within four words of the warning's subject now flags
+minimized risk ("do not use if..." and "not known whether" are not denials).
+
+### 21. The fallback model traced the claim FDA cited
+Regenerating the samples after gpt-oss-120b's daily quota ran out, gpt-oss-20b answered and
+traced "Ozempic also reduces the risk of kidney failure", which the label limits to adults
+with type 2 diabetes and chronic kidney disease (gpt-oss-120b: needs a qualifier). The 120b
+sample was kept (the 20b output is in `scratch/`). The fallback chain changes safety, not
+only speed. Open decision for Madhav: send every verdict a fallback model traces to a
+reviewer, at the cost of fewer traced claims whenever the first model is out of quota.
+
+## Done this session (2026-10-05)
+
+- Repo scaffold: `pyproject.toml` (uv, Python 3.12), `.gitattributes`, `.gitignore`,
+  `.env.example`, `onlabel/env.py` (ported from mandate-retry-sequencer).
+- `onlabel/retrieval/encoder.py`: torch-free ONNX encoder (CLS pooling, L2 norm, one thread).
+- `onlabel/models.py` + `scripts/fetch_models.py`: pinned, hash-checked ONNX artefacts.
+- `scripts/probe_runtime.py`: memory and latency probe (native numbers in finding 1).
+- `onlabel/llm/registry.py`: every model ID in one place; `scripts/smoke_llm.py` checks
+  them against each provider's live model list.
+- `Dockerfile` + `.dockerignore`: runtime image (ONNX only).
+
+- Phase 1 skeleton: `onlabel/data/` (DailyMed client, SPL parser, chunker, corpus,
+  fetcher with manifest), `onlabel/retrieval/` (BM25, index with RRF + figure pinning,
+  build script), `onlabel/llm/` (cache, client), `onlabel/agent/` (ground, guards, judge,
+  verdict), `onlabel/review.py`, `onlabel/api/main.py`, `web/` (Vite + React page),
+  `render.yaml`. 42 tests, ruff clean. Labels: Wegovy v19, Ozempic v20, Mounjaro v40
+  (431 chunks). Browser-checked: sample claim -> verdict, grounded quotes, flags, trace.
+- Launch entries `onlabel-api` (:8060) and `onlabel-web` (:5180) in
+  `Downloads\.claude\launch.json`. Local `.env` routes the chain to Ollama after the
+  hosted models and keeps dev answers in `scratch/cache_api`.
+
+## Done 2026-10-05 to 06 (deploy, benchmark, safety)
+
+- Render: `onlabel-api` (Docker, free, Singapore) and `onlabel-web` (static). Deploys are
+  manual: the repo is connected by URL, so pushes send Render no webhook. Trigger them with
+  the Render connector after pushing.
+- `onlabel/safety/injection.py` and its place in `review.py`; Prompt Guard 2 wired into the
+  API when a Groq key is set (`/health` reports it). 94 Python tests, 9 front-end tests.
+- `evals/`: fact cards, benchmark builder, retrieval, verification and red-team evals,
+  summary. Reports in `reports/`, model answers in `cache/llm`, results in `EVALS.md` and the
+  page's #evals view. Runs: gpt-oss-120b on the test split, Llama 3.1 8B and Gemma 4 26B on
+  all claims, red team on gpt-oss-20b and Llama 3.1 8B.
+- Page: "How it was tested" (#evals), deep links to samples (#sample/<id>), a fourth sample
+  whose email hides an instruction in an HTML comment, injection banner and trace step.
 
 ## Next
 
-1. First Render deploy (needs the repo), then `smoke_llm.py` against Groq and AI Studio.
-2. Phase 2 corpus: the rest of the deep set and comparators, version history, indication
-   table, trials snapshot, OPDP letters (Madhav verifies the extracted claims).
-3. Phase 3 benchmark and retrieval ablation (span gold, ingredient splits).
+1. Madhav sets GROQ_API_KEY and GEMINI_API_KEY on Render (onlabel-api, Environment).
+2. OPDP holdout (Set C): 15-20 letters from 2024-26, claims extracted with help, verified by
+   Madhav, sealed, run once on the frozen config.
+3. When gpt-oss-120b's daily quota resets: the dev split, the rest of the red team, and
+   `scripts/make_samples.py` so the three original samples pick up the new index, routing and
+   injection fields (they were kept at their 120b versions; see finding 21).
+4. LoRA verifier study (plan Phase 5) if time allows; the LLM judge plus guards is the
+   shipped path.
 
 ## Needs Madhav
 
-- Free API keys in `.env`: `GROQ_API_KEY` (console.groq.com) and `GEMINI_API_KEY`
-  (aistudio.google.com).
-- GitHub repo `Maaadhavq/onlabel` (empty, public) before the first push.
+- Paste GROQ_API_KEY and GEMINI_API_KEY into Render (onlabel-api, Environment). Never in
+  `VITE_*` variables.
+- About 10 hours of labelling for the OPDP holdout, and a 15% audit of the benchmark cards.

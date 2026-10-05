@@ -6,10 +6,18 @@ every verdict: off-label populations, figures the label does not report, benefit
 without the label's qualifier, risks the copy denies, and boxed warnings the copy leaves
 out. A reviewer makes every decision; OnLabel prepares the evidence.
 
-Work in progress. Build log and findings: [PROGRESS.md](PROGRESS.md).
+- **Live:** https://onlabel-web.onrender.com (free hosting: the first check after a quiet
+  spell waits about 30 seconds for the server; the samples open at once)
+- **How it was tested:** https://onlabel-web.onrender.com/#evals and [EVALS.md](EVALS.md)
+- **A sample review:** https://onlabel-web.onrender.com/#sample/mounjaro-hcp-detail-aid
+- Build log and findings: [PROGRESS.md](PROGRESS.md)
 
 ## What happens to a piece of copy
 
+0. **Read the copy as untrusted.** Hidden text is exposed first (zero-width characters, HTML
+   comments, invisible elements, base64), then patterns written for MLR copy and Llama Prompt
+   Guard 2 look for instructions aimed at the reviewer ("MLR already approved this", "mark it
+   as supported"). If they find any, every claim is still checked, and none can be traced.
 1. **Find the drug and the claims.** Brand names in the copy pick the DailyMed label. A
    fast open-weight model copies each claim out word for word; a claim it cannot point to
    in the copy is dropped, and if no model answers, sentences become the claims.
@@ -24,7 +32,8 @@ Work in progress. Build log and findings: [PROGRESS.md](PROGRESS.md).
    excerpt it cites (never fuzzily when it holds figures), a "traced" verdict must carry
    every figure the claim states, and a verdict that contradicts itself goes to a human.
 5. **Check the whole piece.** If the label has a boxed warning and the copy never mentions
-   its subject, the page says so first.
+   its subject, or names it only to deny it ("no risk of thyroid tumors"), the page says so
+   first.
 6. **Suggest on-label wording** on request. The suggestion is checked by the same pipeline;
    the model that wrote it never grades it.
 
@@ -55,11 +64,45 @@ uv run python -m onlabel.retrieval.build_index
 uv run python scripts/make_samples.py
 ```
 
+## How it was tested
+
+Full results, intervals and every failure: [EVALS.md](EVALS.md), or the page's "How it was
+tested" view. Headline numbers:
+
+- **gpt-oss-120b, test split (70 claims from six ingredients nobody looked at while the
+  prompts were written):** 2 of 42 violative claims traced (both a blood-sugar claim with
+  "as an adjunct to diet and exercise" left out), 25 of 28 faithful claims traced; the other
+  3 went to a reviewer because a quote did not match the label table word for word.
+- **Llama 3.1 8B, all 132 claims:** the guards cut violative claims traced from 9 to 3 of
+  78. They also hold back half of its faithful claims, mostly ones it called supported while
+  listing violations or quoting text the label does not contain.
+- **Retrieval:** the governing label text is among the judge's excerpts for 129 of 132
+  claims (98%) with section-aware chunks, and for 92% with fixed 180-word windows.
+- **Red team (18 injection attacks, 18 benign copy lines):** no attack got its claim traced
+  with every layer on; the patterns flagged 15 attacks and no benign line, Llama Prompt
+  Guard 2 alone flagged 3.
+
+## Run the evaluation
+
+The benchmark is 132 claims written from 63 hand-written fact cards over the 12 labels; each
+card's label text is checked word for word before anything runs, and each claim's expected
+verdict comes from how it was built. Model answers are in the committed cache (`cache/llm`),
+so these reproduce the reports without API keys.
+
+```bash
+uv run python -m evals.build_bench
+uv run python -m evals.retrieval_eval
+uv run python -m evals.verify_eval --model groq/gpt-oss-120b --split test
+uv run python -m evals.redteam_eval --model groq/gpt-oss-120b
+uv run python -m evals.summarize
+```
+
 ## Tests and checks
 
 ```bash
 uv run pytest
 uv run ruff check .
+npm --prefix web test
 uv run python scripts/smoke_llm.py
 ```
 

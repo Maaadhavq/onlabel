@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { followReview, getJSON, postJSON } from "./api.js";
-import { applyEvent, buildAudit, emptyDoc, replay } from "./review.js";
+import { applyEvent, buildAudit, emptyDoc, labelName, replay } from "./review.js";
 import Topbar from "./components/Topbar.jsx";
 import { EditorCard, ProofCard } from "./components/CopyPanel.jsx";
 import { ClaimsOverview, RiskBox } from "./components/Overview.jsx";
 import Inspector, { TABS } from "./components/Inspector.jsx";
+import Evals from "./components/Evals.jsx";
 
 // Reviews stored with the page: they open while the free server sleeps or quotas run out.
-const SAMPLE_ORDER = ["wegovy-spring-email", "ozempic-web-banner", "mounjaro-hcp-detail-aid"];
+const SAMPLE_ORDER = ["wegovy-spring-email", "ozempic-web-banner", "mounjaro-hcp-detail-aid", "zepbound-hidden-instruction"];
 const SAMPLES = Object.values(import.meta.glob("./samples/*.json", { eager: true, import: "default" }))
   .map((s) => ({ ...s, nClaims: s.events.find((e) => e.event === "claims")?.data.claims.length ?? 0 }))
   .sort((a, b) => SAMPLE_ORDER.indexOf(a.id) - SAMPLE_ORDER.indexOf(b.id));
@@ -72,7 +73,21 @@ const firstFlagged = (doc) => {
   return flagged ? flagged.n : 1;
 };
 
+// "#evals" opens the test results; "#sample/<id>" opens a stored review; anything else is the workspace.
+const viewFromHash = () => (window.location.hash === "#evals" ? "evals" : "review");
+const sampleFromHash = () => SAMPLES.find((s) => window.location.hash === `#sample/${s.id}`) || null;
+
 export default function App() {
+  const [view, setView] = useState(viewFromHash);
+  useEffect(() => {
+    const onHash = () => { setView(viewFromHash()); window.scrollTo({ top: 0 }); };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+  const showReview = () => {
+    if (window.location.hash) window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    setView("review");
+  };
   const health = useHealth();
   const ready = health.status === "ready";
   const [apiLabels, setApiLabels] = useState([]);
@@ -98,12 +113,12 @@ export default function App() {
     if (apiLabels.length) return apiLabels;
     const seen = new Map();
     SAMPLES.forEach((s) => s.events.find((e) => e.event === "start")?.data.labels.forEach((l) => {
-      seen.set(l.key, { key: l.key, drug: (l.products || [l.key])[0], version: l.version, set_id: l.set_id });
+      seen.set(l.key, { key: l.key, drug: labelName(l), generic: l.generic, version: l.version, set_id: l.set_id });
     }));
     return [...seen.values()].sort((a, b) => a.drug.localeCompare(b.drug));
   }, [apiLabels]);
 
-  const reviewing = !editing && doc;
+  const reviewing = view === "review" && !editing && doc;
 
   // Reviewer keys: J/K or arrows move between claims, 1-3 switch tabs. Never while typing.
   useEffect(() => {
@@ -128,6 +143,11 @@ export default function App() {
 
   const select = useCallback((n) => setSel(n), []);
 
+  useEffect(() => {
+    const linked = sampleFromHash();
+    if (linked) openSample(linked);
+  }, []);
+
   const openDoc = (next, rewritesFor) => {
     setDoc(next);
     setRewrites(rewritesFor);
@@ -138,6 +158,9 @@ export default function App() {
   };
 
   const openSample = (sample) => {
+    // A shareable link to this review; replaceState fires no hashchange.
+    window.history.replaceState(null, "", `#sample/${sample.id}`);
+    setView("review");
     stopStream.current?.();
     const next = replay({ source: "sample", id: sample.id, title: sample.title, note: sample.note, text: sample.text, audience: sample.audience }, sample.events);
     setDraft({ text: sample.text, label: sample.label, audience: sample.audience });
@@ -147,6 +170,7 @@ export default function App() {
   };
 
   const newCheck = () => {
+    showReview();
     stopStream.current?.();
     setDoc(null);
     setEditing(true);
@@ -213,7 +237,8 @@ export default function App() {
 
   return (
     <>
-      <Topbar samples={SAMPLES} onOpenSample={openSample} onNew={newCheck} />
+      <Topbar samples={SAMPLES} onOpenSample={openSample} onNew={newCheck} view={view} />
+      {view === "evals" ? <Evals /> : (
       <main className="workspace">
         <section className="col-copy" aria-label="Copy under review">
           <ServerNotice health={health} />
@@ -257,6 +282,7 @@ export default function App() {
           />
         </section>
       </main>
+      )}
     </>
   );
 }

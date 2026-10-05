@@ -212,9 +212,9 @@ def injection_check(report: InjectionReport) -> dict:
     shown = [f for f in report.findings if f.flags] or report.findings
     reasons = "; ".join(dict.fromkeys(f.why for f in shown))
     excerpt = next((f.excerpt for f in shown if f.excerpt), "")
-    detail = (f"The copy {reasons}. Every claim is still checked, but none is traced: an approval the copy "
-              "asks for is not an approval." if report.flagged
-              else f"Found while reading the copy: {reasons}. Nothing in it reads as an instruction.")
+    detail = (f"Found in the copy: {reasons}. Every claim is still checked, but none is traced: an approval "
+              "the copy asks for is not an approval." if report.flagged
+              else f"Found in the copy: {reasons}. Nothing in it reads as an instruction.")
     return {"label": "injection", "drug": "", "ok": not report.flagged,
             "title": "Instructions aimed at the reviewer" if report.flagged else "Hidden characters removed",
             "detail": detail, "findings": [f.why for f in report.findings],
