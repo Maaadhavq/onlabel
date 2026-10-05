@@ -4,6 +4,47 @@
  "encoder": "bge-small-en-v1.5-int8",
  "encoder_revision": "ea104dacec62c0de699686887e3f920caeb4f3e3",
  "labels": {
+  "farxiga": {
+   "set_id": "72ad22ae-efe6-4cd6-a302-98aaee423d69",
+   "version": 49,
+   "effective_time": "20260603",
+   "products": [
+    "FARXIGA"
+   ],
+   "generic": "dapagliflozin",
+   "ingredient": "dapagliflozin"
+  },
+  "januvia": {
+   "set_id": "f85a48d0-0407-4c50-b0fa-7673a160bf01",
+   "version": 71,
+   "effective_time": "20241114",
+   "products": [
+    "JANUVIA"
+   ],
+   "generic": "sitagliptin",
+   "ingredient": "sitagliptin"
+  },
+  "jardiance": {
+   "set_id": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+   "version": 31,
+   "effective_time": "20260130",
+   "products": [
+    "JARDIANCE"
+   ],
+   "generic": "empagliflozin",
+   "ingredient": "empagliflozin"
+  },
+  "lantus": {
+   "set_id": "d5e07a0c-7e14-4756-9152-9fea485d654a",
+   "version": 35,
+   "effective_time": "20250602",
+   "products": [
+    "LANTUS",
+    "LANTUS SOLOSTAR"
+   ],
+   "generic": "insulin glargine",
+   "ingredient": "insulin glargine"
+  },
   "mounjaro": {
    "set_id": "d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
    "version": 40,
@@ -25,6 +66,47 @@
    "generic": "semaglutide",
    "ingredient": "semaglutide"
   },
+  "rybelsus": {
+   "set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+   "version": 14,
+   "effective_time": "20260130",
+   "products": [
+    "OZEMPIC",
+    "RYBELSUS"
+   ],
+   "generic": "oral semaglutide",
+   "ingredient": "semaglutide"
+  },
+  "saxenda": {
+   "set_id": "3946d389-0926-4f77-a708-0acb8153b143",
+   "version": 22,
+   "effective_time": "20260225",
+   "products": [
+    "SAXENDA"
+   ],
+   "generic": "liraglutide",
+   "ingredient": "liraglutide"
+  },
+  "trulicity": {
+   "set_id": "463050bd-2b1c-40f5-b3c3-0a04bb433309",
+   "version": 62,
+   "effective_time": "20260616",
+   "products": [
+    "TRULICITY"
+   ],
+   "generic": "dulaglutide",
+   "ingredient": "dulaglutide"
+  },
+  "victoza": {
+   "set_id": "5a9ef4ea-c76a-4d34-a604-27c5b505f5a4",
+   "version": 31,
+   "effective_time": "20251014",
+   "products": [
+    "VICTOZA"
+   ],
+   "generic": "liraglutide",
+   "ingredient": "liraglutide"
+  },
   "wegovy": {
    "set_id": "ee06186f-2aa3-4990-a760-757579d8f77b",
    "version": 19,
@@ -34,8 +116,19 @@
    ],
    "generic": "semaglutide",
    "ingredient": "semaglutide"
+  },
+  "zepbound": {
+   "set_id": "487cd7e7-434c-4925-99fa-aa80b1cc776b",
+   "version": 40,
+   "effective_time": "20260828",
+   "products": [
+    "ZEPBOUND",
+    "ZEPBOUND KWIKPEN"
+   ],
+   "generic": "tirzepatide",
+   "ingredient": "tirzepatide"
   }
  },
- "n_chunks": 431,
- "built_at": "2026-10-05T09:18:48+00:00"
+ "n_chunks": 1595,
+ "built_at": "2026-10-05T09:36:16+00:00"
 }
