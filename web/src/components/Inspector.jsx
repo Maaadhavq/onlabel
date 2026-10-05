@@ -1,27 +1,27 @@
-import { useState } from "react";
-import { STATUS, modelName, statusOf, traceSteps } from "../review.js";
+import { useEffect, useState } from "react";
+import { STATUS, modelName, shortSection, statusOf, traceSteps, wordDiff } from "../review.js";
 import { Check, ChevronLeft, ChevronRight, Cross } from "./icons.jsx";
 
 const MATCH = {
-  exact: "exact match",
-  normalized: "exact after spacing and dashes evened out",
-  elided: "shortened quote, every part found",
-  fuzzy: "near match",
+  exact: ["exact quote", "Found word for word in the label."],
+  normalized: ["exact quote", "Found word for word once spacing, dashes and bullet marks were evened out."],
+  elided: ["shortened quote", "The model shortened the quote with an ellipsis; every part was found, in order, in the label. The full passage is shown."],
+  fuzzy: ["near match", "Found with small wording differences; quotes with figures never match this way."],
 };
 
-const TABS = [
+export const TABS = [
   ["evidence", "Label evidence"],
   ["checks", "What the checks caught"],
   ["trace", "How it decided"],
 ];
 
-export default function Inspector({ doc, sel, onSelect, tab, setTab, rewrite, onRewrite, canRewrite, rewriteUnavailable }) {
+export default function Inspector({ doc, sel, onSelect, tab, setTab, rewrite, onRewrite, canRewrite, rewriteUnavailable, decision, onDecide }) {
   if (!doc) {
     return (
       <div className="inspector">
         <div className="empty-insp">
           <h2>Claims and their label evidence appear here</h2>
-          <p>Open a sample or paste copy and check it. Each claim gets a verdict, the exact label text behind it, and a record of how it was decided.</p>
+          <p>Open a sample or paste copy and check it. Each claim gets a verdict, the exact label text behind it, and a record of how it was decided. You make the final call on each one.</p>
         </div>
       </div>
     );
@@ -76,7 +76,7 @@ export default function Inspector({ doc, sel, onSelect, tab, setTab, rewrite, on
             <p className="why">{review.reasoning}</p>
             {review.model_verdict && review.model_verdict !== review.status && (
               <p className="model-said">
-                The model said {STATUS[review.model_verdict]?.label.toLowerCase() || review.model_verdict}; the checks below changed that.
+                The model said {STATUS[review.model_verdict]?.label.toLowerCase() || review.model_verdict}; the checks changed that.
               </p>
             )}
           </>
@@ -88,8 +88,9 @@ export default function Inspector({ doc, sel, onSelect, tab, setTab, rewrite, on
       {review && (
         <>
           <div className="tabs" role="tablist" aria-label="Claim details">
-            {TABS.map(([id, label]) => (
-              <button key={id} type="button" role="tab" id={`tab-${id}`} aria-selected={tab === id} aria-controls={`panel-${id}`} onClick={() => setTab(id)}>
+            {TABS.map(([id, label], i) => (
+              <button key={id} type="button" role="tab" id={`tab-${id}`} aria-selected={tab === id} aria-controls={`panel-${id}`}
+                aria-keyshortcuts={String(i + 1)} onClick={() => setTab(id)}>
                 {label}
               </button>
             ))}
@@ -101,7 +102,14 @@ export default function Inspector({ doc, sel, onSelect, tab, setTab, rewrite, on
           </div>
           <div className="insp-foot">
             <RewriteArea review={review} rewrite={rewrite} onRewrite={onRewrite} canRewrite={canRewrite} unavailable={rewriteUnavailable} />
-            {url && <a href={url} target="_blank" rel="noreferrer" style={{ fontSize: 14, fontWeight: 600 }}>Open the label on DailyMed</a>}
+            {doc.status === "done" && <Decision key={n} n={n} review={review} decision={decision} onDecide={onDecide} />}
+            <div className="foot-row">
+              <p className="kbd-hint">
+                <span><kbd>J</kbd> <kbd>K</kbd> or <kbd>←</kbd> <kbd>→</kbd> move between claims</span>
+                <span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> switch tabs</span>
+              </p>
+              {url && <a href={url} target="_blank" rel="noreferrer" style={{ fontSize: 14, fontWeight: 600 }}>Open the label on DailyMed</a>}
+            </div>
           </div>
         </>
       )}
@@ -123,11 +131,15 @@ function EvidenceList({ review }) {
 }
 
 function Evidence({ e }) {
+  const [chip, detail] = MATCH[e.match] || [e.match, ""];
   return (
     <figure className="excerpt-fig">
-      <figcaption className="excerpt-cap">
-        <span>{e.drug} v{e.label_version} · {e.section_path}</span>
-        <span>{MATCH[e.match] || e.match}</span>
+      <figcaption className="excerpt-cap" title={e.section_path}>
+        <span>
+          <span className="drug">{e.drug} v{e.label_version}</span>
+          <span className="where">{shortSection(e.section_path)}</span>
+        </span>
+        <span className="match-chip" title={detail}>{chip}</span>
       </figcaption>
       {e.kind === "table" && e.table ? (
         <LabelTable table={e.table} />
@@ -143,9 +155,16 @@ function Evidence({ e }) {
   );
 }
 
+const COLLAPSED_ROWS = 6;
+
 function LabelTable({ table }) {
+  const [full, setFull] = useState(false);
   const width = Math.max(...[...table.header, ...table.rows].map((r) => r.length));
   const span = (row, i) => (row.length < width && i > 0 ? Math.max(1, Math.round((width - 1) / (row.length - 1))) : 1);
+  const collapsible = table.rows.length > COLLAPSED_ROWS;
+  const indexed = table.rows.map((row, i) => ({ row, i }));
+  const quoted = indexed.filter(({ i }) => table.highlight.includes(i));
+  const shown = !collapsible || full ? indexed : (quoted.length ? quoted : indexed.slice(0, 4));
   return (
     <div className="table-wrap">
       <table className="label-table">
@@ -160,7 +179,7 @@ function LabelTable({ table }) {
           ))}
         </thead>
         <tbody>
-          {table.rows.map((row, r) => (
+          {shown.map(({ row, i: r }) => (
             <tr key={r} className={table.highlight.includes(r) ? "hl" : undefined}>
               {row.map((cell, i) =>
                 i === 0 ? <th key={i} scope="row" style={{ fontWeight: 400 }}>{cell}</th> : <td key={i}>{cell}</td>,
@@ -169,6 +188,11 @@ function LabelTable({ table }) {
           ))}
         </tbody>
       </table>
+      {collapsible && (
+        <button type="button" className="table-toggle" aria-expanded={full} onClick={() => setFull((f) => !f)}>
+          {full ? "Show only the quoted rows" : `Show the full table (${table.rows.length} rows)`}
+        </button>
+      )}
     </div>
   );
 }
@@ -209,6 +233,19 @@ function Trace({ review }) {
   );
 }
 
+function Diff({ before, after }) {
+  return (
+    <p className="diff" aria-label="What changed from the original claim">
+      {wordDiff(before, after).map((p, i) => {
+        const text = `${p.text} `;
+        if (p.type === "del") return <del key={i}>{text}</del>;
+        if (p.type === "add") return <ins key={i}>{text}</ins>;
+        return <span key={i}>{text}</span>;
+      })}
+    </p>
+  );
+}
+
 function RewriteArea({ review, rewrite, onRewrite, canRewrite, unavailable }) {
   const [copied, setCopied] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -219,9 +256,10 @@ function RewriteArea({ review, rewrite, onRewrite, canRewrite, unavailable }) {
     const traced = r.review?.status === "supported";
     const s = statusOf(r.review);
     return (
-      <div className={`rewrite-box${traced ? "" : " unchecked"}`}>
+      <div className="rewrite-box">
         <p className="rewrite-label">Suggested on-label wording</p>
         <p className="rewrite-text">{r.rewrite}</p>
+        <Diff before={review.claim} after={r.rewrite} />
         <p className="rewrite-check">
           {traced ? <Check /> : <Cross />}
           <span>
@@ -233,12 +271,12 @@ function RewriteArea({ review, rewrite, onRewrite, canRewrite, unavailable }) {
         <div className="foot-row" style={{ justifyContent: "flex-start" }}>
           <button
             type="button"
-            className="btn btn-blue"
+            className="btn btn-blue btn-small"
             onClick={() => navigator.clipboard?.writeText(r.rewrite).then(() => { setCopied(true); setTimeout(() => setCopied(false), 1600); })}
           >
             {copied ? "Copied" : "Copy wording"}
           </button>
-          <button type="button" className="btn" onClick={() => setHidden(true)}>Hide</button>
+          <button type="button" className="btn btn-small" onClick={() => setHidden(true)}>Hide</button>
         </div>
       </div>
     );
@@ -254,6 +292,64 @@ function RewriteArea({ review, rewrite, onRewrite, canRewrite, unavailable }) {
       )}
       {rewrite?.state === "error" && <p className="small-note" role="alert">{rewrite.error}</p>}
       {unavailable && <p className="small-note">{unavailable}</p>}
+    </div>
+  );
+}
+
+const CHOICES = Object.entries(STATUS).filter(([key]) => key !== "needs_human_review");
+
+function Decision({ n, review, decision, onDecide }) {
+  const [changing, setChanging] = useState(false);
+  const [status, setStatus] = useState(decision?.status || review.status);
+  const [note, setNote] = useState(decision?.note || "");
+  useEffect(() => { setChanging(false); }, [n]);
+
+  if (decision && !changing) {
+    const label = statusOf({ status: decision.status }).label;
+    return (
+      <div className="decision">
+        <div className="decision-done">
+          <Check />
+          <span>
+            {decision.choice === "agree" ? `You agreed: ${label.toLowerCase()}.` : `You changed the verdict to ${label.toLowerCase()}.`}
+            {decision.note ? ` Note: ${decision.note}` : ""}
+          </span>
+        </div>
+        <div className="decision-buttons">
+          <button type="button" className="btn btn-small" onClick={() => setChanging(true)}>Edit decision</button>
+          <button type="button" className="btn btn-small" onClick={() => onDecide(n, null)}>Undo</button>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className="decision">
+      <div className="decision-head">
+        <span className="decision-title">Your decision on claim {n}</span>
+        <div className="decision-buttons">
+          <button type="button" className="btn btn-small" onClick={() => onDecide(n, { choice: "agree", status: review.status, note })}>
+            Agree with the verdict
+          </button>
+          <button type="button" className="btn btn-small" aria-pressed={changing} onClick={() => setChanging((c) => !c)}>
+            Change the verdict
+          </button>
+        </div>
+      </div>
+      {changing && (
+        <>
+          <label className="field-label" htmlFor={`decision-status-${n}`}>Your verdict</label>
+          <select id={`decision-status-${n}`} className="select" value={status} onChange={(e) => setStatus(e.target.value)}>
+            {CHOICES.map(([key, v]) => <option key={key} value={key}>{v.label}</option>)}
+          </select>
+          <label className="field-label" htmlFor={`decision-note-${n}`}>Note for the file (optional)</label>
+          <textarea id={`decision-note-${n}`} value={note} onChange={(e) => setNote(e.target.value)} placeholder="Why you changed it, or what the copy needs." />
+          <div className="decision-buttons">
+            <button type="button" className="btn btn-primary btn-small" onClick={() => { onDecide(n, { choice: status === review.status ? "agree" : "change", status, note }); setChanging(false); }}>
+              Save decision
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }

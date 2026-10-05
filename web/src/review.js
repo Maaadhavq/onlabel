@@ -128,6 +128,85 @@ export function counts(doc) {
   return out;
 }
 
+const SMALL_WORDS = new Set(["and", "or", "of", "in", "with", "for", "the", "to", "a", "an", "on", "at", "by"]);
+
+// "14 CLINICAL STUDIES > 14.1 Weight Reduction ... Obesity" -> "14.1 Weight Reduction ... Obe…"
+export function shortSection(path, max = 64) {
+  let last = path.split(" > ").at(-1).trim();
+  if (last === last.toUpperCase() && /[A-Z]/.test(last)) {
+    last = last.toLowerCase().split(" ").map((w, i) => (i > 0 && SMALL_WORDS.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1))).join(" ");
+  }
+  return last.length > max ? `${last.slice(0, max - 1).trimEnd()}…` : last;
+}
+
+// Word-level difference between a claim and its suggested rewrite (longest common subsequence).
+export function wordDiff(before, after) {
+  const a = before.split(/\s+/).filter(Boolean);
+  const b = after.split(/\s+/).filter(Boolean);
+  const dp = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i -= 1) {
+    for (let j = b.length - 1; j >= 0; j -= 1) {
+      dp[i][j] = a[i].toLowerCase() === b[j].toLowerCase() ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+  const out = [];
+  const push = (type, text) => {
+    const prev = out.at(-1);
+    if (prev && prev.type === type) prev.text += ` ${text}`;
+    else out.push({ type, text });
+  };
+  let i = 0;
+  let j = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i].toLowerCase() === b[j].toLowerCase()) { push("same", b[j]); i += 1; j += 1; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) { push("del", a[i]); i += 1; }
+    else { push("add", b[j]); j += 1; }
+  }
+  while (i < a.length) { push("del", a[i]); i += 1; }
+  while (j < b.length) { push("add", b[j]); j += 1; }
+  return out;
+}
+
+// Next claim after `from` (wrapping) whose verdict has this label; `from` itself if it is the only one.
+export function nextWithStatus(doc, label, from) {
+  const order = doc.claims.map((c) => c.n);
+  const matches = order.filter((n) => statusOf(doc.reviews[n]).label === label);
+  if (!matches.length) return from;
+  return matches.find((n) => n > from) ?? matches[0];
+}
+
+// Everything a reviewer needs to file: verdicts, quotes, checks, decisions.
+export function buildAudit(doc, decisions = {}, rewrites = {}) {
+  return {
+    tool: "OnLabel MLR pre-check",
+    generated_at: new Date().toISOString(),
+    source: doc.source === "sample" ? `sample: ${doc.title}` : "live check",
+    audience: doc.audience,
+    copy: doc.text,
+    labels: doc.labels.map((l) => ({ key: l.key, products: l.products, set_id: l.set_id, version: l.version, effective: l.effective_time })),
+    document_checks: doc.checks,
+    claims: doc.claims.map((c) => {
+      const r = doc.reviews[c.n];
+      const rw = rewrites[c.n]?.data;
+      return {
+        n: c.n,
+        text: c.text,
+        span: [c.start, c.end],
+        verdict: r ? statusOf(r).label : "not checked",
+        model_verdict: r?.model_verdict ?? null,
+        violations: r?.violations ?? [],
+        reasoning: r?.reasoning ?? "",
+        evidence: (r?.evidence ?? []).map((e) => ({ section: e.section_path, quote: e.quote, match: e.match, label_version: e.label_version, url: e.url })),
+        checks: r?.checks ?? [],
+        model: r?.model ?? null,
+        tokens: r?.tokens ?? 0,
+        suggested_wording: rw ? { text: rw.rewrite, verdict: statusOf(rw.review).label } : null,
+        reviewer: decisions[c.n] ?? null,
+      };
+    }),
+  };
+}
+
 export function formatDate(yyyymmdd) {
   if (!yyyymmdd || yyyymmdd.length !== 8) return "";
   const d = new Date(`${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4, 6)}-${yyyymmdd.slice(6, 8)}T00:00:00Z`);

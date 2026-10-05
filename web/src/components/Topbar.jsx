@@ -1,30 +1,59 @@
-export default function Topbar({ labels, draft, setDraft, onCheck, canCheck, busy }) {
+import { useEffect, useRef, useState } from "react";
+import { ChevronDown, Code, Plus } from "./icons.jsx";
+
+export const REPO_URL = "https://github.com/Maaadhavq/onlabel";
+
+export default function Topbar({ samples, onOpenSample, onNew }) {
+  const [open, setOpen] = useState(false);
+  const wrap = useRef(null);
+  const firstItem = useRef(null);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    firstItem.current?.focus();
+    const away = (e) => { if (!wrap.current?.contains(e.target)) setOpen(false); };
+    const esc = (e) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", away);
+    document.addEventListener("keydown", esc);
+    return () => {
+      document.removeEventListener("mousedown", away);
+      document.removeEventListener("keydown", esc);
+    };
+  }, [open]);
+
   return (
     <header className="topbar">
       <div className="brand">
-        <span className="wordmark">OnLabel</span>
+        <a className="wordmark" href="/" onClick={(e) => { e.preventDefault(); onNew(); }}>OnLabel</a>
         <span className="tagline">Checks promotional claims against the FDA label. A reviewer makes every decision.</span>
       </div>
-      <div className="controls">
-        <label className="field-label" htmlFor="label-pick">Label</label>
-        <select id="label-pick" className="select" value={draft.label} onChange={(e) => setDraft({ ...draft, label: e.target.value })}>
-          <option value="">Detect from the copy</option>
-          {labels.map((l) => (
-            <option key={l.key} value={l.key}>{l.drug}, version {l.version}</option>
-          ))}
-        </select>
-        <span className="field-label" id="audience-label">Audience</span>
-        <div className="seg" role="group" aria-labelledby="audience-label">
-          {[["consumer", "Consumer"], ["hcp", "HCP"]].map(([value, text]) => (
-            <button key={value} type="button" aria-pressed={draft.audience === value} onClick={() => setDraft({ ...draft, audience: value })}>
-              {text}
+      <nav className="nav" aria-label="Main">
+        <button type="button" className="nav-link" onClick={onNew}><Plus /> New check</button>
+        {samples.length > 0 && (
+          <div className="menu-wrap" ref={wrap}>
+            <button type="button" className="nav-link" aria-haspopup="menu" aria-expanded={open} onClick={() => setOpen((o) => !o)}>
+              Samples <ChevronDown />
             </button>
-          ))}
-        </div>
-        <button type="button" className="btn btn-primary" onClick={onCheck} disabled={!canCheck}>
-          {busy ? "Checking…" : "Check copy"}
-        </button>
-      </div>
+            {open && (
+              <div className="menu" role="menu" aria-label="Sample reviews">
+                {samples.map((s, i) => (
+                  <button
+                    key={s.id}
+                    ref={i === 0 ? firstItem : undefined}
+                    type="button"
+                    role="menuitem"
+                    onClick={() => { setOpen(false); onOpenSample(s); }}
+                  >
+                    <span className="menu-title">{s.title}</span>
+                    <span className="menu-sub">{s.nClaims} claims · {s.audience === "hcp" ? "for healthcare professionals" : "for consumers"}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+        <a className="nav-link" href={REPO_URL} target="_blank" rel="noreferrer"><Code /> Source</a>
+      </nav>
     </header>
   );
 }

@@ -1,6 +1,40 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { applyEvent, emptyDoc, replay, segments, statusOf, traceSteps } from "./review.js";
+import { applyEvent, buildAudit, emptyDoc, nextWithStatus, replay, segments, shortSection, statusOf, traceSteps, wordDiff } from "./review.js";
+
+test("section captions are short and readable", () => {
+  assert.equal(shortSection("1 INDICATIONS AND USAGE"), "1 Indications and Usage");
+  assert.equal(shortSection("8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use"), "8.4 Pediatric Use");
+  const long = shortSection("14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight");
+  assert.ok(long.length <= 64 && long.endsWith("…") && long.startsWith("14.2 Weight Reduction"));
+});
+
+test("word diff marks what a rewrite removed and added", () => {
+  const d = wordDiff("Wegovy is approved for children as young as 8.", "Wegovy is approved for patients aged 12 years and older.");
+  assert.deepEqual(d.map((p) => p.type), ["same", "del", "add"]);
+  assert.equal(d[0].text, "Wegovy is approved for");
+  assert.equal(d[1].text, "children as young as 8.");
+});
+
+test("legend jumps cycle through claims with that verdict", () => {
+  const doc = { claims: [{ n: 1 }, { n: 2 }, { n: 3 }], reviews: { 1: { status: "off_label" }, 2: { status: "supported" }, 3: { status: "off_label" } } };
+  assert.equal(nextWithStatus(doc, "Off-label", 1), 3);
+  assert.equal(nextWithStatus(doc, "Off-label", 3), 1);
+  assert.equal(nextWithStatus(doc, "Traced to label", 1), 2);
+});
+
+test("the audit file carries verdicts, quotes and reviewer decisions", () => {
+  const doc = replay({ source: "sample", id: "s", title: "T", text: "Claim one here.", audience: "hcp" }, [
+    { event: "start", data: { labels: [{ key: "w", products: ["W"], set_id: "x", version: 1 }] } },
+    { event: "claims", data: { claims: [{ n: 1, text: "Claim one here.", start: 0, end: 15 }] } },
+    { event: "claim", data: { n: 1, review: { status: "contradicted", violations: ["minimized_risk"], evidence: [{ section_path: "5.1 X", quote: "q", match: "exact", url: "u" }], checks: [] } } },
+  ]);
+  const audit = buildAudit(doc, { 1: { choice: "agree", note: "fine" } });
+  assert.equal(audit.claims[0].verdict, "Conflicts with label");
+  assert.equal(audit.claims[0].evidence[0].quote, "q");
+  assert.deepEqual(audit.claims[0].reviewer, { choice: "agree", note: "fine" });
+  assert.equal(audit.labels[0].set_id, "x");
+});
 
 const TEXT = "Intro. Claim one here. Middle. Claim two here. End.";
 const CLAIMS = [

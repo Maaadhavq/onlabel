@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react";
 import { formatDate, segments, statusOf } from "../review.js";
+import { Download } from "./icons.jsx";
 
 const MAX_CHARS = 4000;
 
-export function EditorCard({ draft, setDraft, onCheck, canCheck, samples, onOpenSample, error, ready }) {
+export function EditorCard({ labels, draft, setDraft, onCheck, canCheck, busy, samples, onOpenSample, error, ready }) {
   return (
     <div className="sheet start">
       <h2>Paste the copy you want checked</h2>
@@ -16,9 +17,28 @@ export function EditorCard({ draft, setDraft, onCheck, canCheck, samples, onOpen
           placeholder="An email, web page, banner or detail aid. Up to 4,000 characters."
           onChange={(e) => setDraft({ ...draft, text: e.target.value })}
         />
+        <div className="editor-row">
+          <label className="field-label" htmlFor="label-pick">Label</label>
+          <select id="label-pick" className="select" value={draft.label} onChange={(e) => setDraft({ ...draft, label: e.target.value })}>
+            <option value="">Detect from the copy</option>
+            {labels.map((l) => (
+              <option key={l.key} value={l.key}>{l.drug}, version {l.version}</option>
+            ))}
+          </select>
+          <span className="field-label" id="audience-label">Audience</span>
+          <div className="seg" role="group" aria-labelledby="audience-label">
+            {[["consumer", "Consumer"], ["hcp", "HCP"]].map(([value, text]) => (
+              <button key={value} type="button" aria-pressed={draft.audience === value} onClick={() => setDraft({ ...draft, audience: value })}>
+                {text}
+              </button>
+            ))}
+          </div>
+        </div>
         <div className="editor-foot">
           <span>{draft.text.length.toLocaleString()} of 4,000 characters</span>
-          <button type="button" className="btn btn-primary" onClick={onCheck} disabled={!canCheck}>Check copy</button>
+          <button type="button" className="btn btn-primary" onClick={onCheck} disabled={!canCheck}>
+            {busy ? "Checking…" : "Check copy"}
+          </button>
         </div>
         {!ready && <p className="small-note">Checking opens once the server is running. Samples open now.</p>}
         {error && <p className="error-box" role="alert">{error}</p>}
@@ -41,7 +61,7 @@ export function EditorCard({ draft, setDraft, onCheck, canCheck, samples, onOpen
   );
 }
 
-export function ProofCard({ doc, sel, onSelect, onEdit }) {
+export function ProofCard({ doc, sel, onSelect, onEdit, onDownload, hoverN, setHoverN }) {
   const seen = useRef(new Set());
   const arrived = new Set();
   for (const n of Object.keys(doc.reviews)) {
@@ -54,6 +74,8 @@ export function ProofCard({ doc, sel, onSelect, onEdit }) {
   const parts = segments(doc.text, doc.claims);
   const labelText = (l) =>
     `the ${(l.products || [l.key]).join(" and ")} label, version ${l.version}${l.effective_time ? `, effective ${formatDate(l.effective_time)}` : ""}`;
+  const finished = doc.status === "done" && doc.claims.length > 0;
+
   return (
     <article className="sheet" aria-labelledby="copy-title">
       <div className="sheet-head">
@@ -61,7 +83,12 @@ export function ProofCard({ doc, sel, onSelect, onEdit }) {
           <h2 id="copy-title">{doc.title}</h2>
           {doc.source === "sample" && <span className="chip">Synthetic test copy</span>}
         </div>
-        <button type="button" className="btn" onClick={onEdit}>Edit copy</button>
+        <div className="sheet-actions">
+          <button type="button" className="btn btn-small" onClick={onDownload} disabled={!finished} title="Every verdict, quote, check and your decisions, as a JSON audit file">
+            <Download /> Download review
+          </button>
+          <button type="button" className="btn btn-small" onClick={onEdit}>Edit copy</button>
+        </div>
       </div>
       {doc.note && doc.note !== "Synthetic test copy." && <p className="sample-note">{doc.note}</p>}
       <p className="proof">
@@ -71,13 +98,20 @@ export function ProofCard({ doc, sel, onSelect, onEdit }) {
               if (!p.claim) return <span key={i}>{p.text}</span>;
               const n = p.claim.n;
               const s = statusOf(doc.reviews[n]);
+              const cls = ["claim-link", `tone-${s.tone}`];
+              if (arrived.has(n) && doc.source === "live") cls.push("arrived");
+              if (hoverN === n) cls.push("is-hover");
               return (
                 <a
                   key={i}
                   href="#claim-panel"
-                  className={`claim-link tone-${s.tone}${arrived.has(n) && doc.source === "live" ? " arrived" : ""}`}
+                  className={cls.join(" ")}
                   aria-current={n === sel ? "true" : "false"}
                   aria-label={`Claim ${n}, ${s.label}: ${p.text}`}
+                  onMouseEnter={() => setHoverN(n)}
+                  onMouseLeave={() => setHoverN(null)}
+                  onFocus={() => setHoverN(n)}
+                  onBlur={() => setHoverN(null)}
                   onClick={(e) => {
                     onSelect(n);
                     if (window.matchMedia("(min-width: 1100px)").matches) e.preventDefault();
@@ -93,7 +127,7 @@ export function ProofCard({ doc, sel, onSelect, onEdit }) {
         {doc.claims.length > 0 ? `${doc.claims.length} claims found. ` : ""}
         {doc.labels.length ? `Checked against ${doc.labels.map(labelText).join(" and ")}.` : ""}
         {doc.ambiguous && doc.labels.length > 1
-          ? " The drug named in the copy appears on more than one label, so every claim was checked against each. Pick a label at the top to narrow the check."
+          ? " The drug named in the copy appears on more than one label, so every claim was checked against each. Pick a label to narrow the check."
           : ""}
         {doc.splitBy === "sentences" ? " Claims were split by sentence because no model was available to split them." : ""}
       </p>
