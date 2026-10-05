@@ -1,0 +1,17 @@
+# LF in the repo for everything textual. A Windows checkout with autocrlf once broke a
+# LightGBM model file in mandate-retry-sequencer; the same would happen to tokenizer JSON
+# and cached LLM responses here.
+* text=auto eol=lf
+
+# Byte-for-byte artefacts.
+*.onnx binary
+*.npy binary
+*.npz binary
+*.pdf binary
+*.zip binary
+*.png binary
+*.webp binary
+
+# Committed LLM responses and frozen reports: replayed byte-for-byte by the offline evals.
+cache/llm/*.json -text
+reports/**/*.json -text

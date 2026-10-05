@@ -1,0 +1,38 @@
+{
+  "run_at": "2026-10-05T06:54:09+00:00",
+  "providers": {
+    "groq": {
+      "status": "skipped",
+      "reason": "GROQ_API_KEY not set"
+    },
+    "gemini": {
+      "status": "skipped",
+      "reason": "GEMINI_API_KEY not set"
+    },
+    "ollama": {
+      "status": "ok",
+      "n_models": 2
+    }
+  },
+  "models": {
+    "ollama/llama3.1-8b": {
+      "ok": true,
+      "latency_s": 10.24,
+      "prompt_tokens": 78,
+      "completion_tokens": 58,
+      "verdict": "unsupported",
+      "verdict_correct": true,
+      "quote_grounded": true
+    },
+    "ollama/qwen3-8b": {
+      "ok": false,
+      "error": "model id not listed",
+      "hint": "ollama pull qwen3:8b"
+    },
+    "ollama/gemma4-e4b": {
+      "ok": false,
+      "error": "model id not listed",
+      "hint": "ollama pull gemma4:e4b"
+    }
+  }
+}

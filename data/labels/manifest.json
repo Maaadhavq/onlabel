@@ -1,0 +1,45 @@
+{
+ "mounjaro": {
+  "effective_time": "20260827",
+  "fetched_on": "2026-10-05",
+  "generic": "tirzepatide",
+  "ingredient": "tirzepatide",
+  "n_sections": 99,
+  "products": [
+   "MOUNJARO",
+   "MOUNJARO KWIKPEN"
+  ],
+  "role": "deep",
+  "set_id": "d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+  "version": 40,
+  "xml_sha256": "c3aaba26e6f6552c543f0ead63b987b76762b559baa18103ffae82c7d3cd5434"
+ },
+ "ozempic": {
+  "effective_time": "20260601",
+  "fetched_on": "2026-10-05",
+  "generic": "semaglutide",
+  "ingredient": "semaglutide",
+  "n_sections": 41,
+  "products": [
+   "OZEMPIC"
+  ],
+  "role": "deep",
+  "set_id": "adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+  "version": 20,
+  "xml_sha256": "cc9ecba8cce6eec215db9a0db28ef3c1c63dce3ba746aaf3caa5c3e9cd956626"
+ },
+ "wegovy": {
+  "effective_time": "20260618",
+  "fetched_on": "2026-10-05",
+  "generic": "semaglutide",
+  "ingredient": "semaglutide",
+  "n_sections": 46,
+  "products": [
+   "WEGOVY"
+  ],
+  "role": "deep",
+  "set_id": "ee06186f-2aa3-4990-a760-757579d8f77b",
+  "version": 19,
+  "xml_sha256": "2f2c51a1fdf57a3a2459f340abfbe1e0283e5c8849d3a844db8c28ede302f6b3"
+ }
+}
