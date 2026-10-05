@@ -25,6 +25,7 @@ import anyio
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
+from openai import OpenAI
 from pydantic import BaseModel, ConfigDict, Field
 
 from onlabel.agent.rewrite import suggest_rewrite
@@ -33,11 +34,12 @@ from onlabel.data.corpus import label_name
 from onlabel.env import load_env
 from onlabel.llm.cache import ResponseCache
 from onlabel.llm.client import LLMClient
-from onlabel.llm.registry import DEMO_CHAIN, MODELS
+from onlabel.llm.registry import DEMO_CHAIN, MODELS, PROMPT_GUARD, providers
 from onlabel.models import BGE_SMALL_INT8
 from onlabel.retrieval.encoder import BGE_QUERY_PREFIX, OnnxEncoder
 from onlabel.retrieval.index import LabelIndex
 from onlabel.review import DAILYMED_URL, Reviewer
+from onlabel.safety.injection import groq_prompt_guard
 
 load_env()
 
@@ -91,12 +93,21 @@ def _load() -> None:
         splitter = LLMClient(_chain("ONLABEL_SPLIT_CHAIN", SPLIT_CHAIN), cache, offline=offline,
                              timeout_s=LLM_TIMEOUT_S, budget=llm.budget)
         state.index = index
-        state.reviewer = Reviewer(index, encoder, llm, splitter=splitter)
+        state.reviewer = Reviewer(index, encoder, llm, splitter=splitter, prompt_guard=_prompt_guard(offline))
         state.runner = JobRunner(_run_document)
         state.loaded_in_s = round(time.perf_counter() - t, 1)
     except Exception as exc:  # noqa: BLE001 - surfaced through /health, not swallowed
         state.error = f"{type(exc).__name__}: {exc}. Run `uv run python scripts/fetch_models.py` " \
                       "and `uv run python -m onlabel.retrieval.build_index` first."
+
+
+def _prompt_guard(offline: bool):
+    """Prompt Guard 2 when Groq is reachable; the pattern layer works without it."""
+    groq = providers()["groq"]
+    if offline or not groq.api_key or os.environ.get("ONLABEL_PROMPT_GUARD", "1") == "0":
+        return None
+    client = OpenAI(api_key=groq.api_key, base_url=groq.base_url, max_retries=0, timeout=10)
+    return groq_prompt_guard(client, PROMPT_GUARD.model_id)
 
 
 @asynccontextmanager
@@ -179,6 +190,7 @@ def health() -> dict:
         "loaded_in_s": state.loaded_in_s,
         "chunks": len(state.index.chunks) if state.index else None,
         "llm_chain": _chain("ONLABEL_LLM_CHAIN", DEMO_CHAIN),
+        "prompt_guard": getattr(state.reviewer, "prompt_guard", None) is not None,
     }
 
 

@@ -280,12 +280,25 @@ class LLMClient:
                 if entry is not None:
                     self.budget.settle(entry, (resp.usage.prompt_tokens or 0) + (resp.usage.completion_tokens or 0))
             content = resp.choices[0].message.content or ""
+            finish = str(getattr(resp.choices[0], "finish_reason", None) or "")
+            if finish.startswith("content_filter"):
+                # Google's recitation filter blanks answers that quote source text verbatim,
+                # which is exactly what a judge must do with label text. Nothing to repair.
+                out["error"] = f"blocked by the provider's filter ({finish})"
+                return out
+            truncated = finish == "length"
             try:
                 out["data"] = schema.model_validate(json.loads(content))
                 out["repaired"] = attempt == 1
                 return out
             except (json.JSONDecodeError, ValidationError) as exc:
                 out["error"] = f"invalid output: {str(exc)[:160]}"
+                if truncated:
+                    # Out of room mid-answer (Gemma 4 writes long reasoning). A repair would
+                    # resend the cut-off answer and run out again, so ask afresh with more room.
+                    out["truncated"] = True
+                    max_completion_tokens *= 2
+                    continue
                 messages = messages + [
                     {"role": "assistant", "content": content},
                     {"role": "user", "content": "That JSON did not match the schema: "
