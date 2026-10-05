@@ -72,8 +72,13 @@ class OnnxEncoder:
         cls = hidden[:, 0, :]
         return cls / np.linalg.norm(cls, axis=1, keepdims=True).clip(min=1e-12)
 
-    def encode(self, texts: list[str], batch_size: int = 32) -> np.ndarray:
-        """Embed passages. Batches are sorted by length so padding stays small."""
+    def encode(self, texts: list[str], batch_size: int = 1) -> np.ndarray:
+        """Embed passages, one at a time by default, the way queries are embedded.
+
+        The int8 graph quantizes activations with one scale per batch, padding included, so a
+        batched passage's vector depended on its batch-mates: renaming one label's chunks and
+        rebuilding moved 1,504 of 1,595 vectors (cosine down to 0.995). Batches above 1 are
+        sorted by length so padding stays small."""
         if not texts:
             return np.zeros((0, self.dim), dtype=np.float32)
         order = np.argsort([len(t) for t in texts])

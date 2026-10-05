@@ -81,7 +81,7 @@ def main() -> int:
 
     passages = [PASSAGE] * 64
     t = time.perf_counter()
-    enc.encode(passages)
+    enc.encode(passages, batch_size=64)  # the batch that grew the arena in finding 1
     report["encode_64_passages_s"] = round(time.perf_counter() - t, 2)
     report["rss_end_mb"] = round(rss_mb(), 1)
 
