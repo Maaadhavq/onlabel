@@ -1,0 +1,25 @@
+{
+ "key": "1fc88c7adf70ffc34d4d366a183de271e984875316db69c2b61c121c5bd03b1d",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."
+   },
+   {
+    "chunk_id": "wegovy:v19:1:1",
+    "quote": "- to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight."
+   }
+  ],
+  "reasoning": "The claim states that Wegovy, used with a reduced‑calorie diet and increased physical activity, reduces the risk of major cardiovascular events—including non‑fatal myocardial infarction and non‑fatal stroke—in adults with established cardiovascular disease who are overweight or have obesity. The INDICATIONS AND USAGE excerpt explicitly lists this indication with the same population, condition, and required lifestyle measures.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 287,
+  "prompt_tokens": 2332
+ }
+}

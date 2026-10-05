@@ -1,0 +1,25 @@
+{
+ "key": "6a85fcf5fb1daa4f6d6a614dc5e9b659945fc54f7bc6fb72779467590c3de143",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:16",
+    "quote": "Treatment with OZEMPIC resulted in a statistically significant reduction in HbA1c after 30 weeks of treatment compared to placebo (see Table 8)."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:18",
+    "quote": "The mean changes from baseline to week 30 were -1.2 kg, -3.5 kg, and -6 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively."
+   }
+  ],
+  "reasoning": "The label excerpts state that treatment with OZEMPIC resulted in a statistically significant reduction in HbA1c after 30 weeks (Table 8) and provide mean weight loss data (e.g., -3.5 kg and -6 kg versus placebo). Both elements of the claim are directly supported by the label.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 361,
+  "prompt_tokens": 2574
+ }
+}

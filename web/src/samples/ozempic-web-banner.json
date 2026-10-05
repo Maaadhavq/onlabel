@@ -5,7 +5,7 @@
  "label": "ozempic",
  "audience": "consumer",
  "text": "There's only one Ozempic. Ozempic is the GLP-1 with the most approved uses for adults with type 2 diabetes. It lowers A1C, and it may help you lose some weight too. Ozempic also reduces the risk of kidney failure. Ask your doctor about Ozempic.",
- "created": "2026-10-05T09:22:31+00:00",
+ "created": "2026-10-05T09:32:10+00:00",
  "events": [
   {
    "id": 0,
@@ -144,10 +144,10 @@
       }
      ],
      "model": "groq/gpt-oss-120b",
-     "source": "live",
+     "source": "cache",
      "prompt_version": "judge-v2",
      "tokens": 2311,
-     "latency_s": 1.65,
+     "latency_s": 0.02,
      "trace": [
       {
        "step": "search_label",
@@ -156,23 +156,19 @@
        ],
        "n_hits": 5,
        "pinned_for_figures": 1,
-       "ms": 49
+       "routed_to": [
+        "Indications and Usage"
+       ],
+       "routed_added": 0,
+       "ms": 17
       },
       {
        "step": "judge",
        "model": "groq/gpt-oss-120b",
-       "source": "live",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 1924,
-         "completion_tokens": 387,
-         "latency_s": 1.5924104999867268,
-         "repaired": false
-        }
-       ],
+       "source": "cache",
+       "attempts": [],
        "tokens": 2311,
-       "ms": 1592
+       "ms": 0
       },
       {
        "step": "guards",
@@ -180,7 +176,7 @@
        "flags": [],
        "kept_quotes": 1,
        "proposed_quotes": 1,
-       "ms": 0.9
+       "ms": 0.4
       }
      ]
     }
@@ -193,17 +189,44 @@
     "n": 2,
     "review": {
      "claim": "It lowers A1C, and it may help you lose some weight too.",
-     "status": "unsupported",
-     "model_verdict": "unsupported",
-     "violations": [
-      "unsupported_absolute_claim"
+     "status": "supported",
+     "model_verdict": "supported",
+     "violations": [],
+     "reasoning": "The label excerpts state that treatment with OZEMPIC resulted in a statistically significant reduction in HbA1c after 30 weeks (Table 8) and provide mean weight loss data (e.g., -3.5 kg and -6 kg versus placebo). Both elements of the claim are directly supported by the label.",
+     "evidence": [
+      {
+       "chunk_id": "ozempic:v20:35:16",
+       "quote": "Treatment with OZEMPIC resulted in a statistically significant reduction in HbA1c after 30 weeks of treatment compared to placebo (see Table 8).",
+       "match": "exact",
+       "section_path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "drug": "OZEMPIC",
+       "label_version": 20,
+       "effective_time": "20260601",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+       "kind": "text",
+       "before": "…59 years and 56% were men. The mean duration of type 2 diabetes was 13 years, and the mean BMI was 32 kg/m^2. Overall, 78% were White, 5% were Black or African American, and 17% were Asian; 12% identified as Hispanic or Latino ethnicity.\n\n",
+       "after": "\n\nTable 8. Results at Week 30 in a Trial of OZEMPIC in Adult Patients with Type 2 Diabetes Mellitus in Combination with Basal Insulin with or without Metformin",
+       "table": null
+      },
+      {
+       "chunk_id": "ozempic:v20:35:18",
+       "quote": "The mean changes from baseline to week 30 were -1.2 kg, -3.5 kg, and -6 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively.",
+       "match": "exact",
+       "section_path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "drug": "OZEMPIC",
+       "label_version": 20,
+       "effective_time": "20260601",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+       "kind": "text",
+       "before": "…country and stratification factors.\n- p<0.0001 (2-sided) for superiority, adjusted for multiplicity.\n\nThe mean baseline body weight was 89.9 kg, 92.7 kg, and 92.5 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively. ",
+       "after": " The difference from placebo (95% CI) for OZEMPIC 0.5 mg was -2.2 kg (-3.4, -1.1), and for OZEMPIC 1 mg was -4.7 kg (-5.8, -3.6).",
+       "table": null
+      }
      ],
-     "reasoning": "The label excerpts describe semaglutide lowering fasting and postprandial glucose and reducing body weight, but they do not provide any information about reductions in A1C. Therefore the claim that it lowers A1C is not supported by the provided excerpts.",
-     "evidence": [],
      "checks": [
       {
        "ok": true,
-       "text": "No label text supports the claim, so no quote was expected."
+       "text": "2 of 2 quotes found word for word in the label."
       },
       {
        "ok": true,
@@ -212,6 +235,22 @@
      ],
      "flags": [],
      "retrieved": [
+      {
+       "chunk_id": "ozempic:v20:35:18",
+       "section": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "score": 0.0306,
+       "dense_rank": 3,
+       "bm25_rank": 8,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:35:16",
+       "section": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "score": 0.0304,
+       "dense_rank": 2,
+       "bm25_rank": 10,
+       "number_rank": null
+      },
       {
        "chunk_id": "ozempic:v20:31:1",
        "section": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics",
@@ -237,36 +276,33 @@
        "number_rank": null
       },
       {
-       "chunk_id": "ozempic:v20:10:0",
-       "section": "5 WARNINGS AND PRECAUTIONS > 5.5 Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin",
-       "score": 0.0283,
-       "dense_rank": 4,
-       "bm25_rank": 19,
-       "number_rank": null
-      },
-      {
-       "chunk_id": "ozempic:v20:30:0",
-       "section": "12 CLINICAL PHARMACOLOGY > 12.1 Mechanism of Action",
-       "score": 0.0278,
-       "dense_rank": 9,
-       "bm25_rank": 15,
+       "chunk_id": "ozempic:v20:35:15",
+       "section": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+       "score": 0.0287,
+       "dense_rank": 3,
+       "bm25_rank": 18,
        "number_rank": null
       }
      ],
      "model": "groq/gpt-oss-120b",
      "source": "live",
      "prompt_version": "judge-v2",
-     "tokens": 2314,
-     "latency_s": 56.81,
+     "tokens": 2935,
+     "latency_s": 56.3,
      "trace": [
       {
        "step": "search_label",
        "labels": [
         "ozempic"
        ],
-       "n_hits": 5,
+       "n_hits": 6,
        "pinned_for_figures": 0,
-       "ms": 38
+       "routed_to": [
+        "Indications and Usage",
+        "Clinical Studies"
+       ],
+       "routed_added": 2,
+       "ms": 15
       },
       {
        "step": "judge",
@@ -275,22 +311,22 @@
        "attempts": [
         {
          "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2096,
-         "completion_tokens": 218,
-         "latency_s": 1.0952704999945126,
+         "prompt_tokens": 2574,
+         "completion_tokens": 361,
+         "latency_s": 1.8401255999924615,
          "repaired": false
         }
        ],
-       "tokens": 2314,
-       "ms": 1095
+       "tokens": 2935,
+       "ms": 1840
       },
       {
        "step": "guards",
-       "status": "unsupported",
+       "status": "supported",
        "flags": [],
-       "kept_quotes": 0,
-       "proposed_quotes": 0,
-       "ms": 0.0
+       "kept_quotes": 2,
+       "proposed_quotes": 2,
+       "ms": 0.1
       }
      ]
     }
@@ -303,10 +339,12 @@
     "n": 3,
     "review": {
      "claim": "Ozempic also reduces the risk of kidney failure.",
-     "status": "supported",
-     "model_verdict": "supported",
-     "violations": [],
-     "reasoning": "The label indicates Ozempic is indicated to reduce the risk of sustained eGFR decline, end‑stage kidney disease (kidney failure), and cardiovascular death in adults with type 2 diabetes and chronic kidney disease, and the clinical study excerpt states Ozempic was superior to placebo in reducing a composite endpoint that included kidney failure.",
+     "status": "needs_qualifier",
+     "model_verdict": "needs_qualifier",
+     "violations": [
+      "omitted_qualifier"
+     ],
+     "reasoning": "The label indicates Ozempic is indicated to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease, and the clinical study confirms a reduction in kidney failure outcomes. The claim does not specify the required population, so a qualifier is needed.",
      "evidence": [
       {
        "chunk_id": "ozempic:v20:1:0",
@@ -350,6 +388,22 @@
      "flags": [],
      "retrieved": [
       {
+       "chunk_id": "ozempic:v20:11:0",
+       "section": "5 WARNINGS AND PRECAUTIONS > 5.6 Acute Kidney Injury Due to Volume Depletion",
+       "score": 0.0325,
+       "dense_rank": 1,
+       "bm25_rank": 2,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "ozempic:v20:10:0",
+       "section": "5 WARNINGS AND PRECAUTIONS > 5.5 Hypoglycemia with Concomitant Use of Insulin Secretagogues or Insulin",
+       "score": 0.0318,
+       "dense_rank": 2,
+       "bm25_rank": 4,
+       "number_rank": null
+      },
+      {
        "chunk_id": "ozempic:v20:37:2",
        "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
        "score": 0.0323,
@@ -380,30 +434,28 @@
        "dense_rank": 9,
        "bm25_rank": 4,
        "number_rank": null
-      },
-      {
-       "chunk_id": "ozempic:v20:37:0",
-       "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
-       "score": 0.0301,
-       "dense_rank": 1,
-       "bm25_rank": 13,
-       "number_rank": null
       }
      ],
      "model": "groq/gpt-oss-120b",
      "source": "live",
      "prompt_version": "judge-v2",
-     "tokens": 2127,
-     "latency_s": 3.04,
+     "tokens": 2258,
+     "latency_s": 3.91,
      "trace": [
       {
        "step": "search_label",
        "labels": [
         "ozempic"
        ],
-       "n_hits": 5,
+       "n_hits": 6,
        "pinned_for_figures": 0,
-       "ms": 10
+       "routed_to": [
+        "Boxed Warning",
+        "Contraindications",
+        "Warnings and Precautions"
+       ],
+       "routed_added": 2,
+       "ms": 14
       },
       {
        "step": "judge",
@@ -412,18 +464,18 @@
        "attempts": [
         {
          "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 1748,
-         "completion_tokens": 379,
-         "latency_s": 1.4507165999966674,
+         "prompt_tokens": 1812,
+         "completion_tokens": 446,
+         "latency_s": 3.2066498000058345,
          "repaired": false
         }
        ],
-       "tokens": 2127,
-       "ms": 1451
+       "tokens": 2258,
+       "ms": 3207
       },
       {
        "step": "guards",
-       "status": "supported",
+       "status": "needs_qualifier",
        "flags": [],
        "kept_quotes": 2,
        "proposed_quotes": 2,
@@ -457,10 +509,284 @@
    "id": 6,
    "event": "done",
    "data": {
-    "seconds": 62.3,
-    "tokens": 7043,
+    "seconds": 60.2,
+    "tokens": 7795,
     "n_claims": 3
    }
   }
- ]
+ ],
+ "rewrites": {
+  "1": {
+   "rewrite": "Ozempic is approved for use in adults with type 2 diabetes mellitus as an adjunct to diet and exercise to improve glycemic control, to reduce the risk of major adverse cardiovascular events in those with established cardiovascular disease, and to reduce the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death in those with chronic kidney disease.",
+   "model": "groq/gpt-oss-120b",
+   "review": {
+    "claim": "Ozempic is approved for use in adults with type 2 diabetes mellitus as an adjunct to diet and exercise to improve glycemic control, to reduce the risk of major adverse cardiovascular events in those with established cardiovascular disease, and to reduce the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death in those with chronic kidney disease.",
+    "status": "supported",
+    "model_verdict": "supported",
+    "violations": [],
+    "reasoning": "The claim states three indications that are all listed verbatim in the INDICATIONS AND USAGE excerpt, matching the population (adults with type 2 diabetes), the adjunct to diet and exercise, and the specific risk reductions for cardiovascular events, kidney outcomes, and end‑stage kidney disease.",
+    "evidence": [
+     {
+      "chunk_id": "ozempic:v20:1:0",
+      "quote": "OZEMPIC is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease.",
+      "match": "exact",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "OZEMPIC",
+      "label_version": 20,
+      "effective_time": "20260601",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+      "kind": "text",
+      "before": "",
+      "after": "",
+      "table": null
+     }
+    ],
+    "checks": [
+     {
+      "ok": true,
+      "text": "1 of 1 quotes found word for word in the label."
+     },
+     {
+      "ok": true,
+      "text": "No figures in the claim to check."
+     }
+    ],
+    "flags": [],
+    "retrieved": [
+     {
+      "chunk_id": "ozempic:v20:1:0",
+      "section": "1 INDICATIONS AND USAGE",
+      "score": 0.0492,
+      "dense_rank": 1,
+      "bm25_rank": 1,
+      "number_rank": 1
+     },
+     {
+      "chunk_id": "ozempic:v20:40:2",
+      "section": "Medication Guide",
+      "score": 0.0479,
+      "dense_rank": 4,
+      "bm25_rank": 2,
+      "number_rank": 2
+     },
+     {
+      "chunk_id": "ozempic:v20:37:2",
+      "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+      "score": 0.0453,
+      "dense_rank": 14,
+      "bm25_rank": 3,
+      "number_rank": 3
+     },
+     {
+      "chunk_id": "ozempic:v20:36:0",
+      "section": "14 CLINICAL STUDIES > 14.2 Cardiovascular Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Cardiovascular Disease",
+      "score": 0.0452,
+      "dense_rank": 7,
+      "bm25_rank": 6,
+      "number_rank": 6
+     },
+     {
+      "chunk_id": "ozempic:v20:37:0",
+      "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+      "score": 0.0444,
+      "dense_rank": 3,
+      "bm25_rank": 10,
+      "number_rank": 10
+     }
+    ],
+    "model": "groq/gpt-oss-120b",
+    "source": "live",
+    "prompt_version": "judge-v2",
+    "tokens": 2262,
+    "latency_s": 54.59,
+    "trace": [
+     {
+      "step": "search_label",
+      "labels": [
+       "ozempic"
+      ],
+      "n_hits": 5,
+      "pinned_for_figures": 1,
+      "routed_to": [
+       "Indications and Usage"
+      ],
+      "routed_added": 0,
+      "ms": 33
+     },
+     {
+      "step": "judge",
+      "model": "groq/gpt-oss-120b",
+      "source": "live",
+      "attempts": [
+       {
+        "model": "groq/gpt-oss-120b",
+        "prompt_tokens": 1994,
+        "completion_tokens": 268,
+        "latency_s": 1.522401299997,
+        "repaired": false
+       }
+      ],
+      "tokens": 2262,
+      "ms": 1522
+     },
+     {
+      "step": "guards",
+      "status": "supported",
+      "flags": [],
+      "kept_quotes": 1,
+      "proposed_quotes": 1,
+      "ms": 0.1
+     }
+    ]
+   }
+  },
+  "3": {
+   "rewrite": "In adults with type 2 diabetes mellitus and chronic kidney disease, Ozempic reduces the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death.",
+   "model": "groq/gpt-oss-120b",
+   "review": {
+    "claim": "In adults with type 2 diabetes mellitus and chronic kidney disease, Ozempic reduces the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death.",
+    "status": "supported",
+    "model_verdict": "supported",
+    "violations": [],
+    "reasoning": "The indication section explicitly states Ozempic is to reduce the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease. The clinical study excerpt confirms a hazard ratio of 0.76 for the composite endpoint that includes those outcomes, demonstrating risk reduction.",
+    "evidence": [
+     {
+      "chunk_id": "ozempic:v20:1:0",
+      "quote": "to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease.",
+      "match": "exact",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "OZEMPIC",
+      "label_version": 20,
+      "effective_time": "20260601",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+      "kind": "text",
+      "before": "…2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- ",
+      "after": "",
+      "table": null
+     },
+     {
+      "chunk_id": "ozempic:v20:37:2",
+      "quote": "OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m^2, chronic renal replacement therapy, renal death, CV death (HR 0.76 [95% CI 0.66, 0.88], p=0.0003) as shown in Table 10 and Figure 7.",
+      "match": "exact",
+      "section_path": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+      "drug": "OZEMPIC",
+      "label_version": 20,
+      "effective_time": "20260601",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=adec4fd2-6858-4c99-91d4-531f5f2a2d79",
+      "kind": "text",
+      "before": "",
+      "after": " The treatment effect reflected a reduction in a sustained decline in eGFR of ≥50%, progression to kidney failure and CV death. There were few renal deaths during the trial.\n\nOZEMPIC also reduced the annual rate of change in eGFR (Figure…",
+      "table": null
+     }
+    ],
+    "checks": [
+     {
+      "ok": true,
+      "text": "2 of 2 quotes found word for word in the label."
+     },
+     {
+      "ok": true,
+      "text": "No figures in the claim to check."
+     }
+    ],
+    "flags": [],
+    "retrieved": [
+     {
+      "chunk_id": "ozempic:v20:8:0",
+      "section": "5 WARNINGS AND PRECAUTIONS > 5.3 Diabetic Retinopathy Complications",
+      "score": 0.0492,
+      "dense_rank": 1,
+      "bm25_rank": 1,
+      "number_rank": 1
+     },
+     {
+      "chunk_id": "ozempic:v20:6:0",
+      "section": "5 WARNINGS AND PRECAUTIONS > 5.1 Risk of Thyroid C-Cell Tumors",
+      "score": 0.0469,
+      "dense_rank": 3,
+      "bm25_rank": 6,
+      "number_rank": 3
+     },
+     {
+      "chunk_id": "ozempic:v20:1:0",
+      "section": "1 INDICATIONS AND USAGE",
+      "score": 0.0487,
+      "dense_rank": 3,
+      "bm25_rank": 1,
+      "number_rank": 1
+     },
+     {
+      "chunk_id": "ozempic:v20:37:2",
+      "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+      "score": 0.0484,
+      "dense_rank": 2,
+      "bm25_rank": 2,
+      "number_rank": 2
+     },
+     {
+      "chunk_id": "ozempic:v20:37:3",
+      "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+      "score": 0.0474,
+      "dense_rank": 4,
+      "bm25_rank": 3,
+      "number_rank": 3
+     },
+     {
+      "chunk_id": "ozempic:v20:37:4",
+      "section": "14 CLINICAL STUDIES > 14.3 Kidney Outcomes Trial of OZEMPIC in Adults with Type 2 Diabetes Mellitus and Chronic Kidney Disease",
+      "score": 0.0462,
+      "dense_rank": 7,
+      "bm25_rank": 4,
+      "number_rank": 4
+     }
+    ],
+    "model": "groq/gpt-oss-120b",
+    "source": "live",
+    "prompt_version": "judge-v2",
+    "tokens": 2915,
+    "latency_s": 4.25,
+    "trace": [
+     {
+      "step": "search_label",
+      "labels": [
+       "ozempic"
+      ],
+      "n_hits": 6,
+      "pinned_for_figures": 2,
+      "routed_to": [
+       "Boxed Warning",
+       "Contraindications",
+       "Warnings and Precautions"
+      ],
+      "routed_added": 2,
+      "ms": 19
+     },
+     {
+      "step": "judge",
+      "model": "groq/gpt-oss-120b",
+      "source": "live",
+      "attempts": [
+       {
+        "model": "groq/gpt-oss-120b",
+        "prompt_tokens": 2518,
+        "completion_tokens": 397,
+        "latency_s": 1.7124520000070333,
+        "repaired": false
+       }
+      ],
+      "tokens": 2915,
+      "ms": 1712
+     },
+     {
+      "step": "guards",
+      "status": "supported",
+      "flags": [],
+      "kept_quotes": 2,
+      "proposed_quotes": 2,
+      "ms": 0.1
+     }
+    ]
+   }
+  }
+ }
 }

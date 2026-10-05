@@ -1,4 +1,61 @@
 {
+ "farxiga": {
+  "effective_time": "20260603",
+  "fetched_on": "2026-10-05",
+  "generic": "dapagliflozin",
+  "ingredient": "dapagliflozin",
+  "n_sections": 59,
+  "products": [
+   "FARXIGA"
+  ],
+  "role": "comparator",
+  "set_id": "72ad22ae-efe6-4cd6-a302-98aaee423d69",
+  "version": 49,
+  "xml_sha256": "e712d0df42d5bb528bc30a8b1fe8c0297ccc1eb84dd5a3cdc9bd40626149e337"
+ },
+ "januvia": {
+  "effective_time": "20241114",
+  "fetched_on": "2026-10-05",
+  "generic": "sitagliptin",
+  "ingredient": "sitagliptin",
+  "n_sections": 64,
+  "products": [
+   "JANUVIA"
+  ],
+  "role": "comparator",
+  "set_id": "f85a48d0-0407-4c50-b0fa-7673a160bf01",
+  "version": 71,
+  "xml_sha256": "fc8b2d3ff3a71c847a8aba2b25a6bd475d9df86e29ef92e14d3010c945a459e7"
+ },
+ "jardiance": {
+  "effective_time": "20260130",
+  "fetched_on": "2026-10-05",
+  "generic": "empagliflozin",
+  "ingredient": "empagliflozin",
+  "n_sections": 93,
+  "products": [
+   "JARDIANCE"
+  ],
+  "role": "comparator",
+  "set_id": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+  "version": 31,
+  "xml_sha256": "ec88bb9aa0eee51a36acbf33f2f4f39ab6c6c3b2b95e9a172d879374b17618c8"
+ },
+ "lantus": {
+  "effective_time": "20250602",
+  "fetched_on": "2026-10-05",
+  "generic": "insulin glargine",
+  "ingredient": "insulin glargine",
+  "n_sections": 68,
+  "products": [
+   "LANTUS",
+   "LANTUS SOLOSTAR"
+  ],
+  "role": "comparator",
+  "set_id": "d5e07a0c-7e14-4756-9152-9fea485d654a",
+  "version": 35,
+  "xml_sha256": "535d6c9aef778526d5e09e37fa49e921b165241559c33d77a6a169c7ab3b8830"
+ },
  "mounjaro": {
   "effective_time": "20260827",
   "fetched_on": "2026-10-05",
@@ -28,6 +85,63 @@
   "version": 20,
   "xml_sha256": "cc9ecba8cce6eec215db9a0db28ef3c1c63dce3ba746aaf3caa5c3e9cd956626"
  },
+ "rybelsus": {
+  "effective_time": "20260130",
+  "fetched_on": "2026-10-05",
+  "generic": "oral semaglutide",
+  "ingredient": "semaglutide",
+  "n_sections": 44,
+  "products": [
+   "OZEMPIC",
+   "RYBELSUS"
+  ],
+  "role": "deep",
+  "set_id": "27f15fac-7d98-4114-a2ec-92494a91da98",
+  "version": 14,
+  "xml_sha256": "fb90194667fc6232e55fe714558f4978df41dd2226c199d41a7e2edf8a67e64e"
+ },
+ "saxenda": {
+  "effective_time": "20260225",
+  "fetched_on": "2026-10-05",
+  "generic": "liraglutide",
+  "ingredient": "liraglutide",
+  "n_sections": 36,
+  "products": [
+   "SAXENDA"
+  ],
+  "role": "deep",
+  "set_id": "3946d389-0926-4f77-a708-0acb8153b143",
+  "version": 22,
+  "xml_sha256": "99c55f409d563b47a2e8a807a0f4c1d03ea1f5ecee335ea84fa20adafb9923de"
+ },
+ "trulicity": {
+  "effective_time": "20260616",
+  "fetched_on": "2026-10-05",
+  "generic": "dulaglutide",
+  "ingredient": "dulaglutide",
+  "n_sections": 83,
+  "products": [
+   "TRULICITY"
+  ],
+  "role": "deep",
+  "set_id": "463050bd-2b1c-40f5-b3c3-0a04bb433309",
+  "version": 62,
+  "xml_sha256": "2a790740cae6415ba5160d0c578d599e26decb426a6f5c59d99803bb53b227d5"
+ },
+ "victoza": {
+  "effective_time": "20251014",
+  "fetched_on": "2026-10-05",
+  "generic": "liraglutide",
+  "ingredient": "liraglutide",
+  "n_sections": 41,
+  "products": [
+   "VICTOZA"
+  ],
+  "role": "deep",
+  "set_id": "5a9ef4ea-c76a-4d34-a604-27c5b505f5a4",
+  "version": 31,
+  "xml_sha256": "b14adc782ac8eaf1e871bdc936480c5d5d23ca1edc49306020c978d4fa5ee500"
+ },
  "wegovy": {
   "effective_time": "20260618",
   "fetched_on": "2026-10-05",
@@ -41,5 +155,20 @@
   "set_id": "ee06186f-2aa3-4990-a760-757579d8f77b",
   "version": 19,
   "xml_sha256": "2f2c51a1fdf57a3a2459f340abfbe1e0283e5c8849d3a844db8c28ede302f6b3"
+ },
+ "zepbound": {
+  "effective_time": "20260828",
+  "fetched_on": "2026-10-05",
+  "generic": "tirzepatide",
+  "ingredient": "tirzepatide",
+  "n_sections": 107,
+  "products": [
+   "ZEPBOUND",
+   "ZEPBOUND KWIKPEN"
+  ],
+  "role": "deep",
+  "set_id": "487cd7e7-434c-4925-99fa-aa80b1cc776b",
+  "version": 40,
+  "xml_sha256": "7c40611952c42e85d4688669dae2a5529cd563e0e857fdb23e411a8f7d8b0f14"
  }
 }

@@ -1,0 +1,625 @@
+{
+ "set_id": "d5e07a0c-7e14-4756-9152-9fea485d654a",
+ "version": 35,
+ "effective_time": "20250602",
+ "products": [
+  "LANTUS",
+  "LANTUS SOLOSTAR"
+ ],
+ "generic": "insulin glargine",
+ "sections": [
+  {
+   "code": "34067-9",
+   "top_code": "34067-9",
+   "top_name": "Indications and Usage",
+   "number": "1",
+   "title": "INDICATIONS AND USAGE",
+   "path": "1 INDICATIONS AND USAGE",
+   "text": "LANTUS is indicated to improve glycemic control in adult and pediatric patients with diabetes mellitus."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34067-9",
+   "top_name": "Indications and Usage",
+   "number": null,
+   "title": "Indications and Usage",
+   "path": "1 INDICATIONS AND USAGE > Indications and Usage",
+   "text": "Limitations of Use\n\nLANTUS is not recommended for the treatment of diabetic ketoacidosis."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.1",
+   "title": "Important Administration Instructions",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.1 Important Administration Instructions",
+   "text": "- Always check insulin labels before administration [see Warnings and Precautions (5.4)].\n- Visually inspect LANTUS vials and SoloStar prefilled pens for particulate matter and discoloration prior to administration. Only use if the solution is clear and colorless with no visible particles.\n- Administer LANTUS subcutaneously into the abdominal area, thigh, or deltoid, and rotate injection sites within the same region from one injection to the next to reduce the risk of lipodystrophy and localized cutaneous amyloidosis. Do not inject into areas of lipodystrophy or localized cutaneous amyloidosis [see Warnings and Precautions (5.2) and Adverse Reactions (6)].\n- During changes to a patient's insulin regimen, increase the frequency of blood glucose monitoring [see Warnings and Precautions (5.2)].\n- Do not administer intravenously or via an insulin pump.\n- Do not dilute or mix LANTUS with any other insulin or solution.\n- The LANTUS SoloStar prefilled pen dials in 1-unit increments.\n- Use LANTUS SoloStar prefilled pen with caution in patients with visual impairment who may rely on audible clicks to dial their dose."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.2",
+   "title": "General Dosing Instructions",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.2 General Dosing Instructions",
+   "text": "- Administer LANTUS subcutaneously once daily at any time of day but at the same time every day.\n- Individualize and adjust the dosage of LANTUS based on the patient's metabolic needs, blood glucose monitoring results and glycemic control goal.\n- Dosage adjustments may be needed with changes in physical activity, changes in meal patterns (i.e., macronutrient content or timing of food intake), during acute illness, or changes in renal or hepatic function. Dosage adjustments should only be made under medical supervision with appropriate glucose monitoring [see Warnings and Precautions (5.2)].\n- In patients with type 1 diabetes, LANTUS must be used concomitantly with short-acting insulin."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": null,
+   "title": "Dosage and Administration",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.3 Initiation of LANTUS Therapy > Dosage and Administration",
+   "text": "Recommended Starting Dosage in Patients with Type 1 Diabetes\n\nThe recommended starting dosage of LANTUS in patients with type 1 diabetes is approximately one-third of the total daily insulin requirements. Use short-acting, premeal insulin to satisfy the remainder of the daily insulin requirements."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": null,
+   "title": "Dosage and Administration",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.3 Initiation of LANTUS Therapy > Dosage and Administration",
+   "text": "Recommended Starting Dosage in Patients with Type 2 Diabetes\n\nThe recommended starting dosage of LANTUS in patients with type 2 diabetes who are not currently treated with insulin is 0.2 units/kg or up to 10 units once daily."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.4",
+   "title": "Switching to LANTUS from Other Insulin Therapies",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.4 Switching to LANTUS from Other Insulin Therapies",
+   "text": "Dosage adjustments are recommended to lower the risk of hypoglycemia when switching patients to LANTUS from other insulin therapies [see Warnings and Precautions (5.3)].\n\nWhen switching from:\n\n- Once-daily TOUJEO (insulin glargine 300 units/mL) to once-daily LANTUS (100 units/mL), the recommended starting LANTUS dosage is 80% of the TOUJEO dosage that is being discontinued.\n- Once-daily NPH insulin to once-daily LANTUS, the recommended starting LANTUS dosage is the same as the dosage of NPH that is being discontinued.\n- Twice-daily NPH insulin to once-daily LANTUS, the recommended starting LANTUS dosage is 80% of the total NPH dosage that is being discontinued."
+  },
+  {
+   "code": "43678-2",
+   "top_code": "43678-2",
+   "top_name": "Dosage Forms and Strengths",
+   "number": "3",
+   "title": "DOSAGE FORMS AND STRENGTHS",
+   "path": "3 DOSAGE FORMS AND STRENGTHS",
+   "text": "Injection: 100 units/mL (U-100) a clear and colorless solution available as:\n\n- 10 mL multiple-dose vial\n- 3 mL single-patient-use LANTUS SoloStar prefilled pen"
+  },
+  {
+   "code": "34070-3",
+   "top_code": "34070-3",
+   "top_name": "Contraindications",
+   "number": "4",
+   "title": "CONTRAINDICATIONS",
+   "path": "4 CONTRAINDICATIONS",
+   "text": "LANTUS is contraindicated:\n\n- During episodes of hypoglycemia [see Warnings and Precautions (5.3)]\n- In patients with hypersensitivity to insulin glargine or any of the excipients in LANTUS [see Warnings and Precautions (5.5)]"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.1",
+   "title": "Never Share a LANTUS SoloStar Prefilled Pen, Insulin Syringe, or Needle Between Patients",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.1 Never Share a LANTUS SoloStar Prefilled Pen, Insulin Syringe, or Needle Between Patients",
+   "text": "LANTUS SoloStar prefilled pens must never be shared between patients, even if the needle is changed. Patients using LANTUS vials must never re-use or share needles or syringes with another person. Sharing poses a risk for transmission of blood-borne pathogens."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.2",
+   "title": "Hyperglycemia or Hypoglycemia with Changes in Insulin Regimen",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.2 Hyperglycemia or Hypoglycemia with Changes in Insulin Regimen",
+   "text": "Changes in an insulin regimen (e.g., insulin strength, manufacturer, type, injection site or method of administration) may affect glycemic control and predispose to hypoglycemia [see Warnings and Precautions (5.3)] or hyperglycemia. Repeated insulin injections into areas of lipodystrophy or localized cutaneous amyloidosis have been reported to result in hyperglycemia; and a sudden change in the injection site (to unaffected area) has been reported to result in hypoglycemia [see Adverse Reactions (6)].\n\nMake any changes to a patient's insulin regimen under close medical supervision with increased frequency of blood glucose monitoring. Advise patients who have repeatedly injected into areas of lipodystrophy or localized cutaneous amyloidosis to change the injection site to unaffected areas and closely monitor for hypoglycemia. For patients with type 2 diabetes, dosage adjustments of concomitant oral and antidiabetic products may be needed."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.3",
+   "title": "Hypoglycemia",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.3 Hypoglycemia",
+   "text": "Hypoglycemia is the most common adverse reaction associated with insulins, including LANTUS. Severe hypoglycemia can cause seizures, may be life-threatening or cause death. Hypoglycemia can impair concentration ability and reaction time; this may place the patient and others at risk in situations where these abilities are important (e.g., driving or operating other machinery).\n\nHypoglycemia can happen suddenly, and symptoms may differ in each patient and change over time in the same patient. Symptomatic awareness of hypoglycemia may be less pronounced in patients with longstanding diabetes, in patients with diabetic neuropathy, using drugs that block the sympathetic nervous system (e.g., beta-blockers) [see Drug Interactions (7)], or who experience recurrent hypoglycemia.\n\nThe long-acting effect of LANTUS may delay recovery from hypoglycemia."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": null,
+   "title": "Warnings and Precautions",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.3 Hypoglycemia > Warnings and Precautions",
+   "text": "Risk Factors for Hypoglycemia\n\nThe risk of hypoglycemia after an injection is related to the duration of action of the insulin and, in general, is highest when the glucose lowering effect of the insulin is maximal. As with all insulins, the glucose lowering effect time course of LANTUS may vary in different patients or at different times in the same patient and depends on many conditions, including the area of injection as well as the injection site blood supply and temperature [see Clinical Pharmacology (12.2)]. Other factors which may increase the risk of hypoglycemia include changes in meal pattern (e.g., macronutrient content or timing of meals), changes in level of physical activity, or changes to concomitant drugs [see Drug Interactions (7)]. Patients with renal or hepatic impairment may be at higher risk of hypoglycemia [see Use in Specific Populations (8.6, 8.7)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": null,
+   "title": "Warnings and Precautions",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.3 Hypoglycemia > Warnings and Precautions",
+   "text": "Risk Mitigation Strategies for Hypoglycemia\n\nPatients and caregivers must be educated to recognize and manage hypoglycemia. Self-monitoring of blood glucose plays an essential role in the prevention and management of hypoglycemia. In patients at higher risk for hypoglycemia and patients who have reduced symptomatic awareness of hypoglycemia, increased frequency of blood glucose monitoring is recommended."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.4",
+   "title": "Hypoglycemia Due to Medication Errors",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.4 Hypoglycemia Due to Medication Errors",
+   "text": "Accidental mix-ups among insulin products have been reported. To avoid medication errors between LANTUS and other insulins, instruct patients to always check the insulin label before each injection [see Adverse Reactions (6.3)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.5",
+   "title": "Hypersensitivity Reactions",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.5 Hypersensitivity Reactions",
+   "text": "Severe, life-threatening, generalized allergy, including anaphylaxis, can occur with insulins, including LANTUS [see Adverse Reactions (6.1)]. If hypersensitivity reactions occur, discontinue LANTUS; treat per standard of care and monitor until symptoms and signs resolve. LANTUS is contraindicated in patients who have had hypersensitivity reactions to insulin glargine or one of the excipients."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.6",
+   "title": "Hypokalemia",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.6 Hypokalemia",
+   "text": "All insulins, including LANTUS, cause a shift in potassium from the extracellular to intracellular space, possibly leading to hypokalemia. Untreated hypokalemia may cause respiratory paralysis, ventricular arrhythmia, and death. Monitor potassium levels in patients at risk for hypokalemia, if indicated (e.g., patients using potassium-lowering medications, patients taking medications sensitive to serum potassium concentrations)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.7",
+   "title": "Fluid Retention and Heart Failure with Concomitant Use of PPAR-gamma Agonists",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.7 Fluid Retention and Heart Failure with Concomitant Use of PPAR-gamma Agonists",
+   "text": "Thiazolidinediones (TZDs), which are peroxisome proliferator-activated receptor (PPAR)-gamma agonists, can cause dose-related fluid retention, when used in combination with insulin. Fluid retention may lead to or exacerbate heart failure. Patients treated with insulin, including LANTUS, and a PPAR-gamma agonist should be observed for signs and symptoms of heart failure. If heart failure develops, it should be managed according to current standards of care, and discontinuation or dose reduction of the PPAR-gamma agonist must be considered."
+  },
+  {
+   "code": "34084-4",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6",
+   "title": "ADVERSE REACTIONS",
+   "path": "6 ADVERSE REACTIONS",
+   "text": "The following adverse reactions are discussed elsewhere:\n\n- Hyperglycemia or Hypoglycemia with Changes in Insulin Regimen [see Warnings and Precautions (5.2)]\n- Hypoglycemia [see Warnings and Precautions (5.3)]\n- Hypoglycemia Due to Medication Errors [see Warnings and Precautions (5.4)]\n- Hypersensitivity Reactions [see Warnings and Precautions (5.5)]\n- Hypokalemia [see Warnings and Precautions (5.6)]"
+  },
+  {
+   "code": "90374-0",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6.1",
+   "title": "Clinical Trials Experience",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience",
+   "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in clinical trials of a drug cannot be directly compared to rates in the clinical trial of another drug and may not reflect the rates observed in practice.\n\nThe data in Table 1 reflect the exposure of 2,327 patients with type 1 diabetes to LANTUS or NPH in Studies A, B, C, and D [see Clinical Studies (14.2)]. The type 1 diabetes population had the following characteristics: the mean age was 39 years, 54% were male, and mean body mass index (BMI) was 25.1 kg/m^2. Ninety-seven percent were White, 2% were Black or African American and less than 1% were Asian. Approximately 3% of the patients in studies B and C were Hispanic.\n\nThe data in Table 2 reflect the exposure of 1,563 patients with type 2 diabetes to LANTUS or NPH in Studies E, F, and G [see Clinical Studies (14.3)]. The type 2 diabetes population had the following characteristics: the mean age was 59 years, 58% were male, and mean BMI was 29.2 kg/m^2. Eighty-seven percent were White, 8% were Black or African American and 3% were Asian. Approximately 9% of patients in Study F were Hispanic.\n\nThe frequencies of adverse reactions during LANTUS clinical studies in patients with type 1 diabetes mellitus and type 2 diabetes mellitus are listed in the tables below (Tables 1, 2, 3, and 4).\n\nTable 1: Adverse Reactions Occurring \u22655% in Pooled Clinical Studies up to 28 Weeks Duration in Adults with Type 1 Diabetes\n| LANTUS, % (n=1,257) | NPH, % (n=1,070)\nUpper respiratory tract infection | 22.4 | 23.1\nInfection Body system not specified | 9.4 | 10.3\nAccidental injury | 5.7 | 6.4\nHeadache | 5.5 | 4.7\n\nTable 2: Adverse Reactions Occurring \u22655% in Pooled Clinical Studies up to 1 Year Duration in Adults with Type 2 Diabetes\n| LANTUS, % (n=849) | NPH, % (n=714)\nUpper respiratory tract infection | 11.4 | 13.3\nInfection Body system not specified | 10.4 | 11.6\nRetinal vascular disorder | 5.8 | 7.4\n\nTable 3: Adverse Reactions Occurring \u226510% in a 5-Year Study of Adults with Type 2 Diabetes\n| LANTUS, % (n=514) | NPH, % (n=503)\nUpper respiratory tract infection | 29.0 | 33.6\nEdema peripheral | 20.0 | 22.7\nHypertension | 19.6 | 18.9\nInfluenza | 18.7 | 19.5\nSinusitis | 18.5 | 17.9\nCataract | 18.1 | 15.9\nBronchitis | 15.2 | 14.1\nArthralgia | 14.2 | 16.1\nPain in extremity | 13.0 | 13.1\nBack pain | 12.8 | 12.3\nCough | 12.1 | 7.4\nUrinary tract infection | 10.7 | 10.1\nDiarrhea | 10.7 | 10.3\nDepression | 10.5 | 9.7\nHeadache | 10.3 | 9.3\n\nTable 4: Adverse Reactions Occurring \u22655% in a 28-Week Clinical Study in Pediatric Patients with Type 1 Diabetes\n| LANTUS, % (n=174) | NPH, % (n=175)\nInfection Body system not specified | 13.8 | 17.7\nUpper respiratory tract infection | 13.8 | 16.0\nPharyngitis | 7.5 | 8.6\nRhinitis | 5.2 | 5.1"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Severe Hypoglycemia\n\nHypoglycemia was the most commonly observed adverse reaction in patients treated with LANTUS. Tables 5, 6, and 7 summarize the incidence of severe hypoglycemia in the LANTUS clinical studies. Severe symptomatic hypoglycemia was defined as an event with symptoms consistent with hypoglycemia requiring the assistance of another person and associated with either a blood glucose below 50 mg/dL (\u226456 mg/dL in the 5-year study and \u226436 mg/dL in the ORIGIN study) or prompt recovery after oral carbohydrate, intravenous glucose, or glucagon administration.\n\nPercentages of LANTUS-treated adult patients who experienced severe symptomatic hypoglycemia in the LANTUS clinical studies [see Clinical Studies (14)] were comparable to percentages of NPH-treated patients for all treatment regimens (see Tables 5 and 6). In the pediatric clinical study, pediatric patients with type 1 diabetes had a higher incidence of severe symptomatic hypoglycemia in the two treatment groups compared to the adult studies with type 1 diabetes.\n\nTable 5: Severe Symptomatic Hypoglycemia in Patients with Type 1 Diabetes\n| Study A Type 1 Diabetes Adults 28 weeks In combination with regular insulin | Study B Type 1 Diabetes Adults 28 weeks In combination with regular insulin | Study C Type 1 Diabetes Adults 16 weeks In combination with insulin lispro | Study D Type 1 Diabetes Pediatrics 26 weeks In combination with regular insulin\n| LANTUS N=292 | NPH N=293 | LANTUS N=264 | NPH N=270 | LANTUS N=310 | NPH N=309 | LANTUS N=174 | NPH N=175\nPercent of patients | 10.6 | 15.0 | 8.7 | 10.4 | 6.5 | 5.2 | 23.0 | 28.6\n\nTable 6: Severe Symptomatic Hypoglycemia in Patients with Type 2 Diabetes\n| Study E Type 2 Diabetes Adults 52 weeks In combination with oral agents | Study F Type 2 Diabetes Adults 28 weeks In combination with regular insulin | Study G Type 2 Diabetes Adults 5 years In combination with regular insulin\n| LANTUS N=289 | NPH N=281 | LANTUS N=259 | NPH N=259 | LANTUS N=513 | NPH N=504\nPercent of patients | 1.7 | 1.1 | 0.4 | 2.3 | 7.8 | 11.9\n\nTable 7 displays the proportion of patients who experienced severe symptomatic hypoglycemia in the LANTUS and Standard Care groups in the ORIGIN study [see Clinical Studies (14)].\n\nTable 7: Severe Symptomatic Hypoglycemia in the ORIGIN Study\n| ORIGIN Study Median duration of follow-up: 6.2 years\n| LANTUS N=6231 | Standard Care N=6273\nPercent of patients | 5.6 | 1.8"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Peripheral Edema\n\nSome patients taking LANTUS have experienced sodium retention and edema, particularly if previously poor metabolic control was improved by intensified insulin therapy."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Lipodystrophy\n\nAdministration of insulin subcutaneously, including LANTUS, has resulted in lipoatrophy (depression in the skin) or lipohypertrophy (enlargement or thickening of tissue) in some patients [see Dosage and Administration (2.2)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Insulin Initiation and Intensification of Glucose Control\n\nIntensification or rapid improvement in glucose control has been associated with a transitory, reversible ophthalmologic refraction disorder, worsening of diabetic retinopathy, and acute painful peripheral neuropathy. However, long-term glycemic control decreases the risk of diabetic retinopathy and neuropathy."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Weight Gain\n\nWeight gain has occurred with insulin including LANTUS and has been attributed to the anabolic effects of insulin and the decrease in glucosuria."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Hypersensitivity Reactions"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Local Reactions\n\nPatients taking LANTUS experienced injection site reactions, including redness, pain, itching, urticaria, edema, and inflammation. In clinical studies in adult patients, there was a higher incidence of injection site pain in LANTUS-treated patients (2.7%) compared to NPH insulin-treated patients (0.7%). The reports of pain at the injection site did not result in discontinuation of therapy."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Systemic Reactions\n\nSevere, life-threatening, generalized allergy, including anaphylaxis, generalized skin reactions, angioedema, bronchospasm, hypotension, and shock have occurred with insulin, including LANTUS and may be life threatening."
+  },
+  {
+   "code": "88830-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6.2",
+   "title": "Immunogenicity",
+   "path": "6 ADVERSE REACTIONS > 6.2 Immunogenicity",
+   "text": "As with all therapeutic proteins, there is potential for immunogenicity. All insulin products can elicit the formation of insulin antibodies. The presence of such insulin antibodies may increase or decrease the efficacy of insulin and may require adjustment of the insulin dose. In clinical studies of LANTUS, increases in titers of antibodies to insulin were observed in NPH insulin and LANTUS treatment groups with similar incidences."
+  },
+  {
+   "code": "90375-7",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6.3",
+   "title": "Postmarketing Experience",
+   "path": "6 ADVERSE REACTIONS > 6.3 Postmarketing Experience",
+   "text": "The following adverse reactions have been identified during postapproval use of LANTUS. Because these reactions are reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\n\nMedication errors have been reported in which rapid-acting insulins and other insulins, have been accidentally administered instead of LANTUS.\n\nLocalized cutaneous amyloidosis at the injection site has occurred. Hyperglycemia has been reported with repeated insulin injections into areas of localized cutaneous amyloidosis; hypoglycemia has been reported with a sudden change to an unaffected injection site."
+  },
+  {
+   "code": "34073-7",
+   "top_code": "34073-7",
+   "top_name": "Drug Interactions",
+   "number": "7",
+   "title": "DRUG INTERACTIONS",
+   "path": "7 DRUG INTERACTIONS",
+   "text": "Table 8 includes clinically significant drug interactions with LANTUS.\n\nTable 8: Clinically Significant Drug Interactions with LANTUS\nDrugs that May Increase the Risk of Hypoglycemia\nDrugs: | Antidiabetic agents, ACE inhibitors, angiotensin II receptor blocking agents, disopyramide, fibrates, fluoxetine, monoamine oxidase inhibitors, pentoxifylline, pramlintide, salicylates, somatostatin analogs (e.g., octreotide), sulfonamide antibiotics. GLP-1 receptor agonists, DPP-4 inhibitors, and SGLT-2 inhibitors.\nIntervention: | Dosage reductions and increased frequency of glucose monitoring may be required when LANTUS is coadministered with these drugs.\nDrugs that May Decrease the Blood Glucose Lowering Effect of LANTUS\nDrugs: | Atypical antipsychotics (e.g., olanzapine and clozapine), corticosteroids, danazol, diuretics, estrogens, glucagon, isoniazid, niacin, oral contraceptives, phenothiazines, progestogens (e.g., in oral contraceptives), protease inhibitors, somatropin, sympathomimetic agents (e.g., albuterol, epinephrine, terbutaline), and thyroid hormones.\nIntervention: | Dosage increases and increased frequency of glucose monitoring may be required when LANTUS is coadministered with these drugs.\nDrugs that May Increase or Decrease the Blood Glucose Lowering Effect of LANTUS\nDrugs: | Alcohol, beta-blockers, clonidine, and lithium salts. Pentamidine may cause hypoglycemia, which may sometimes be followed by hyperglycemia.\nIntervention: | Dosage adjustment and increased frequency of glucose monitoring may be required when LANTUS is coadministered with these drugs.\nDrugs that May Blunt Signs and Symptoms of Hypoglycemia\nDrugs: | Beta-blockers, clonidine, guanethidine, and reserpine.\nIntervention: | Increased frequency of glucose monitoring may be required when LANTUS is coadministered with these drugs."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations",
+   "text": "Risk Summary\n\nPublished studies with use of insulin glargine during pregnancy have not reported a clear association with insulin glargine and adverse developmental outcomes (see Data). There are risks to the mother and fetus associated with poorly controlled diabetes in pregnancy (see Clinical Considerations).\n\nRats and rabbits were exposed to insulin glargine in animal reproduction studies during organogenesis, respectively 50 times and 10 times the human subcutaneous dosage of 0.2 units/kg/day. Overall, the effects of insulin glargine did not generally differ from those observed with regular human insulin (see Data).\n\nIn the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively. The estimated background risk of major birth defects is 6% to 10% in women with pregestational diabetes with a peri-conceptional HbA1c >7 and has been reported to be as high as 20% to 25% in women with a peri-conceptional HbA1c >10. The estimated background risk of miscarriage for the indicated population is unknown."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations",
+   "text": "Clinical Considerations"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations > Use in Specific Populations",
+   "text": "Disease-Associated Maternal and/or Embryo-fetal Risk\n\nHypoglycemia and hyperglycemia occur more frequently during pregnancy in patients with pre-gestational diabetes. Poorly controlled diabetes in pregnancy increases the maternal risk for diabetic ketoacidosis, preeclampsia, spontaneous abortions, preterm delivery, and delivery complications. Poorly controlled diabetes increases the fetal risk for major birth defects, stillbirth, and macrosomia-related morbidity."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations",
+   "text": "Data"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations > Use in Specific Populations",
+   "text": "Human Data\n\nPublished data do not report a clear association with insulin glargine and major birth defects, miscarriage, or adverse maternal or fetal outcomes when insulin glargine is used during pregnancy. However, these studies cannot definitely establish the absence of any risk because of methodological limitations including small sample size and some lacking comparator groups."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations > Use in Specific Populations",
+   "text": "Animal Data\n\nSubcutaneous reproduction and teratology studies have been performed with insulin glargine and regular human insulin in rats and Himalayan rabbits. Insulin glargine was given to female rats before mating, during mating, and throughout pregnancy at doses up to 0.36 mg/kg/day, which is approximately 50 times the recommended human subcutaneous starting dosage of 0.2 units/kg/day (0.007 mg/kg/day), on a mg/kg basis. In rabbits, doses of 0.072 mg/kg/day, which is approximately 10 times the recommended human subcutaneous starting dosage of 0.2 units/kg/day on a mg/kg basis, were administered during organogenesis. The effects of insulin glargine did not generally differ from those observed with regular human insulin in rats or rabbits. However, in rabbits, five fetuses from two litters of the high-dose group exhibited dilation of the cerebral ventricles. Fertility and early embryonic development appeared normal."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.2 Lactation > Use in Specific Populations",
+   "text": "Risk Summary\n\nThere are either no or only limited data on the presence of insulin glargine in human milk, the effects on breastfed infant, or the effects on milk production. Endogenous insulin is present in human milk. The developmental and health benefits of breastfeeding should be considered along with the mother's clinical need for LANTUS, and any potential adverse effects on the breastfed child from LANTUS or from the underlying maternal condition."
+  },
+  {
+   "code": "34081-0",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.4",
+   "title": "Pediatric Use",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
+   "text": "The safety and effectiveness of LANTUS to improve glycemic control in pediatric patients with diabetes mellitus have been established. Use of LANTUS for this indication is supported by evidence from an adequate and well-controlled study (Study D) in 174 LANTUS-treated pediatric patients aged 6 to 15 years with type 1 diabetes mellitus, and from adequate and well-controlled studies of LANTUS in adults with diabetes mellitus [see Clinical Pharmacology (12.3), Clinical Studies (14.2)].\n\nIn the pediatric clinical study, pediatric patients with type 1 diabetes had a higher incidence of severe symptomatic hypoglycemia compared to the adults in studies with type 1 diabetes [see Adverse Reactions (6.1)]."
+  },
+  {
+   "code": "34082-8",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.5",
+   "title": "Geriatric Use",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.5 Geriatric Use",
+   "text": "Of the total number of subjects in controlled clinical studies of patients with type 1 and type 2 diabetes who were treated with LANTUS, 15% (n=316) were \u226565 years of age and 2% (n=42) were \u226575 years of age. No overall differences in safety or effectiveness of LANTUS have been observed between patients 65 years of age and older and younger adult patients.\n\nNevertheless, caution should be exercised when LANTUS is administered to geriatric patients. In geriatric patients with diabetes, the initial dosing, dosage increments, and maintenance dosage should be conservative to avoid hypoglycemic reactions. Hypoglycemia may be difficult to recognize in geriatric patients."
+  },
+  {
+   "code": "88828-9",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.6",
+   "title": "Renal Impairment",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.6 Renal Impairment",
+   "text": "The effect of kidney impairment on the pharmacokinetics of LANTUS has not been studied. Some studies with human insulin have shown increased circulating levels of insulin in patients with kidney failure. Frequent glucose monitoring and dosage adjustment may be necessary for LANTUS in patients with kidney impairment [see Warnings and Precautions (5.3)]."
+  },
+  {
+   "code": "88829-7",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.7",
+   "title": "Hepatic Impairment",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.7 Hepatic Impairment",
+   "text": "The effect of hepatic impairment on the pharmacokinetics of LANTUS has not been studied. Frequent glucose monitoring and dosage adjustment may be necessary for LANTUS in patients with hepatic impairment [see Warnings and Precautions (5.3)]."
+  },
+  {
+   "code": "34088-5",
+   "top_code": "34088-5",
+   "top_name": "Overdosage",
+   "number": "10",
+   "title": "OVERDOSAGE",
+   "path": "10 OVERDOSAGE",
+   "text": "Excess insulin administration may cause hypoglycemia and hypokalemia [see Warnings and Precautions (5.3, 5.6)].\n\nMild episodes of hypoglycemia can usually be treated with oral carbohydrates. Lowering the insulin dosage, and adjustments in meal patterns or exercise may be needed.\n\nMore severe episodes of hypoglycemia with coma, seizure, or neurologic impairment may be treated with glucagon for emergency use or concentrated intravenous glucose. After apparent clinical recovery from hypoglycemia, continued observation and additional carbohydrate intake may be necessary to avoid recurrence of hypoglycemia.\n\nHypokalemia must be corrected appropriately."
+  },
+  {
+   "code": "34089-3",
+   "top_code": "34089-3",
+   "top_name": "Description",
+   "number": "11",
+   "title": "DESCRIPTION",
+   "path": "11 DESCRIPTION",
+   "text": "Insulin glargine is a long-acting human insulin analog produced by recombinant DNA technology utilizing a non-pathogenic laboratory strain of Escherichia coli (K12). Insulin glargine differs from human insulin in that the amino acid asparagine at position A21 is replaced by glycine and two arginines are added to the C-terminus of the B-chain. Insulin glargine has a molecular weight of 6063 Da.\n\nLANTUS (insulin glargine) injection is a sterile, clear and colorless solution for subcutaneous use in a 10 mL multiple-dose vial or a 3 mL single-patient use prefilled pen (LANTUS Solostar).\n\nPrefilled Pen (LANTUS Solostar) and Vial: Each mL contains 100 units of insulin glargine and the inactive ingredients: glycerol 85% (20 mg), m-cresol (2.7 mg), zinc (30 mcg), and Water for Injection, USP. The vial also contains polysorbate 20 (20 mcg). The pH is adjusted by addition of aqueous solutions of hydrochloric acid and sodium hydroxide. LANTUS has a pH of approximately 4."
+  },
+  {
+   "code": "43679-0",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": "12.1",
+   "title": "Mechanism of Action",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.1 Mechanism of Action",
+   "text": "The primary activity of insulin, including insulin glargine, is regulation of glucose metabolism. Insulin and its analogs lower blood glucose by stimulating peripheral glucose uptake, especially by skeletal muscle and fat, and by inhibiting hepatic glucose production. Insulin inhibits lipolysis and proteolysis, and enhances protein synthesis."
+  },
+  {
+   "code": "43681-6",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": "12.2",
+   "title": "Pharmacodynamics",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics",
+   "text": "In clinical studies, the glucose-lowering effect on a molar basis (i.e., when given at the same doses) of intravenous LANTUS is approximately the same as that for human insulin. Figure 1 shows results from a study in patients with type 1 diabetes conducted for a maximum of 24 hours after subcutaneous injection of LANTUS or NPH insulin. The median time between subcutaneous injection and the end of pharmacological effect was 14.5 hours (range: 9.5 to 19.3 hours) for NPH insulin, and 24 hours (range: 10.8 to >24 hours) (24 hours was the end of the observation period) for LANTUS.\n\n* Determined as amount of glucose infused to maintain constant plasma glucose levels\nFigure 1: Glucose-Lowering Effect Over 24 Hours in Patients with Type 1 Diabetes\n\nThe duration of action after abdominal, deltoid, or thigh subcutaneous administration of LANTUS was similar. The time course of action of insulins, including LANTUS, may vary between patients and within the same patient."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Absorption\n\nAfter subcutaneous injection of LANTUS in healthy subjects and in patients with diabetes, the insulin serum concentrations indicated a slower, more prolonged absorption and a relatively constant concentration/time profile over 24 hours with no pronounced peak in comparison to NPH insulin."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Elimination"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Metabolism\n\nA metabolism study in humans indicates that insulin glargine is partly metabolized at the carboxyl terminus of the B chain in the subcutaneous depot to form two active metabolites with in vitro activity similar to that of human insulin, M1 (21-Gly-insulin) and M2 (21-Gly-des-30-Thr-insulin). Unchanged drug and these degradation products are also present in the circulation."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Specific Populations"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Age, Race, Body Mass Index, and Gender\n\nEffect of age, race, body mass index (BMI), and gender on the pharmacokinetics of insulin glargine has not been evaluated. However, in controlled clinical studies in adults (n=3,890) and a controlled clinical study in pediatric patients (n=349), subgroup analyses based on age, race, BMI, and gender did not show differences in safety and efficacy between LANTUS and NPH insulin [see Clinical Studies (14)]."
+  },
+  {
+   "code": "34083-6",
+   "top_code": "43680-8",
+   "top_name": "Nonclinical Toxicology",
+   "number": "13.1",
+   "title": "Carcinogenesis, Mutagenesis, Impairment of Fertility",
+   "path": "13 NONCLINICAL TOXICOLOGY > 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility",
+   "text": "In mice and rats, standard two-year carcinogenicity studies with insulin glargine were performed at doses up to 0.455 mg/kg, which was for the rat approximately 65 times the recommended human subcutaneous starting dosage of 0.2 units/kg/day (0.007 mg/kg/day) on a mg/kg basis. Histiocytomas were found at injection sites in male rats and mice in acid vehicle containing groups and are considered a response to chronic tissue irritation and inflammation in rodents. These tumors were not found in female animals, in saline control, or insulin comparator groups using a different vehicle.\n\nInsulin glargine was not mutagenic in tests for detection of gene mutations in bacteria and mammalian cells (Ames and HGPRT-test) and in tests for detection of chromosomal aberrations (cytogenetics in vitro in V79 cells and in vivo in Chinese hamsters).\n\nIn a combined fertility and prenatal and postnatal study in male and female rats at subcutaneous doses up to 0.36 mg/kg/day, which was approximately 50 times the recommended human subcutaneous starting dose of 0.2 units/kg/day (0.007 mg/kg/day) maternal toxicity due to dose-dependent hypoglycemia, including some deaths, was observed. Consequently, a reduction of the rearing rate occurred in the high-dose group only. Similar effects were observed with NPH insulin."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.1",
+   "title": "Overview of Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
+   "text": "The safety and effectiveness of LANTUS given once-daily at bedtime was compared to that of once-daily and twice-daily NPH insulin in open-label, randomized, active-controlled, parallel studies of 2,327 adult patients and 349 pediatric patients with type 1 diabetes mellitus and 1,563 adult patients with type 2 diabetes mellitus (see Tables 9\u201311). In general, the reduction in glycated hemoglobin (HbA1c) with LANTUS was similar to that with NPH insulin."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.2 Clinical Studies in Adult and Pediatric Patients with Type 1 Diabetes > Clinical Studies",
+   "text": "Adult Patients with Type 1 Diabetes\n\nIn two clinical studies (Studies A and B), adult patients with type 1 diabetes (Study A, n=585, Study B n=534) were randomized to 28 weeks of basal-bolus treatment with LANTUS or NPH insulin. Regular human insulin was administered before each meal. LANTUS was administered at bedtime. NPH insulin was administered either as once daily at bedtime or in the morning and at bedtime when used twice daily.\n\nIn Study A, the average age was 39 years. The majority of patients were White (99%) and 56% were male. The mean BMI was approximately 24.9 kg/m^2. The mean duration of diabetes was 16 years.\n\nIn Study B, the average age was 39 years. The majority of patients were White (95%) and 51% were male. The mean BMI was approximately 25.8 kg/m^2. The mean duration of diabetes was 17 years.\n\nIn another clinical study (Study C), patients with type 1 diabetes (n=619) were randomized to 16 weeks of basal-bolus treatment with LANTUS or NPH insulin. Insulin lispro was used before each meal. LANTUS was administered once daily at bedtime and NPH insulin was administered once or twice daily. The average age was 39 years. The majority of patients were White (97%) and 51% were male. The mean BMI was approximately 25.6 kg/m^2. The mean duration of diabetes was 19 years.\n\nIn these 3 adult studies, LANTUS and NPH insulin had similar effects on HbA1c (Table 9) with a similar overall rate of severe symptomatic hypoglycemia [see Adverse Reactions (6.1)].\n\nTable 9: Type 1 Diabetes Mellitus \u2013 Adults\n| Study A | Study B | Study C\nTreatment duration | 28 weeks | 28 weeks | 16 weeks\nTreatment in combination with | Regular insulin | Regular insulin | Insulin lispro\n| LANTUS | NPH | LANTUS | NPH | LANTUS | NPH\nNumber of subjects treated | 292 | 293 | 264 | 270 | 310 | 309\nHbA1c\nBaseline HbA1c | 8.0 | 8.0 | 7.7 | 7.7 | 7.6 | 7.7\nAdjusted mean change at study end | +0.2 | +0.1 | -0.2 | -0.2 | -0.1 | -0.1\nTreatment Difference (95% CI) | +0.1 (0.0; +0.2) | +0.1 (-0.1; +0.2) | 0.0 (-0.1; +0.1)\nBasal insulin dose\nBaseline mean | 21 | 23 | 29 | 29 | 28 | 28\nMean change from baseline | -2 | 0 | -4 | +2 | -5 | +1\nTotal insulin dose\nBaseline mean | 48 | 52 | 50 | 51 | 50 | 50\nMean change from baseline | -1 | 0 | 0 | +4 | -3 | 0\nFasting blood glucose (mg/dL)\nBaseline mean | 167 | 166 | 166 | 175 | 175 | 173\nAdj. mean change from baseline | -21 | -16 | -20 | -17 | -29 | -12\nBody weight (kg)\nBaseline mean | 73.2 | 74.8 | 75.5 | 75.0 | 74.8 | 75.6\nMean change from baseline | 0.1 | -0.0 | 0.7 | 1.0 | 0.1 | 0.5"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.2 Clinical Studies in Adult and Pediatric Patients with Type 1 Diabetes > Clinical Studies",
+   "text": "Pediatric Patients with Type 1 Diabetes\n\nIn a randomized, controlled clinical study (Study D), pediatric patients (age range 6 to 15 years) with type 1 diabetes (n=349) were treated for 28 weeks with a basal-bolus insulin regimen where regular human insulin was used before each meal. LANTUS was administered once daily at bedtime and NPH insulin was administered once or twice daily. The average age was 11.7 years. The majority of patients were White (97%) and 52% were male. The mean BMI was approximately 18.9 kg/m^2. The mean duration of diabetes was 5 years. Similar effects on HbA1c (Table 10) were observed in both treatment groups [see Adverse Reactions (6.1)].\n\nTable 10: Type 1 Diabetes Mellitus \u2013 Pediatric Patients\n| Study D\nTreatment duration | 28 weeks\nTreatment in combination with | Regular insulin\n| LANTUS + Regular insulin | NPH + Regular insulin\nNumber of subjects treated | 174 | 175\nHbA1c\nBaseline mean | 8.5 | 8.8\nChange from baseline (adjusted mean) | +0.3 | +0.3\nDifference from NPH (adjusted mean) | 0.0\n(95% CI ) | (-0.2; +0.3)\nBasal insulin dose\nBaseline mean | 19 | 19\nMean change from baseline | -1 | +2\nTotal insulin dose\nBaseline mean | 43 | 43\nMean change from baseline | +2 | +3\nFasting blood glucose (mg/dL)\nBaseline mean | 194 | 191\nMean change from baseline | -23 | -12\nBody weight (kg)\nBaseline mean | 45.5 | 44.6\nMean change from baseline | 2.2 | 2.5"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.3",
+   "title": "Clinical Studies in Adults with Type 2 Diabetes",
+   "path": "14 CLINICAL STUDIES > 14.3 Clinical Studies in Adults with Type 2 Diabetes",
+   "text": "In a randomized, controlled clinical study (Study E) in 570 adults with type 2 diabetes, LANTUS was evaluated for 52 weeks in combination with oral antidiabetic medications (a sulfonylurea, metformin, acarbose, or combinations of these drugs). The average age was 60 years old. The majority of patients were White (93%) and 54% were male. The mean BMI was approximately 29.1 kg/m^2. The mean duration of diabetes was 10 years. LANTUS administered once daily at bedtime was as effective as NPH insulin administered once daily at bedtime in reducing HbA1c and fasting glucose (Table 11). The rate of severe symptomatic hypoglycemia was similar in LANTUS and NPH insulin treated patients [see Adverse Reactions (6.1)].\n\nIn a randomized, controlled clinical study (Study F), in adult patients with type 2 diabetes not using oral antidiabetic medications (n=518), a basal-bolus regimen of LANTUS once daily at bedtime or NPH insulin administered once or twice daily was evaluated for 28 weeks. Regular human insulin was used before meals, as needed. The average age was 59 years. The majority of patients were White (81%) and 60% were male. The mean BMI was approximately 30.5 kg/m^2. The mean duration of diabetes was 14 years. LANTUS had similar effectiveness as either once- or twice-daily NPH insulin in reducing HbA1c and fasting glucose (Table 11) with a similar incidence of hypoglycemia [see Adverse Reactions (6.1)].\n\nIn a randomized, controlled clinical study (Study G), adult patients with type 2 diabetes were randomized to 5 years of treatment with once-daily LANTUS or twice-daily NPH insulin. For patients not previously treated with insulin, the starting dosage of LANTUS or NPH insulin was 10 units daily. Patients who were already treated with NPH insulin either continued on the same total daily NPH insulin dose or started LANTUS at a dosage that was 80% of the total previous NPH insulin dosage. The primary endpoint for this study was a comparison of the progression of diabetic retinopathy by 3 or more steps on the Early Treatment Diabetic Retinopathy Study (ETDRS) scale. HbA1c change from baseline was a secondary endpoint. Similar glycemic control in the 2 treatment groups was desired in order to not confound the interpretation of the retinal data. Patients or study personnel used an algorithm to adjust the LANTUS and NPH insulin dosages to a target fasting plasma glucose \u2264100 mg/dL. After the LANTUS or NPH insulin dosage was adjusted, other antidiabetic agents, including premeal insulin were to be adjusted or added. The average age was 55 years. The majority of patients were White (85%) and 54% were male. The mean BMI was approximately 34.3 kg/m^2. The mean duration of diabetes was 11 years. The LANTUS group had a smaller mean reduction from baseline in HbA1c compared to the NPH insulin group, which may be explained by the lower daily basal insulin doses in the LANTUS group (Table 11). The incidences of severe symptomatic hypoglycemia were similar between groups [see Adverse Reactions (6.1)].\n\nTable 11: Type 2 Diabetes Mellitus \u2013 Adults\n| Study E | Study F | Study G\nTreatment duration | 52 weeks | 28 weeks | 5 years\nTreatment in combination with | Oral agents | Regular insulin | Regular insulin\n| LANTUS | NPH | LANTUS | NPH | LANTUS | NPH\nNumber of subjects treated | 289 | 281 | 259 | 259 | 513 | 504\nHbA1c\nBaseline mean | 9.0 | 8.9 | 8.6 | 8.5 | 8.4 | 8.3\nAdjusted mean change from baseline | -0.5 | -0.4 | -0.4 | -0.6 | -0.6 | -0.8\nLANTUS \u2013 NPH | -0.1 | +0.2 | +0.2\n95% CI for Treatment difference | (-0.3; +0.1) | (0.0; +0.4) | (+0.1; +0.4)\nBasal insulin dose In Study G, the baseline dose of basal or total insulin was the first available on-treatment dose prescribed during the study (on visit month 1.5).\nBaseline mean | 14 | 15 | 44.1 | 45.5 | 39 | 44\nMean change from baseline | +12 | +9 | -1 | +7 | +23 | +30\nTotal insulin dose\nBaseline mean | 14 | 15 | 64 | 67 | 48 | 53\nMean change from baseline | +12 | +9 | +10 | +13 | +41 | +40\nFasting blood glucose (mg/dL)\nBaseline mean | 179 | 180 | 164 | 166 | 190 | 180\nAdj. mean change from baseline | -49 | -46 | -24 | -22 | -45 | -44\nBody weight (kg)\nBaseline mean | 83.5 | 82.1 | 89.6 | 90.7 | 100 | 99\nAdj. mean change from baseline | 2.0 | 1.9 | 0.4 | 1.4 | 3.7 | 4.8"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.4 Additional Clinical Studies in Adults with Diabetes Type 1 and Type 2 > Clinical Studies",
+   "text": "Different Timing of LANTUS Administration in Diabetes Type 1 and Diabetes Type 2\n\nThe safety and efficacy of once daily LANTUS administered either at pre-breakfast, pre-dinner, or at bedtime were evaluated in a randomized, controlled clinical study in adult patients with type 1 diabetes (Study H, n=378). Patients were also treated with insulin lispro at mealtime. The average age was 41 years. All patients were White (100%) and 54% were male. The mean BMI was approximately 25.3 kg/m^2. The mean duration of diabetes was 17 years.\n\nLANTUS administered at pre-breakfast or at pre-dinner (both once daily) resulted in similar reductions in HbA1c compared to that with bedtime administration (see Table 12). In these patients, data are available from 8-point home glucose monitoring. The maximum mean blood glucose was observed just prior to LANTUS injection regardless of time of administration. In this study, 5% of patients in the LANTUS-breakfast group discontinued treatment because of lack of efficacy. No patients in the other two groups (pre-dinner, bedtime) discontinued for this reason.\n\nThe safety and efficacy of once daily LANTUS administered pre-breakfast or at bedtime were also evaluated in a randomized, active-controlled clinical study (Study I, n=697) in patients with type 2 diabetes not adequately controlled on oral antidiabetic therapy. All patients in this study also received glimepiride 3 mg daily. The average age was 61 years. The majority of patients were White (97%) and 54% were male. The mean BMI was approximately 28.7 kg/m^2. The mean duration of diabetes was 10 years. LANTUS given before breakfast was at least as effective in lowering HbA1c as LANTUS given at bedtime or NPH insulin given at bedtime (see Table 12).\n\nTable 12: Study of Different Times of Once Daily LANTUS Dosing in Type 1 (Study H) and Type 2 (Study I) Diabetes Mellitus\nTreatment duration Treatment in combination with | Study H 24 weeks Insulin lispro | Study I 24 weeks Glimepiride\n| LANTUS Before Breakfast | LANTUS Before Dinner | LANTUS Bedtime | LANTUS Before Breakfast | LANTUS Bedtime | NPH Bedtime\nNumber of subjects treated Intent-to-treat | 112 | 124 | 128 | 234 | 226 | 227\nHbA1c\nBaseline mean | 7.6 | 7.5 | 7.6 | 9.1 | 9.1 | 9.1\nMean change from baseline | -0.2 | -0.1 | 0.0 | -1.3 | -1.0 | -0.8\nBasal insulin dose (Units)\nBaseline mean | 22 | 23 | 21 | 19 | 20 | 19\nMean change from baseline | 5 | 2 | 2 | 11 | 18 | 18\nTotal insulin dose (Units) | \u2013 | \u2013 | \u2013 | NA Not applicable | NA | NA\nBaseline mean | 52 | 52 | 49 | \u2013 | \u2013 | \u2013\nMean change from baseline | 2 | 3 | 2 | \u2013 | \u2013 | \u2013\nBody weight (kg)\nBaseline mean | 77.1 | 77.8 | 74.5 | 80.7 | 82 | 81\nMean change from baseline | 0.7 | 0.1 | 0.4 | 3.9 | 3.7 | 2.9"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.4 Additional Clinical Studies in Adults with Diabetes Type 1 and Type 2 > Clinical Studies",
+   "text": "Progression of Retinopathy Evaluation in Adults with Diabetes Type 1 and Diabetes Type 2\n\nLANTUS was compared to NPH insulin in a 5-year randomized clinical study that evaluated the progression of retinopathy as assessed with fundus photography using a grading protocol derived from the Early Treatment Diabetic Retinopathy Scale (ETDRS). Patients had type 2 diabetes (mean age 55 years) with no (86%) or mild (14%) retinopathy at baseline. Mean baseline HbA1c was 8.4%. The primary outcome was progression by 3 or more steps on the ETDRS scale at study endpoint. Patients with prespecified postbaseline eye procedures (pan-retinal photocoagulation for proliferative or severe nonproliferative diabetic retinopathy, local photocoagulation for new vessels, and vitrectomy for diabetic retinopathy) were also considered as 3-step progressors regardless of actual change in ETDRS score from baseline. Retinopathy graders were blinded to treatment group assignment.\n\nThe results for the primary endpoint are shown in Table 13 for both the per-protocol and intent-to-treat populations, and indicate similarity of LANTUS to NPH in the progression of diabetic retinopathy as assessed by this outcome. In this study, the numbers of retinal adverse events reported for LANTUS and NPH insulin treatment groups were similar for adult patients with type 1 and type 2 diabetes.\n\nTable 13: Number (%) of Patients with 3 or More Step Progression on ETDRS Scale at Endpoint\n| LANTUS (%) | NPH (%) | Difference Difference = LANTUS \u2013 NPH ^, Using a generalized linear model (SAS GENMOD) with treatment and baseline HbA1c strata (cutoff 9.0%) as the classified independent variables, and with binomial distribution and identity link function (SE) | 95% CI for difference\nPer-protocol | 53/374 (14.2%) | 57/363 (15.7%) | -2.0% (2.6%) | -7.0% to +3.1%\nIntent-to-Treat | 63/502 (12.5%) | 71/487 (14.6%) | -2.1% (2.1%) | -6.3% to +2.1%"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.4 Additional Clinical Studies in Adults with Diabetes Type 1 and Type 2 > Clinical Studies",
+   "text": "The ORIGIN Study of Major Cardiovascular Outcomes in Patients with Established CV Disease or CV Risk Factors\n\nThe Outcome Reduction with Initial Glargine Intervention study (i.e., ORIGIN) was an open-label, randomized, 2-by-2, factorial design study. One intervention in ORIGIN compared the effect of LANTUS to standard care on major adverse cardiovascular (CV) outcomes in 12,537 adults \u2265 50 years of age with:\n\n- Abnormal glucose levels (i.e., impaired fasting glucose [IFG] and/or impaired glucose tolerance [IGT]) or early type 2 diabetes mellitus and\n- Established CV disease or CV risk factors at baseline.\n\nThe objective of the study was to demonstrate that LANTUS use could significantly lower the risk of major CV outcomes compared to standard care. There were two coprimary composite CV endpoints:\n\n- The first coprimary endpoint was the time to first occurrence of a major adverse CV event defined as the composite of CV death, nonfatal myocardial infarction, and nonfatal stroke.\n- The second coprimary endpoint was the time to the first occurrence of CV death or nonfatal myocardial infarction or nonfatal stroke or revascularization procedure or hospitalization for heart failure.\n\nPatients were randomized to either LANTUS (N=6,264) titrated to a goal fasting plasma glucose of \u226495 mg/dL or to standard care (N=6,273). Anthropometric and disease characteristics were balanced at baseline. The mean age was 64 years and 8% of patients were 75 years of age or older. The majority of patients were male (65%). Fifty nine percent were White, 25% were Latin, 10% were Asian and 3% were Black or African American. The median baseline BMI was 29 kg/m^2. Approximately 12% of patients had abnormal glucose levels (IGT and/or IFG) at baseline and 88% had type 2 diabetes. For patients with type 2 diabetes, 59% were treated with a single oral antidiabetic drug, 23% had known diabetes but were on no antidiabetic drug and 6% were newly diagnosed during the screening procedure. The mean HbA1c (SD) at baseline was 6.5% (1.0). Fifty-nine percent of the patients had had a prior CV event and 39% had documented coronary artery disease or other CV risk factors.\n\nVital status was available for 99.9% and 99.8% of patients randomized to LANTUS and standard care respectively at end of study. The median duration of follow-up was 6.2 years (range: 8 days to 7.9 years). The mean HbA1c (SD) at the end of the study was 6.5% (1.1) and 6.8% (1.2) in the LANTUS and standard care group respectively. The median dose of LANTUS at end of study was 0.45 U/kg. Eighty-one percent of patients randomized to LANTUS were using LANTUS at end of the study. The mean change in body weight from baseline to the last treatment visit was 2.2 kg greater in the LANTUS group than in the standard care group.\n\nOverall, the incidence of major adverse CV outcomes was similar between groups (see Table 14). All-cause mortality was also similar between groups.\n\nTable 14: Cardiovascular Outcomes in ORIGIN in Patients with Established CV Disease or CV Risk Factors \u2013 Time to First Event Analyses\n| LANTUS N=6,264 | Standard Care N=6,273 | LANTUS vs Standard Care\nn (Events per 100 PY) | n (Events per 100 PY) | Hazard Ratio (95% CI)\nCoprimary endpoints\nCV death, nonfatal myocardial infarction, or nonfatal stroke | 1041 (2.9) | 1013 (2.9) | 1.02 (0.94, 1.11)\nCV death, nonfatal myocardial infarction, nonfatal stroke, hospitalization for heart failure or revascularization procedure | 1792 (5.5) | 1727 (5.3) | 1.04 (0.97, 1.11)\nComponents of coprimary endpoints\nCV death | 580 | 576 | 1.00 (0.89, 1.13)\nMyocardial Infarction (fatal or nonfatal) | 336 | 326 | 1.03 (0.88, 1.19)\nStroke (fatal or nonfatal) | 331 | 319 | 1.03 (0.89, 1.21)\nRevascularizations | 908 | 860 | 1.06 (0.96, 1.16)\nHospitalization for heart failure | 310 | 343 | 0.90 (0.77, 1.05)\n\nIn the ORIGIN study, the overall incidence of cancer (all types combined) or death from cancer (Table 15) was similar between treatment groups.\n\nTable 15: Cancer Outcomes in ORIGIN \u2013 Time to First Event Analyses\n| LANTUS N=6,264 | Standard Care N=6,273 | LANTUS vs Standard Care\nn (Events per 100 PY) | n (Events per 100 PY) | Hazard Ratio (95% CI)\nCancer endpoints\nAny cancer event (new or recurrent) | 559 (1.56) | 561 (1.56) | 0.99 (0.88, 1.11)\nNew cancer events | 524 (1.46) | 535 (1.49) | 0.96 (0.85, 1.09)\nDeath due to Cancer | 189 (0.51) | 201 (0.54) | 0.94 (0.77, 1.15)"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34069-5",
+   "top_name": "How Supplied/Storage and Handling",
+   "number": "16.1",
+   "title": "How Supplied",
+   "path": "16 HOW SUPPLIED/STORAGE AND HANDLING > 16.1 How Supplied",
+   "text": "LANTUS (insulin glargine) injection is supplied as a clear and colorless solution containing 100 units/mL (U-100) available as follows:\n\nLANTUS | NDC number | Package size\n10 mL Multiple-dose vial | 0088-2220-33 | 1 vial per carton\n3 mL SoloStar single-patient-use prefilled pen | 0088-2219-05 | 5 pens per carton\n\nAdditional Information about LANTUS Solostar:\n\n- The LANTUS SoloStar prefilled pen dials in 1-unit increments.\n- Needles are not included in the packs.\n\nUse BD Ultra-Fine^\u00ae needles with the SoloStar prefilled pens (these BD manufactured needles are sold separately)."
+  },
+  {
+   "code": "44425-7",
+   "top_code": "34069-5",
+   "top_name": "How Supplied/Storage and Handling",
+   "number": "16.2",
+   "title": "Storage",
+   "path": "16 HOW SUPPLIED/STORAGE AND HANDLING > 16.2 Storage",
+   "text": "Dispense in the original sealed carton with the enclosed Instructions for Use.\n\nStore unused LANTUS in a refrigerator between 36\u00b0F and 46\u00b0F (2\u00b0C and 8\u00b0C). Do not freeze. Discard LANTUS if it has been frozen. Protect LANTUS from direct heat and light.\n\nStorage conditions are summarized in the following table.\n\n| Not in-use (unopened) | Not in-use (unopened) | In-use (opened)\n| Refrigerated | Room Temperature |\n| (36\u00b0F\u201346\u00b0F [2\u00b0C\u20138\u00b0C]) | (up to 86\u00b0F [30\u00b0C]) | (see temperature below)\n10 mL multiple-dose vial | Until expiration date | 28 days | 28 days Refrigerated or room temperature\n3 mL single-patient-use SoloStar prefilled pen | Until expiration date | 28 days | 28 days Room temperature only (Do not refrigerate)"
+  },
+  {
+   "code": "34076-0",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": "17",
+   "title": "PATIENT COUNSELING INFORMATION",
+   "path": "17 PATIENT COUNSELING INFORMATION",
+   "text": "Advise the patient to read the FDA-approved patient labeling (Patient Information and Instructions for Use). There are separate Instructions for Use for the Vial and LANTUS SoloStar Pen."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Never Share a LANTUS SoloStar Prefilled Pen or Insulin Syringe Between Patients\n\nAdvise patients that they must never share a LANTUS SoloStar pen with another person, even if the needle is changed. Advise patients using LANTUS vials not to re-use or share needles or insulin syringes with another person. Sharing carries a risk for transmission of blood-borne pathogens [see Warnings and Precautions (5.1)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Hyperglycemia or Hypoglycemia\n\nInform patients that hypoglycemia is the most common adverse reaction with insulin. Inform patients of the symptoms of hypoglycemia (e.g., impaired ability to concentrate and react). This may present a risk in situations where these abilities are especially important, such as driving or operating other machinery. Advise patients who have frequent hypoglycemia or reduced or absent warning signs of hypoglycemia to use caution when driving or operating machinery [see Warnings and Precautions (5.3)].\n\nAdvise patients that changes in insulin regimen can predispose to hyperglycemia or hypoglycemia and that changes in insulin regimen should be made under close medical supervision [see Warnings and Precautions (5.2)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Hypoglycemia Due to Medications Errors\n\nInstruct patients to always check the insulin label before each injection to reduce the risk of a medication error [see Warnings and Precautions (5.4)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Hypersensitivity Reactions\n\nAdvise patients that hypersensitivity reactions have occurred with LANTUS. Inform patients about the symptoms of hypersensitivity reactions [see Warnings and Precautions (5.5)]."
+  },
+  {
+   "code": "42230-3",
+   "top_code": "42230-3",
+   "top_name": "Patient Information",
+   "number": null,
+   "title": "Patient Information",
+   "path": "Patient Information",
+   "text": "PATIENT INFORMATION LANTUS^\u00ae (LAN-tus) (insulin glargine) injection, for subcutaneous use VIAL:100 units/mL (U-100)\nDo not share your syringes with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them. What is LANTUS? LANTUS is a long-acting man-made-insulin used to control high blood sugar in adults and children with diabetes mellitus. LANTUS is not for use to treat diabetic ketoacidosis.\nWho should not use LANTUS? Do not use LANTUS if you: - are having an episode of low blood sugar (hypoglycemia). - have an allergy to insulin glargine or any of the ingredients in LANTUS. See the end of this Patient Information leaflet for a complete list of ingredients in LANTUS.\nWhat should I tell my healthcare provider before using LANTUS? Before using LANTUS, tell your healthcare provider about all your medical conditions including if you: - have liver or kidney problems. - take other medicines, especially ones called TZDs (thiazolidinediones). - have heart failure or other heart problems. If you have heart failure, it may get worse while you take TZDs with LANTUS. - are pregnant, planning to become pregnant, or are breastfeeding. It is not known if LANTUS may harm your unborn baby or breastfeeding baby. Tell your healthcare provider about all the medicines you take including prescription and over-the-counter medicines, vitamins, and herbal supplements. Before you start using LANTUS, talk to your healthcare provider about low blood sugar and how to manage it.\nHow should I use LANTUS? - Read the detailed Instructions for Use that come with your LANTUS insulin. - Use LANTUS exactly as your healthcare provider tells you to. Your healthcare provider should tell you how much LANTUS to use and when to use it. - Know the amount of LANTUS you use. Do not change the amount of LANTUS you use unless your healthcare provider tells you to. - Check your insulin label each time you give your injection to make sure you are using the correct insulin. - Do not re-use needles. Always use a new needle for each injection. Re-use of needles increases your risk of having blocked needles, which may cause you to get the wrong dose of LANTUS. Using a new needle for each injection lowers your risk of getting an infection. - You may take LANTUS at any time during the day but you must take it at the same time every day. - Only use LANTUS that is clear and colorless. If your LANTUS is cloudy or slightly colored, return it to your pharmacy for a replacement. - LANTUS is injected under the skin (subcutaneously) of your upper legs (thighs), upper arms, or stomach area (abdomen). - Do not use LANTUS in an insulin pump or inject LANTUS into your vein (intravenously). - Change (rotate) injection sites within the area you chose with each dose to reduce your risk of getting lipodystrophy (pits in skin or thickened skin) and localized cutaneous amyloidosis (skin with lumps) at the injection sites. - Do not use the exact same spot for each injection. - Do not inject where the skin has pits, is thickened, or has lumps. - Do not inject where the skin is tender, bruised, scaly or hard, or into scars or damaged skin. - Do not mix LANTUS with any other type of insulin or liquid medicine. - Check your blood sugar levels. Ask your healthcare provider what your blood sugar should be and when you should check your blood sugar levels. Keep LANTUS and all medicines out of the reach of children.\nYour dose of LANTUS may need to change because of: - a change in level of physical activity or exercise, weight gain or loss, increased stress, illness, change in diet, or because of the medicines you take.\nWhat should I avoid while using LANTUS? While using LANTUS do not: - drive or operate heavy machinery, until you know how LANTUS affects you. - drink alcohol or use over-the-counter medicines that contain alcohol.\nWhat are the possible side effects of LANTUS and other insulins? LANTUS may cause serious side effects that can lead to death, including: - low blood sugar (hypoglycemia). Signs and symptoms that may indicate low blood sugar include: - dizziness or light-headedness, sweating, confusion, headache, blurred vision, slurred speech, shakiness, fast heartbeat, anxiety, irritability or mood change, hunger. - severe allergic reaction (whole body reaction). Get medical help right away if you have any of these signs or symptoms of a severe allergic reaction: - a rash over your whole body, trouble breathing, a fast heartbeat, or sweating. - low potassium in your blood (hypokalemia). - heart failure. Taking certain diabetes pills called TZDs (thiazolidinediones) with LANTUS may cause heart failure in some people. This can happen even if you have never had heart failure or heart problems before. If you already have heart failure it may get worse while you take TZDs with LANTUS. Your healthcare provider should monitor you closely while you are taking TZDs with LANTUS. Tell your healthcare provider if you have any new or worse symptoms of heart failure including: Treatment with TZDs and LANTUS may need to be changed or stopped by your healthcare provider if you have new or worse heart failure. - shortness of breath, swelling of your ankles or feet, sudden weight gain. Get emergency medical help if you have: - trouble breathing; shortness of breath; fast heartbeat; swelling of your face, tongue, or throat; sweating; extreme drowsiness; dizziness; confusion. The most common side effects of LANTUS include: - low blood sugar (hypoglycemia); weight gain; allergic reactions, including reactions at your injection site; skin thickening or pits at the injection site (lipodystrophy). These are not all the possible side effects of LANTUS. Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.\nGeneral information about the safe and effective use of LANTUS. Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use LANTUS for a condition for which it was not prescribed. Do not give LANTUS to other people, even if they have the same symptoms that you have. It may harm them. This Patient Information leaflet summarizes the most important information about LANTUS. If you would like more information, talk with your healthcare provider. You can ask your pharmacist or healthcare provider for information about LANTUS that is written for healthcare professionals. For more information, go to www.lantus.com or call 1-800-633-1610.\nWhat are the ingredients in LANTUS? - Active ingredient: insulin glargine - 10 mL vial inactive ingredients: glycerol 85%, m-cresol, polysorbate 20, zinc, and Water for Injection, USP. Hydrochloric acid and sodium hydroxide may be added to adjust the pH.\nManufactured by: sanofi-aventis U.S. LLC, Morristown, NJ 07960, A SANOFI COMPANY. U.S. License No. 1752\n\nThis Patient Information has been approved by the U.S. Food and Drug Administration.\n\nRevised: May 2025"
+  },
+  {
+   "code": "42230-3",
+   "top_code": "42230-3",
+   "top_name": "Patient Information",
+   "number": null,
+   "title": "Patient Information",
+   "path": "Patient Information",
+   "text": "PATIENT INFORMATION LANTUS^\u00ae SOLOSTAR (LAN-tus) (insulin glargine) injection, for subcutaneous use 100 units/mL (U-100)\nDo not share your LANTUS SoloStar^\u00ae pen with other people, even if the needle has been changed. You may give other people a serious infection, or get a serious infection from them. What is LANTUS? LANTUS is a long-acting man-made insulin used to control high blood sugar in adults and children with diabetes mellitus. LANTUS is not for use to treat diabetic ketoacidosis.\nWho should not use LANTUS? Do not use LANTUS if you: - are having an episode of low blood sugar (hypoglycemia). - have an allergy to insulin glargine or any of the ingredients in LANTUS. See the end of this Patient Information leaflet for a complete list of ingredients in LANTUS.\nWhat should I tell my healthcare provider before using LANTUS? Before using LANTUS, tell your healthcare provider about all your medical conditions including if you: - have liver or kidney problems. - take other medicines, especially ones called TZDs (thiazolidinediones). - have heart failure or other heart problems. If you have heart failure, it may get worse while you take TZDs with LANTUS. - are pregnant, planning to become pregnant, or are breastfeeding. It is not known if LANTUS may harm your unborn baby or breastfeeding baby. Tell your healthcare provider about all the medicines you take including prescription and over-the-counter medicines, vitamins, and herbal supplements. Before you start using LANTUS, talk to your healthcare provider about low blood sugar and how to manage it.\nHow should I use LANTUS SoloStar? - Read the detailed Instructions for Use that come with your LANTUS SoloStar single-patient-use prefilled pen. - Use LANTUS exactly as your healthcare provider tells you to. Your healthcare provider should tell you how much LANTUS to use and when to use it. - Know the amount of LANTUS you use. Do not change the amount of LANTUS you use unless your healthcare provider tells you to. - Check your insulin label each time you give your injection to make sure you are using the correct insulin. - The dose counter on your SoloStar pen shows your dose of LANTUS. Do not make any dose changes unless your healthcare provider tells you to. - Do not use a syringe to remove LANTUS from your SoloStar disposable prefilled pen. - Do not re-use needles. Always use a new needle for each injection. Re-use of needles increases your risk of having blocked needles, which may cause you to get the wrong dose of LANTUS. Using a new needle for each injection lowers your risk of getting an infection. If your needle is blocked, follow the instructions in Step 3 of the Instructions for Use. - You may take LANTUS at any time during the day but you must take it at the same time every day. - LANTUS is injected under the skin (subcutaneously) of your upper legs (thighs), upper arms, or stomach area (abdomen). - Do not use LANTUS in an insulin pump or inject LANTUS into your vein (intravenously). - Change (rotate) your injection sites within area you chose with each dose to reduce your risk of getting lipodystrophy (pits in skin or thickened skin) and localized cutaneous amyloidosis (skin with lumps) at the injection sites. - Do not use the exact same spot for each injection. - Do not inject where the skin has pits, is thickened, or has lumps. - Do not inject where skin is tender, bruised, scaly or hard, or into scars or damaged skin. - Do not mix LANTUS with any other type of insulin or liquid medicine. - Check your blood sugar levels. Ask your healthcare provider what your blood sugar should be and when you should check your blood sugar levels. Keep LANTUS and all medicines out of the reach of children.\nYour dose of LANTUS may need to change because of: - a change in level of physical activity or exercise, weight gain or loss, increased stress, illness, change in diet, or because of the medicines you take.\nWhat should I avoid while using LANTUS? While using LANTUS do not: - drive or operate heavy machinery, until you know how LANTUS affects you. - drink alcohol or use over-the-counter medicines that contain alcohol.\nWhat are the possible side effects of LANTUS and other insulins? LANTUS may cause serious side effects that can lead to death, including: - low blood sugar (hypoglycemia). Signs and symptoms that may indicate low blood sugar include: - dizziness or light-headedness, sweating, confusion, headache, blurred vision, slurred speech, shakiness, fast heartbeat, anxiety, irritability or mood change, hunger. - severe allergic reaction (whole body reaction). Get medical help right away if you have any of these signs or symptoms of a severe allergic reaction: - a rash over your whole body, trouble breathing, a fast heartbeat, or sweating. - low potassium in your blood (hypokalemia). - heart failure. Taking certain diabetes pills called TZDs (thiazolidinediones) with LANTUS may cause heart failure in some people. This can happen even if you have never had heart failure or heart problems before. If you already have heart failure it may get worse while you take TZDs with LANTUS. Your healthcare provider should monitor you closely while you are taking TZDs with LANTUS. Tell your healthcare provider if you have any new or worse symptoms of heart failure including: Treatment with TZDs and LANTUS may need to be changed or stopped by your healthcare provider if you have new or worse heart failure. - shortness of breath, swelling of your ankles or feet, sudden weight gain. Get emergency medical help if you have: - trouble breathing; shortness of breath; fast heartbeat; swelling of your face, tongue, or throat; sweating; extreme drowsiness; dizziness; confusion. The most common side effects of LANTUS include: - low blood sugar (hypoglycemia); weight gain; allergic reactions, including reactions at your injection site; skin thickening or pits at the injection site (lipodystrophy). These are not all the possible side effects of LANTUS. Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.\nGeneral information about the safe and effective use of LANTUS. Medicines are sometimes prescribed for purposes other than those listed in a Patient Information leaflet. Do not use LANTUS for a condition for which it was not prescribed. Do not give LANTUS to other people, even if they have the same symptoms that you have. It may harm them. This Patient Information leaflet summarizes the most important information about LANTUS. If you would like more information, talk with your healthcare provider. You can ask your healthcare provider or pharmacist for information about LANTUS that is written for healthcare professionals. For more information about LANTUS call 1-800-633-1610 or go to the website www.lantus.com.\nWhat are the ingredients in LANTUS? - Active ingredient: insulin glargine - 3 mL SoloStar prefilled pen inactive ingredients: glycerol 85%, m-cresol, zinc, and Water for Injection, USP. Hydrochloric acid and sodium hydroxide may be added to adjust the pH.\nManufactured by: sanofi-aventis U.S. LLC, Morristown, NJ 07960, A SANOFI COMPANY. U.S. License No. 1752\n\nThis Patient Information has been approved by the U.S. Food and Drug Administration.\nRevised: May 2025"
+  }
+ ],
+ "skipped_codes": []
+}

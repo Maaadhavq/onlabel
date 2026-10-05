@@ -51,8 +51,9 @@ export function ProofCard({ doc, sel, onSelect, onEdit }) {
     Object.keys(doc.reviews).forEach((n) => seen.current.add(n));
   });
 
-  const label = doc.labels[0];
   const parts = segments(doc.text, doc.claims);
+  const labelText = (l) =>
+    `the ${(l.products || [l.key]).join(" and ")} label, version ${l.version}${l.effective_time ? `, effective ${formatDate(l.effective_time)}` : ""}`;
   return (
     <article className="sheet" aria-labelledby="copy-title">
       <div className="sheet-head">
@@ -90,8 +91,9 @@ export function ProofCard({ doc, sel, onSelect, onEdit }) {
       </p>
       <p className="sheet-foot">
         {doc.claims.length > 0 ? `${doc.claims.length} claims found. ` : ""}
-        {label
-          ? `Checked against the ${(label.products || [label.key])[0]} label, version ${label.version}${label.effective_time ? `, effective ${formatDate(label.effective_time)}` : ""}.`
+        {doc.labels.length ? `Checked against ${doc.labels.map(labelText).join(" and ")}.` : ""}
+        {doc.ambiguous && doc.labels.length > 1
+          ? " The drug named in the copy appears on more than one label, so every claim was checked against each. Pick a label at the top to narrow the check."
           : ""}
         {doc.splitBy === "sentences" ? " Claims were split by sentence because no model was available to split them." : ""}
       </p>

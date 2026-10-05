@@ -1,0 +1,37 @@
+{
+ "key": "4d269b514436071be7967e99e5d3aaad211c1629c460977d870370087a8a0735",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:8:0",
+    "quote": "Serious hypersensitivity reactions, including anaphylaxis and angioedema, have been reported with WEGOVY"
+   },
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "Possible thyroid tumors, including cancer... In studies with rodents, WEGOVY ... caused thyroid tumors, including thyroid cancer."
+   },
+   {
+    "chunk_id": "wegovy:v19:10:0",
+    "quote": "Acute pancreatitis, including fatal and non-fatal hemorrhagic or necrotizing pancreatitis, has been observed in patients treated with GLP-1 receptor agonists, including WEGOVY"
+   },
+   {
+    "chunk_id": "wegovy:v19:45:6",
+    "quote": "Wegovy may cause gallbladder problems including gallstones."
+   },
+   {
+    "chunk_id": "wegovy:v19:20:0",
+    "quote": "The following serious adverse reactions are described... Acute Pancreatitis... Acute Gallbladder Disease... Hypersensitivity Reactions... Risk of Thyroid C-cell Tumors"
+   }
+  ],
+  "reasoning": "The claim lists hypersensitivity reactions, possible thyroid tumors, pancreatitis, and gallbladder problems as serious side effects. Each of these is explicitly mentioned in the FDA label excerpts as serious adverse reactions or warnings.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 443,
+  "prompt_tokens": 2049
+ }
+}

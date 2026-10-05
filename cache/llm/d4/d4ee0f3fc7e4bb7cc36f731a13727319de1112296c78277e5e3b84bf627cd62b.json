@@ -1,0 +1,21 @@
+{
+ "key": "d4ee0f3fc7e4bb7cc36f731a13727319de1112296c78277e5e3b84bf627cd62b",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "OZEMPIC is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular events (cardiovascular death, non-fatal myocardial infarction or non-fatal stroke) in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."
+   }
+  ],
+  "reasoning": "The claim states three indications that are all listed verbatim in the INDICATIONS AND USAGE excerpt, matching the population (adults with type 2 diabetes), the adjunct to diet and exercise, and the specific risk reductions for cardiovascular events, kidney outcomes, and end‑stage kidney disease.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 268,
+  "prompt_tokens": 1994
+ }
+}

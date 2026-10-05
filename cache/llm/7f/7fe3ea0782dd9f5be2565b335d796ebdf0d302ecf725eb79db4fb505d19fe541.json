@@ -1,0 +1,21 @@
+{
+ "key": "7fe3ea0782dd9f5be2565b335d796ebdf0d302ecf725eb79db4fb505d19fe541",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:40:13",
+    "quote": "- % change from baseline (LSMean) | -2.4 | -14.9 | -3.4 | -9.6 | -5.7 | -16"
+   }
+  ],
+  "reasoning": "The claim states that in adults with obesity or overweight and comorbidity treated with WEGOVY 2.4 mg, the mean percent change in body weight was –14.9% at week 68 (Study 2). Table 8 in the label excerpt shows a –14.9 LSMean percent change for Study 2 at week 68, matching the claim exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 235,
+  "prompt_tokens": 2725
+ }
+}

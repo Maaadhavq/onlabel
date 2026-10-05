@@ -1,0 +1,13 @@
+{
+ "key": "00db85cc415a81a96b721a2830bf87783a62d35ecc5cbf00282b24375318af0e",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Ozempic is approved for use in adults with type 2 diabetes mellitus as an adjunct to diet and exercise to improve glycemic control, to reduce the risk of major adverse cardiovascular events in those with established cardiovascular disease, and to reduce the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death in those with chronic kidney disease."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 235,
+  "prompt_tokens": 915
+ }
+}

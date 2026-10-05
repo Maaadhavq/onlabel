@@ -1,0 +1,25 @@
+{
+ "key": "2911fd052cc669ea3b086b468c8785ea0a82c6533a769b88b81762a6b74aea4d",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:75:2",
+    "quote": "Change at Week 40 | -1.9 | -2.0 | -2.2 | -2.3"
+   },
+   {
+    "chunk_id": "mounjaro:v40:75:0",
+    "quote": "Treatment with MOUNJARO 10 mg and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with semaglutide 1 mg once weekly (see Table 5 and Figure 2)."
+   }
+  ],
+  "reasoning": "Table 5 shows that at Week 40 the HbA1c change was -1.9% for semaglutide 1 mg and -2.2% (10 mg) and -2.3% (15 mg) for MOUNJARO, indicating a greater reduction with MOUNJARO. The text also states the reduction was statistically significant versus semaglutide.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 358,
+  "prompt_tokens": 2726
+ }
+}

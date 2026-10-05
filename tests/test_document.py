@@ -77,6 +77,11 @@ def test_detect_labels_prefers_brands_and_flags_generic_ambiguity():
     assert detect_labels("no drug named here", META) == ([], False)
 
 
+def test_a_brand_on_two_labels_is_ambiguous():
+    meta = {**META, "rybelsus": {"products": ["OZEMPIC", "RYBELSUS"], "generic": "semaglutide"}}
+    assert detect_labels("Ask about Ozempic", meta) == (["ozempic", "rybelsus"], True)
+
+
 def _boxed() -> list[Chunk]:
     text = "- In rodents, semaglutide causes thyroid C-cell tumors. It is unknown whether WEGOVY causes them."
     return [Chunk("w:v19:0:0", "wegovy", "set", 19, "WEGOVY", "semaglutide", 0,

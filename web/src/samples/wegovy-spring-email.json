@@ -5,7 +5,7 @@
  "label": "wegovy",
  "audience": "consumer",
  "text": "Your weight-loss journey starts here. Wegovy is approved for weight loss in children as young as 8. In clinical trials, adults lost an average of 14.9% of their body weight at 68 weeks. Wegovy also reduces the risk of heart attack and stroke. Unlike other options, Wegovy has no serious side effects. Use it with a reduced-calorie diet and increased physical activity. Ask your doctor if Wegovy is right for you.",
- "created": "2026-10-05T09:21:29+00:00",
+ "created": "2026-10-05T09:30:08+00:00",
  "events": [
   {
    "id": 0,
@@ -90,41 +90,27 @@
       "broadened_indication",
       "omitted_qualifier"
      ],
-     "reasoning": "The label excerpts state that Wegovy's safety and effectiveness have been established in pediatric patients aged 12 years and older, and the pediatric clinical study involved patients aged 12 years and older. There is no excerpt indicating approval for children as young as 8 years, so the claim extends beyond the approved age range.",
+     "reasoning": "The indication section lists pediatric patients aged 12 years and older for weight loss, and no mention of children as young as 8. Therefore the claim extends the approved age range.",
      "evidence": [
       {
-       "chunk_id": "wegovy:v19:28:0",
-       "quote": "The safety and effectiveness of WEGOVY injection in combination with a reduced-calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in pediatric patients aged 12 years and older with obesity have been established.",
-       "match": "elided",
-       "section_path": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
-       "drug": "WEGOVY",
-       "label_version": 19,
-       "effective_time": "20260618",
-       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
-       "kind": "text",
-       "before": "",
-       "after": " Use of WEGOVY injection for this indication is supported by a 68-week, double-blind, placebo-controlled clinical trial in 201 pediatric patients aged 12 years and older with a BMI corresponding to ≥95th percentile for age and sex [see…",
-       "table": null
-      },
-      {
-       "chunk_id": "wegovy:v19:41:1",
-       "quote": "Weight Reduction and Long-term Maintenance Study of WEGOVY Injection in Pediatric Patients Aged 12 Years and Older with Obesity",
+       "chunk_id": "wegovy:v19:1:0",
+       "quote": "to reduce excess body weight and maintain weight reduction long term in:\n  - adults and pediatric patients aged 12 years and older with obesity.",
        "match": "exact",
-       "section_path": "14 CLINICAL STUDIES > 14.3 Weight Reduction and Long-term Maintenance Study of WEGOVY Injection in Pediatric Patients Aged 12 Years and Older with Obesity",
+       "section_path": "1 INDICATIONS AND USAGE",
        "drug": "WEGOVY",
        "label_version": 19,
        "effective_time": "20260618",
        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
        "kind": "text",
-       "before": "",
-       "after": "",
+       "before": "…and increased physical activity:\n\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight.\n- ",
+       "after": "\n  - adults with overweight in the presence of at least one weight-related comorbid condition.\n- for the treatment of noncirrhotic metabolic dysfunction-associated steatohepatitis (MASH), formerly known as nonalcoholic steatohepatitis…",
        "table": null
       }
      ],
      "checks": [
       {
        "ok": true,
-       "text": "2 of 2 quotes found word for word in the label."
+       "text": "1 of 1 quotes found word for word in the label."
       },
       {
        "ok": true,
@@ -133,6 +119,22 @@
      ],
      "flags": [],
      "retrieved": [
+      {
+       "chunk_id": "wegovy:v19:1:0",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0328,
+       "dense_rank": 1,
+       "bm25_rank": 1,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "wegovy:v19:1:1",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0323,
+       "dense_rank": 2,
+       "bm25_rank": 2,
+       "number_rank": null
+      },
       {
        "chunk_id": "wegovy:v19:40:12",
        "section": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
@@ -164,30 +166,26 @@
        "dense_rank": 5,
        "bm25_rank": 39,
        "number_rank": 24
-      },
-      {
-       "chunk_id": "wegovy:v19:28:0",
-       "section": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
-       "score": 0.0358,
-       "dense_rank": 4,
-       "bm25_rank": 48,
-       "number_rank": 32
       }
      ],
      "model": "groq/gpt-oss-120b",
      "source": "live",
      "prompt_version": "judge-v2",
-     "tokens": 2403,
-     "latency_s": 1.68,
+     "tokens": 2466,
+     "latency_s": 1.12,
      "trace": [
       {
        "step": "search_label",
        "labels": [
         "wegovy"
        ],
-       "n_hits": 5,
+       "n_hits": 6,
        "pinned_for_figures": 1,
-       "ms": 42
+       "routed_to": [
+        "Indications and Usage"
+       ],
+       "routed_added": 2,
+       "ms": 41
       },
       {
        "step": "judge",
@@ -196,22 +194,22 @@
        "attempts": [
         {
          "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2110,
-         "completion_tokens": 293,
-         "latency_s": 1.626763000007486,
+         "prompt_tokens": 2242,
+         "completion_tokens": 224,
+         "latency_s": 1.0736714000231586,
          "repaired": false
         }
        ],
-       "tokens": 2403,
-       "ms": 1627
+       "tokens": 2466,
+       "ms": 1074
       },
       {
        "step": "guards",
        "status": "off_label",
        "flags": [],
-       "kept_quotes": 2,
-       "proposed_quotes": 2,
-       "ms": 1.1
+       "kept_quotes": 1,
+       "proposed_quotes": 1,
+       "ms": 0.1
       }
      ]
     }
@@ -398,10 +396,10 @@
       }
      ],
      "model": "groq/gpt-oss-120b",
-     "source": "live",
+     "source": "cache",
      "prompt_version": "judge-v2",
      "tokens": 3112,
-     "latency_s": 1.69,
+     "latency_s": 0.05,
      "trace": [
       {
        "step": "search_label",
@@ -410,23 +408,20 @@
        ],
        "n_hits": 5,
        "pinned_for_figures": 1,
-       "ms": 47
+       "routed_to": [
+        "Indications and Usage",
+        "Clinical Studies"
+       ],
+       "routed_added": 0,
+       "ms": 48
       },
       {
        "step": "judge",
        "model": "groq/gpt-oss-120b",
-       "source": "live",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2679,
-         "completion_tokens": 433,
-         "latency_s": 1.6415103999897838,
-         "repaired": false
-        }
-       ],
+       "source": "cache",
+       "attempts": [],
        "tokens": 3112,
-       "ms": 1642
+       "ms": 0
       },
       {
        "step": "guards",
@@ -450,96 +445,27 @@
      "status": "needs_qualifier",
      "model_verdict": "needs_qualifier",
      "violations": [
-      "overstated_efficacy",
       "omitted_qualifier"
      ],
-     "reasoning": "The label shows a statistically significant reduction in non-fatal myocardial infarction (HR 0.72) but the reduction in non-fatal stroke (HR 0.89) was not statistically significant. The claim that Wegovy reduces the risk of heart attack and stroke omits the qualifier that stroke risk reduction was not demonstrated as significant.",
+     "reasoning": "The label indicates Wegovy is indicated to reduce major adverse cardiovascular events (including non‑fatal myocardial infarction and non‑fatal stroke) in adults with established cardiovascular disease and obesity or overweight. The claim states a risk reduction for heart attack and stroke but does not specify this population or the required background of diet and activity, so a qualifying condition is missing.",
      "evidence": [
       {
-       "chunk_id": "wegovy:v19:39:5",
-       "quote": "Fatal or non-fatal myocardial infarction^5 | 334 (3.8%) | 243 (2.8%) | 0.72 (0.61; 0.85)",
+       "chunk_id": "wegovy:v19:1:1",
+       "quote": "- to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight.",
        "match": "exact",
-       "section_path": "14 CLINICAL STUDIES > 14.1 Cardiovascular Outcomes Trial in Adult Patients with Cardiovascular Disease and Either Obesity or Overweight",
+       "section_path": "1 INDICATIONS AND USAGE",
        "drug": "WEGOVY",
        "label_version": 19,
        "effective_time": "20260618",
        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
-       "kind": "table",
-       "before": "…or non-fatal stroke^1 | 701 (8%) | 569 (6.5%) | 0.8 (0.72; 0.9)^*,2\nKey secondary endpoints | | |\nCV death^3 | 262 (3%) | 223 (2.5%) | 0.85 (0.71; 1.01)\nAll-cause death^4 | 458 (5.2%) | 375 (4.3%) | 0.81 (0.71; 0.93)\nOther endpoints | | |\n",
-       "after": "\nFatal or non-fatal stroke^5 | 178 (2%) | 160 (1.8%) | 0.89 (0.72; 1.11)\nHospitalization for heart failure or urgent heart failure visits^5,6 | 122 (1.4%) | 97 (1.1%) | 0.79 (0.6; 1.03)\n\np-value <0.001, one-sided p-value\n\n^1 Primary…",
-       "table": {
-        "caption": "Table 6. Treatment Effect for MACE and Other Events in Study 1 with WEGOVY Injection",
-        "header": [
-         [
-          "",
-          "Patients with events n (%)",
-          ""
-         ],
-         [
-          "",
-          "Placebo N=8,801",
-          "WEGOVY Injection N=8,803",
-          "Hazard Ratio (95% CI)"
-         ]
-        ],
-        "rows": [
-         [
-          "Composite of CV death, non-fatal myocardial infarction, or non-fatal stroke^1",
-          "701 (8%)",
-          "569 (6.5%)",
-          "0.8 (0.72; 0.9)^*,2"
-         ],
-         [
-          "Key secondary endpoints",
-          "",
-          "",
-          ""
-         ],
-         [
-          "CV death^3",
-          "262 (3%)",
-          "223 (2.5%)",
-          "0.85 (0.71; 1.01)"
-         ],
-         [
-          "All-cause death^4",
-          "458 (5.2%)",
-          "375 (4.3%)",
-          "0.81 (0.71; 0.93)"
-         ],
-         [
-          "Other endpoints",
-          "",
-          "",
-          ""
-         ],
-         [
-          "Fatal or non-fatal myocardial infarction^5",
-          "334 (3.8%)",
-          "243 (2.8%)",
-          "0.72 (0.61; 0.85)"
-         ],
-         [
-          "Fatal or non-fatal stroke^5",
-          "178 (2%)",
-          "160 (1.8%)",
-          "0.89 (0.72; 1.11)"
-         ],
-         [
-          "Hospitalization for heart failure or urgent heart failure visits^5,6",
-          "122 (1.4%)",
-          "97 (1.1%)",
-          "0.79 (0.6; 1.03)"
-         ]
-        ],
-        "highlight": [
-         5
-        ]
-       }
+       "kind": "text",
+       "before": "",
+       "after": "\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity, or in adults with overweight in the presence of at least one weight-related comorbid condition.\n\nLimitations of Use\n\nConcomitant use of WEGOVY…",
+       "table": null
       },
       {
        "chunk_id": "wegovy:v19:39:5",
-       "quote": "Fatal or non-fatal stroke^5 | 178 (2%) | 160 (1.8%) | 0.89 (0.72; 1.11)",
+       "quote": "Composite of CV death, non-fatal myocardial infarction, or non-fatal stroke^1 | 701 (8%) | 569 (6.5%) | 0.8 (0.72; 0.9)^*,2",
        "match": "exact",
        "section_path": "14 CLINICAL STUDIES > 14.1 Cardiovascular Outcomes Trial in Adult Patients with Cardiovascular Disease and Either Obesity or Overweight",
        "drug": "WEGOVY",
@@ -547,8 +473,8 @@
        "effective_time": "20260618",
        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
        "kind": "table",
-       "before": "…| | |\nCV death^3 | 262 (3%) | 223 (2.5%) | 0.85 (0.71; 1.01)\nAll-cause death^4 | 458 (5.2%) | 375 (4.3%) | 0.81 (0.71; 0.93)\nOther endpoints | | |\nFatal or non-fatal myocardial infarction^5 | 334 (3.8%) | 243 (2.8%) | 0.72 (0.61; 0.85)\n",
-       "after": "\nHospitalization for heart failure or urgent heart failure visits^5,6 | 122 (1.4%) | 97 (1.1%) | 0.79 (0.6; 1.03)\n\np-value <0.001, one-sided p-value\n\n^1 Primary endpoint\n\n^2 Adjusted for group sequential design using the likelihood ratio…",
+       "before": "",
+       "after": "\nKey secondary endpoints | | |\nCV death^3 | 262 (3%) | 223 (2.5%) | 0.85 (0.71; 1.01)\nAll-cause death^4 | 458 (5.2%) | 375 (4.3%) | 0.81 (0.71; 0.93)\nOther endpoints | | |\nFatal or non-fatal myocardial infarction^5 | 334 (3.8%) | 243…",
        "table": {
         "caption": "Table 6. Treatment Effect for MACE and Other Events in Study 1 with WEGOVY Injection",
         "header": [
@@ -615,7 +541,7 @@
          ]
         ],
         "highlight": [
-         6
+         0
         ]
        }
       }
@@ -632,6 +558,14 @@
      ],
      "flags": [],
      "retrieved": [
+      {
+       "chunk_id": "wegovy:v19:39:0",
+       "section": "14 CLINICAL STUDIES > 14.1 Cardiovascular Outcomes Trial in Adult Patients with Cardiovascular Disease and Either Obesity or Overweight",
+       "score": 0.0313,
+       "dense_rank": 3,
+       "bm25_rank": 5,
+       "number_rank": null
+      },
       {
        "chunk_id": "wegovy:v19:39:5",
        "section": "14 CLINICAL STUDIES > 14.1 Cardiovascular Outcomes Trial in Adult Patients with Cardiovascular Disease and Either Obesity or Overweight",
@@ -676,17 +610,22 @@
      "model": "groq/gpt-oss-120b",
      "source": "live",
      "prompt_version": "judge-v2",
-     "tokens": 2783,
-     "latency_s": 58.6,
+     "tokens": 3037,
+     "latency_s": 2.53,
      "trace": [
       {
        "step": "search_label",
        "labels": [
         "wegovy"
        ],
-       "n_hits": 5,
+       "n_hits": 6,
        "pinned_for_figures": 0,
-       "ms": 51
+       "routed_to": [
+        "Indications and Usage",
+        "Clinical Studies"
+       ],
+       "routed_added": 1,
+       "ms": 40
       },
       {
        "step": "judge",
@@ -695,14 +634,14 @@
        "attempts": [
         {
          "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2386,
-         "completion_tokens": 397,
-         "latency_s": 1.9205112000054214,
+         "prompt_tokens": 2617,
+         "completion_tokens": 420,
+         "latency_s": 2.481546900002286,
          "repaired": false
         }
        ],
-       "tokens": 2783,
-       "ms": 1921
+       "tokens": 3037,
+       "ms": 2482
       },
       {
        "step": "guards",
@@ -726,11 +665,26 @@
      "status": "contradicted",
      "model_verdict": "contradicted",
      "violations": [
+      "overstated_efficacy",
       "minimized_risk",
       "unsupported_absolute_claim"
      ],
-     "reasoning": "The claim states Wegovy has no serious side effects, but the label explicitly lists several serious side effects such as possible thyroid tumors, pancreatitis, gallbladder problems, and increased heart rate. Therefore the claim is directly contradicted by the label.",
+     "reasoning": "The claim states Wegovy has no serious side effects, but the label excerpts list multiple serious side effects such as hypersensitivity reactions, possible thyroid tumors, pancreatitis, and gallbladder problems. This directly conflicts with the claim.",
      "evidence": [
+      {
+       "chunk_id": "wegovy:v19:15:0",
+       "quote": "Serious hypersensitivity reactions (e.g., anaphylaxis, angioedema) have been reported with WEGOVY.",
+       "match": "exact",
+       "section_path": "5 WARNINGS AND PRECAUTIONS > 5.7 Hypersensitivity Reactions",
+       "drug": "WEGOVY",
+       "label_version": 19,
+       "effective_time": "20260618",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+       "kind": "text",
+       "before": "",
+       "after": " If hypersensitivity reactions occur, discontinue use of WEGOVY, treat promptly per standard of care, and monitor until signs and symptoms resolve. WEGOVY is contraindicated in patients with a prior serious hypersensitivity reaction to…",
+       "table": null
+      },
       {
        "chunk_id": "wegovy:v19:45:1",
        "quote": "WEGOVY may cause serious side effects, including: - Possible thyroid tumors, including cancer.",
@@ -749,7 +703,7 @@
      "checks": [
       {
        "ok": false,
-       "text": "1 of 2 quotes found word for word in the label."
+       "text": "2 of 3 quotes found word for word in the label."
       },
       {
        "ok": false,
@@ -764,6 +718,22 @@
       "quote_not_found_in_excerpt"
      ],
      "retrieved": [
+      {
+       "chunk_id": "wegovy:v19:15:0",
+       "section": "5 WARNINGS AND PRECAUTIONS > 5.7 Hypersensitivity Reactions",
+       "score": 0.0323,
+       "dense_rank": 3,
+       "bm25_rank": 1,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "wegovy:v19:8:0",
+       "section": "4 CONTRAINDICATIONS",
+       "score": 0.0323,
+       "dense_rank": 2,
+       "bm25_rank": 2,
+       "number_rank": null
+      },
       {
        "chunk_id": "wegovy:v19:45:10",
        "section": "Medication Guide",
@@ -795,30 +765,28 @@
        "dense_rank": 12,
        "bm25_rank": 1,
        "number_rank": null
-      },
-      {
-       "chunk_id": "wegovy:v19:45:9",
-       "section": "Medication Guide",
-       "score": 0.029,
-       "dense_rank": 10,
-       "bm25_rank": 8,
-       "number_rank": null
       }
      ],
      "model": "groq/gpt-oss-120b",
      "source": "live",
      "prompt_version": "judge-v2",
-     "tokens": 2305,
-     "latency_s": 1.42,
+     "tokens": 2330,
+     "latency_s": 57.82,
      "trace": [
       {
        "step": "search_label",
        "labels": [
         "wegovy"
        ],
-       "n_hits": 5,
+       "n_hits": 6,
        "pinned_for_figures": 0,
-       "ms": 12
+       "routed_to": [
+        "Boxed Warning",
+        "Contraindications",
+        "Warnings and Precautions"
+       ],
+       "routed_added": 2,
+       "ms": 35
       },
       {
        "step": "judge",
@@ -827,14 +795,14 @@
        "attempts": [
         {
          "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 1942,
-         "completion_tokens": 363,
-         "latency_s": 1.393659099994693,
+         "prompt_tokens": 2001,
+         "completion_tokens": 329,
+         "latency_s": 1.4492687000019941,
          "repaired": false
         }
        ],
-       "tokens": 2305,
-       "ms": 1394
+       "tokens": 2330,
+       "ms": 1449
       },
       {
        "step": "guards",
@@ -842,9 +810,9 @@
        "flags": [
         "quote_not_found_in_excerpt"
        ],
-       "kept_quotes": 1,
-       "proposed_quotes": 2,
-       "ms": 15.4
+       "kept_quotes": 2,
+       "proposed_quotes": 3,
+       "ms": 18.2
       }
      ]
     }
@@ -945,10 +913,10 @@
       }
      ],
      "model": "groq/gpt-oss-120b",
-     "source": "live",
+     "source": "cache",
      "prompt_version": "judge-v2",
      "tokens": 2525,
-     "latency_s": 58.47,
+     "latency_s": 0.02,
      "trace": [
       {
        "step": "search_label",
@@ -957,23 +925,17 @@
        ],
        "n_hits": 5,
        "pinned_for_figures": 0,
-       "ms": 11
+       "routed_to": [],
+       "routed_added": 0,
+       "ms": 8
       },
       {
        "step": "judge",
        "model": "groq/gpt-oss-120b",
-       "source": "live",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2213,
-         "completion_tokens": 312,
-         "latency_s": 1.8116800999850966,
-         "repaired": false
-        }
-       ],
+       "source": "cache",
+       "attempts": [],
        "tokens": 2525,
-       "ms": 1812
+       "ms": 0
       },
       {
        "step": "guards",
@@ -1011,10 +973,693 @@
    "id": 8,
    "event": "done",
    "data": {
-    "seconds": 123.5,
-    "tokens": 14023,
+    "seconds": 62.4,
+    "tokens": 14131,
     "n_claims": 5
    }
   }
- ]
+ ],
+ "rewrites": {
+  "1": {
+   "rewrite": "Wegovy is approved to reduce excess body weight, in combination with a reduced‑calorie diet and increased physical activity, for pediatric patients aged 12 years and older.",
+   "model": "groq/gpt-oss-120b",
+   "review": {
+    "claim": "Wegovy is approved to reduce excess body weight, in combination with a reduced‑calorie diet and increased physical activity, for pediatric patients aged 12 years and older.",
+    "status": "supported",
+    "model_verdict": "supported",
+    "violations": [],
+    "reasoning": "The indication section states Wegovy injection is indicated to reduce excess body weight and maintain weight reduction long term in adults and pediatric patients aged 12 years and older with obesity, and that it is to be used in combination with a reduced‑calorie diet and increased physical activity. This directly matches the claim.",
+    "evidence": [
+     {
+      "chunk_id": "wegovy:v19:1:0",
+      "quote": "to reduce excess body weight and maintain weight reduction long term in:\n  - adults and pediatric patients aged 12 years and older with obesity.",
+      "match": "exact",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "…and increased physical activity:\n\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight.\n- ",
+      "after": "\n  - adults with overweight in the presence of at least one weight-related comorbid condition.\n- for the treatment of noncirrhotic metabolic dysfunction-associated steatohepatitis (MASH), formerly known as nonalcoholic steatohepatitis…",
+      "table": null
+     },
+     {
+      "chunk_id": "wegovy:v19:1:0",
+      "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:",
+      "match": "normalized",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "",
+      "after": "\n\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight.\n- to reduce excess body weight and…",
+      "table": null
+     }
+    ],
+    "checks": [
+     {
+      "ok": true,
+      "text": "2 of 2 quotes found word for word in the label."
+     },
+     {
+      "ok": true,
+      "text": "Figures 12 appear in the quoted label text."
+     }
+    ],
+    "flags": [],
+    "retrieved": [
+     {
+      "chunk_id": "wegovy:v19:1:1",
+      "section": "1 INDICATIONS AND USAGE",
+      "score": 0.0323,
+      "dense_rank": 2,
+      "bm25_rank": 2,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:28:0",
+      "section": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
+      "score": 0.0489,
+      "dense_rank": 2,
+      "bm25_rank": 1,
+      "number_rank": 1
+     },
+     {
+      "chunk_id": "wegovy:v19:41:0",
+      "section": "14 CLINICAL STUDIES > 14.3 Weight Reduction and Long-term Maintenance Study of WEGOVY Injection in Pediatric Patients Aged 12 Years and Older with Obesity",
+      "score": 0.0476,
+      "dense_rank": 1,
+      "bm25_rank": 4,
+      "number_rank": 4
+     },
+     {
+      "chunk_id": "wegovy:v19:45:2",
+      "section": "Medication Guide",
+      "score": 0.0476,
+      "dense_rank": 3,
+      "bm25_rank": 3,
+      "number_rank": 3
+     },
+     {
+      "chunk_id": "wegovy:v19:1:0",
+      "section": "1 INDICATIONS AND USAGE",
+      "score": 0.0456,
+      "dense_rank": 15,
+      "bm25_rank": 2,
+      "number_rank": 2
+     },
+     {
+      "chunk_id": "wegovy:v19:41:1",
+      "section": "14 CLINICAL STUDIES > 14.3 Weight Reduction and Long-term Maintenance Study of WEGOVY Injection in Pediatric Patients Aged 12 Years and Older with Obesity",
+      "score": 0.0427,
+      "dense_rank": 4,
+      "bm25_rank": 15,
+      "number_rank": 13
+     }
+    ],
+    "model": "groq/gpt-oss-120b",
+    "source": "live",
+    "prompt_version": "judge-v2",
+    "tokens": 2870,
+    "latency_s": 1.36,
+    "trace": [
+     {
+      "step": "search_label",
+      "labels": [
+       "wegovy"
+      ],
+      "n_hits": 6,
+      "pinned_for_figures": 1,
+      "routed_to": [
+       "Indications and Usage"
+      ],
+      "routed_added": 1,
+      "ms": 22
+     },
+     {
+      "step": "judge",
+      "model": "groq/gpt-oss-120b",
+      "source": "live",
+      "attempts": [
+       {
+        "model": "groq/gpt-oss-120b",
+        "prompt_tokens": 2522,
+        "completion_tokens": 348,
+        "latency_s": 1.3359606000012718,
+        "repaired": false
+       }
+      ],
+      "tokens": 2870,
+      "ms": 1336
+     },
+     {
+      "step": "guards",
+      "status": "supported",
+      "flags": [],
+      "kept_quotes": 2,
+      "proposed_quotes": 2,
+      "ms": 0.3
+     }
+    ]
+   }
+  },
+  "2": {
+   "rewrite": "In adults with obesity or overweight and comorbidity treated with WEGOVY 2.4 mg injection, the mean percent change in body weight was ‑14.9% at week 68 (Study 2).",
+   "model": "groq/gpt-oss-120b",
+   "review": {
+    "claim": "In adults with obesity or overweight and comorbidity treated with WEGOVY 2.4 mg injection, the mean percent change in body weight was ‑14.9% at week 68 (Study 2).",
+    "status": "supported",
+    "model_verdict": "supported",
+    "violations": [],
+    "reasoning": "The claim states that in adults with obesity or overweight and comorbidity treated with WEGOVY 2.4 mg, the mean percent change in body weight was –14.9% at week 68 (Study 2). Table 8 in the label excerpt shows a –14.9 LSMean percent change for Study 2 at week 68, matching the claim exactly.",
+    "evidence": [
+     {
+      "chunk_id": "wegovy:v19:40:13",
+      "quote": "- % change from baseline (LSMean) | -2.4 | -14.9 | -3.4 | -9.6 | -5.7 | -16",
+      "match": "exact",
+      "section_path": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "table",
+      "before": "",
+      "after": "\n- % difference from placebo (LSMean) (95% CI) | | -12.4 (‑13.3; ‑11.6) | | -6.2 (-7.3; -5.2) | | -10.3 (-11.8; -8.7)\n% of Patients losing greater than or equal to 5% body weight | 31.1 | 83.5 | 30.2 | 67.4 | 47.8 | 84.8\n- % difference…",
+      "table": {
+       "caption": "Table 8. Changes in Body Weight at Week 68 in Studies 2, 3, and 4 with WEGOVY 2.4 mg Injection",
+       "header": [
+        [
+         "",
+         "Study 2 (Obesity or Overweight with Comorbidity)",
+         "Study 3 (Type 2 Diabetes with Obesity or Overweight)",
+         "Study 4 (Obesity or Overweight with Comorbidity Undergoing Intensive Lifestyle Therapy)"
+        ],
+        [
+         "Intention-to-Treat^1",
+         "PLACEBO N=655",
+         "WEGOVY Injection N=1,306",
+         "PLACEBO N=403",
+         "WEGOVY Injection N=404",
+         "PLACEBO N=204",
+         "WEGOVY Injection N=407"
+        ]
+       ],
+       "rows": [
+        [
+         "% change from baseline (LSMean)",
+         "-2.4",
+         "-14.9",
+         "-3.4",
+         "-9.6",
+         "-5.7",
+         "-16"
+        ],
+        [
+         "% difference from placebo (LSMean) (95% CI)",
+         "",
+         "-12.4 (‑13.3; ‑11.6)",
+         "",
+         "-6.2 (-7.3; -5.2)",
+         "",
+         "-10.3 (-11.8; -8.7)"
+        ],
+        [
+         "% of Patients losing greater than or equal to 5% body weight",
+         "31.1",
+         "83.5",
+         "30.2",
+         "67.4",
+         "47.8",
+         "84.8"
+        ],
+        [
+         "% difference from placebo (LSMean) (95% CI)",
+         "",
+         "52.4 (48.1; 56.7)",
+         "",
+         "37.2 (30.7; 43.8)",
+         "",
+         "37 (28.9; 45.2)"
+        ],
+        [
+         "% of Patients losing greater than or equal to 10% body weight",
+         "12",
+         "66.1",
+         "10.2",
+         "44.5",
+         "27.1",
+         "73"
+        ],
+        [
+         "% difference from placebo (LSMean) (95% CI)",
+         "",
+         "54.1 (50.4; 57.9)",
+         "",
+         "34.3 (28.4; 40.2)",
+         "",
+         "45.9 (38; 53.7)"
+        ],
+        [
+         "% of Patients losing greater than or equal to 15% body weight",
+         "4.8",
+         "47.9",
+         "4.3",
+         "25.1",
+         "13.2",
+         "53.4"
+        ]
+       ],
+       "highlight": [
+        0
+       ]
+      }
+     }
+    ],
+    "checks": [
+     {
+      "ok": true,
+      "text": "1 of 1 quotes found word for word in the label."
+     },
+     {
+      "ok": true,
+      "text": "Figures 14.9, 2.4, 68 appear in the quoted label text."
+     }
+    ],
+    "flags": [],
+    "retrieved": [
+     {
+      "chunk_id": "wegovy:v19:40:13",
+      "section": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
+      "score": 0.0476,
+      "dense_rank": 4,
+      "bm25_rank": 4,
+      "number_rank": 1
+     },
+     {
+      "chunk_id": "wegovy:v19:40:22",
+      "section": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
+      "score": 0.0449,
+      "dense_rank": 10,
+      "bm25_rank": 9,
+      "number_rank": 2
+     },
+     {
+      "chunk_id": "wegovy:v19:40:12",
+      "section": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
+      "score": 0.0487,
+      "dense_rank": 1,
+      "bm25_rank": 1,
+      "number_rank": 3
+     },
+     {
+      "chunk_id": "wegovy:v19:40:16",
+      "section": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
+      "score": 0.0474,
+      "dense_rank": 2,
+      "bm25_rank": 3,
+      "number_rank": 5
+     },
+     {
+      "chunk_id": "wegovy:v19:40:15",
+      "section": "14 CLINICAL STUDIES > 14.2 Weight Reduction and Long-term Maintenance Studies in Adults with Obesity or Overweight",
+      "score": 0.0471,
+      "dense_rank": 5,
+      "bm25_rank": 2,
+      "number_rank": 4
+     }
+    ],
+    "model": "groq/gpt-oss-120b",
+    "source": "live",
+    "prompt_version": "judge-v2",
+    "tokens": 2960,
+    "latency_s": 2.52,
+    "trace": [
+     {
+      "step": "search_label",
+      "labels": [
+       "wegovy"
+      ],
+      "n_hits": 5,
+      "pinned_for_figures": 1,
+      "routed_to": [
+       "Indications and Usage",
+       "Clinical Studies"
+      ],
+      "routed_added": 0,
+      "ms": 14
+     },
+     {
+      "step": "judge",
+      "model": "groq/gpt-oss-120b",
+      "source": "live",
+      "attempts": [
+       {
+        "model": "groq/gpt-oss-120b",
+        "prompt_tokens": 2725,
+        "completion_tokens": 235,
+        "latency_s": 1.471051400003489,
+        "repaired": false
+       }
+      ],
+      "tokens": 2960,
+      "ms": 1471
+     },
+     {
+      "step": "guards",
+      "status": "supported",
+      "flags": [],
+      "kept_quotes": 1,
+      "proposed_quotes": 1,
+      "ms": 0.1
+     }
+    ]
+   }
+  },
+  "3": {
+   "rewrite": "Wegovy, used with a reduced‑calorie diet and increased physical activity, reduces the risk of major cardiovascular events—including non‑fatal myocardial infarction and non‑fatal stroke—in adults with established cardiovascular disease who are overweight or have obesity.",
+   "model": "groq/gpt-oss-120b",
+   "review": {
+    "claim": "Wegovy, used with a reduced‑calorie diet and increased physical activity, reduces the risk of major cardiovascular events—including non‑fatal myocardial infarction and non‑fatal stroke—in adults with established cardiovascular disease who are overweight or have obesity.",
+    "status": "supported",
+    "model_verdict": "supported",
+    "violations": [],
+    "reasoning": "The claim states that Wegovy, used with a reduced‑calorie diet and increased physical activity, reduces the risk of major cardiovascular events—including non‑fatal myocardial infarction and non‑fatal stroke—in adults with established cardiovascular disease who are overweight or have obesity. The INDICATIONS AND USAGE excerpt explicitly lists this indication with the same population, condition, and required lifestyle measures.",
+    "evidence": [
+     {
+      "chunk_id": "wegovy:v19:1:0",
+      "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:\n\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight.",
+      "match": "normalized",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "",
+      "after": "\n- to reduce excess body weight and maintain weight reduction long term in:\n  - adults and pediatric patients aged 12 years and older with obesity.\n  - adults with overweight in the presence of at least one weight-related comorbid…",
+      "table": null
+     },
+     {
+      "chunk_id": "wegovy:v19:1:1",
+      "quote": "- to reduce the risk of major adverse CV events (CV death, non-fatal myocardial infarction, or non-fatal stroke) in adults with established CV disease and either obesity or overweight.",
+      "match": "exact",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "",
+      "after": "\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity, or in adults with overweight in the presence of at least one weight-related comorbid condition.\n\nLimitations of Use\n\nConcomitant use of WEGOVY…",
+      "table": null
+     }
+    ],
+    "checks": [
+     {
+      "ok": true,
+      "text": "2 of 2 quotes found word for word in the label."
+     },
+     {
+      "ok": true,
+      "text": "No figures in the claim to check."
+     }
+    ],
+    "flags": [],
+    "retrieved": [
+     {
+      "chunk_id": "wegovy:v19:1:0",
+      "section": "1 INDICATIONS AND USAGE",
+      "score": 0.0328,
+      "dense_rank": 1,
+      "bm25_rank": 1,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:1:1",
+      "section": "1 INDICATIONS AND USAGE",
+      "score": 0.0318,
+      "dense_rank": 2,
+      "bm25_rank": 4,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:45:2",
+      "section": "Medication Guide",
+      "score": 0.0318,
+      "dense_rank": 4,
+      "bm25_rank": 2,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:39:0",
+      "section": "14 CLINICAL STUDIES > 14.1 Cardiovascular Outcomes Trial in Adult Patients with Cardiovascular Disease and Either Obesity or Overweight",
+      "score": 0.0317,
+      "dense_rank": 3,
+      "bm25_rank": 3,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:39:5",
+      "section": "14 CLINICAL STUDIES > 14.1 Cardiovascular Outcomes Trial in Adult Patients with Cardiovascular Disease and Either Obesity or Overweight",
+      "score": 0.0301,
+      "dense_rank": 5,
+      "bm25_rank": 8,
+      "number_rank": null
+     }
+    ],
+    "model": "groq/gpt-oss-120b",
+    "source": "live",
+    "prompt_version": "judge-v2",
+    "tokens": 2619,
+    "latency_s": 59.35,
+    "trace": [
+     {
+      "step": "search_label",
+      "labels": [
+       "wegovy"
+      ],
+      "n_hits": 5,
+      "pinned_for_figures": 0,
+      "routed_to": [
+       "Indications and Usage",
+       "Clinical Studies"
+      ],
+      "routed_added": 0,
+      "ms": 27
+     },
+     {
+      "step": "judge",
+      "model": "groq/gpt-oss-120b",
+      "source": "live",
+      "attempts": [
+       {
+        "model": "groq/gpt-oss-120b",
+        "prompt_tokens": 2332,
+        "completion_tokens": 287,
+        "latency_s": 1.614469599997392,
+        "repaired": false
+       }
+      ],
+      "tokens": 2619,
+      "ms": 1614
+     },
+     {
+      "step": "guards",
+      "status": "supported",
+      "flags": [],
+      "kept_quotes": 2,
+      "proposed_quotes": 2,
+      "ms": 0.6
+     }
+    ]
+   }
+  },
+  "4": {
+   "rewrite": "Wegovy may cause serious side effects, including hypersensitivity reactions, possible thyroid tumors, pancreatitis, and gallbladder problems, as noted in the FDA label.",
+   "model": "groq/gpt-oss-120b",
+   "review": {
+    "claim": "Wegovy may cause serious side effects, including hypersensitivity reactions, possible thyroid tumors, pancreatitis, and gallbladder problems, as noted in the FDA label.",
+    "status": "supported",
+    "model_verdict": "supported",
+    "violations": [],
+    "reasoning": "The claim lists hypersensitivity reactions, possible thyroid tumors, pancreatitis, and gallbladder problems as serious side effects. Each of these is explicitly mentioned in the FDA label excerpts as serious adverse reactions or warnings.",
+    "evidence": [
+     {
+      "chunk_id": "wegovy:v19:8:0",
+      "quote": "Serious hypersensitivity reactions, including anaphylaxis and angioedema, have been reported with WEGOVY",
+      "match": "exact",
+      "section_path": "4 CONTRAINDICATIONS",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "…a personal or family history of MTC or in patients with MEN 2 [see Warnings and Precautions ( 5.1 )].\n- a prior serious hypersensitivity reaction to semaglutide or to any of the excipients in WEGOVY injection or WEGOVY tablet. ",
+      "after": " [see Warnings and Precautions (5.7)].",
+      "table": null
+     },
+     {
+      "chunk_id": "wegovy:v19:45:1",
+      "quote": "Possible thyroid tumors, including cancer. Tell your healthcare provider if you get a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath. These may be symptoms of thyroid cancer. In studies with rodents, WEGOVY and other medicines that work like WEGOVY caused thyroid tumors, including thyroid cancer.",
+      "match": "elided",
+      "section_path": "Medication Guide",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "What is the most important information I should know about WEGOVY? WEGOVY may cause serious side effects, including: - ",
+      "after": " It is not known if WEGOVY will cause thyroid tumors or a type of thyroid cancer called medullary thyroid carcinoma (MTC) in people. - Do not use WEGOVY if you or any of your family have ever had a type of thyroid cancer called medullary…",
+      "table": null
+     },
+     {
+      "chunk_id": "wegovy:v19:10:0",
+      "quote": "Acute pancreatitis, including fatal and non-fatal hemorrhagic or necrotizing pancreatitis, has been observed in patients treated with GLP-1 receptor agonists, including WEGOVY",
+      "match": "exact",
+      "section_path": "5 WARNINGS AND PRECAUTIONS > 5.2 Acute Pancreatitis",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "",
+      "after": " [see Adverse Reactions (6)]. After initiation of WEGOVY, observe patients carefully for signs and symptoms of acute pancreatitis, which may include persistent or severe abdominal pain (sometimes radiating to the back), and which may or…",
+      "table": null
+     },
+     {
+      "chunk_id": "wegovy:v19:45:6",
+      "quote": "WEGOVY may cause gallbladder problems including gallstones.",
+      "match": "normalized",
+      "section_path": "Medication Guide",
+      "drug": "WEGOVY",
+      "label_version": 19,
+      "effective_time": "20260618",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ee06186f-2aa3-4990-a760-757579d8f77b",
+      "kind": "text",
+      "before": "…your healthcare provider right away if you have severe pain in your stomach area (abdomen) that will not go away, with or without nausea or vomiting. Sometimes you may feel the pain from your abdomen to your back. - gallbladder problems. ",
+      "after": " Some gallbladder problems need surgery. Call your healthcare provider if you have any of the following symptoms:\n- pain in your upper stomach (abdomen) | - yellowing of skin or eyes (jaundice)\n- fever | - clay-colored stools",
+      "table": null
+     }
+    ],
+    "checks": [
+     {
+      "ok": false,
+      "text": "4 of 5 quotes found word for word in the label."
+     },
+     {
+      "ok": false,
+      "text": "1 quote dropped: the wording is not in the label text."
+     },
+     {
+      "ok": true,
+      "text": "No figures in the claim to check."
+     }
+    ],
+    "flags": [
+     "quote_not_found_in_excerpt"
+    ],
+    "retrieved": [
+     {
+      "chunk_id": "wegovy:v19:8:0",
+      "section": "4 CONTRAINDICATIONS",
+      "score": 0.0315,
+      "dense_rank": 5,
+      "bm25_rank": 2,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:10:0",
+      "section": "5 WARNINGS AND PRECAUTIONS > 5.2 Acute Pancreatitis",
+      "score": 0.0315,
+      "dense_rank": 4,
+      "bm25_rank": 3,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:45:6",
+      "section": "Medication Guide",
+      "score": 0.0328,
+      "dense_rank": 1,
+      "bm25_rank": 1,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:45:1",
+      "section": "Medication Guide",
+      "score": 0.032,
+      "dense_rank": 3,
+      "bm25_rank": 2,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:20:0",
+      "section": "6 ADVERSE REACTIONS",
+      "score": 0.0312,
+      "dense_rank": 4,
+      "bm25_rank": 4,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "wegovy:v19:44:0",
+      "section": "17 PATIENT COUNSELING INFORMATION",
+      "score": 0.0301,
+      "dense_rank": 8,
+      "bm25_rank": 5,
+      "number_rank": null
+     }
+    ],
+    "model": "groq/gpt-oss-120b",
+    "source": "live",
+    "prompt_version": "judge-v2",
+    "tokens": 2492,
+    "latency_s": 3.0,
+    "trace": [
+     {
+      "step": "search_label",
+      "labels": [
+       "wegovy"
+      ],
+      "n_hits": 6,
+      "pinned_for_figures": 0,
+      "routed_to": [
+       "Boxed Warning",
+       "Contraindications",
+       "Warnings and Precautions"
+      ],
+      "routed_added": 2,
+      "ms": 22
+     },
+     {
+      "step": "judge",
+      "model": "groq/gpt-oss-120b",
+      "source": "live",
+      "attempts": [
+       {
+        "model": "groq/gpt-oss-120b",
+        "prompt_tokens": 2049,
+        "completion_tokens": 443,
+        "latency_s": 2.9737441999895964,
+        "repaired": false
+       }
+      ],
+      "tokens": 2492,
+      "ms": 2974
+     },
+     {
+      "step": "guards",
+      "status": "supported",
+      "flags": [
+       "quote_not_found_in_excerpt"
+      ],
+      "kept_quotes": 4,
+      "proposed_quotes": 5,
+      "ms": 1.5
+     }
+    ]
+   }
+  }
+ }
 }

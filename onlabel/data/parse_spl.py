@@ -36,9 +36,11 @@ TOP_SECTIONS = {
     "34069-5": "How Supplied/Storage and Handling",
     "34076-0": "Patient Counseling Information",
     "42231-1": "Medication Guide",
+    "42230-3": "Patient Information",  # patient package insert (Lantus): consumer wording, like a med guide
 }
-# Product data, recent major changes, carton images, instructions for use: never evidence.
-SKIPPED_SECTIONS = {"48780-1", "43683-2", "51945-4", "59845-8"}
+# Product data, recent major changes, carton images, instructions for use, references, and
+# small untitled top-level blocks (distributor lines): never evidence.
+SKIPPED_SECTIONS = {"48780-1", "43683-2", "51945-4", "59845-8", "34093-5", "42229-5"}
 
 NUMBERED_TITLE = re.compile(r"^(\d+(?:\.\d+)*)\s+(.*)$")
 # Many labels encode a sub-bullet as a sibling item whose marker is "o" rather than as a

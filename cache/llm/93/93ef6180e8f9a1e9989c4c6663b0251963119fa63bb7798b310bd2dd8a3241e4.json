@@ -1,0 +1,27 @@
+{
+ "key": "93ef6180e8f9a1e9989c4c6663b0251963119fa63bb7798b310bd2dd8a3241e4",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."
+   },
+   {
+    "chunk_id": "ozempic:v20:37:2",
+    "quote": "OZEMPIC was superior to placebo in reducing the incidence of the primary composite endpoint of a sustained decline in eGFR of ≥50%, sustained eGFR <15 mL/min/1.73m^2, chronic renal replacement therapy, renal death, CV death (HR 0.76 [95% CI 0.66, 0.88], p=0.0003) as shown in Table 10 and Figure 7."
+   }
+  ],
+  "reasoning": "The label indicates Ozempic is indicated to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease, and the clinical study confirms a reduction in kidney failure outcomes. The claim does not specify the required population, so a qualifier is needed.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 446,
+  "prompt_tokens": 1812
+ }
+}

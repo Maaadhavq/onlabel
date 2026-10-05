@@ -1,0 +1,13 @@
+{
+ "key": "55a5623358ff863b3c53ad4cce84802624407f01a11d6756adc261d973a98634",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "In adults with obesity or overweight and comorbidity treated with WEGOVY 2.4 mg injection, the mean percent change in body weight was ‑14.9% at week 68 (Study 2)."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 176,
+  "prompt_tokens": 1628
+ }
+}

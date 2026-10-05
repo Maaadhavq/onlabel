@@ -1,0 +1,849 @@
+{
+ "set_id": "faf3dd6a-9cd0-39c2-0d2e-232cb3f67565",
+ "version": 31,
+ "effective_time": "20260130",
+ "products": [
+  "JARDIANCE"
+ ],
+ "generic": "empagliflozin",
+ "sections": [
+  {
+   "code": "34067-9",
+   "top_code": "34067-9",
+   "top_name": "Indications and Usage",
+   "number": "1",
+   "title": "INDICATIONS AND USAGE",
+   "path": "1 INDICATIONS AND USAGE",
+   "text": "JARDIANCE is indicated:\n\n- to reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure.\n- to reduce the risk of sustained decline in eGFR, end-stage kidney disease, cardiovascular death, and hospitalization in adults with chronic kidney disease at risk of progression.\n- to reduce the risk of cardiovascular death in adults with type 2 diabetes mellitus and established cardiovascular disease.\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34067-9",
+   "top_name": "Indications and Usage",
+   "number": null,
+   "title": "Indications and Usage",
+   "path": "1 INDICATIONS AND USAGE > Indications and Usage",
+   "text": "Limitations of Use\n\nJARDIANCE is not recommended for use to improve glycemic control in patients with type 1 diabetes mellitus. It may increase the risk of diabetic ketoacidosis in these patients [see Warnings and Precautions (5.1)].\n\nJARDIANCE is not recommended for use to improve glycemic control in patients with type 2 diabetes mellitus with an eGFR less than 30 mL/min/1.73 m^2. JARDIANCE is likely to be ineffective in this setting based upon its mechanism of action.\n\nJARDIANCE is not recommended for the treatment of chronic kidney disease in patients with polycystic kidney disease or patients requiring or with a recent history of intravenous immunosuppressive therapy or greater than 45 mg of prednisone or equivalent for kidney disease [see Clinical Studies (14.5)]. JARDIANCE is not expected to be effective in these populations."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.1",
+   "title": "Testing Prior to Initiation of JARDIANCE",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.1 Testing Prior to Initiation of JARDIANCE",
+   "text": "- Assess renal function before initiating JARDIANCE and as clinically indicated [see Warnings and Precautions (5.2)].\n  - Use for glycemic control is not recommended in patients with an eGFR less than 30 mL/min/1.73 m^2 [see Use in Specific Populations (8.6)].\n- Assess volume status. In patients with volume depletion, correct this condition before initiating JARDIANCE [see Warnings and Precautions (5.2) and Use in Specific Populations (8.5, 8.6)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.2",
+   "title": "Recommended Dosage",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.2 Recommended Dosage",
+   "text": "Table 1 presents the recommended dosage of JARDIANCE in adult and pediatric patients aged 10 years and older.\n\nTable 1 Recommended Dosage of JARDIANCE\nPopulation | Indication | Recommended Dosage\nAdults | Reduce the risk of cardiovascular death and hospitalization in patients with heart failure | - 10 mg orally once daily in the morning, taken with or without food.\nReduce the risk of sustained decline in eGFR, end-stage kidney disease, cardiovascular death, and hospitalization in adults with chronic kidney disease at risk of progression.\nReduce the risk of cardiovascular death in patients with type 2 diabetes mellitus with established cardiovascular disease\nGlycemic control in type 2 diabetes mellitus | - 10 mg orally once daily in the morning, taken with or without food. - For additional glycemic control, may increase to 25 mg orally once daily in patients tolerating 10 mg once daily.\nPediatric patients aged 10 years and older | Glycemic control in type 2 diabetes mellitus | - 10 mg orally once daily in the morning, taken with or without food. - For additional glycemic control, may increase to 25 mg orally once daily in patients tolerating 10 mg once daily."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.3",
+   "title": "Temporary Interruption for Surgery",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.3 Temporary Interruption for Surgery",
+   "text": "Withhold JARDIANCE for at least 3 days, if possible, prior to surgery or procedures associated with prolonged fasting. Resume JARDIANCE when the patient is clinically stable and has resumed oral intake [see Warnings and Precautions (5.1) and Clinical Pharmacology (12.2)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34068-7",
+   "top_name": "Dosage and Administration",
+   "number": "2.4",
+   "title": "Recommendations Regarding Missed Dose",
+   "path": "2 DOSAGE AND ADMINISTRATION > 2.4 Recommendations Regarding Missed Dose",
+   "text": "- If a dose is missed, instruct patients to take the dose as soon as possible.\n- Advise patients not to double up the next dose."
+  },
+  {
+   "code": "43678-2",
+   "top_code": "43678-2",
+   "top_name": "Dosage Forms and Strengths",
+   "number": "3",
+   "title": "DOSAGE FORMS AND STRENGTHS",
+   "path": "3 DOSAGE FORMS AND STRENGTHS",
+   "text": "JARDIANCE tablets available as:\n\n- 10 mg pale yellow, round, biconvex and bevel-edged, film-coated tablets debossed with \"S 10\" on one side and the Boehringer Ingelheim company symbol on the other side.\n- 25 mg pale yellow, oval, biconvex, film-coated tablets debossed with \"S 25\" on one side and the Boehringer Ingelheim company symbol on the other side."
+  },
+  {
+   "code": "34070-3",
+   "top_code": "34070-3",
+   "top_name": "Contraindications",
+   "number": "4",
+   "title": "CONTRAINDICATIONS",
+   "path": "4 CONTRAINDICATIONS",
+   "text": "JARDIANCE is contraindicated in patients:\n\n- with a hypersensitivity to empagliflozin or any of the excipients in JARDIANCE, reactions such as angioedema have occurred [see Warnings and Precautions (5.6)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.1",
+   "title": "Diabetic Ketoacidosis in Patients with Type 1 Diabetes Mellitus and Other Ketoacidosis",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.1 Diabetic Ketoacidosis in Patients with Type 1 Diabetes Mellitus and Other Ketoacidosis",
+   "text": "In patients with type 1 diabetes mellitus, JARDIANCE significantly increases the risk of diabetic ketoacidosis, a life-threatening event, beyond the background rate. In placebo-controlled trials of patients with type 1 diabetes mellitus, the risk of ketoacidosis was markedly increased in patients who received sodium glucose co-transporter 2 (SGLT2) inhibitors compared to patients who received placebo and fatal ketoacidosis has occurred with JARDIANCE. JARDIANCE is not indicated for glycemic control in patients with type 1 diabetes mellitus.\n\nType 2 diabetes mellitus and pancreatic disorders (e.g., history of pancreatitis or pancreatic surgery) are also risk factors for ketoacidosis. There have been postmarketing reports of fatal events of ketoacidosis in patients with type 2 diabetes mellitus using SGLT2 inhibitors, including JARDIANCE.\n\nPrecipitating conditions for diabetic ketoacidosis or other ketoacidosis include under-insulinization due to insulin dose reduction or missed insulin doses, acute febrile illness, reduced caloric intake, ketogenic diet, surgery, volume depletion, and alcohol abuse.\n\nSigns and symptoms are consistent with dehydration and severe metabolic acidosis and include nausea, vomiting, abdominal pain, generalized malaise, and shortness of breath. Blood glucose levels at presentation may be below those typically expected for diabetic ketoacidosis (e.g., less than 250 mg/dL). Ketoacidosis and glucosuria may persist longer than typically expected. Urinary glucose excretion persists for 3 days after discontinuing JARDIANCE [see Clinical Pharmacology (12.2)]; however, there have been postmarketing reports of ketoacidosis and/or glucosuria lasting greater than 6 days and some up to 2 weeks after discontinuation of SGLT2 inhibitors.\n\nConsider ketone monitoring in patients with type 1 diabetes mellitus and consider ketone monitoring in others at risk for ketoacidosis if indicated by the clinical situation. Assess for ketoacidosis regardless of presenting blood glucose levels in patients who present with signs and symptoms consistent with severe metabolic acidosis. If ketoacidosis is suspected, discontinue JARDIANCE, promptly evaluate, and treat ketoacidosis, if confirmed. Monitor patients for resolution of ketoacidosis before restarting JARDIANCE.\n\nWithhold JARDIANCE, if possible, in temporary clinical situations that could predispose patients to ketoacidosis. Resume JARDIANCE when the patient is clinically stable and has resumed oral intake [see Dosage and Administration (2.3)].\n\nEducate all patients on the signs and symptoms of ketoacidosis and instruct patients to discontinue JARDIANCE and seek medical attention immediately if signs and symptoms occur."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.2",
+   "title": "Volume Depletion",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.2 Volume Depletion",
+   "text": "JARDIANCE can cause intravascular volume depletion which may sometimes manifest as symptomatic hypotension or acute transient changes in creatinine [see Adverse Reactions (6.1)]. There have been post-marketing reports of acute kidney injury, some requiring hospitalization and dialysis, in patients with type 2 diabetes mellitus receiving SGLT2 inhibitors, including JARDIANCE. Patients with impaired renal function (eGFR less than 60 mL/min/1.73 m^2), elderly patients, or patients on loop diuretics may be at increased risk for volume depletion or hypotension. Before initiating JARDIANCE in patients with one or more of these characteristics, assess volume status and renal function. In patients with volume depletion, correct this condition before initiating JARDIANCE. Monitor for signs and symptoms of volume depletion, and renal function after initiating therapy."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.3",
+   "title": "Genitourinary Infections, including Urosepsis, Pyelonephritis, Necrotizing Fasciitis of the Perineum (Fournier's Gangrene), and Genital Mycotic Infections",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.3 Genitourinary Infections, including Urosepsis, Pyelonephritis, Necrotizing Fasciitis of the Perineum (Fournier's Gangrene), and Genital Mycotic Infections",
+   "text": "JARDIANCE increases urinary glucose excretion [see Clinical Pharmacology (12.2)] and increases the risk of genitourinary infections including urinary tract infections and genital mycotic infections in both male and female patients [see Adverse Reactions (6.1)].\n\nSerious genitourinary infections, including urosepsis, pyelonephritis, and necrotizing fasciitis of the perineum (Fournier's gangrene, a rare life-threatening infection requiring urgent surgical intervention), have occurred in patients with and without diabetes mellitus receiving SGLT2 inhibitors, including JARDIANCE [see Adverse Reactions (6.2)]. Cases have required hospitalization. In patients with Fournier's gangrene, serious outcomes have included multiple surgeries and death.\n\nPatients with a history of chronic or recurrent genitourinary infections are more likely to develop genitourinary infections when using JARDIANCE. Monitor patients for signs and symptoms of genitourinary infections and treat promptly, if indicated.\n\nImmediately evaluate patients presenting with pain or tenderness, erythema, or swelling in the genital or perineal area, along with fever or malaise, for necrotizing fasciitis. If suspected, discontinue JARDIANCE and promptly institute appropriate medical and/or surgical intervention."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.4",
+   "title": "Hypoglycemia",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.4 Hypoglycemia",
+   "text": "Insulin and insulin secretagogues are known to cause hypoglycemia. In adult patients, the risk of hypoglycemia may be increased when JARDIANCE is used in combination with insulin secretagogues (e.g., sulfonylurea) or insulin. In pediatric patients aged 10 years and older, the risk of hypoglycemia was higher with JARDIANCE regardless of insulin use [see Adverse Reactions (6.1)].\n\nThe risk of hypoglycemia may be lowered by a reduction in the dose of sulfonylurea (or other concomitantly administered insulin secretagogues) or insulin. Inform patients using these concomitant medications and pediatric patients of the risk of hypoglycemia and educate them on the signs and symptoms of hypoglycemia."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.5",
+   "title": "Lower Limb Amputation",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.5 Lower Limb Amputation",
+   "text": "In some clinical studies with SGLT2 inhibitors an imbalance in the incidence of lower limb amputation has been observed. Across four JARDIANCE outcome trials, lower limb amputation event rates were 4.3 and 5.0 events per 1,000 patient-years in the placebo group and the JARDIANCE 10 mg or 25 mg dose group, respectively, with a HR of 1.05 (95 % CI) (0.81, 1.36).\n\nIn a long-term cardio-renal outcome trial [see Clinical Studies 14.5], in patients with chronic kidney disease, the occurrence of lower limb amputations was reported with event rates of 2.9, and 4.3 events per 1,000 patient-years in the placebo, and JARDIANCE 10 mg treatment arms, respectively. Amputation of the toe and mid-foot were most frequent (21 out of 28 JARDIANCE 10 mg treated patients with lower limb amputations), and some involving above and below the knee. Some patients had multiple amputations.\n\nPeripheral artery disease, and diabetic foot infection (including osteomyelitis), were the most common precipitating medical events leading to the need for an amputation. The risk of amputation was highest in patients with a baseline history of diabetic foot, peripheral artery disease (including previous amputation) or diabetes.\n\nCounsel patients about the importance of routine preventative foot care. Monitor patients receiving JARDIANCE for signs and symptoms of diabetic foot infection (including osteomyelitis), new pain or tenderness, sores or ulcers involving the lower limbs, and institute appropriate treatment."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43685-7",
+   "top_name": "Warnings and Precautions",
+   "number": "5.6",
+   "title": "Hypersensitivity Reactions",
+   "path": "5 WARNINGS AND PRECAUTIONS > 5.6 Hypersensitivity Reactions",
+   "text": "There have been postmarketing reports of serious hypersensitivity reactions (e.g., angioedema) in patients treated with JARDIANCE. If a hypersensitivity reaction occurs, discontinue JARDIANCE; treat promptly per standard of care, and monitor until signs and symptoms resolve. JARDIANCE is contraindicated in patients with hypersensitivity to empagliflozin or any of the excipients in JARDIANCE [see Contraindications (4)]."
+  },
+  {
+   "code": "34084-4",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6",
+   "title": "ADVERSE REACTIONS",
+   "path": "6 ADVERSE REACTIONS",
+   "text": "The following important adverse reactions are described below and elsewhere in the labeling:\n\n- Diabetic Ketoacidosis in Patients with Type 1 Diabetes Mellitus and Other Ketoacidosis [see Warnings and Precautions (5.1)]\n- Volume Depletion [see Warnings and Precautions (5.2)]\n- Genitourinary Infections, including Urosepsis, Pyelonephritis, Necrotizing Fasciitis of the Perineum (Fournier's Gangrene), and Genital Mycotic Infections [see Warnings and Precautions (5.3)]\n- Hypoglycemia [see Warnings and Precautions (5.4)]\n- Hypersensitivity Reactions [see Warnings and Precautions (5.6)]"
+  },
+  {
+   "code": "90374-0",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6.1",
+   "title": "Clinical Trials Experience",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience",
+   "text": "Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice.\n\nJARDIANCE has been evaluated in clinical trials in adult and pediatric patients aged 10 to 17 years with type 2 diabetes mellitus, in adults with heart failure, and in adults with chronic kidney disease. The overall safety profile of JARDIANCE was generally consistent across the studied indications."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Clinical Trials in Adults with Type 2 Diabetes Mellitus\n\nThe data in Table 2 are derived from a pool of four 24-week placebo-controlled trials and 18-week data from a placebo-controlled trial with insulin in adult patients with type 2 diabetes mellitus. JARDIANCE was used as monotherapy in one trial and as add-on therapy in four trials [see Clinical Studies (14.1)].\n\nThese data reflect exposure of 1,976 adult patients to JARDIANCE with a mean exposure duration of approximately 23 weeks. Patients received placebo (N=995), JARDIANCE 10 mg (N=999), or JARDIANCE 25 mg (N=977) once daily. The mean age of the population was 56 years and 3% were older than 75 years of age. More than half (55%) of the population was male; 46% were White, 50% were Asian, and 3% were Black or African American. At baseline, 57% of the population had diabetes mellitus more than 5 years and had a mean hemoglobin A1c (HbA1c) of 8%. Established microvascular complications of diabetes mellitus at baseline included diabetic nephropathy (7%), retinopathy (8%), or neuropathy (16%). Baseline renal function was normal or mildly impaired in 91% of patients and moderately impaired in 9% of patients (mean eGFR 86.8 mL/min/1.73 m^2).\n\nTable 2 shows adverse reactions (excluding hypoglycemia) that were not present at baseline, occurred more commonly in JARDIANCE-treated patients than on placebo and occurred in greater than or equal to 2% JARDIANCE-treated patients.\n\nTable 2 Adverse Reactions Reported in \u22652% of Adults with Type 2 Diabetes Mellitus Treated with JARDIANCE and Greater than Placebo in Pooled Placebo-Controlled Clinical Trials of JARDIANCE Monotherapy or Combination Therapy\nAdverse Reactions | Placebo (%) N=995 | JARDIANCE 10 mg (%) N=999 | JARDIANCE 25 mg (%) N=977\nPredefined adverse event grouping, including, but not limited to, urinary tract infection, asymptomatic bacteriuria, cystitis Female genital mycotic infections include the following adverse reactions: vulvovaginal mycotic infection, vaginal infection, vulvitis, vulvovaginal candidiasis, genital infection, genital candidiasis, genital infection fungal, genitourinary tract infection, vulvovaginitis, cervicitis, urogenital infection fungal, vaginitis bacterial. Percentages calculated with the number of female subjects in each group as denominator: placebo (N=481), JARDIANCE 10 mg (N=443), JARDIANCE 25 mg (N=420). Predefined adverse event grouping, including, but not limited to, polyuria, pollakiuria, and nocturia Male genital mycotic infections include the following adverse reactions: balanoposthitis, balanitis, genital infections fungal, genitourinary tract infection, balanitis candida, scrotal abscess, penile infection. Percentages calculated with the number of male subjects in each group as denominator: placebo (N=514), JARDIANCE 10 mg (N=556), JARDIANCE 25 mg (N=557).\nUrinary tract infection | 7.6 | 9.3 | 7.6\nFemale genital mycotic infections | 1.5 | 5.4 | 6.4\nUpper respiratory tract infection | 3.8 | 3.1 | 4.0\nIncreased urination | 1.0 | 3.4 | 3.2\nDyslipidemia | 3.4 | 3.9 | 2.9\nArthralgia | 2.2 | 2.4 | 2.3\nMale genital mycotic infections | 0.4 | 3.1 | 1.6\nNausea | 1.4 | 2.3 | 1.1\n\nThirst (including polydipsia) was reported in 0%, 1.7%, and 1.5% for placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Volume Depletion\n\nJARDIANCE causes an osmotic diuresis, which may lead to intravascular volume contraction and adverse reactions related to volume depletion. In the pool of five placebo-controlled clinical trials in adults, adverse reactions related to volume depletion (e.g., blood pressure (ambulatory) decreased, blood pressure systolic decreased, dehydration, hypotension, hypovolemia, orthostatic hypotension, and syncope) were reported by 0.3%, 0.5%, and 0.3% of patients treated with placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively. JARDIANCE may increase the risk of hypotension in patients at risk for volume contraction [see Use in Specific Populations (8.5, 8.6)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Increased Urination\n\nIn the pool of five placebo-controlled clinical trials in adults, adverse reactions of increased urination (e.g., polyuria, pollakiuria, and nocturia) occurred more frequently on JARDIANCE than on placebo (see Table 2). Specifically, nocturia was reported by 0.4%, 0.3%, and 0.8% of patients treated with placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Hypoglycemia in Clinical Trials for Glycemic Control in Adults with Type 2 Diabetes Mellitus\n\nThe incidence of hypoglycemia in adults by trial is shown in Table 3. The incidence of hypoglycemia increased when JARDIANCE was administered with insulin or sulfonylurea.\n\nTable 3 Incidence of Overalla and Severeb Hypoglycemic Events in Placebo-Controlled Clinical Trials for Glycemic Control in Adults with Type 2 Diabetes Mellitusc\nOverall hypoglycemic events: plasma or capillary glucose of less than or equal to 70 mg/dL Severe hypoglycemic events: requiring assistance regardless of blood glucose Treated set (patients who had received at least one dosage of trial drug) Insulin dosage could not be adjusted during the initial 18-week treatment period\nMonotherapy (24 weeks) | Placebo (n=229) | JARDIANCE 10 mg (n=224) | JARDIANCE 25 mg (n=223)\nOverall (%) | 0.4 | 0.4 | 0.4\nSevere (%) | 0 | 0 | 0\nIn Combination with Metformin (24 weeks) | Placebo + Metformin (n=206) | JARDIANCE 10 mg + Metformin (n=217) | JARDIANCE 25 mg + Metformin (n=214)\nOverall (%) | 0.5 | 1.8 | 1.4\nSevere (%) | 0 | 0 | 0\nIn Combination with Metformin + Sulfonylurea (24 weeks) | Placebo (n=225) | JARDIANCE 10 mg + Metformin + Sulfonylurea (n=224) | JARDIANCE 25 mg + Metformin + Sulfonylurea (n=217)\nOverall (%) | 8.4 | 16.1 | 11.5\nSevere (%) | 0 | 0 | 0\nIn Combination with Pioglitazone +/- Metformin (24 weeks) | Placebo (n=165) | JARDIANCE 10 mg + Pioglitazone +/- Metformin (n=165) | JARDIANCE 25 mg + Pioglitazone +/- Metformin (n=168)\nOverall (%) | 1.8 | 1.2 | 2.4\nSevere (%) | 0 | 0 | 0\nIn Combination with Basal Insulin +/- Metformin (18 weeks) | Placebo (n=170) | JARDIANCE 10 mg (n=169) | JARDIANCE 25 mg (n=155)\nOverall (%) | 20.6 | 19.5 | 28.4\nSevere (%) | 0 | 0 | 1.3\nIn Combination with MDI Insulin +/-Metformin (18 weeks) | Placebo (n=188) | JARDIANCE 10 mg (n=186) | JARDIANCE 25 mg (n=189)\nOverall (%) | 37.2 | 39.8 | 41.3\nSevere (%) | 0.5 | 0.5 | 0.5"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Other Adverse Reactions in Clinical Trials for Glycemic Control in Adults with Type 2 Diabetes Mellitus\n\n- Genital Mycotic Infections: In the pool of five placebo-controlled clinical trials in adults, the incidence of genital mycotic infections (e.g., vaginal mycotic infection, vaginal infection, genital infection fungal, vulvovaginal candidiasis, and vulvitis) was increased in patients treated with JARDIANCE compared to placebo, occurring in 0.9%, 4.1%, and 3.7% of patients randomized to placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively. Discontinuation from trial due to genital infection occurred in 0% of placebo-treated patients and 0.2% of patients treated with either JARDIANCE 10 mg or 25 mg. Genital mycotic infections occurred more frequently in female than male patients (see Table 2). Phimosis occurred more frequently in male patients treated with JARDIANCE 10 mg (less than 0.1%) and JARDIANCE 25 mg (0.1%) than placebo (0%).\n- Urinary Tract Infections: In the pool of five placebo-controlled clinical trials in adults, the incidence of urinary tract infections (e.g., urinary tract infection, asymptomatic bacteriuria, and cystitis) was increased in patients treated with JARDIANCE compared to placebo (see Table 2). Patients with a history of chronic or recurrent urinary tract infections were more likely to experience a urinary tract infection. The rate of treatment discontinuation due to urinary tract infections was 0.1%, 0.2%, and 0.1% for placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively. Urinary tract infections occurred more frequently in female patients. The incidence of urinary tract infections in female patients randomized to placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg was 16.6%, 18.4%, and 17.0%, respectively. The incidence of urinary tract infections in male patients randomized to placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg was 3.2%, 3.6%, and 4.1%, respectively [see Use in Specific Populations (8.5)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Clinical Trial in Pediatric Patients Aged 10 to 17 Years with Type 2 Diabetes Mellitus\n\nJARDIANCE was administered to 52 patients in a trial of 157 pediatric patients aged 10 to 17 years with type 2 diabetes mellitus with a mean exposure to JARDIANCE of 23.8 weeks [see Clinical Studies (14.2)]. Background therapies as adjunct to diet and exercise included metformin (51%), a combination of metformin and insulin (40.1%), insulin (3.2%), or none (5.7%). The mean HbA1c at baseline was 8.0% and the mean duration of type 2 diabetes mellitus was 2.1 years. The mean age was 14.5 years (range: 10-17 years) and 51.6% were aged 15 years and older. Approximately, 50% were White, 6% were Asian, 31% were Black or African American, and 38% were of Hispanic or Latino ethnicity. The mean BMI was 36.0 kg/m^2 and mean BMI Z-score was 3.0. Approximately 25% of the trial population had microalbuminuria or macroalbuminuria.\n\nThe risk of hypoglycemia was higher in pediatric patients treated with JARDIANCE regardless of concomitant insulin use. Hypoglycemia, defined as a blood glucose <54 mg/dL, occurred in 10 (19.2%) patients and in 4 (7.5%) patients treated with JARDIANCE and placebo, respectively. No severe hypoglycemic events occurred (severe hypoglycemia was defined as an event requiring the assistance of another person to actively administer carbohydrates, glucagon or take other corrective actions)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Clinical Trials in Adults with Heart Failure\n\nNo new adverse reactions were identified in EMPEROR-Reduced or EMPEROR-Preserved heart failure trials."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Clinical Trial in Adults with Chronic Kidney Disease\n\nThe safety profile in patients with chronic kidney disease was generally consistent with that observed across the studied indications. In a long-term cardio-renal outcome trial [see Clinical Studies 14.5], in patients with chronic kidney disease, the occurrence of lower limb amputations was reported with event rates of 2.9, and 4.3 events per 1,000 patient-years in the placebo, and JARDIANCE 10 mg treatment arms, respectively [see Warnings and Precautions (5.5)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions",
+   "text": "Laboratory Test Abnormalities in Clinical Trials"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Increases in Serum Creatinine and Decreases in eGFR\n\nInitiation of JARDIANCE causes an increase in serum creatinine and decrease in eGFR within weeks of starting therapy and then these changes stabilize. In a trial of adults with moderate renal impairment, larger mean changes were observed. In a long-term cardiovascular outcomes trial, the increase in serum creatinine and decrease in eGFR generally did not exceed 0.1 mg/dL and -9.0 mL/min/1.73 m^2, respectively, at Week 4, and reversed after treatment discontinuation, suggesting acute hemodynamic changes may play a role in the renal function changes observed with JARDIANCE."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Increase in Low-Density Lipoprotein Cholesterol (LDL-C)\n\nDose-related increases in low-density lipoprotein cholesterol (LDL-C) were observed in adults treated with JARDIANCE. LDL-C increased by 2.3%, 4.6%, and 6.5% in patients treated with placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively. The range of mean baseline LDL-C levels was 90.3 to 90.6 mg/dL across treatment groups."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": null,
+   "title": "Adverse Reactions",
+   "path": "6 ADVERSE REACTIONS > 6.1 Clinical Trials Experience > Adverse Reactions > Adverse Reactions",
+   "text": "Increase in Hematocrit\n\nIn a pool of four placebo-controlled trials in adults, median hematocrit decreased by 1.3% in placebo and increased by 2.8% in JARDIANCE 10 mg and 2.8% in JARDIANCE 25 mg treated patients. At the end of treatment, 0.6%, 2.7%, and 3.5% of patients with hematocrits initially within the reference range had values above the upper limit of the reference range with placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively."
+  },
+  {
+   "code": "90375-7",
+   "top_code": "34084-4",
+   "top_name": "Adverse Reactions",
+   "number": "6.2",
+   "title": "Postmarketing Experience",
+   "path": "6 ADVERSE REACTIONS > 6.2 Postmarketing Experience",
+   "text": "Additional adverse reactions have been identified during postapproval use of JARDIANCE. Because these reactions are reported voluntarily from a population of uncertain size, it is generally not possible to reliably estimate their frequency or establish a causal relationship to drug exposure.\n\nGastrointestinal Disorders: Constipation\n\nInfections: Necrotizing fasciitis of the perineum (Fournier's gangrene), urosepsis and pyelonephritis\n\nMetabolism and Nutrition Disorders: Ketoacidosis\n\nRenal and Urinary Disorders: Acute kidney injury\n\nSkin and Subcutaneous Tissue Disorders: Angioedema, skin reactions (e.g., rash, urticaria)"
+  },
+  {
+   "code": "34073-7",
+   "top_code": "34073-7",
+   "top_name": "Drug Interactions",
+   "number": "7",
+   "title": "DRUG INTERACTIONS",
+   "path": "7 DRUG INTERACTIONS",
+   "text": "See Table 4 for clinically relevant interactions with JARDIANCE.\n\nTable 4 Clinically Relevant Interactions with JARDIANCE\nDiuretics\nClinical Impact | Coadministration of empagliflozin with diuretics resulted in increased urine volume and frequency of voids, which might enhance the potential for volume depletion.\nIntervention | Before initiating JARDIANCE, assess volume status and renal function. In patients with volume depletion, correct this condition before initiating JARDIANCE. Monitor for signs and symptoms of volume depletion, and renal function after initiating therapy.\nInsulin or Insulin Secretagogues\nClinical Impact | The risk of hypoglycemia is increased when JARDIANCE is used in combination with insulin secretagogues (e.g., sulfonylurea) or insulin.\nIntervention | Coadministration of JARDIANCE with an insulin secretagogue (e.g., sulfonylurea) or insulin may require lower dosages of the insulin secretagogue or insulin to reduce the risk of hypoglycemia.\nLithium\nClinical Impact | Concomitant use of an SGLT2 inhibitor with lithium may decrease serum lithium concentrations.\nIntervention | Monitor serum lithium concentration more frequently during JARDIANCE initiation and dosage changes.\nPositive Urine Glucose Test\nClinical Impact | SGLT2 inhibitors increase urinary glucose excretion and will lead to positive urine glucose tests.\nIntervention | Monitoring glycemic control with urine glucose tests is not recommended in patients taking SGLT2 inhibitors. Use alternative methods to monitor glycemic control.\nInterference with 1,5-anhydroglucitol (1,5-AG) Assay\nClinical Impact | Measurements of 1,5-AG are unreliable in assessing glycemic control in patients taking SGLT2 inhibitors.\nIntervention | Monitoring glycemic control with 1,5-AG assay is not recommended. Use alternative methods to monitor glycemic control."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations",
+   "text": "Risk Summary\n\nBased on animal data showing adverse renal effects, JARDIANCE is not recommended during the second and third trimesters of pregnancy.\n\nThe limited available data with JARDIANCE in pregnant women are not sufficient to determine a drug-associated risk for major birth defects and miscarriage. There are risks to the mother and fetus associated with poorly controlled diabetes in pregnancy [see Clinical Considerations].\n\nIn animal studies, adverse renal changes were observed in rats when empagliflozin was administered during a period of renal development corresponding to the late second and third trimesters of human pregnancy. Doses approximately 13-times the maximum clinical dose caused renal pelvic and tubule dilatations that were reversible [see Data].\n\nThe estimated background risk of major birth defects is 6% to 10% in women with pre-gestational diabetes with a HbA1c >7 and has been reported to be as high as 20% to 25% in women with HbA1c >10. The estimated background risk of miscarriage for the indicated population is unknown. In the U.S. general population, the estimated background risk of major birth defects and miscarriage in clinically recognized pregnancies is 2% to 4% and 15% to 20%, respectively."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations",
+   "text": "Clinical Considerations"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations > Use in Specific Populations",
+   "text": "Disease-associated maternal and/or embryo/fetal risk\n\nPoorly controlled diabetes in pregnancy increases the maternal risk for diabetic ketoacidosis, pre-eclampsia, spontaneous abortions, preterm delivery, and delivery complications. Poorly controlled diabetes increases the fetal risk for major birth defects, stillbirth, and macrosomia related morbidity."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations",
+   "text": "Data"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.1 Pregnancy > Use in Specific Populations > Use in Specific Populations",
+   "text": "Animal Data\n\nEmpagliflozin dosed directly to juvenile rats from postnatal day (PND) 21 until PND 90 at doses of 1, 10, 30, and 100 mg/kg/day caused increased kidney weights and renal tubular and pelvic dilatation at 100 mg/kg/day, which approximates 13-times the maximum clinical dose of 25 mg, based on AUC. These findings were not observed after a 13-week, drug-free recovery period. These outcomes occurred with drug exposure during periods of renal development in rats that correspond to the late second and third trimester of human renal development.\n\nIn embryo-fetal development studies in rats and rabbits, empagliflozin was administered for intervals coinciding with the first trimester period of organogenesis in humans. Doses up to 300 mg/kg/day, which approximates 48-times (rats) and 128-times (rabbits) the maximum clinical dose of 25 mg (based on AUC), did not result in adverse developmental effects. In rats, at higher doses of empagliflozin causing maternal toxicity, malformations of limb bones increased in fetuses at 700 mg/kg/day or 154-times the 25 mg maximum clinical dose. Empagliflozin crosses the placenta and reaches fetal tissues in rats. In the rabbit, higher doses of empagliflozin resulted in maternal and fetal toxicity at 700 mg/kg/day, or 139-times the 25 mg maximum clinical dose.\n\nIn pre- and postnatal development studies in pregnant rats, empagliflozin was administered from gestation day 6 through to lactation day 20 (weaning) at up to 100 mg/kg/day (approximately 16-times the 25 mg maximum clinical dose) without maternal toxicity. Reduced body weight was observed in the offspring at greater than or equal to 30 mg/kg/day (approximately 4-times the 25 mg maximum clinical dose)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.2 Lactation > Use in Specific Populations",
+   "text": "Risk Summary\n\nThere is limited information regarding the presence of JARDIANCE in human milk, the effects of JARDIANCE on the breastfed infant or the effects on milk production. Empagliflozin is present in the milk of lactating rats [see Data]. Since human kidney maturation occurs in utero and during the first 2 years of life when lactational exposure may occur, there may be risk to the developing human kidney.\n\nBecause of the potential for serious adverse reactions in a breastfed infant, including the potential for empagliflozin to affect postnatal renal development, advise patients that use of JARDIANCE is not recommended while breastfeeding."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": null,
+   "title": "Use in Specific Populations",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.2 Lactation > Use in Specific Populations",
+   "text": "Data\n\nEmpagliflozin was present at a low level in rat fetal tissues after a single oral dose to the dams at gestation day 18. In rat milk, the mean milk to plasma ratio ranged from 0.634 to 5, and was greater than one from 2 to 24 hours post-dose. The mean maximal milk to plasma ratio of 5 occurred at 8 hours post-dose, suggesting accumulation of empagliflozin in the milk. Juvenile rats directly exposed to empagliflozin showed a risk to the developing kidney (renal pelvic and tubular dilatations) during maturation."
+  },
+  {
+   "code": "34081-0",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.4",
+   "title": "Pediatric Use",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
+   "text": "The safety and effectiveness of JARDIANCE as an adjunct to diet and exercise to improve glycemic control in type 2 diabetes mellitus have been established in pediatric patients aged 10 years and older. Use of JARDIANCE for this indication is supported by evidence from a 26-week double-blind, placebo-controlled clinical trial, with a double-blind active treatment safety extension period of up to 52 weeks in 157 pediatric patients aged 10 to 17 years with type 2 diabetes mellitus and a pediatric pharmacokinetic study [see Clinical Pharmacology (12.3) and Clinical Studies (14.2)]. The safety profile of pediatric patients treated with JARDIANCE was similar to that observed in adults with type 2 diabetes mellitus, with the exception of hypoglycemia risk which was higher in pediatric patients treated with JARDIANCE regardless of concomitant insulin use [see Warnings and Precautions (5.4) and Adverse Reactions (6.1)].\n\nThe safety and effectiveness of JARDIANCE have not been established in pediatric patients less than 10 years of age as an adjunct to diet and exercise to improve glycemic control in type 2 diabetes mellitus.\n\nThe safety and effectiveness of JARDIANCE have not been established in pediatric patients to reduce the risk of:\n\n- cardiovascular death and hospitalization for heart failure in patients with heart failure.\n- sustained decline in eGFR, end-stage kidney disease, cardiovascular death, and hospitalization in patients with chronic kidney disease at risk of progression.\n- cardiovascular death in patients with type 2 diabetes mellitus and established cardiovascular disease."
+  },
+  {
+   "code": "34082-8",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.5",
+   "title": "Geriatric Use",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.5 Geriatric Use",
+   "text": "In glycemic control trials in patients with type 2 diabetes mellitus, a total of 2,721 (32%) patients treated with JARDIANCE were 65 years of age and older, and 491 (6%) were 75 years of age and older. JARDIANCE is expected to have diminished glycemic efficacy in elderly patients with renal impairment [see Use in Specific Populations (8.6)]. The risk of volume depletion-related adverse reactions increased in patients who were 75 years of age and older to 2.1%, 2.3%, and 4.4% for placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg. The risk of urinary tract infections increased in patients who were 75 years of age and older to 10.5%, 15.7%, and 15.1% in patients randomized to placebo, JARDIANCE 10 mg, and JARDIANCE 25 mg, respectively [see Warnings and Precautions (5.2) and Adverse Reactions (6.1)].\n\nIn the EMPEROR-Reduced, EMPEROR-Preserved, and EMPA-KIDNEY trials, no overall differences in safety and effectiveness have been observed between patients 65 years of age and older and younger adult patients. EMPEROR-Reduced included 1,188 (64%) patients treated with JARDIANCE 65 years of age and older, and 503 (27%) patients 75 years of age and older. EMPEROR-Preserved included 2,403 (80%) patients treated with JARDIANCE 65 years of age and older, and 1,281 (43%) patients 75 years of age and older. EMPA-KIDNEY included 1,803 (55%) patients treated with JARDIANCE 65 years of age and older, and 758 (23%) patients 75 years of age and older."
+  },
+  {
+   "code": "88828-9",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.6",
+   "title": "Renal Impairment",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.6 Renal Impairment",
+   "text": "The efficacy and safety of JARDIANCE for glycemic control were evaluated in a trial of adult patients with type 2 diabetes mellitus with mild and moderate renal impairment (eGFR 30 to less than 90 mL/min/1.73 m^2) [see Clinical Studies (14.1)]. In this trial, 195 adult patients exposed to JARDIANCE had an eGFR between 60 and 90 mL/min/1.73 m^2, 91 adult patients exposed to JARDIANCE had an eGFR between 45 and 60 mL/min/1.73 m^2, and 97 patients exposed to JARDIANCE had an eGFR between 30 and 45 mL/min/1.73 m^2. The glucose lowering benefit of JARDIANCE 25 mg decreased in adult patients with worsening renal function. The risks of renal impairment, volume depletion adverse reactions and urinary tract infection-related adverse reactions increased with worsening renal function [see Warnings and Precautions (5.2)]. Use of JARDIANCE for glycemic control in patients without established cardiovascular disease or cardiovascular risk factors is not recommended when eGFR is less than 30 mL/min/1.73 m^2.\n\nJARDIANCE was evaluated in 7,020 adult patients with type 2 diabetes and established cardiovascular disease (eGFR greater than or equal to 30 mL/min/1.73 m^2) in the EMPA-REG OUTCOME trial, in a total of 9,718 patients with heart failure (eGFR greater than or equal to 20 mL/min/1.73 m^2) in the EMPEROR-Reduced and EMPEROR-Preserved trials, and in 6,609 adult patients with chronic kidney disease (eGFR 20 to 90 mL/min/1.73 m^2) in the EMPA-KIDNEY study. The safety profile across eGFR subgroups in these trials was consistent with the known safety profile [see Adverse Reactions (6.1) and Clinical Studies (14.3, 14.4, 14.5)].\n\nEfficacy and safety trials with JARDIANCE did not enroll adult patients with an eGFR less than 20 mL/min/1.73 m^2 or on dialysis. Once enrolled, adult patients in the EMPA-REG OUTCOME, EMPEROR-Reduced, EMPEROR-Preserved, and EMPA-KIDNEY trials were not required to discontinue therapy for worsening of eGFR to less than 20 mL/min/1.73 m^2 or initiation of dialysis [see Clinical Studies (14.3, 14.4, 14.5)]."
+  },
+  {
+   "code": "88829-7",
+   "top_code": "43684-0",
+   "top_name": "Use in Specific Populations",
+   "number": "8.7",
+   "title": "Hepatic Impairment",
+   "path": "8 USE IN SPECIFIC POPULATIONS > 8.7 Hepatic Impairment",
+   "text": "JARDIANCE may be used in patients with hepatic impairment [see Clinical Pharmacology (12.3)]."
+  },
+  {
+   "code": "34088-5",
+   "top_code": "34088-5",
+   "top_name": "Overdosage",
+   "number": "10",
+   "title": "OVERDOSAGE",
+   "path": "10 OVERDOSAGE",
+   "text": "In the event of an overdose with JARDIANCE, consider contacting the Poison Help line (1-800-222-1222) or a medical toxicologist for additional overdosage management recommendations. Removal of empagliflozin by hemodialysis has not been studied."
+  },
+  {
+   "code": "34089-3",
+   "top_code": "34089-3",
+   "top_name": "Description",
+   "number": "11",
+   "title": "DESCRIPTION",
+   "path": "11 DESCRIPTION",
+   "text": "JARDIANCE tablets for oral use contain empagliflozin, an inhibitor of the SGLT2.\n\nThe chemical name of empagliflozin is D-Glucitol,1,5-anhydro-1-C-[4-chloro-3-[[4-[[(3S)-tetrahydro-3-furanyl]oxy]phenyl]methyl]phenyl]-, (1S).\n\nIts molecular formula is C23H27ClO7 and the molecular weight is 450.91. The structural formula is:\n\nEmpagliflozin is a white to yellowish, non-hygroscopic powder. It is very slightly soluble in water, sparingly soluble in methanol, slightly soluble in ethanol and acetonitrile, soluble in 50% acetonitrile/water, and practically insoluble in toluene.\n\nEach film-coated tablet of JARDIANCE contains 10 mg or 25 mg of empagliflozin (free base) and the following inactive ingredients: colloidal silicon dioxide, croscarmellose sodium, hydroxypropyl cellulose, lactose monohydrate, magnesium stearate, and microcrystalline cellulose. In addition, the film coating contains the following inactive ingredients: ferric oxide yellow, hypromellose, polyethylene glycol, talc, and titanium dioxide."
+  },
+  {
+   "code": "43679-0",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": "12.1",
+   "title": "Mechanism of Action",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.1 Mechanism of Action",
+   "text": "Empagliflozin is an inhibitor of SGLT2, the predominant transporter responsible for reabsorption of glucose from the glomerular filtrate back into the circulation. By inhibiting SGLT2, empagliflozin reduces renal reabsorption of filtered glucose and lowers the renal threshold for glucose, and thereby increases urinary glucose excretion.\n\nEmpagliflozin also reduces sodium reabsorption and increases the delivery of sodium to the distal tubule. This may influence several physiological functions including, but not restricted to, increasing tubuloglomerular feedback and reducing intraglomerular pressure, lowering both pre- and afterload of the heart and downregulating sympathetic activity."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics > Clinical Pharmacology",
+   "text": "Urinary Glucose Excretion\n\nIn patients with type 2 diabetes mellitus, urinary glucose excretion increased immediately following a dose of empagliflozin and was maintained at the end of a 4-week treatment period averaging at approximately 64 grams per day with 10 mg empagliflozin and 78 grams per day with 25 mg empagliflozin once daily [see Clinical Studies (14)]. Data from single oral doses of empagliflozin in healthy subjects indicate that, on average, the elevation in urinary glucose excretion approaches baseline by about 3 days for the 10 mg and 25 mg doses."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics > Clinical Pharmacology",
+   "text": "Urinary Volume\n\nIn a 5-day study, mean 24-hour urine volume increase from baseline was 341 mL on Day 1 and 135 mL on Day 5 of empagliflozin 25 mg once daily treatment."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.2 Pharmacodynamics > Clinical Pharmacology",
+   "text": "Cardiac Electrophysiology\n\nIn a randomized, placebo-controlled, active-comparator, crossover study, 30 healthy subjects were administered a single oral dose of empagliflozin 25 mg, empagliflozin 200 mg (8 times the maximum dose), moxifloxacin, and placebo. No increase in QTc was observed with either 25 mg or 200 mg empagliflozin."
+  },
+  {
+   "code": "43682-4",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": "12.3",
+   "title": "Pharmacokinetics",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics",
+   "text": "The pharmacokinetics of empagliflozin has been characterized in healthy volunteers and patients with type 2 diabetes mellitus and no clinically relevant differences were noted between the two populations. The steady-state mean plasma AUC and Cmax were 1,870 nmol\u2219h/L and 259 nmol/L, respectively, with 10 mg empagliflozin once daily treatment, and 4,740 nmol\u2219h/L and 687 nmol/L, respectively, with 25 mg empagliflozin once daily treatment. Systemic exposure of empagliflozin increased in a dose-proportional manner in the therapeutic dose range. Empagliflozin does not appear to have time-dependent pharmacokinetic characteristics. Following once-daily dosing, up to 22% accumulation, with respect to plasma AUC, was observed at steady-state."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Absorption\n\nAfter oral administration, peak plasma concentrations of empagliflozin were reached at 1.5 hours post-dose. Administration of 25 mg empagliflozin after intake of a high-fat and high-calorie meal resulted in slightly lower exposure; AUC decreased by approximately 16% and Cmax decreased by approximately 37%, compared to fasted condition. The observed effect of food on empagliflozin pharmacokinetics was not considered clinically relevant and empagliflozin may be administered with or without food."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Distribution\n\nThe apparent steady-state volume of distribution was estimated to be 73.8 L based on a population pharmacokinetic analysis. Following administration of an oral [^14C]-empagliflozin solution to healthy subjects, the red blood cell partitioning was approximately 36.8% and plasma protein binding was 86.2%."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Elimination\n\nThe apparent terminal elimination half-life of empagliflozin was estimated to be 12.4 h and apparent oral clearance was 10.6 L/h based on the population pharmacokinetic analysis."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Metabolism\n\nNo major metabolites of empagliflozin were detected in human plasma and the most abundant metabolites were three glucuronide conjugates (2-O-, 3-O-, and 6-O-glucuronide). Systemic exposure of each metabolite was less than 10% of total drug-related material. In vitro studies suggested that the primary route of metabolism of empagliflozin in humans is glucuronidation by the uridine 5'-diphospho-glucuronosyltransferases UGT2B7, UGT1A3, UGT1A8, and UGT1A9."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Excretion\n\nFollowing administration of an oral [^14C]-empagliflozin solution to healthy subjects, approximately 95.6% of the drug-related radioactivity was eliminated in feces (41.2%) or urine (54.4%). The majority of drug-related radioactivity recovered in feces was unchanged parent drug and approximately half of drug-related radioactivity excreted in urine was unchanged parent drug."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Specific Populations"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Pediatric Patients\n\nThe pharmacokinetics and pharmacodynamics of empagliflozin were investigated in pediatric patients aged 10 to 17 years with type 2 diabetes mellitus. Oral administration of empagliflozin at 10 mg and 25 mg resulted in exposure within the range observed in adult patients."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Effects of Age, Body Mass Index, Gender, and Race\n\nAge, body mass index (BMI), gender and race (Asians versus primarily Whites) do not have a clinically meaningful effect on pharmacokinetics of empagliflozin."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Patients with Hepatic Impairment\n\nIn adult patients with mild, moderate, and severe hepatic impairment according to the Child-Pugh classification, AUC of empagliflozin increased by approximately 23%, 47%, and 75%, and Cmax increased by approximately 4%, 23%, and 48%, respectively, compared to subjects with normal hepatic function."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "Patients with Renal Impairment\n\nIn adult patients with type 2 diabetes mellitus with mild (eGFR: 60 to less than 90 mL/min/1.73 m^2), moderate (eGFR: 30 to less than 60 mL/min/1.73 m^2), and severe (eGFR: less than 30 mL/min/1.73 m^2) renal impairment and patients on dialysis due to kidney failure, AUC of empagliflozin increased by approximately 18%, 20%, 66%, and 48%, respectively, compared to subjects with normal renal function. Peak plasma levels of empagliflozin were similar in patients with moderate renal impairment and patients on dialysis due to kidney failure compared to subjects with normal renal function. Peak plasma levels of empagliflozin were roughly 20% higher in patients with mild and severe renal impairment as compared to patients with normal renal function. Population pharmacokinetic analysis showed that the apparent oral clearance of empagliflozin decreased, with a decrease in eGFR leading to an increase in drug exposure. However, the fraction of empagliflozin that was excreted unchanged in urine, and urinary glucose excretion, declined with decrease in eGFR."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology",
+   "text": "Drug Interaction Studies"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "In vitro Assessment of Drug Interactions\n\nEmpagliflozin does not inhibit, inactivate, or induce CYP450 isoforms. In vitro data suggest that the primary route of metabolism of empagliflozin in humans is glucuronidation by the uridine 5'-diphospho-glucuronosyltransferases UGT1A3, UGT1A8, UGT1A9, and UGT2B7. Empagliflozin does not inhibit UGT1A1, UGT1A3, UGT1A8, UGT1A9, or UGT2B7. Therefore, no effect of empagliflozin is anticipated on concomitantly administered drugs that are substrates of the major CYP450 isoforms or UGT1A1, UGT1A3, UGT1A8, UGT1A9, or UGT2B7. The effect of UGT induction (e.g., induction by rifampicin or any other UGT enzyme inducer) on empagliflozin exposure has not been evaluated.\n\nEmpagliflozin is a substrate for P-glycoprotein (P-gp) and breast cancer resistance protein (BCRP), but it does not inhibit these efflux transporters at therapeutic doses. Based on in vitro studies, empagliflozin is considered unlikely to cause interactions with drugs that are P-gp substrates. Empagliflozin is a substrate of the human uptake transporters OAT3, OATP1B1, and OATP1B3, but not OAT1 and OCT2. Empagliflozin does not inhibit any of these human uptake transporters at clinically relevant plasma concentrations and, therefore, no effect of empagliflozin is anticipated on concomitantly administered drugs that are substrates of these uptake transporters."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34090-1",
+   "top_name": "Clinical Pharmacology",
+   "number": null,
+   "title": "Clinical Pharmacology",
+   "path": "12 CLINICAL PHARMACOLOGY > 12.3 Pharmacokinetics > Clinical Pharmacology > Clinical Pharmacology",
+   "text": "In vivo Assessment of Drug Interactions\n\nEmpagliflozin pharmacokinetics were similar with and without coadministration of metformin, glimepiride, pioglitazone, sitagliptin, linagliptin, warfarin, verapamil, ramipril, and simvastatin in healthy volunteers and with or without coadministration of hydrochlorothiazide and torsemide in patients with type 2 diabetes mellitus (see Figure 1). In subjects with normal renal function, coadministration of empagliflozin with probenecid resulted in a 30% decrease in the fraction of empagliflozin excreted in urine without any effect on 24-hour urinary glucose excretion. The relevance of this observation to patients with renal impairment is unknown.\n\nFigure 1 Effect of Various Medications on the Pharmacokinetics of Empagliflozin as Displayed as 90% Confidence Interval of Geometric Mean AUC and Cmax Ratios [reference lines indicate 100% (80% - 125%)]\nempagliflozin, 50 mg, once daily; empagliflozin, 25 mg, single dose; empagliflozin, 25 mg, once daily; empagliflozin, 10 mg, single dose\n\nEmpagliflozin had no clinically relevant effect on the pharmacokinetics of metformin, glimepiride, pioglitazone, sitagliptin, linagliptin, warfarin, digoxin, ramipril, simvastatin, hydrochlorothiazide, torsemide, and oral contraceptives when coadministered in healthy volunteers (see Figure 2).\n\nFigure 2 Effect of Empagliflozin on the Pharmacokinetics of Various Medications as Displayed as 90% Confidence Interval of Geometric Mean AUC and Cmax Ratios [reference lines indicate 100% (80% - 125%)]\nempagliflozin, 50 mg, once daily; empagliflozin, 25 mg, once daily; empagliflozin, 25 mg, single dose; administered as simvastatin; administered as warfarin racemic mixture; administered as Microgynon^\u00ae; administered as ramipril"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43680-8",
+   "top_name": "Nonclinical Toxicology",
+   "number": null,
+   "title": "Nonclinical Toxicology",
+   "path": "13 NONCLINICAL TOXICOLOGY > 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility > Nonclinical Toxicology",
+   "text": "Carcinogenesis\n\nCarcinogenesis was evaluated in 2-year studies conducted in CD-1 mice and Wistar rats. Empagliflozin did not increase the incidence of tumors in female rats dosed at 100, 300, or 700 mg/kg/day (up to 72 times the exposure from the maximum clinical dose of 25 mg). In male rats, hemangiomas of the mesenteric lymph node were increased significantly at 700 mg/kg/day or approximately 42 times the exposure from a 25 mg clinical dose. Empagliflozin did not increase the incidence of tumors in female mice dosed at 100, 300, or 1,000 mg/kg/day (up to 62 times the exposure from a 25 mg clinical dose). Renal tubule adenomas and carcinomas were observed in male mice at 1,000 mg/kg/day, which is approximately 45 times the exposure of the maximum clinical dose of 25 mg. These tumors may be associated with a metabolic pathway predominantly present in the male mouse kidney."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43680-8",
+   "top_name": "Nonclinical Toxicology",
+   "number": null,
+   "title": "Nonclinical Toxicology",
+   "path": "13 NONCLINICAL TOXICOLOGY > 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility > Nonclinical Toxicology",
+   "text": "Mutagenesis\n\nEmpagliflozin was not mutagenic or clastogenic with or without metabolic activation in the in vitro Ames bacterial mutagenicity assay, the in vitro L5178Y tk^+/- mouse lymphoma cell assay, and an in vivo micronucleus assay in rats."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "43680-8",
+   "top_name": "Nonclinical Toxicology",
+   "number": null,
+   "title": "Nonclinical Toxicology",
+   "path": "13 NONCLINICAL TOXICOLOGY > 13.1 Carcinogenesis, Mutagenesis, Impairment of Fertility > Nonclinical Toxicology",
+   "text": "Impairment of Fertility\n\nEmpagliflozin had no effects on mating, fertility or early embryonic development in treated male or female rats up to the high dose of 700 mg/kg/day (approximately 155 times the 25 mg clinical dose in males and females, respectively)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.1",
+   "title": "Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus",
+   "text": "JARDIANCE has been studied as monotherapy and in combination with metformin, sulfonylurea, pioglitazone, linagliptin, and insulin. JARDIANCE has also been studied in patients with type 2 diabetes mellitus with mild or moderate renal impairment.\n\nIn adult patients with type 2 diabetes mellitus, treatment with JARDIANCE reduced hemoglobin A1c (HbA1c), compared to placebo. The reduction in HbA1c for JARDIANCE compared with placebo was observed across subgroups including sex, race, geographic region, baseline BMI and duration of disease."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Monotherapy\n\nA total of 986 patients with type 2 diabetes mellitus participated in a double-blind, placebo-controlled trial to evaluate the efficacy of JARDIANCE monotherapy.\n\nTreatment-na\u00efve patients with inadequately controlled type 2 diabetes mellitus entered an open-label placebo run-in for 2 weeks. At the end of the run-in period, patients who remained inadequately controlled and had an HbA1c between 7% and 10% were randomized to placebo, JARDIANCE 10 mg, JARDIANCE 25 mg, or a reference comparator.\n\nAt Week 24, treatment with JARDIANCE 10 mg or 25 mg daily provided statistically significant reductions in HbA1c (p-value <0.0001), fasting plasma glucose (FPG), and body weight compared with placebo (see Table 5 and Figure 3).\n\nTable 5 Results at Week 24 From a Placebo-Controlled Monotherapy Trial of JARDIANCE\n| JARDIANCE 10 mg N=224 | JARDIANCE 25 mg N=224 | Placebo N=228\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 24. At Week 24, 9.4%, 9.4%, and 30.7% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. ANCOVA derived p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, and region. Body weight and FPG: same model used as for HbA1c but additionally including baseline body weight/baseline FPG, respectively.) FPG (mg/dL); for JARDIANCE 10 mg, n=223, for JARDIANCE 25 mg, n=223, and for placebo, n=226\nHbA1c (%)\nBaseline (mean) | 7.9 | 7.9 | 7.9\nChange from baseline (adjusted mean) | -0.7 | -0.8 | 0.1\nDifference from placebo (adjusted mean) (97.5% CI) | -0.7 (-0.9, -0.6) | -0.9 (-1.0, -0.7) | --\nPatients [n (%)] achieving HbA1c <7% | 72 (35%) | 88 (44%) | 25 (12%)\nFPG (mg/dL)\nBaseline (mean) | 153 | 153 | 155\nChange from baseline (adjusted mean) | -19 | -25 | 12\nDifference from placebo (adjusted mean) (95% CI) | -31 (-37, -26) | -36 (-42, -31) | --\nBody Weight\nBaseline (mean) in kg | 78 | 78 | 78\n% change from baseline (adjusted mean) | -2.8 | -3.2 | -0.4\nDifference from placebo (adjusted mean) (95% CI) | -2.5 (-3.1, -1.9) | -2.8 (-3.4, -2.2) | --\n\nFigure 3 Adjusted Mean HbA1c Change at Each Time Point (Completers) and at Week 24 (mITT Population) - LOCF\n\nAt Week 24, the systolic blood pressure was statistically significantly reduced compared to placebo by -2.6 mmHg (placebo-adjusted, p-value=0.0231) in patients randomized to 10 mg of JARDIANCE and by -3.4 mmHg (placebo-corrected, p-value=0.0028) in patients randomized to 25 mg of JARDIANCE."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Add-On Combination Therapy with Metformin\n\nA total of 637 patients with type 2 diabetes mellitus participated in a double-blind, placebo-controlled trial to evaluate the efficacy of JARDIANCE in combination with metformin.\n\nPatients with type 2 diabetes mellitus inadequately controlled on at least 1,500 mg of metformin per day entered an open-label 2-week placebo run-in. At the end of the run-in period, patients who remained inadequately controlled and had an HbA1c between 7% and 10% were randomized to placebo, JARDIANCE 10 mg, or JARDIANCE 25 mg.\n\nAt Week 24, treatment with JARDIANCE 10 mg or 25 mg daily provided statistically significant reductions in HbA1c (p-value <0.0001), FPG, and body weight compared with placebo (see Table 6).\n\nTable 6 Results at Week 24 From a Placebo-Controlled Trial for JARDIANCE used in Combination with Metformin\n| JARDIANCE 10 mg N=217 | JARDIANCE 25 mg N=213 | Placebo N=207\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 24. At Week 24, 9.7%, 14.1%, and 24.6% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. ANCOVA p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, and region. Body weight and FPG: same model used as for HbA1c but additionally including baseline body weight/baseline FPG, respectively.) FPG (mg/dL); for JARDIANCE 10 mg, n=216, for JARDIANCE 25 mg, n=213, and for placebo, n=207\nHbA1c (%)\nBaseline (mean) | 7.9 | 7.9 | 7.9\nChange from baseline (adjusted mean) | -0.7 | -0.8 | -0.1\nDifference from placebo + metformin (adjusted mean) (95% CI) | -0.6 (-0.7, -0.4) | -0.6 (-0.8, -0.5) | --\nPatients [n (%)] achieving HbA1c <7% | 75 (38%) | 74 (39%) | 23 (13%)\nFPG (mg/dL)\nBaseline (mean) | 155 | 149 | 156\nChange from baseline (adjusted mean) | -20 | -22 | 6\nDifference from placebo + metformin (adjusted mean) | -26 | -29 | --\nBody Weight\nBaseline mean in kg | 82 | 82 | 80\n% change from baseline (adjusted mean) | -2.5 | -2.9 | -0.5\nDifference from placebo (adjusted mean) (95% CI) | -2.0 (-2.6, -1.4) | -2.5 (-3.1, -1.9) | --\n\nAt Week 24, the systolic blood pressure was statistically significantly reduced compared to placebo by -4.1 mmHg (placebo-corrected, p-value <0.0001) for JARDIANCE 10 mg and -4.8 mmHg (placebo-corrected, p-value <0.0001) for JARDIANCE 25 mg."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Initial Combination Therapy with Metformin\n\nA total of 1,364 patients with type 2 diabetes mellitus participated in a double-blind, randomized, active-controlled trial to evaluate the efficacy of JARDIANCE in combination with metformin as initial therapy compared to the corresponding individual components.\n\nTreatment-na\u00efve patients with inadequately controlled type 2 diabetes mellitus entered an open-label placebo run-in for 2 weeks. At the end of the run-in period, patients who remained inadequately controlled and had an HbA1c between 7% and 10.5% were randomized to one of 8 active-treatment arms: JARDIANCE 10 mg or 25 mg; metformin 1,000 mg, or 2,000 mg; JARDIANCE 10 mg in combination with 1,000 mg or 2,000 mg metformin; or JARDIANCE 25 mg in combination with 1,000 mg or 2,000 mg metformin.\n\nAt Week 24, initial therapy of JARDIANCE in combination with metformin provided statistically significant reductions in HbA1c (p-value <0.01) compared to the individual components (see Table 7).\n\nTable 7 Glycemic Parameters at 24 Weeks in a Trial Comparing JARDIANCE and Metformin to the Individual Components as Initial Therapy\n| JARDIANCE 10 mg + Metformin 1,000 mg N=161 | JARDIANCE 10 mg + Metformin 2,000 mg N=167 | JARDIANCE 25 mg + Metformin 1,000 mg N=165 | JARDIANCE 25 mg + Metformin 2,000 mg N=169 | JARDIANCE 10 mg N=169 | JARDIANCE 25 mg N=163 | Metformin 1,000 mg N=167 | Metformin 2,000 mg N=162\nMetformin total daily dose, administered in two equally divided doses per day. p-value \u22640.0062 (modified intent-to-treat population [observed case] MMRM model included treatment, renal function, region, visit, visit by treatment interaction, and baseline HbA1c). p-value \u22640.0056 (modified intent-to-treat population [observed case] MMRM model included treatment, renal function, region, visit, visit by treatment interaction, and baseline HbA1c).\nHbA1c (%) | | | | | | | |\nBaseline (mean) | 8.7 | 8.7 | 8.8 | 8.7 | 8.6 | 8.9 | 8.7 | 8.6\nChange from baseline (adjusted mean) | -2.0 | -2.1 | -1.9 | -2.1 | -1.4 | -1.4 | -1.2 | -1.8\nComparison vs JARDIANCE (adjusted mean) (95% CI) | -0.6 (-0.9, -0.4) | -0.7 (-1.0, -0.5) | -0.6 (-0.8, -0.3) | -0.7 (-1.0, -0.5) | -- | -- | -- | --\nComparison vs metformin (adjusted mean) (95% CI) | -0.8 (-1.0, -0.6) | -0.3 (-0.6, -0.1) | -0.8 (-1.0, -0.5) | -0.3 (-0.6, -0.1) | -- | -- | -- | --"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Add-On Combination Therapy with Metformin and Sulfonylurea\n\nA total of 666 patients with type 2 diabetes mellitus participated in a double-blind, placebo-controlled trial to evaluate the efficacy of JARDIANCE in combination with metformin plus a sulfonylurea.\n\nPatients with inadequately controlled type 2 diabetes mellitus on at least 1,500 mg per day of metformin and on a sulfonylurea, entered a 2-week open-label placebo run-in. At the end of the run-in, patients who remained inadequately controlled and had an HbA1c between 7% and 10% were randomized to placebo, JARDIANCE 10 mg, or JARDIANCE 25 mg.\n\nTreatment with JARDIANCE 10 mg or 25 mg daily provided statistically significant reductions in HbA1c (p-value <0.0001), FPG, and body weight compared with placebo (see Table 8).\n\nTable 8 Results at Week 24 from a Placebo-Controlled Trial for JARDIANCE in Combination with Metformin and Sulfonylurea\n| JARDIANCE 10 mg N=225 | JARDIANCE 25 mg N=216 | Placebo N=225\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 24. At Week 24, 17.8%, 16.7%, and 25.3% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. ANCOVA p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, and region. Body weight and FPG: same model used as for HbA1c but additionally including baseline body weight/baseline FPG, respectively.) FPG (mg/dL); for JARDIANCE 10 mg, n=225, for JARDIANCE 25 mg, n=215, for placebo, n=224\nHbA1c (%)\nBaseline (mean) | 8.1 | 8.1 | 8.2\nChange from baseline (adjusted mean) | -0.8 | -0.8 | -0.2\nDifference from placebo (adjusted mean) (95% CI) | -0.6 (-0.8, -0.5) | -0.6 (-0.7, -0.4) | --\nPatients [n (%)] achieving HbA1c <7% | 55 (26%) | 65 (32%) | 20 (9%)\nFPG (mg/dL)\nBaseline (mean) | 151 | 156 | 152\nChange from baseline (adjusted mean) | -23 | -23 | 6\nDifference from placebo (adjusted mean) | -29 | -29 | --\nBody Weight\nBaseline mean in kg | 77 | 78 | 76\n% change from baseline (adjusted mean) | -2.9 | -3.2 | -0.5\nDifference from placebo (adjusted mean) (95% CI) | -2.4 (-3.0, -1.8) | -2.7 (-3.3, -2.1) | --"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "In Combination with Linagliptin as Add-On to Metformin Therapy\n\nA total of 686 patients with type 2 diabetes mellitus participated in a double-blind, active-controlled trial to evaluate the efficacy of JARDIANCE 10 mg or 25 mg in combination with linagliptin 5 mg compared to the individual components.\n\nPatients with type 2 diabetes mellitus inadequately controlled on at least 1,500 mg of metformin per day entered a single-blind placebo run-in period for 2 weeks. At the end of the run-in period, patients who remained inadequately controlled and had an HbA1c between 7% and 10.5% were randomized 1:1:1:1:1 to one of 5 active-treatment arms of JARDIANCE 10 mg or 25 mg, linagliptin 5 mg, or linagliptin 5 mg in combination with 10 mg or 25 mg JARDIANCE as a fixed-dose combination tablet.\n\nAt Week 24, JARDIANCE 10 mg or 25 mg used in combination with linagliptin 5 mg provided statistically significant improvement in HbA1c (p-value <0.0001) and FPG (p-value <0.001) compared to the individual components in patients who had been inadequately controlled on metformin. Treatment with JARDIANCE/linagliptin 25 mg/5 mg or JARDIANCE/linagliptin 10 mg/5 mg daily also resulted in a statistically significant reduction in body weight compared to linagliptin 5 mg (p-value <0.0001). There was no statistically significant difference in body weight compared to JARDIANCE alone."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Active-Controlled Trial versus Glimepiride in Combination with Metformin\n\nThe efficacy of JARDIANCE was evaluated in a double-blind, glimepiride-controlled, trial in 1,545 patients with type 2 diabetes mellitus with insufficient glycemic control despite metformin therapy.\n\nPatients with inadequate glycemic control and an HbA1c between 7% and 10% after a 2-week run-in period were randomized to glimepiride or JARDIANCE 25 mg.\n\nAt Week 52, JARDIANCE 25 mg and glimepiride lowered HbA1c and FPG (see Table 9, Figure 4). The difference in observed effect size between JARDIANCE 25 mg and glimepiride excluded the pre-specified non-inferiority margin of 0.3%. The mean daily dosage of glimepiride was 2.7 mg and the maximal approved dosage in the United States is 8 mg per day.\n\nTable 9 Results at Week 52 from an Active-Controlled Trial Comparing JARDIANCE to Glimepiride as Add-On Therapy in Patients Inadequately Controlled on Metformin\n| JARDIANCE 25 mg N=765 | Glimepiride N=780\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute data missing at Week 52. At Week 52, data was imputed for 15.3% and 21.9% of patients randomized to JARDIANCE 25 mg and glimepiride, respectively. Non-inferior, ANCOVA model p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, and region) ANCOVA p-value <0.0001 (Body weight and FPG: same model used as for HbA1c but additionally including baseline body weight/baseline FPG, respectively.) FPG (mg/dL); for JARDIANCE 25 mg, n=764, for glimepiride, n=779\nHbA1c (%)\nBaseline (mean) | 7.9 | 7.9\nChange from baseline (adjusted mean) | -0.7 | -0.7\nDifference from glimepiride (adjusted mean) (97.5% CI) | -0.07 (-0.15, 0.01) | --\nFPG (mg/dL)\nBaseline (mean) | 150 | 150\nChange from baseline (adjusted mean) | -19 | -9\nDifference from glimepiride (adjusted mean) | -11 | --\nBody Weight\nBaseline mean in kg | 82.5 | 83\n% change from baseline (adjusted mean) | -3.9 | 2.0\nDifference from glimepiride (adjusted mean) (95% CI) | -5.9 (-6.3, -5.5) | --\n\nFigure 4 Adjusted mean HbA1c Change at Each Time Point (Completers) and at Week 52 (mITT Population) - LOCF\n\nAt Week 52, the adjusted mean change from baseline in systolic blood pressure was -3.6 mmHg, compared to 2.2 mmHg for glimepiride. The differences between treatment groups for systolic blood pressure was statistically significant (p-value <0.0001).\n\nAt Week 104, the adjusted mean change from baseline in HbA1c was -0.75% for JARDIANCE 25 mg and -0.66% for glimepiride. The adjusted mean treatment difference was -0.09% with a 97.5% confidence interval of (-0.32%, 0.15%), excluding the pre-specified non-inferiority margin of 0.3%. The mean daily dosage of glimepiride was 2.7 mg and the maximal approved dosage in the United States is 8 mg per day. The Week 104 analysis included data with and without concomitant glycemic rescue medication, as well as off-treatment data. Missing data for patients not providing any information at the visit were imputed based on the observed off-treatment data. In this multiple imputation analysis, 13.9% of the data were imputed for JARDIANCE 25 mg and 12.9% for glimepiride.\n\nAt Week 104, JARDIANCE 25 mg daily resulted in a statistically significant difference in change from baseline for body weight compared to glimepiride (-3.1 kg for JARDIANCE 25 mg vs. +1.3 kg for glimepiride; ANCOVA-LOCF, p-value <0.0001)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Add-On Combination Therapy with Pioglitazone with or without Metformin\n\nA total of 498 patients with type 2 diabetes mellitus participated in a double-blind, placebo-controlled trial to evaluate the efficacy of JARDIANCE in combination with pioglitazone, with or without metformin.\n\nPatients with inadequately controlled type 2 diabetes mellitus on metformin at a dose of at least 1,500 mg per day and pioglitazone at a dose of at least 30 mg per day were placed into an open-label placebo run-in for 2 weeks. Patients with inadequate glycemic control and an HbA1c between 7% and 10% after the run-in period were randomized to placebo, JARDIANCE 10 mg, or JARDIANCE 25 mg.\n\nTreatment with JARDIANCE 10 mg or 25 mg daily resulted in statistically significant reductions in HbA1c (p-value <0.0001), FPG, and body weight compared with placebo (see Table 10).\n\nTable 10 Results of Placebo-Controlled Trial for JARDIANCE in Combination Therapy with Pioglitazone\n| JARDIANCE 10 mg N=165 | JARDIANCE 25 mg N=168 | Placebo N=165\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 24. At Week 24, 10.9%, 8.3%, and 20.6% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. ANCOVA p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, and background medication. Body weight and FPG: same model used as for HbA1c but additionally including baseline body weight/baseline FPG, respectively.) FPG (mg/dL); for JARDIANCE 10 mg, n=163\nHbA1c (%)\nBaseline (mean) | 8.1 | 8.1 | 8.2\nChange from baseline (adjusted mean) | -0.6 | -0.7 | -0.1\nDifference from placebo + pioglitazone (adjusted mean) (95% CI) | -0.5 (-0.7, -0.3) | -0.6 (-0.8, -0.4) | --\nPatients [n (%)] achieving HbA1c <7% | 36 (24%) | 48 (30%) | 12 (8%)\nFPG (mg/dL)\nBaseline (mean) | 152 | 152 | 152\nChange from baseline (adjusted mean) | -17 | -22 | 7\nDifference from placebo + pioglitazone (adjusted mean) (97.5% CI) | -23 (-31.8, -15.2) | -28 (-36.7, -20.2) | --\nBody Weight\nBaseline mean in kg | 78 | 79 | 78\n% change from baseline (adjusted mean) | -2.0 | -1.8 | 0.6\nDifference from placebo (adjusted mean) (95% CI) | -2.6 (-3.4, -1.8) | -2.4 (-3.2, -1.6) | --"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Add-On Combination with Insulin with or without Metformin and/or Sulfonylureas\n\nA total of 494 patients with type 2 diabetes mellitus inadequately controlled on insulin, or insulin in combination with oral drugs participated in a double-blind, placebo-controlled trial to evaluate the efficacy of JARDIANCE as add-on therapy to insulin over 78 weeks.\n\nPatients entered a 2-week placebo run-in period on basal insulin (e.g., insulin glargine, insulin detemir, or NPH insulin) with or without metformin and/or sulfonylurea background therapy. Following the run-in period, patients with inadequate glycemic control were randomized to the addition of JARDIANCE 10 mg, JARDIANCE 25 mg, or placebo. Patients were maintained on a stable dose of insulin prior to enrollment, during the run-in period, and during the first 18 weeks of treatment. For the remaining 60 weeks, insulin could be adjusted. The mean total daily insulin dose at baseline for JARDIANCE 10 mg, 25 mg, and placebo was 45 IU, 48 IU, and 48 IU, respectively.\n\nJARDIANCE used in combination with insulin (with or without metformin and/or sulfonylurea) provided statistically significant reductions in HbA1c and FPG compared to placebo after both 18 and 78 weeks of treatment (see Table 11). JARDIANCE 10 mg or 25 mg daily also resulted in statistically significantly greater percent body weight reduction compared to placebo.\n\nTable 11 Results at Week 18 and 78 for a Placebo-Controlled Trial for JARDIANCE in Combination with Insulin\n| 18 weeks (no insulin adjustment) | 78 weeks (adjustable insulin dose after 18 weeks)\n| JARDIANCE 10 mg N=169 | JARDIANCE 25 mg N=155 | Placebo N=170 | JARDIANCE 10 mg N=169 | JARDIANCE 25 mg N=155 | Placebo N=170\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 18 and 78. At Week 18, 21.3%, 30.3%, and 21.8% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. At Week 78, 32.5%, 38.1% and 42.4% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. ANCOVA p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, and region; FPG: MMRM model includes baseline FPG, baseline HbA1c, treatment, region, visit and visit by treatment interaction. Body weight: MMRM model includes baseline body weight, baseline HbA1c, treatment, region, visit and visit by treatment interaction. p-value=0.0049 p-value=0.0052 p-value=0.0463\nHbA1c (%)\nBaseline (mean) | 8.3 | 8.3 | 8.2 | 8.3 | 8.3 | 8.2\nChange from baseline (adjusted mean) | -0.6 | -0.7 | 0 | -0.4 | -0.6 | 0.1\nDifference from placebo (adjusted mean) (97.5% CI) | -0.6 (-0.8, -0.4) | -0.7 (-0.9, -0.5) | -- | -0.5 (-0.7, -0.3) | -0.7 (-0.9, -0.5) | --\nPatients (%) achieving HbA1c <7% | 18.0 | 19.5 | 5.5 | 12.0 | 17.5 | 6.7\nFPG (mg/dL)\nBaseline (mean) | 138 | 146 | 142 | 138 | 146 | 142\nChange from baseline (adjusted mean, SE) | -17.9 (3.2) | -19.1 (3.3) | 10.4 (3.1) | -10.1 (3.2) | -15.2 (3.4) | 2.8 (3.2)\nDifference from placebo (adjusted mean) (95% CI) | -28.2 (-37.0, -19.5) | -29.5 (-38.4, -20.6) | -- | -12.9 (-21.9, 3.9) | -17.9 (-27.0, -8.8) | --\nBody Weight\nBaseline mean in kg | 92 | 95 | 90 | 92 | 95 | 90\n% change from baseline (adjusted mean) | -1.8 | -1.4 | -0.1 | -2.4 | -2.4 | 0.7\nDifference from placebo (adjusted mean) (95% CI) | -1.7 (-3.0, -0.5) | -1.3 (-2.5, -0.0) | -- | -3.0 (-4.4, -1.7) | -3.0 (-4.4, -1.6) | --"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Add-on Combination with MDI Insulin with or without Metformin\n\nA total of 563 patients with type 2 diabetes mellitus inadequately controlled on multiple daily injections (MDI) of insulin (total daily dose >60 IU), alone or in combination with metformin, participated in a double-blind, placebo-controlled trial to evaluate the efficacy of JARDIANCE as add-on therapy to MDI insulin over 18 weeks.\n\nPatients entered a 2-week placebo run-in period on MDI insulin with or without metformin background therapy. Following the run-in period, patients with inadequate glycemic control were randomized to the addition of JARDIANCE 10 mg, JARDIANCE 25 mg, or placebo. Patients were maintained on a stable dose of insulin prior to enrollment, during the run-in period, and during the first 18 weeks of treatment. The mean total daily insulin dose at baseline for JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo was 88.6 IU, 90.4 IU, and 89.9 IU, respectively.\n\nJARDIANCE 10 mg or 25 mg daily used in combination with MDI insulin (with or without metformin) provided statistically significant reductions in HbA1c compared to placebo after 18 weeks of treatment (see Table 12).\n\nTable 12 Results at Week 18 for a Placebo-Controlled Trial for JARDIANCE in Combination with Insulin and with or without Metformin\n| JARDIANCE 10 mg N=186 | JARDIANCE 25 mg N=189 | Placebo N=188\nModified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 18. At Week 18, 23.7%, 22.8% and 23.4% was imputed for patients randomized to JARDIANCE 10 mg, JARDIANCE 25 mg, and placebo, respectively. ANCOVA p-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, geographical region, and background medication).\nHbA1c (%)\nBaseline (mean) | 8.4 | 8.3 | 8.3\nChange from baseline (adjusted mean) | -0.9 | -1.0 | -0.5\nDifference from placebo (adjusted mean) (95% CI) | -0.4 (-0.6, -0.3) | -0.5 (-0.7, -0.4) | --\n\nDuring an extension period with treatment for up to 52 weeks, insulin could be adjusted to achieve defined glucose target levels. The change from baseline in HbA1c was maintained from 18 to 52 weeks with both JARDIANCE 10 mg and 25 mg. After 52 weeks, JARDIANCE 10 mg or 25 mg daily resulted in statistically greater percent body weight reduction compared to placebo (p-value <0.0001). The mean change in body weight from baseline was -1.95 kg for JARDIANCE 10 mg, and -2.04 kg for JARDIANCE 25 mg."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": null,
+   "title": "Clinical Studies",
+   "path": "14 CLINICAL STUDIES > 14.1 Glycemic Control Trials in Adults with Type 2 Diabetes Mellitus > Clinical Studies",
+   "text": "Renal Impairment\n\nA total of 738 patients with type 2 diabetes mellitus and a baseline eGFR less than 90 mL/min/1.73 m^2 participated in a randomized, double-blind, placebo-controlled, parallel-group trial to evaluate the efficacy of JARDIANCE in patients with type 2 diabetes mellitus and renal impairment. The trial population comprised of 290 patients with mild renal impairment (eGFR 60 to less than 90 mL/min/1.73 m^2), 374 patients with moderate renal impairment (eGFR 30 to less than 60 mL/min/1.73 m^2), and 74 with severe renal impairment (eGFR less than 30 mL/min/1.73 m^2). A total of 194 patients with moderate renal impairment had a baseline eGFR of 30 to less than 45 mL/min/1.73 m^2 and 180 patients had a baseline eGFR of 45 to less than 60 mL/min/1.73 m^2.\n\nAt Week 24, JARDIANCE 25 mg provided statistically significant reduction in HbA1c relative to placebo in patients with mild to moderate renal impairment (see Table 13). A statistically significant reduction relative to placebo was also observed with JARDIANCE 25 mg in patients with either mild [-0.7 (95% CI: -0.9, -0.5)] or moderate [-0.4 (95% CI: -0.6, -0.3)] renal impairment and with JARDIANCE 10 mg in patients with mild [-0.5 (95% CI: -0.7, -0.3)] renal impairment.\n\nThe glucose lowering efficacy of JARDIANCE 25 mg decreased with decreasing level of renal function in the mild to moderate range. Least square mean HbA1c changes at 24 weeks were -0.6%, -0.5%, and -0.2% for those with a baseline eGFR of 60 to less than 90 mL/min/1.73 m^2, 45 to less than 60 mL/min/1.73 m^2, and 30 to less than 45 mL/min/1.73 m^2, respectively [see Dosage and Administration (2) and Use in Specific Populations (8.6)]. For placebo, least square mean HbA1c changes at 24 weeks were 0.1%, -0.1%, and 0.2% for patients with a baseline eGFR of 60 to less than 90 mL/min/1.73 m^2, 45 to less than 60 mL/min/1.73 m^2, and 30 to less than 45 mL/min/1.73 m^2, respectively.\n\nTable 13 Results at Week 24 (LOCF) of Placebo-Controlled Trial for JARDIANCE in Adults with Type 2 Diabetes Mellitus and Renal Impairment\n| Mild and Moderate Impairment\n| JARDIANCE 25 mg\np-value <0.0001 (HbA1c: ANCOVA model includes baseline HbA1c, treatment, renal function, and background medication) eGFR 30 to less than 90 mL/min/1.73 m^2 - Modified intent-to-treat population. Last observation on trial (LOCF) was used to impute missing data at Week 24. At Week 24, 24.6% and 26.2% was imputed for patients randomized to JARDIANCE 25 mg and placebo, respectively.\nHbA1c |\nNumber of patients | n=284\nComparison vs placebo (adjusted mean) (95% CI) | -0.5 (-0.6, -0.4)\n\nFor patients with severe renal impairment, the analyses of changes in HbA1c and FPG showed no discernible treatment effect of JARDIANCE 25 mg compared to placebo [see Indications and Usage (1), Dosage and Administration (2.1, 2.2) and Use in Specific Populations (8.6)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.2",
+   "title": "Glycemic Control Trial in Pediatric Patients Aged 10 to 17 Years with Type 2 Diabetes Mellitus",
+   "path": "14 CLINICAL STUDIES > 14.2 Glycemic Control Trial in Pediatric Patients Aged 10 to 17 Years with Type 2 Diabetes Mellitus",
+   "text": "DINAMO (NCT03429543) was a 26-week, double-blind, randomized, placebo-controlled, parallel group trial, with a double-blind active treatment safety extension period up to 52 weeks to assess the efficacy of JARDIANCE. The trial enrolled pediatric patients aged 10 to 17 years with inadequately controlled type 2 diabetes mellitus (HbA1c 6.5 to 10.5%). Patients treated with metformin (at least 1,000 mg daily or maximally tolerated dose), with or without insulin therapy, and those with a history of intolerance to metformin therapy were enrolled. Patients were randomized to 3 treatment arms (JARDIANCE 10 mg, a dipeptidyl peptidase-4 (DPP-4) inhibitor or placebo), over 26 weeks. Patients in the JARDIANCE 10 mg group who failed to achieve HbA1c <7.0% at Week 12 underwent a second randomization at Week 14 to remain on the 10 mg dose or increase to 25 mg. Patients on placebo were re-randomized at Week 26 to one of the JARDIANCE doses (10 mg or 25 mg) or a DPP-4 inhibitor.\n\nA total of 157 patients were treated with either JARDIANCE (10 mg or 25 mg; N=52), a DPP-4 inhibitor (N=52), or placebo (N=53). Background therapies as adjunct to diet and exercise included metformin (51%), a combination of metformin and insulin (40.1%), insulin (3.2%), or none (5.7%). The mean HbA1c at baseline was 8.0% and the mean duration of type 2 diabetes mellitus was 2.1 years. The mean age was 14.5 years (range: 10-17 years) and 51.6% were aged 15 years and older. Approximately, 50% were White, 6% were Asian, 31% were Black or African American, and 38% were of Hispanic or Latino ethnicity. The mean BMI was 36.0 kg/m^2 and mean BMI Z-score was 3.0. Patients with an eGFR less than 60 mL/min/1.73 m^2 were not enrolled in the trial. Approximately 25% of the study population had microalbuminuria or macroalbuminuria.\n\nAt Week 26, treatment with JARDIANCE was superior in reducing HbA1c from baseline versus placebo (see Table 14).\n\nTable 14 Results at Week 26 for a Placebo-Controlled Trial for JARDIANCE in Combination with Metformin and/or Insulin or as Monotherapy in Pediatric Patients Aged 10 to 17 Years with Type 2 Diabetes Mellitusa\n| JARDIANCE 10 mg and 25 mg | Placebo\nModified intent-to-treat set (All randomized and treated patients with baseline measurement). Multiple imputations using placebo wash-out approach with 500 iterations for missing data. Imputed for HbA1c (Jardiance N=5 (9.6 %), Placebo N=3 (5.7%)), for FPG (Jardiance N=4 (8.3%), Placebo N=2 (3.8%)). Least-Square Mean from Analysis of Covariance (ANCOVA) adjusted for baseline value and baseline age stratum (< 15 years vs 15 to < 18 years). Not evaluated for statistical significance, not part of sequential testing procedure. p-value=0.0116 (two-sided)\nHbA1c (%)\nNumber of patients | n=52 | n=53\nBaseline (mean) | 8.0 | 8.1\nChange from baseline | -0.2 | 0.7\nDifference from placebo (95% CI) | -0.8 (-1.5, -0.2) | --\nFPG (mg/dL)^b,d | |\nNumber of patients | n=48 | n=52\nBaseline (mean) | 154 | 159\nChange from baseline | -19 | 17\nDifference from placebo (95% CI) | -36 (-60.7, -10.7) | --"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.3",
+   "title": "Cardiovascular Outcomes in Adults with Type 2 Diabetes Mellitus and Atherosclerotic Cardiovascular Disease",
+   "path": "14 CLINICAL STUDIES > 14.3 Cardiovascular Outcomes in Adults with Type 2 Diabetes Mellitus and Atherosclerotic Cardiovascular Disease",
+   "text": "The effect of JARDIANCE on cardiovascular (CV) risk in adult patients with type 2 diabetes mellitus and established, stable, atherosclerotic CV disease was evaluated in the EMPA-REG OUTCOME trial, a multicenter, multinational, randomized, double-blind parallel group trial. The trial compared the risk of experiencing a major adverse cardiovascular event (MACE) between JARDIANCE and placebo when these were added to and used concomitantly with standard of care treatments for diabetes mellitus and atherosclerotic CV disease. Concomitant antidiabetic medications were to be kept stable for the first 12 weeks of the trial. Thereafter, antidiabetic and atherosclerotic therapies could be adjusted, at the discretion of investigators, to ensure participants were treated according to the standard care for these diseases.\n\nA total of 7,020 patients were treated (JARDIANCE 10 mg = 2,345; JARDIANCE 25 mg = 2,342; placebo = 2,333) and followed for a median of 3.1 years. Approximately 72% of the trial population was White, 22% was Asian, and 5% was Black. The mean age was 63 years and approximately 72% were male.\n\nAll patients in the trial had inadequately controlled type 2 diabetes mellitus at baseline (HbA1c greater than or equal to 7%). The mean HbA1c at baseline was 8.1% and 57% of participants had diabetes mellitus for more than 10 years. Approximately 31%, 22% and 20% reported a past history of neuropathy, retinopathy and nephropathy to investigators, respectively and the mean eGFR was 74 mL/min/1.73 m^2. At baseline, patients were treated with one (~30%) or more (~70%) antidiabetic medications including metformin (74%), insulin (48%), and sulfonylurea (43%).\n\nAll patients had established atherosclerotic CV disease at baseline including one (82%) or more (18%) of the following: a documented history of coronary artery disease (76%), stroke (23%) or peripheral artery disease (21%). At baseline, the mean systolic blood pressure was 136 mmHg, the mean diastolic blood pressure was 76 mmHg, the mean LDL was 86 mg/dL, the mean HDL was 44 mg/dL, and the mean urinary albumin to creatinine ratio (UACR) was 175 mg/g. At baseline, approximately 81% of patients were treated with renin angiotensin system inhibitors, 65% with beta-blockers, 43% with diuretics, 77% with statins, and 86% with antiplatelet agents (mostly aspirin).\n\nThe primary endpoint in EMPA-REG OUTCOME was the time to first occurrence of a Major Adverse Cardiac Event (MACE). A major adverse cardiac event was defined as occurrence of either a CV death or a non-fatal myocardial infarction (MI) or a non-fatal stroke. The statistical analysis plan had pre-specified that the 10 and 25 mg doses would be combined. A Cox proportional hazards model was used to test for non-inferiority against the pre-specified risk margin of 1.3 for the hazard ratio of MACE and superiority on MACE if non-inferiority was demonstrated. Type-1 error was controlled across multiples tests using a hierarchical testing strategy.\n\nJARDIANCE significantly reduced the risk of first occurrence of primary composite endpoint of CV death, non-fatal myocardial infarction, or non-fatal stroke (HR: 0.86; 95% CI: 0.74, 0.99). The treatment effect was due to a significant reduction in the risk of CV death in subjects randomized to empagliflozin (HR: 0.62; 95% CI: 0.49, 0.77), with no change in the risk of non-fatal myocardial infarction or non-fatal stroke (see Table 15 and Figures 5 and 6). Results for the 10 mg and 25 mg empagliflozin dosages were consistent with results for the combined dosage groups.\n\nTable 15 Treatment Effect for the Primary Composite Endpoint and its Componentsa\n| Placebo N=2,333 | JARDIANCE N=4,687 | Hazard ratio vs placebo (95% CI)\nTreated set (patients who had received at least one dose of trial drug) p-value for superiority (2-sided) 0.04 Total number of events\nComposite of CV death, non-fatal myocardial infarction, non-fatal stroke (time to first occurrence) | 282 (12.1%) | 490 (10.5%) | 0.86 (0.74, 0.99)\nNon-fatal myocardial infarction | 121 (5.2%) | 213 (4.5%) | 0.87 (0.70, 1.09)\nNon-fatal stroke | 60 (2.6%) | 150 (3.2%) | 1.24 (0.92, 1.67)\nCV death | 137 (5.9%) | 172 (3.7%) | 0.62 (0.49, 0.77)\n\nFigure 5 Estimated Cumulative Incidence of First MACE\n\nFigure 6 Estimated Cumulative Incidence of CV Death\n\nThe efficacy of JARDIANCE on CV death was generally consistent across major demographic and disease subgroups.\n\nVital status was obtained for 99.2% of subjects in the trial. A total of 463 deaths were recorded during the EMPA-REG OUTCOME trial. Most of these deaths were categorized as CV deaths. The non-CV deaths were only a small proportion of deaths and were balanced between the treatment groups (2.1% in patients treated with JARDIANCE, and 2.4% of patients treated with placebo)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.4",
+   "title": "Heart Failure Trials in Adults",
+   "path": "14 CLINICAL STUDIES > 14.4 Heart Failure Trials in Adults",
+   "text": "EMPEROR-Reduced (NCT03057977) was a double-blind trial conducted in adults with chronic heart failure (New York Heart Association [NYHA] functional class II-IV) with left ventricular ejection fraction (LVEF) \u226440% to evaluate the efficacy of JARDIANCE as adjunct to standard of care heart failure therapy.\n\nOf 3,730 patients, 1,863 were randomized to JARDIANCE 10 mg and 1,867 to placebo and were followed for a median of 16 months. The mean age of the trial population was 67 years (range: 25 to 94 years) and 76% were men, 24% were women, and 27% were 75 years of age or older. Approximately 71% of the trial population were White, 18% Asian, and 7% Black or African American. At baseline, 50% of the patients had type 2 diabetes mellitus.\n\nAt randomization, 75% of patients were NYHA class II, 24% were class III, and 0.5% were class IV. The mean LVEF was 28%. At baseline, the mean eGFR was 62 mL/min/1.73 m^2 and the median urinary albumin to creatinine ratio (UACR) was 22 mg/g. Approximately half of the patients (52%) had eGFR equal to or above 60 mL/min/1.73 m^2, 24% had eGFR 45 to less than 60 mL/min/1.73 m^2, 19% had eGFR 30 to less than 45 mL/min/1.73 m^2, and 5% had eGFR 20 to less than 30 mL/min/1.73 m^2.\n\nAt baseline, 88% of patients were treated with angiotensin-converting enzyme (ACE) inhibitors, angiotensin receptor blockers (ARB), or angiotensin receptor-neprilysin inhibitors (ARNI), 95% with beta-blockers, 71% with mineralocorticoid receptor antagonists (MRA), and 95% with diuretics.\n\nThe primary endpoint was the time to first event of either cardiovascular (CV) death or hospitalization for heart failure (HHF). First and recurrent HHF was assessed as a key secondary endpoint.\n\nJARDIANCE was superior in reducing the risk of the primary composite endpoint of cardiovascular death or hospitalization for heart failure compared with placebo, mostly through a reduction in hospitalization for heart failure. JARDIANCE reduced the risk of first and recurrent HHF (see Table 16 and Figures 7 and 8).\n\nTable 16 Treatment Effect for the Primary Composite Endpoint, its Components, and Key Secondary Endpoints\n| Placebo N=1,867 | JARDIANCE 10 mg N=1,863 | Hazard ratio vs placebo (95% CI) | p-value\n| Number of Patients (%) |\nTime to first event Includes deaths following hospitalization Joint frailty model accounting for CV death\nCV death or HHF | 462 (24.7%) | 361 (19.4%) | 0.75 (0.65, 0.86) | <0.0001\nCV death^a,b | 202 (10.8%) | 187 (10.0%) | 0.92 (0.75, 1.12) |\nHHF | 342 (18.3%) | 246 (13.2%) | 0.69 (0.59, 0.81) |\n| Number of Events | |\nFirst and recurrent HHF | 553 | 388 | 0.70 (0.58, 0.85) | 0.0003\n\nFigure 7 Time to First Occurrence of the Primary Composite Endpoint of CV Death or Hospitalization for Heart Failure\n\nFigure 8 Time to Event of Hospitalization for Heart Failure (First and Recurrent)\n\nThe results of the primary composite were generally consistent across the pre-specified subgroups (see Figure 9).\n\nFigure 9 Treatment Effects for the Primary Composite Endpoint (CV Death and Hospitalization for Heart Failure) Subgroup Analysis (EMPEROR-Reduced)\n\nLVEF >30%: Includes both above and below the median NT-proBNP. To be eligible for inclusion, patients with an LVEF >30% were required to meet a higher NT-proBNP threshold than those with LVEF \u226430%, unless they additionally had a history of HHF within the past 12 months.\n\nEMPEROR-Preserved (NCT03057951) was a double-blind trial conducted in adults with chronic heart failure NYHA Class II-IV with LVEF >40% to evaluate the efficacy of JARDIANCE as adjunct to standard of care therapy.\n\nOf 5,988 patients, 2,997 were randomized to JARDIANCE 10 mg and 2,991 to placebo and were followed for a median of 26 months. The mean age of the trial population was 72 years (range: 22 to 100 years) and 55% were men, 45% were women, and 43% were 75 years of age or older. Approximately 76% of the trial population were White, 14% Asian, and 4% Black or African American.\n\nAt randomization, 82% of patients were NYHA class II, 18% were class III, and 0.3% were class IV. The EMPEROR-Preserved trial population included patients with a LVEF <50% (33.1%), with a LVEF 50 to <60% (34.4%) and a LVEF \u226560% (32.5%). At baseline, the mean eGFR was 61 mL/min/1.73 m^2 and the median urinary albumin to creatinine ratio (UACR) was 21 mg/g. Approximately half of the patients (50%) had eGFR equal to or above 60 mL/min/1.73 m^2, 26% had eGFR 45 to less than 60 mL/min/1.73 m^2, 19% had eGFR 30 to less than 45 mL/min/1.73 m^2, and 5% had eGFR 20 to less than 30 mL/min/1.73 m^2.\n\nAt baseline, 81% of patients were treated with ACE inhibitors, ARBs, or ARNI, 86% with beta-blockers, 38% with MRAs, and 86% with diuretics.\n\nThe primary endpoint was the time to first event of either CV death or HHF. First and recurrent HHF was assessed as a key secondary endpoint.\n\nJARDIANCE was superior in reducing the risk of the primary composite endpoint compared with placebo, mostly through a reduction in hospitalization for heart failure. JARDIANCE reduced the risk of first and recurrent HHF (see Table 17 and Figures 10 and 11).\n\nTable 17 Treatment Effect for the Primary Composite Endpoint, its Components, and Key Secondary Endpoints\n| Placebo N=2,991 | JARDIANCE 10 mg N=2,997 | Hazard ratio vs placebo (95% CI) | p-value\n| Number of Patients (%) |\nTime to first event Includes deaths following hospitalization Joint frailty model accounting for CV death\nCV death or HHF | 511 (17.1%) | 415 (13.8%) | 0.79 (0.69, 0.90) | 0.0003\nCV death^a,b | 244 (8.2%) | 219 (7.3%) | 0.91 (0.76, 1.09) |\nHHF | 352 (11.8%) | 259 (8.6%) | 0.71 (0.60, 0.83) |\n| Number of Events | |\nFirst and recurrent HHF | 541 | 407 | 0.73 (0.61, 0.88) | 0.0009\n\nFigure 10 Time to First Occurrence of the Primary Composite Endpoint of CV Death or Hospitalization for Heart Failure\n\nFigure 11 Time to Event of Hospitalization for Heart Failure (First and Recurrent)\n\nThe results of the primary composite endpoint were consistent across the pre-specified subgroups (see Figure 12).\n\nFigure 12 Treatment Effects for the Primary Composite Endpoint (CV Death or Hospitalization for Heart Failure) Subgroup Analysis (EMPEROR-Preserved)"
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34092-7",
+   "top_name": "Clinical Studies",
+   "number": "14.5",
+   "title": "Chronic Kidney Disease Trial in Adults",
+   "path": "14 CLINICAL STUDIES > 14.5 Chronic Kidney Disease Trial in Adults",
+   "text": "EMPA-KIDNEY (NCT03594110) was a randomized, double-blind, placebo-controlled trial conducted in adults with chronic kidney disease (eGFR \u226520 to <45 mL/min/1.73 m^2; or eGFR \u226545 to <90 mL/min/1.73 m^2 with urine albumin to creatinine ratio [UACR] \u2265200 mg/g). The trial excluded patients with polycystic kidney disease or patients requiring intravenous immunosuppressive therapy in the preceding three months or >45 mg of prednisone (or equivalent) at the time of screening. The primary objective of the trial was to assess the effects of empagliflozin as an adjunct to standard of care therapy, including RAS-inhibitor therapy when appropriate, on time to kidney disease progression or cardiovascular death.\n\nA total of 6,609 patients, were equally randomized to JARDIANCE 10 mg or placebo and were followed for a median of 24 months.\n\nThe mean age of the study population was 63 years (range: 18 to 94 years) and 67% were male. Approximately 58% of the study population were White, 36% Asian, and 4% Black or African American. Approximately 44% of the patients had type 2 diabetes mellitus.\n\nAt baseline, the mean eGFR was 37 mL/min/1.73 m^2, 21% of patients had an eGFR equal to or above 45 mL/min/1.73 m^2, 44% had an eGFR 30 to less than 45 mL/min/1.73 m^2, and 35% had an eGFR less than 30 mL/min/1.73 m^2. The median UACR was 329 mg/g, 20% of patients had a UACR <30 mg/g, 28% had a UACR 30 to \u2264300mg/g, and 52% had a UACR >300 mg/g. Approximately 1% of patients had type 1 diabetes at baseline. The most common etiologies of CKD were diabetic nephropathy/diabetic kidney disease (31%), glomerular disease (25%), hypertensive/renovascular disease (22%) and other/unknown (22%).\n\nAt baseline, 85% of patients were treated with ACE inhibitor or ARB, 64% with statins, and 34% with antiplatelet agents.\n\nJARDIANCE was superior to placebo in reducing the risk of the primary composite endpoint of sustained \u226540% eGFR decline, sustained eGFR <10 mL/min/1.73 m^2, progression to end-stage kidney disease, or CV or renal death. The treatment effect reflected a reduction in a sustained \u226540% eGFR decline, sustained eGFR <10 mL/min/1.73 m^2, progression to end-stage kidney disease, and CV death. There were few renal deaths during the trial. JARDIANCE also reduced the risk of first and recurrent hospitalization (see Table 18 and Figure 13); information collected on the reason for hospitalization was insufficient to further characterize the benefit.\n\nTable 18 Treatment Effect for the Primary Composite Endpoint, its Components and Key Secondary Endpoints\n| Placebo N=3,305 | JARDIANCE 10 mg N=3,304 | Hazard ratio vs placebo (95% CI) | p-value\nCV=Cardiovascular, eGFR=Estimated glomerular filtration rate, ESKD=End-stage kidney disease\nESKD is defined as the initiation of maintenance dialysis or receipt of a kidney transplant.\nThere were too few events of renal death to compute a reliable hazard ratio.\nInformation collected on the reason for hospitalization was insufficient to further characterize the benefit.\n| Number of Patients (%) | |\nComposite of sustained \u226540% eGFR decline, sustained eGFR <10 mL/min/1.73 m^2, ESKD, or CV or renal death (time to first occurrence) | 558 (16.9) | 432 (13.1) | 0.72 (0.64, 0.82) | <0.0001\nSustained \u226540% eGFR decline | 474 (14.3) | 359 (10.9) | 0.70 (0.61, 0.81) |\nESKD or sustained eGFR <10 mL/min/1.73 m^2 | 221 (6.7) | 157 (4.8) | 0.69 (0.56, 0.84) |\nRenal death | 4 (0.1) | 4 (0.1) | |\nCV death | 69 (2.1) | 59 (1.8) | 0.84 (0.60, 1.19) |\n| Number of Events | |\nFirst and recurrent hospitalization | 1,895 | 1,611 | 0.86 (0.78, 0.95) | 0.0025\n\nFigure 13 Time to First Occurrence of the Primary Composite Endpoint, Sustained \u226540% eGFR Decline, Sustained eGFR <10 mL/min/1.73 m^2, ESKD or Renal Death, or CV Death\n\nThe results of the primary composite endpoint were generally consistent across the pre-specified subgroups examined, including eGFR categories, underlying cause of kidney disease, diabetes status, or background use of RAS inhibitors (see Figure 14). The treatment benefit with JARDIANCE on the primary composite endpoint was not evident in patients with very low levels of albuminuria, however there were few events in these patients.\n\nFigure 14 Treatment Effects for the Primary Composite Endpoint (Sustained \u226540% eGFR Decline, Sustained eGFR <10 mL/min/1.73 m^2, ESKD or Renal Death, or CV Death) Subgroup Analysis (EMPA-KIDNEY)\n\n*=Trend test"
+  },
+  {
+   "code": "34069-5",
+   "top_code": "34069-5",
+   "top_name": "How Supplied/Storage and Handling",
+   "number": "16",
+   "title": "HOW SUPPLIED/STORAGE AND HANDLING",
+   "path": "16 HOW SUPPLIED/STORAGE AND HANDLING",
+   "text": "JARDIANCE tablets are available as follows:\n\n10 mg tablets: pale yellow, round, biconvex, and bevel-edged film-coated tablets debossed with \"S 10\" on one side and the Boehringer Ingelheim company symbol on the other side.\nBottles of 30 (NDC 0597-0152-30)\nBottles of 90 (NDC 0597-0152-90)\nCartons containing 3 blister cards of 10 tablets each (3 \u00d7 10) (NDC 0597-0152-37), institutional pack.\n\n25 mg tablets: pale yellow, oval, biconvex film-coated tablets, debossed with \"S 25\" on one side and the Boehringer Ingelheim company symbol on the other side.\nBottles of 30 (NDC 0597-0153-30)\nBottles of 90 (NDC 0597-0153-90)\nCartons containing 3 blister cards of 10 tablets each (3 \u00d7 10) (NDC 0597-0153-37), institutional pack.\n\nDispense in a well-closed container as defined in the USP."
+  },
+  {
+   "code": "44425-7",
+   "top_code": "34069-5",
+   "top_name": "How Supplied/Storage and Handling",
+   "number": null,
+   "title": "How Supplied/Storage and Handling",
+   "path": "16 HOW SUPPLIED/STORAGE AND HANDLING > How Supplied/Storage and Handling",
+   "text": "Storage\n\nStore at 20\u00b0C to 25\u00b0C (68\u00b0F to 77\u00b0F); excursions permitted to 15\u00b0C to 30\u00b0C (59\u00b0F to 86\u00b0F) [see USP Controlled Room Temperature]."
+  },
+  {
+   "code": "34076-0",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": "17",
+   "title": "PATIENT COUNSELING INFORMATION",
+   "path": "17 PATIENT COUNSELING INFORMATION",
+   "text": "Advise the patient to read the FDA-approved patient labeling (Medication Guide)."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Diabetic Ketoacidosis in Patients with Type 1 Diabetes Mellitus and Other Ketoacidosis\n\nIn patients with type 1 diabetes mellitus, inform them that using JARDIANCE can increase their risk of life-threatening diabetic ketoacidosis and that fatal ketoacidosis has occurred. For all other patients, inform them that JARDIANCE can cause potentially fatal ketoacidosis and that type 2 diabetes mellitus and pancreatic disorders (e.g., history of pancreatitis or pancreatic surgery) are risk factors.\n\nEducate all patients on precipitating factors (such as insulin dose reduction or missed insulin doses, infection, reduced caloric intake, ketogenic diet, surgery, dehydration, and alcohol abuse) and symptoms of ketoacidosis (including nausea, vomiting, abdominal pain, tiredness, and labored breathing). Inform patients that blood glucose may be normal even in the presence of ketoacidosis.\n\nAdvise patients that they may be asked to monitor ketones. If symptoms of ketoacidosis occur, instruct patients to discontinue JARDIANCE and seek medical attention immediately [see Warnings and Precautions (5.1)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Volume Depletion\n\nInform patients that symptomatic hypotension may occur with JARDIANCE and advise them to contact their healthcare provider if they experience such symptoms [see Warnings and Precautions (5.2)]. Inform patients that dehydration may increase the risk for hypotension, and to maintain adequate fluid intake."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Genitourinary Infections, including Urosepsis, Pyelonephritis, Necrotizing Fasciitis of the Perineum (Fournier's Gangrene), and Genital Mycotic Infections\n\nCounsel patients that genitourinary infections may occur when taking JARDIANCE and may become serious. Educate them on the symptoms and advise them to seek medical advice if symptoms occur. Specifically, advise patients to promptly seek medical attention if they develop pain or tenderness, redness, or swelling of the genitals or the area from the genitals back to the rectum, along with a fever above 100.4\u00b0F or malaise [see Warnings and Precautions (5.3)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Hypoglycemia\n\nInform patients that hypoglycemia has been reported when JARDIANCE is used with insulin secretagogues or insulin. Hypoglycemia may occur in pediatric patients regardless of concomitant antidiabetic treatment. Educate patients or caregivers on the signs and symptoms of hypoglycemia [see Warnings and Precautions (5.4)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Lower Limb Amputation\n\nCounsel patients about the importance of routine preventative foot care. Instruct patients to monitor for new pain or tenderness, sores or ulcers, or infections involving the leg or foot and to seek medical advice immediately if such signs or symptoms develop [see Warnings and Precautions (5.5)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Hypersensitivity Reactions\n\nInform patients that serious hypersensitivity reactions, such as urticaria and angioedema, have been reported with JARDIANCE. Advise patients to report immediately any skin reaction or angioedema, and to discontinue drug until they have consulted prescribing healthcare provider [see Warnings and Precautions (5.6)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Laboratory Tests\n\nInform patients that elevated glucose in urinalysis is expected when taking JARDIANCE [see Drug Interactions (7)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Pregnancy\n\nAdvise pregnant patients, and patients of reproductive potential, of the potential risk to a fetus with treatment with JARDIANCE [see Use in Specific Populations (8.1)]. Instruct patients to report pregnancies to their healthcare provider as soon as possible."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Lactation\n\nAdvise patients that breastfeeding is not recommended during treatment with JARDIANCE [see Use in Specific Populations (8.2)]."
+  },
+  {
+   "code": "42229-5",
+   "top_code": "34076-0",
+   "top_name": "Patient Counseling Information",
+   "number": null,
+   "title": "Patient Counseling Information",
+   "path": "17 PATIENT COUNSELING INFORMATION > Patient Counseling Information",
+   "text": "Missed Dose\n\nInstruct patients to take JARDIANCE only as prescribed. If a dose is missed, it should be taken as soon as the patient remembers. Advise patients not to double their next dose [see Dosage and Administration (2.4)]."
+  },
+  {
+   "code": "42231-1",
+   "top_code": "42231-1",
+   "top_name": "Medication Guide",
+   "number": null,
+   "title": "Medication Guide",
+   "path": "Medication Guide",
+   "text": "This Medication Guide has been approved by the U.S. Food and Drug Administration. | Revised: January 2026\nMEDICATION GUIDE JARDIANCE^\u00ae (jar DEE ans) (empagliflozin tablets) for oral use\nWhat is the most important information I should know about JARDIANCE? JARDIANCE can cause serious side effects, including: - Diabetic ketoacidosis (increased ketones in your blood or urine) in people with type 1 and other ketoacidosis. JARDIANCE can cause ketoacidosis that can be life-threatening and may lead to death. Ketoacidosis is a serious condition which needs to be treated in a hospital. People with type 1 diabetes have a high risk of getting ketoacidosis. People with type 2 diabetes or pancreas problems also have an increased risk of getting ketoacidosis. Ketoacidosis can also happen in people who: are sick, cannot eat or drink as usual, skip meals, are on a diet high in fat and low in carbohydrates (ketogenic diet), take less than the usual amount of insulin or miss insulin doses, drink too much alcohol, have a loss of too much fluid from the body (volume depletion), or who have surgery. Ketoacidosis can happen even if your blood sugar is less than 250 mg/dL. Your healthcare provider may ask you to periodically check ketones in your urine or blood. Stop taking JARDIANCE and call your healthcare provider or get medical help right away if you get any of the following. If possible, check for ketones in your urine or blood, even if your blood sugar is less than 250 mg/dL:\n| - nausea - vomiting - stomach-area (abdominal) pain | - tiredness - trouble breathing - ketones in your urine or blood |\n- Dehydration. JARDIANCE can cause some people to become dehydrated (the loss of body water and salt). Dehydration may cause you to feel dizzy, faint, light-headed, or weak, especially when you stand up (orthostatic hypotension). There have been reports of sudden worsening of kidney function in people who are taking JARDIANCE. You may be at higher risk of dehydration if you: Talk to your healthcare provider about what you can do to prevent dehydration including how much fluid you should drink on a daily basis. Call your healthcare provider right away if you reduce the amount of food or liquid you drink, for example if you are sick or you cannot eat, or start to lose liquids from your body, for example from vomiting, diarrhea or being in the sun too long. - take medicines to lower your blood pressure, including diuretics (water pills) - are on low sodium (salt) diet - have kidney problems - are 65 years of age or older\nWhat is JARDIANCE? JARDIANCE is a prescription medicine used to: - reduce the risk of cardiovascular death and hospitalization for heart failure in adults with heart failure, when the heart cannot pump enough blood to the rest of your body. - reduce the risk of further worsening of kidney disease, end-stage kidney disease (ESKD), death due to cardiovascular disease, and hospitalization in adults with chronic kidney disease. - reduce the risk of cardiovascular death in adults with type 2 diabetes and who also have known cardiovascular disease. - lower blood sugar (glucose) along with diet and exercise in adults and children who are 10 years of age and older with type 2 diabetes. JARDIANCE is not for use to lower blood sugar (glucose) in people with type 1 diabetes. It may increase their risk of diabetic ketoacidosis (increased ketones in blood or urine). JARDIANCE is not for use to lower blood sugar (glucose) in people with type 2 diabetes who have severe kidney problems, because it may not work. JARDIANCE is not for people with polycystic kidney disease, or who are taking or have recently received certain types of immunosuppressive therapy to treat kidney disease. JARDIANCE is not expected to work if you have these conditions. It is not known if JARDIANCE is safe and effective in children under 10 years of age.\nWho should not take JARDIANCE? Do not take JARDIANCE if you: - are allergic to empagliflozin or any of the ingredients in JARDIANCE. See the end of this Medication Guide for a complete list of ingredients in JARDIANCE. Symptoms of a serious allergic reaction to JARDIANCE may include:If you have any of these symptoms, stop taking JARDIANCE and call your healthcare provider right away or go to the nearest hospital emergency room. - rash - raised, red areas on your skin (hives) - swelling of your face, lips, mouth, and throat that may cause difficulty in breathing or swallowing\nWhat should I tell my healthcare provider before taking JARDIANCE? Before taking JARDIANCE, tell your healthcare provider about all of your medical conditions, including if you: - have type 1 diabetes or have had diabetic ketoacidosis. - have a decrease in your insulin dose. - have a serious infection. - have a history of infection of the vagina or penis. - have a history of amputation. - have kidney problems. - have liver problems. - have a history of urinary tract infections or problems with urination. - are on a low sodium (salt) diet. Your healthcare provider may change your diet or your dose. - are going to have surgery. Your healthcare provider may stop your JARDIANCE before you have surgery. Talk to your healthcare provider if you are having surgery about when to stop taking JARDIANCE and when to start it again. - are eating less, or there is a change in your diet. - are dehydrated. - have or have had problems with your pancreas, including pancreatitis or surgery on your pancreas. - drink alcohol very often or drink a lot of alcohol in the short term (\"binge\" drinking). - have ever had an allergic reaction to JARDIANCE. - are pregnant or plan to become pregnant. JARDIANCE may harm your unborn baby. If you become pregnant while taking JARDIANCE, tell your healthcare provider as soon as possible. Talk with your healthcare provider about the best way to control your blood sugar while you are pregnant. - are breastfeeding or plan to breastfeed. JARDIANCE may pass into your breast milk and may harm your baby. Talk with your healthcare provider about the best way to feed your baby if you are taking JARDIANCE. Do not breastfeed while taking JARDIANCE. Tell your healthcare provider about all the medicines you take, including prescription and over-the-counter medicines, vitamins, and herbal supplements. JARDIANCE may affect the way other medicines work, and other medicines may affect how JARDIANCE works. Know the medicines you take. Keep a list of them to show your healthcare provider and pharmacist when you get a new medicine.\nHow should I take JARDIANCE? - Take JARDIANCE exactly as your healthcare provider tells you to take it. - Take JARDIANCE by mouth 1 time in the morning each day, with or without food. - Your healthcare provider will tell you how much JARDIANCE to take and when to take it. Your healthcare provider may change your dose if needed. - Your healthcare provider may tell you to take JARDIANCE along with other diabetes medicines. Low blood sugar can happen more often when JARDIANCE is taken with certain other diabetes medicines. See \"What are the possible side effects of JARDIANCE?\" - If you miss a dose, take it as soon as you remember. If it is almost time for your next dose, skip the missed dose and take the medicine at the next regularly scheduled time. Do not take two doses of JARDIANCE at the same time. Talk with your healthcare provider if you have questions about a missed dose. - If you take too much JARDIANCE, call your healthcare provider or Poison Help line at 1-800-222-1222, or go to the nearest hospital emergency room right away. - When taking JARDIANCE, you may have sugar in your urine, which will show up on a urine test. - When your body is under some types of stress, such as fever, trauma (such as a car accident), infection, or surgery, the amount of diabetes medicine you need may change. Tell your healthcare provider right away if you have any of these conditions and follow your healthcare provider's instructions. - Your healthcare provider may do certain blood tests before you start JARDIANCE and during treatment as needed.\nWhat are the possible side effects of JARDIANCE? JARDIANCE may cause serious side effects, including: - See \"What is the most important information I should know about JARDIANCE?\" - Genital and urinary tract infections. JARDIANCE can cause serious infections in your genital area or urinary tract that could require hospitalization. A rare but serious bacterial infection called necrotizing fasciitis can cause damage to the tissue under the skin in the area between and around the anus and genitals (perineum). This infection may require hospitalization, multiple surgeries, and could lead to death. Seek medical attention immediately if you have a fever or you are feeling very weak, tired or uncomfortable (malaise), and you develop any of the following symptoms in the area between and around your anus and genitals:\n| - pain or tenderness | - swelling | - redness of skin (erythema)\n| Also tell your healthcare provider if you have any of these signs or symptoms of urinary tract infections or yeast infections:\n| - Urinary tract infection: You may also have a fever, back pain, nausea, or vomiting. - burning feeling when you urinate - need to urinate often or right away - pain in the lower part of your stomach (pelvis) - blood in your urine - Vaginal yeast infection: - vaginal odor - white or yellowish vaginal discharge (may be lumpy or look like cottage cheese) - vaginal itching - Yeast infection of the skin around the penis (balanitis or balanoposthitis): If you are uncircumcised, swelling may make it difficult to pull back the skin around the tip of your penis. Other symptoms include:\n| | - redness, itching, or swelling of the penis - bad smelling discharge from the penis | - rash on the penis - pain in the skin around the penis\n| | Talk to your healthcare provider about what to do if you get symptoms of a yeast infection. They may suggest you use an over-the-counter antifungal medicine. Contact your healthcare provider right away if your symptoms do not improve after using an over-the-counter antifungal medicine.\n- Low blood sugar (hypoglycemia). In adults, if you take JARDIANCE with another medicine that can cause low blood sugar, such as a sulfonylurea or insulin, your risk of getting low blood sugar is higher. In children 10 years of age and older, the risk for low blood sugar is higher with JARDIANCE even if you do not use another medicine that can also lower blood sugar. The dose of your sulfonylurea medicine or insulin may need to be lowered while you take JARDIANCE. Signs and symptoms of low blood sugar may include:\n| - headache - drowsiness - weakness | - irritability - hunger - fast heartbeat | - confusion - shaking or feeling jittery | - dizziness - sweating\n- Amputations. SGLT2 inhibitors may increase your risk of lower limb amputations. You may be at a higher risk of lower limb amputation if you: Call your healthcare provider right away if you have new pain or tenderness, any sores, ulcers, or infections in your leg or foot. Talk to your healthcare provider about proper foot care. - have a history of amputation - have had blocked or narrowed blood vessels, usually in your leg - have had diabetic foot infection, ulcers or sores - Serious allergic reactions. If you have any symptoms of a serious allergic reaction, stop taking JARDIANCE and call your healthcare provider right away or go to the nearest hospital emergency room. See \"Who should not take JARDIANCE?\". The most common side effects of JARDIANCE include: - urinary tract infections - yeast infections in females These are not all the possible side effects of JARDIANCE. For more information, ask your healthcare provider or pharmacist. Call your doctor for medical advice about side effects. You may report side effects to FDA at 1-800-FDA-1088.\nHow should I store JARDIANCE? - Store JARDIANCE at room temperature between 68\u00b0F to 77\u00b0F (20\u00b0C to 25\u00b0C). - Keep JARDIANCE and all medicines out of the reach of children.\nGeneral information about the safe and effective use of JARDIANCE. Medicines are sometimes prescribed for purposes other than those listed in a Medication Guide. Do not use JARDIANCE for a condition for which it is not prescribed. Do not give JARDIANCE to other people, even if they have the same symptoms you have. It may harm them. You can ask your pharmacist or healthcare provider for information about JARDIANCE that is written for health professionals.\nWhat are the ingredients in JARDIANCE? Active Ingredient: empagliflozin Inactive Ingredients: colloidal silicon dioxide, croscarmellose sodium, hydroxypropyl cellulose, lactose monohydrate, magnesium stearate, and microcrystalline cellulose. In addition, the film coating contains the following inactive ingredients: ferric oxide yellow, hypromellose, polyethylene glycol, talc, and titanium dioxide. Distributed by: Boehringer Ingelheim Pharmaceuticals, Inc., Ridgefield, CT 06877 USA Licensed from: Boehringer Ingelheim International GmbH, Ingelheim, Germany JARDIANCE is a registered trademark of and used under license from Boehringer Ingelheim International GmbH. Boehringer Ingelheim Pharmaceuticals, Inc. either owns or uses the EMPA-REG OUTCOME^\u00ae, EMPEROR-Reduced^\u00ae, EMPEROR-Preserved^\u00ae, and EMPA-KIDNEY^\u00ae trademarks under license. The other brands listed are trademarks of their respective owners and are not trademarks of Boehringer Ingelheim Pharmaceuticals, Inc. Copyright \u00a9 2026 Boehringer Ingelheim International GmbH ALL RIGHTS RESERVED COL8914QA062026 For more information about JARDIANCE, including current prescribing information and Medication Guide, go to www.jardiance.com, scan the code, or call Boehringer Ingelheim Pharmaceuticals, Inc. at 1-800-542-6257."
+  }
+ ],
+ "skipped_codes": []
+}

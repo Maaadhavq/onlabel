@@ -1,0 +1,13 @@
+{
+ "key": "812eac5323e861571229d66fbaa8f098463cb3702337251f6d6c1a90e0fb09df",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Wegovy, used with a reduced‑calorie diet and increased physical activity, reduces the risk of major cardiovascular events—including non‑fatal myocardial infarction and non‑fatal stroke—in adults with established cardiovascular disease who are overweight or have obesity."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 132,
+  "prompt_tokens": 1595
+ }
+}

@@ -118,8 +118,9 @@ def split_claims(llm: LLMClient | None, text: str) -> tuple[list[ClaimSpan], LLM
 
 
 def detect_labels(text: str, labels_meta: dict[str, dict]) -> tuple[list[str], bool]:
-    """Labels whose brand names appear in the copy; a generic name alone is ambiguous
-    (semaglutide is Wegovy, Ozempic and Rybelsus), so it returns every match and says so."""
+    """Labels whose brand names appear in the copy. Ambiguity is reported, never guessed away:
+    a generic name alone matches several labels (semaglutide is Wegovy, Ozempic and Rybelsus),
+    and so can a brand (Ozempic tablets share Rybelsus's label, Ozempic injection has its own)."""
     brand_hits, generic_hits = [], []
     for key, meta in labels_meta.items():
         names = [p for p in meta.get("products", []) if p] or [key]
@@ -128,7 +129,7 @@ def detect_labels(text: str, labels_meta: dict[str, dict]) -> tuple[list[str], b
         elif meta.get("generic") and re.search(rf"\b{re.escape(meta['generic'])}\b", text, re.IGNORECASE):
             generic_hits.append(key)
     if brand_hits:
-        return sorted(brand_hits), False
+        return sorted(brand_hits), len(brand_hits) > 1
     return sorted(generic_hits), len(generic_hits) > 1
 
 
