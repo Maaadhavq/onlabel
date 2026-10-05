@@ -129,6 +129,14 @@ to a human; "It lowers A1C" missed every HbA1c table. Fixes: claims are routed b
 the sections that govern them (`review.py: SECTION_ROUTES`, 2 routed excerpts, 6 max), and
 an A1C/HbA1c query synonym (`retrieval/bm25.py`).
 
+### 13b. First live check on unseen copy (Zepbound, 2026-10-05)
+Through the page, against the twelve-label index (1,595 chunks): label detected from the
+brand, 4 claims in 6.5 s and 9,892 tokens. Teen use off-label, "works better than any other
+weight-loss medicine" not in the label, diet and activity traced, missing boxed-warning
+risk information flagged. "Lose up to 20.9%" was traced (the label reports 20.9% for 15 mg);
+an MLR reviewer may still object to "up to". The Ozempic sample's "may help you lose some
+weight" is traced the same way. Both are judgement calls the benchmark has to define.
+
 ### 14. Free-tier model behaviour worth knowing
 Qwen3.8-27B once returned `{"claims": []}` for a five-claim email; `accept=` now rejects
 empty or unlocatable answers and asks the next model, never caching them. Gemma 4 on Google's
