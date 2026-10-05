@@ -6,7 +6,8 @@ OnLabel build plan, eval design, phases, and the interview kit.
 
 ## Current phase
 
-Phase 0 (de-risk), started 2026-10-05.
+Phase 1 (walking skeleton) built and verified locally on 2026-10-05. Waiting on Madhav
+for the GitHub repo and API keys before the first Render deploy (see "Needs Madhav").
 
 ## Findings that change assumptions (READ THESE)
 
@@ -40,7 +41,34 @@ Ollama runs on the Windows side. Changing either setting was not needed.
 ### 5. The Hub CDN drops long downloads
 The first Docker build lost the connection at 12 of 34 MB. `scripts/fetch_models.py` now
 resumes with Range requests and checks each file against a pinned SHA-256
-(`onlabel/models.py`, digests match the Hub's LFS metadata).
+(`onlabel/models.py`, digests match the Hub's LFS metadata). The rebuild hit a drop at
+12.6 MB again and resumed cleanly. Ollama's registry dropped the gemma4:e4b pull the same
+way; it is being retried.
+
+### 6. Render limits measured in Docker (`--memory=512m --cpus=0.1`)
+Probe: RSS 143 MB with both models loaded, 203 MB after reranking; bge-small query 100 ms;
+MiniLM cross-encoder 0.45 s per claim-evidence pair (10 pairs: 4.5 s). The API container
+is ready 31 s after a cold start (model load 2.1 s), idles at 130 MiB, and a keyless
+review's retrieval takes 172 ms. Budget the verifier at 3-4 windows per claim.
+
+### 7. A claim's figure and the label's figure tokenised differently
+First end-to-end run: the true claim "lost an average of 14.9% ... at 68 weeks" came back
+unsupported. BM25 kept "14.9%" as one token while the efficacy table says "-14.9", so the
+exact-figure match never happened. Numbers now drop % and sign (`retrieval/bm25.py`).
+
+### 8. Table rows embed badly; rare figures are now pinned
+Even with the token fix, the table chunk holding -14.9 was dense rank > 50 and BM25 rank
+9, and lost the three-way fusion. Chunks containing a claim's rare figures (df <= 10) are
+now pinned into the judge's context (`retrieval/index.py`). Table-to-sentence text for
+embedding is the next lever; measure it in the Phase 3 ablation.
+
+### 9. Guards caught a confident wrong answer the quote check could not
+Llama 3.1 8B then called the 14.9% claim "supported" on a verbatim quote of "-14.8"
+(a real number from a different study) while also listing a violation. The quote guard
+passes that; two new rules catch it: a supported verdict must carry every claim figure in
+its own quotes, and must not list violations (`agent/guards.py`). Result:
+needs_human_review with both reasons named. The 8B model is not good enough to confirm
+true numeric claims; the hosted models and the verifier have to be measured in Phase 4.
 
 ## Done this session (2026-10-05)
 
@@ -53,12 +81,22 @@ resumes with Range requests and checks each file against a pinned SHA-256
   them against each provider's live model list.
 - `Dockerfile` + `.dockerignore`: runtime image (ONNX only).
 
+- Phase 1 skeleton: `onlabel/data/` (DailyMed client, SPL parser, chunker, corpus,
+  fetcher with manifest), `onlabel/retrieval/` (BM25, index with RRF + figure pinning,
+  build script), `onlabel/llm/` (cache, client), `onlabel/agent/` (ground, guards, judge,
+  verdict), `onlabel/review.py`, `onlabel/api/main.py`, `web/` (Vite + React page),
+  `render.yaml`. 42 tests, ruff clean. Labels: Wegovy v19, Ozempic v20, Mounjaro v40
+  (431 chunks). Browser-checked: sample claim -> verdict, grounded quotes, flags, trace.
+- Launch entries `onlabel-api` (:8060) and `onlabel-web` (:5180) in
+  `Downloads\.claude\launch.json`. Local `.env` routes the chain to Ollama after the
+  hosted models and keeps dev answers in `scratch/cache_api`.
+
 ## Next
 
-1. Probe inside Docker at `--memory=512m --cpus=0.1` (the Render free-tier limits).
-2. `smoke_llm.py` against Ollama now, Groq and AI Studio once keys exist.
-3. Phase 1 walking skeleton: 3 DailyMed labels, chunks, hybrid retrieval, one grounded
-   verdict, `POST /reviews`, minimal page, Render deploy.
+1. First Render deploy (needs the repo), then `smoke_llm.py` against Groq and AI Studio.
+2. Phase 2 corpus: the rest of the deep set and comparators, version history, indication
+   table, trials snapshot, OPDP letters (Madhav verifies the extracted claims).
+3. Phase 3 benchmark and retrieval ablation (span gold, ingredient splits).
 
 ## Needs Madhav
 

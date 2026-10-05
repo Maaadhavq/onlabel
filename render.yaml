@@ -1,0 +1,43 @@
+# Render Blueprint: the API (Docker, ONNX-only) and the static React page.
+#
+# The API image downloads its two pinned ONNX models at build time (hash-checked) and
+# ships the committed label index, so a deploy needs no manual step. API keys are set in
+# the Render dashboard (sync: false) and never reach the frontend bundle.
+services:
+  - type: web
+    name: onlabel-api
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: ONLABEL_LLM_CHAIN
+        value: groq/gpt-oss-120b,groq/gpt-oss-20b,groq/qwen3.8-27b,gemini/gemma-4-26b
+      - key: ONLABEL_REVIEWS_PER_HOUR
+        value: "20"
+      # Exactly the frontend's origin: a wildcard would let any page spend the free quota.
+      - key: CORS_ORIGINS
+        value: https://onlabel-web.onrender.com
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+
+  - type: web
+    name: onlabel-web
+    runtime: static
+    buildCommand: cd web && npm ci && npm run build
+    staticPublishPath: web/dist
+    envVars:
+      - key: NODE_VERSION
+        value: 22.12.0
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: onlabel-api
+          property: host
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
