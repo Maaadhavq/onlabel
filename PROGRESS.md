@@ -8,9 +8,8 @@ OnLabel build plan, eval design, phases, and the interview kit.
 
 Deployed and measured (2026-10-05). Live: https://onlabel-web.onrender.com (page) and
 https://onlabel-api.onrender.com (API, Render free, Singapore). Repo:
-https://github.com/Maaadhavq/onlabel. The API needs GROQ_API_KEY and GEMINI_API_KEY set in
-Render (onlabel-api, Environment); until then live checks return "reviewer decides" with
-"no key set" in the trace, which is the designed fallback.
+https://github.com/Maaadhavq/onlabel. GROQ_API_KEY and GEMINI_API_KEY are set in Render
+(onlabel-api, Environment) since 2026-10-06.
 
 Phase 3 benchmark built and run: `evals/` (fact cards, retrieval eval, claim verification,
 red team, summary). Results: `EVALS.md` and the page's "How it was tested" view (#evals),
@@ -211,7 +210,12 @@ reviewer, at the cost of fewer traced claims whenever the first model is out of 
 
 ## Next
 
-1. Madhav sets GROQ_API_KEY and GEMINI_API_KEY on Render (onlabel-api, Environment).
+1. Keys are set on Render (2026-10-06; /health shows prompt_guard true). First live check:
+   with the label picked, verdicts are clean; when "Ozempic" matches two labels (Ozempic and
+   Rybelsus/Ozempic tablets), gpt-oss-120b's verdicts were right but none of its quotes matched
+   the excerpt it cited, so both claims went to a reviewer. Likely the model citing the other
+   label's near-identical excerpt; check whether a quote found verbatim in another shown excerpt
+   can be re-attributed to it.
 2. OPDP holdout (Set C): 15-20 letters from 2024-26, claims extracted with help, verified by
    Madhav, sealed, run once on the frozen config.
 3. When gpt-oss-120b's daily quota resets: the dev split, the rest of the red team, and
@@ -222,6 +226,4 @@ reviewer, at the cost of fewer traced claims whenever the first model is out of 
 
 ## Needs Madhav
 
-- Paste GROQ_API_KEY and GEMINI_API_KEY into Render (onlabel-api, Environment). Never in
-  `VITE_*` variables.
 - About 10 hours of labelling for the OPDP holdout, and a 15% audit of the benchmark cards.
