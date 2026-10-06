@@ -1,0 +1,13 @@
+{
+ "key": "7bec82e034e9360de6537e7bf891c5bfa593697c8e22101820513e8ef674a49c",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Ozempic is indicated for adults with type 2 diabetes mellitus as an adjunct to diet and exercise to improve glycemic control, to reduce the risk of major adverse cardiovascular events in those with established cardiovascular disease, and to reduce the risk of sustained eGFR decline, end‑stage kidney disease, and cardiovascular death in those with chronic kidney disease."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 211,
+  "prompt_tokens": 931
+ }
+}

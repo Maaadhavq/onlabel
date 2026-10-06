@@ -1,0 +1,33 @@
+{
+ "key": "756bf3336e4775295a37687f6f8779bb159b0e71dd94ebf85a09e1af9b46e41c",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:45:1",
+    "quote": "Wegovy may cause serious side effects, including: - Possible thyroid tumors, including cancer."
+   },
+   {
+    "chunk_id": "wegovy:v19:20:0",
+    "quote": "The following serious adverse reactions are described below or elsewhere in the prescribing information: - Acute Pancreatitis [see Warnings and Precautions (5.2)]"
+   },
+   {
+    "chunk_id": "wegovy:v19:45:6",
+    "quote": "Wegovy may cause gallbladder problems including gallstones."
+   },
+   {
+    "chunk_id": "wegovy:v19:4:0",
+    "quote": "Serious hypersensitivity reactions, including anaphylaxis and angioedema, have been reported with WEGOVY"
+   }
+  ],
+  "reasoning": "The FDA label excerpts list thyroid tumors, acute pancreatitis, acute gallbladder disease, and hypersensitivity reactions as serious adverse reactions of Wegovy. The claim accurately reflects these listed side effects without adding or omitting required qualifiers.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 389,
+  "prompt_tokens": 2172
+ }
+}

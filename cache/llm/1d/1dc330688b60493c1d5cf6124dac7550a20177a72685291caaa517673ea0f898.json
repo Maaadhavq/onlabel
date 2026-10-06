@@ -1,0 +1,25 @@
+{
+ "key": "1dc330688b60493c1d5cf6124dac7550a20177a72685291caaa517673ea0f898",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:2:0",
+    "quote": "Administer WEGOVY in combination with a reduced-calorie diet and increased physical activity."
+   },
+   {
+    "chunk_id": "wegovy:v19:1:0",
+    "quote": "WEGOVY injection is indicated in combination with a reduced calorie diet and increased physical activity:"
+   }
+  ],
+  "reasoning": "The claim states that the product should be used with a reduced-calorie diet and increased physical activity. The label excerpts explicitly say to administer WEGOVY in combination with a reduced-calorie diet and increased physical activity (excerpt id=\"wegovy:v19:2:0\") and list the indication as requiring such a diet and activity (excerpt id=\"wegovy:v19:1:0\").",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 256,
+  "prompt_tokens": 2382
+ }
+}

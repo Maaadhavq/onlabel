@@ -1,0 +1,23 @@
+{
+ "key": "4422c4ea4e95356515b7301fe2baa800ab7bec028b8131aac6953402367a7bd5",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND® is indicated in combination with a reduced-calorie diet and increased physical activity:\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   }
+  ],
+  "reasoning": "The label indicates ZEPBOUND is indicated to reduce excess body weight and maintain weight reduction long term in adults with obesity, but only when used with a reduced‑calorie diet and increased physical activity. The claim omits this required condition, so it needs the qualifier.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 365,
+  "prompt_tokens": 1665
+ }
+}

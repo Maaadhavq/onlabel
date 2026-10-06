@@ -1,0 +1,28 @@
+{
+ "key": "7539ca86cb9a66462d53f4979c546cc1369036814c460a1caa5b4a4e97be0f78",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "wegovy:v19:39:5",
+    "quote": "Fatal or non-fatal myocardial infarction^5 | 334 (3.8%) | 243 (2.8%) | 0.72 (0.61; 0.85)"
+   },
+   {
+    "chunk_id": "wegovy:v19:39:5",
+    "quote": "Fatal or non-fatal stroke^5 | 178 (2%) | 160 (1.8%) | 0.89 (0.72; 1.11)"
+   }
+  ],
+  "reasoning": "The label provides a hazard ratio of 0.72 (0.61; 0.85) for fatal or non-fatal myocardial infarction, supporting a risk reduction, but the hazard ratio for fatal or non-fatal stroke is 0.89 (0.72; 1.11), which is not statistically significant and does not demonstrate a reduction. The claim states that Wegovy reduces the risk of both non‑fatal myocardial infarction and non‑fatal stroke, which conflicts with the stroke data.",
+  "verdict": "contradicted",
+  "violations": [
+   "overstated_efficacy",
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 485,
+  "prompt_tokens": 2626
+ }
+}

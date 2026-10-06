@@ -1,0 +1,27 @@
+{
+ "key": "024c9782ff76e7827e17bfe3cdbfb7ac4deb1b8b946b99198dd90ada7f69d55f",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "zepbound:v40:79:1",
+    "quote": "After 72 weeks of treatment, ZEPBOUND resulted in a statistically significant reduction in body weight compared with placebo, and greater proportions of patients treated with ZEPBOUND 5 mg, 10 mg, and 15 mg achieved at least 5% weight reduction compared to placebo. Among patients treated with ZEPBOUND 10 mg and 15 mg, greater proportions of patients achieved at least 10%, 15%, and 20% weight reduction compared to placebo (see Table 2)."
+   },
+   {
+    "chunk_id": "zepbound:v40:1:0",
+    "quote": "ZEPBOUND® is indicated in combination with a reduced-calorie diet and increased physical activity: - to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition."
+   }
+  ],
+  "reasoning": "The claim states a statistically significant weight reduction and greater proportions achieving ≥5%, ≥10%, ≥15% and ≥20% loss after 72 weeks in adults with obesity or overweight. The label excerpt 79:1 confirms these efficacy results for 72 weeks. However, the indication requires use in combination with a reduced‑calorie diet and increased physical activity, which the claim omits, so a qualifier is needed.",
+  "verdict": "needs_qualifier",
+  "violations": [
+   "omitted_qualifier"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 568,
+  "prompt_tokens": 2006
+ }
+}

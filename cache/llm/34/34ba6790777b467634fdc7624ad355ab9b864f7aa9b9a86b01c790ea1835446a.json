@@ -1,0 +1,13 @@
+{
+ "key": "34ba6790777b467634fdc7624ad355ab9b864f7aa9b9a86b01c790ea1835446a",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Wegovy may cause serious side effects, including possible thyroid tumors, pancreatitis, gallbladder problems, and serious hypersensitivity reactions, as noted in the FDA label."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 99,
+  "prompt_tokens": 1154
+ }
+}

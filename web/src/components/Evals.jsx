@@ -365,6 +365,15 @@ export default function Evals() {
                 </li>
               );
             })}
+            {prod && (
+              <li>
+                <strong>Two guard rules were written after these failures were seen, test split included.</strong> Quotes
+                that skip whole lines or name the wrong excerpt are matched where they are, and a traced claim must carry
+                the conditions its quoted indication attaches (diet and exercise, type 2 diabetes, chronic kidney disease).
+                On its own, {prod.name} traced {of(prod.guards_off.false_approvals, prod.guards_off.n_violative)} violative
+                test claims; the Guards off column shows what each model did without them.
+              </li>
+            )}
             <li><strong>The holdout of claims FDA cited in its 2024–26 letters is not built yet.</strong> It needs a person to verify each extracted claim; the synthetic set shows whether known shapes of violation are caught, not how real copy behaves.</li>
           </ul>
         </section>

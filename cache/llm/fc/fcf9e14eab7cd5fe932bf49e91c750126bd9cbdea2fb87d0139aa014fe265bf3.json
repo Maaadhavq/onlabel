@@ -1,0 +1,13 @@
+{
+ "key": "fcf9e14eab7cd5fe932bf49e91c750126bd9cbdea2fb87d0139aa014fe265bf3",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "MOUNJARO is indicated, as an adjunct to diet and exercise, to improve glycemic control in adults (and pediatric patients ≥ 10 years old) with type 2 diabetes mellitus, and to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes who are at high risk."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 218,
+  "prompt_tokens": 1079
+ }
+}

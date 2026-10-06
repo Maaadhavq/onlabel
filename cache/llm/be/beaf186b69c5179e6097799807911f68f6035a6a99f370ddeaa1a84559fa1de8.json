@@ -1,0 +1,25 @@
+{
+ "key": "beaf186b69c5179e6097799807911f68f6035a6a99f370ddeaa1a84559fa1de8",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:75:0",
+    "quote": "Treatment with MOUNJARO 10 mg and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with semaglutide 1 mg once weekly (see Table 5 and Figure 2)."
+   },
+   {
+    "chunk_id": "mounjaro:v40:75:2",
+    "quote": "Change at Week 40 | -1.9 | -2.0 | -2.2 | -2.3"
+   }
+  ],
+  "reasoning": "The label excerpts report that in SURPASS-2, MOUNJARO 10 mg and 15 mg achieved a statistically significant greater reduction in HbA1c versus semaglutide 1 mg, with changes of -2.2% and -2.3% compared to -1.9% for semaglutide. This directly supports the claim of greater A1C reduction.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 381,
+  "prompt_tokens": 2850
+ }
+}

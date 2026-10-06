@@ -171,8 +171,14 @@ def markdown(s: dict) -> str:
     L += ["", "## Limits", "",
           ("- One author wrote the cards, the perturbations and the red team. The synthetic set measures whether the "
           "pipeline catches violations of known shapes; it is not a sample of real promotional copy."),
+          ("- Two guard rules were written after seeing benchmark failures, test split included: quotes that "
+           "skip whole lines or name the wrong excerpt are matched where they are (89 rejected quotes replayed, "
+           "35 still rejected), and a traced claim must carry the conditions its quoted indication attaches. "
+           "Before the conditions rule, gpt-oss-120b traced 2 of 42 violative test claims, both a glycemic claim "
+           "without \"as an adjunct to diet and exercise\". The test split no longer measures these rules blind; "
+           "the 'guards off' column shows what the models did on their own."),
           ("- The planned holdout of claims FDA cited in 2024-26 untitled letters is not built yet; it needs a "
-          "person to verify each extracted claim."),
+          "person to verify each extracted claim. It is the blind test these rules have not had."),
           ("- Free-tier daily quotas (Groq: 200K tokens a day per model) limited gpt-oss-120b to the test split, "
            "and its red-team run stopped after 4 attacks, so the full red team ran on gpt-oss-20b, the next model "
            "in the production chain. The committed cache makes every run repeatable."),

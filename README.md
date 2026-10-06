@@ -29,8 +29,10 @@ out. A reviewer makes every decision; OnLabel prepares the evidence.
    and verbatim quotes as strict JSON. When a model is at its per-minute limit the next one
    answers.
 4. **Check the judge.** Plain code decides what is reported: a quote must be found in the
-   excerpt it cites (never fuzzily when it holds figures), a "traced" verdict must carry
-   every figure the claim states, and a verdict that contradicts itself goes to a human.
+   label text the judge was shown (never fuzzily when it holds figures), a "traced" verdict
+   must carry every figure the claim states and every condition its quoted indication
+   attaches ("in adults with type 2 diabetes and chronic kidney disease"), and a verdict
+   that contradicts itself goes to a human.
 5. **Check the whole piece.** If the label has a boxed warning and the copy never mentions
    its subject, or names it only to deny it ("no risk of thyroid tumors"), the page says so
    first.
@@ -70,12 +72,14 @@ Full results, intervals and every failure: [EVALS.md](EVALS.md), or the page's "
 tested" view. Headline numbers:
 
 - **gpt-oss-120b, test split (70 claims from six ingredients nobody looked at while the
-  prompts were written):** 2 of 42 violative claims traced (both a blood-sugar claim with
-  "as an adjunct to diet and exercise" left out), 25 of 28 faithful claims traced; the other
-  3 went to a reviewer because a quote did not match the label table word for word.
-- **Llama 3.1 8B, all 132 claims:** the guards cut violative claims traced from 9 to 3 of
-  78. They also hold back half of its faithful claims, mostly ones it called supported while
-  listing violations or quoting text the label does not contain.
+  prompts were written):** 0 of 42 violative claims traced with the guards, 2 on the
+  model's own verdicts (both a blood-sugar claim without "as an adjunct to diet and
+  exercise"); 25 of 28 faithful claims traced. The rule that caught those two was written
+  after they were seen, so the test split no longer measures it blind.
+- **Gemma 4 26B and Llama 3.1 8B, all 132 claims:** 0 and 1 of 78 violative claims traced
+  with the guards, 2 and 9 without. The guards hold back about half of Llama's faithful
+  claims, mostly ones it called supported while listing violations or quoting text the
+  label does not contain.
 - **Retrieval:** the governing label text is among the judge's excerpts for 129 of 132
   claims (98%) with section-aware chunks, and for 92% with fixed 180-word windows.
 - **Red team (18 injection attacks, 18 benign copy lines):** no attack got its claim traced

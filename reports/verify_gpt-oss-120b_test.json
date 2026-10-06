@@ -7,8 +7,8 @@
   "stopped": null,
   "tokens": 179326,
   "tokens_per_claim": 2562,
-  "live": 3,
-  "cached": 67,
+  "live": 0,
+  "cached": 70,
   "unanswered": 0,
   "unanswered_reasons": {},
   "median_latency_s": 0.01
@@ -18,11 +18,11 @@
    "n": 70,
    "n_faithful": 28,
    "n_violative": 42,
-   "false_approvals": 2,
-   "false_approval_rate": 0.048,
+   "false_approvals": 0,
+   "false_approval_rate": 0.0,
    "false_approval_ci": [
     0.0,
-    0.116
+    0.0
    ],
    "traced_faithful": 25,
    "supported_recall": 0.893,
@@ -30,8 +30,8 @@
     0.76,
     1.0
    ],
-   "violative_named": 0.881,
-   "human_review": 0.071,
+   "violative_named": 0.905,
+   "human_review": 0.086,
    "violation_tag_match": 0.714
   },
   "guards_off": {
@@ -61,11 +61,11 @@
     "n": 70,
     "n_faithful": 28,
     "n_violative": 42,
-    "false_approvals": 2,
-    "false_approval_rate": 0.048,
+    "false_approvals": 0,
+    "false_approval_rate": 0.0,
     "false_approval_ci": [
      0.0,
-     0.116
+     0.0
     ],
     "traced_faithful": 25,
     "supported_recall": 0.893,
@@ -73,8 +73,8 @@
      0.76,
      1.0
     ],
-    "violative_named": 0.881,
-    "human_review": 0.071,
+    "violative_named": 0.905,
+    "human_review": 0.086,
     "violation_tag_match": 0.714
    },
    "guards_off": {
@@ -112,12 +112,12 @@
   },
   "drop_qualifier": {
    "n": 6,
-   "supported": 2,
+   "supported": 0,
    "needs_qualifier": 4,
    "unsupported": 0,
    "contradicted": 0,
    "off_label": 0,
-   "needs_human_review": 0,
+   "needs_human_review": 2,
    "named": 4
   },
   "broaden": {
@@ -126,9 +126,9 @@
    "needs_qualifier": 0,
    "unsupported": 0,
    "contradicted": 5,
-   "off_label": 3,
-   "needs_human_review": 1,
-   "named": 8
+   "off_label": 4,
+   "needs_human_review": 0,
+   "named": 9
   },
   "inflate": {
    "n": 6,
@@ -183,8 +183,8 @@
  },
  "confusion": {
   "faithful -> supported": 25,
-  "drop_qualifier -> supported": 2,
-  "broaden -> off_label": 3,
+  "drop_qualifier -> needs_human_review": 2,
+  "broaden -> off_label": 4,
   "drop_qualifier -> needs_qualifier": 4,
   "faithful -> needs_human_review": 3,
   "inflate -> contradicted": 2,
@@ -194,7 +194,6 @@
   "inflate -> unsupported": 3,
   "superiority -> unsupported": 3,
   "deny_risk -> contradicted": 3,
-  "broaden -> needs_human_review": 1,
   "broaden -> contradicted": 5,
   "inflate -> needs_human_review": 1,
   "wrong_dose -> needs_qualifier": 1,
@@ -217,13 +216,11 @@
    "status": "supported",
    "model_verdict": "supported",
    "violations": [],
-   "flags": [
-    "quote_not_found_in_excerpt"
-   ],
-   "quotes_kept": 1,
+   "flags": [],
+   "quotes_kept": 2,
    "reasoning": "The label states VICTOZA is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus, matching the claim. No additional conditions are omitted.",
    "tokens": 2316,
-   "latency_s": 0.03,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -245,13 +242,13 @@
     "broadened_indication"
    ],
    "text": "VICTOZA improves blood sugar control in adults and children 10 years and older with type 2 diabetes.",
-   "status": "supported",
+   "status": "needs_human_review",
    "model_verdict": "supported",
    "violations": [],
    "flags": [
-    "quote_not_found_in_excerpt"
+    "conditions_not_in_claim:diet and exercise"
    ],
-   "quotes_kept": 1,
+   "quotes_kept": 2,
    "reasoning": "The label INDICATIONS AND USAGE states VICTOZA is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients aged 10 years and older with type 2 diabetes mellitus. The pediatric use section confirms safety and effectiveness in patients 10 years and older. The claim matches these statements exactly.",
    "tokens": 2330,
    "latency_s": 0.01,
@@ -396,7 +393,7 @@
    "quotes_kept": 1,
    "reasoning": "The label table shows the adjusted mean change in HbA1c for VICTOZA 1.8 mg as -1.1% and for glimepiride 8 mg as -0.5%, not the 2.1% reduction claimed for VICTOZA. Therefore the claim’s numeric values conflict with the FDA label.",
    "tokens": 3194,
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -443,12 +440,12 @@
    "model_verdict": "contradicted",
    "violations": [],
    "flags": [
-    "quote_not_found_in_excerpt"
+    "quote_reattributed"
    ],
-   "quotes_kept": 1,
+   "quotes_kept": 2,
    "reasoning": "The claim states VICTOZA is administered once weekly, but the label excerpts specify subcutaneous injection once daily for adult patients. This directly conflicts with the claim.",
    "tokens": 2332,
-   "latency_s": 0.02,
+   "latency_s": 0.03,
    "source": "cache",
    "unanswered": null
   },
@@ -562,10 +559,8 @@
     "overstated_efficacy",
     "omitted_qualifier"
    ],
-   "flags": [
-    "quote_not_found_in_excerpt"
-   ],
-   "quotes_kept": 1,
+   "flags": [],
+   "quotes_kept": 2,
    "reasoning": "The label explicitly states that VICTOZA is contraindicated in patients with Multiple Endocrine Neoplasia syndrome type 2, meaning it should not be used in this population. The claim asserts it is safe, which directly conflicts with the label.",
    "tokens": 3130,
    "latency_s": 0.01,
@@ -592,7 +587,7 @@
    "quotes_kept": 1,
    "reasoning": "The claim states that with a reduced-calorie diet and increased physical activity, SAXENDA helps adults and children 12 and older who weigh more than 60 kg and have obesity lose excess weight and keep it off. The INDICATIONS AND USAGE excerpt explicitly says SAXENDA is indicated in combination with a reduced calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in adults and pediatric patients aged 12 years and older with body weight greater than 60 kg and obesity.",
    "tokens": 2430,
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -742,7 +737,7 @@
    "quotes_kept": 2,
    "reasoning": "The label excerpts provide percent change from baseline for Study 3 as -4.9% for SAXENDA and 0.3% for placebo (Table 4). No excerpt reports an average weight loss of 12.4% with SAXENDA or 3% with placebo, so the claim’s numbers are not supported by the label.",
    "tokens": 3040,
-   "latency_s": 0.02,
+   "latency_s": 0.01,
    "source": "cache",
    "unanswered": null
   },
@@ -877,10 +872,8 @@
    "status": "supported",
    "model_verdict": "supported",
    "violations": [],
-   "flags": [
-    "quote_not_found_in_excerpt"
-   ],
-   "quotes_kept": 1,
+   "flags": [],
+   "quotes_kept": 2,
    "reasoning": "The label indicates TRULICITY is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus, which matches the claim. No additional qualifiers or restrictions are omitted.",
    "tokens": 2347,
    "latency_s": 0.01,
@@ -904,16 +897,13 @@
     "broadened_indication"
    ],
    "text": "Along with diet and exercise, TRULICITY improves blood sugar control in adults with type 1 diabetes.",
-   "status": "needs_human_review",
+   "status": "off_label",
    "model_verdict": "off_label",
    "violations": [
     "broadened_indication"
    ],
-   "flags": [
-    "quote_not_found_in_excerpt",
-    "violation_without_grounded_quote"
-   ],
-   "quotes_kept": 0,
+   "flags": [],
+   "quotes_kept": 1,
    "reasoning": "The claim states that TRULICITY improves blood sugar control in adults with type 1 diabetes, but the label excerpts list the indication only for adults (and pediatric patients) with type 2 diabetes mellitus. No excerpt supports use in type 1 diabetes, making the claim an off‑label use.",
    "tokens": 2605,
    "latency_s": 0.01,
@@ -1026,7 +1016,7 @@
    "quotes_kept": 2,
    "reasoning": "The monotherapy trial excerpt provides the 26‑week change from baseline for HbA1c: TRULICITY 1.5 mg reduced HbA1c by –0.8% and metformin reduced it by –0.6%, matching the claim. The population is adult patients with type 2 diabetes, as stated in the section heading.",
    "tokens": 2871,
-   "latency_s": 0.02,
+   "latency_s": 0.01,
    "source": "cache",
    "unanswered": null
   },
@@ -1055,7 +1045,7 @@
    "quotes_kept": 2,
    "reasoning": "The provided label excerpts give HbA1c changes for TRULICITY 1.5 mg (e.g., -1.2% in a combination trial) but do not report a 1.8% reduction nor provide a metformin reduction of 0.6% in a 26‑week monotherapy trial. No excerpt contains the specific numbers claimed.",
    "tokens": 3169,
-   "latency_s": 0.02,
+   "latency_s": 0.01,
    "source": "cache",
    "unanswered": null
   },
@@ -1333,7 +1323,7 @@
    "quotes_kept": 1,
    "reasoning": "The claim states that 1.7% of patients taking JARDIANCE died of cardiovascular causes, but the label excerpt Table 15 reports CV death as 172 (3.7%) of JARDIANCE patients. This conflicts with the claim's figure. Therefore the claim is contradicted by the label.",
    "tokens": 2624,
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -1586,7 +1576,7 @@
    "quotes_kept": 0,
    "reasoning": "The claim states a 1.9% HbA1c reduction with FARXIGA 10 mg, but the label excerpt shows a change of –0.9% (Table 7) for a 24‑week monotherapy trial. No excerpt provides a 1.9% reduction or a 0.2% reduction for placebo. Therefore the factual elements are not supported by the label.",
    "tokens": 2686,
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -1682,13 +1672,13 @@
     "broadened_indication"
    ],
    "text": "JANUVIA improves blood sugar control in adults with type 2 diabetes.",
-   "status": "supported",
+   "status": "needs_human_review",
    "model_verdict": "supported",
    "violations": [],
    "flags": [
-    "quote_not_found_in_excerpt"
+    "conditions_not_in_claim:diet and exercise"
    ],
-   "quotes_kept": 1,
+   "quotes_kept": 2,
    "reasoning": "The label states JANUVIA is indicated to improve glycemic control in adults with type 2 diabetes and clinical study data report clinically significant improvements in hemoglobin A1C, fasting plasma glucose and post‑prandial glucose versus placebo. The claim matches these statements with no omitted qualifiers.",
    "tokens": 2284,
    "latency_s": 0.01,
@@ -1782,7 +1772,7 @@
    "quotes_kept": 0,
    "reasoning": "The claim matches the data in Table 6 for the 24‑week study, which shows a change from baseline A1C of –0.6% for JANUVIA 100 mg and +0.2% for placebo in patients with type 2 diabetes. The study population and duration are consistent with the claim.",
    "tokens": 2563,
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -1816,7 +1806,7 @@
    "quotes_kept": 0,
    "reasoning": "The claim states a 1.6% A1C reduction with JANUVIA 100 mg in a 24‑week study, but the label excerpt shows the change from baseline was -0.6% (adjusted mean) for JANUVIA and +0.2% for placebo. Therefore the claim’s efficacy figure is not supported and conflicts with the label data.",
    "tokens": 2566,
-   "latency_s": 0.01,
+   "latency_s": 0.02,
    "source": "cache",
    "unanswered": null
   },
@@ -2122,8 +2112,8 @@
    "quotes_kept": 3,
    "reasoning": "The label excerpts state that reduction in HbA1c with LANTUS was similar to NPH (excerpt lantus:v35:52:0) and in specific studies LANTUS had a smaller mean reduction or differences close to zero (excerpt lantus:v35:55:3). No data support a far greater reduction, thus the claim is contradicted.",
    "tokens": 2538,
-   "latency_s": 1.59,
-   "source": "live",
+   "latency_s": 0.01,
+   "source": "cache",
    "unanswered": null
   },
   {
@@ -2146,8 +2136,8 @@
    "quotes_kept": 1,
    "reasoning": "The claim states that LANTUS is injected once daily, at any time of day but at the same time every day. This exact wording is found in excerpt id \"lantus:v35:3:0\" under General Dosing Instructions. No additional conditions or qualifiers are omitted.",
    "tokens": 2243,
-   "latency_s": 0.86,
-   "source": "live",
+   "latency_s": 0.01,
+   "source": "cache",
    "unanswered": null
   },
   {
@@ -2172,8 +2162,8 @@
    "quotes_kept": 1,
    "reasoning": "The claim states LANTUS is injected three times a day with meals, but the label specifies administration once daily. The dosage instructions explicitly require once‑daily dosing, not multiple daily injections.",
    "tokens": 2240,
-   "latency_s": 58.61,
-   "source": "live",
+   "latency_s": 0.01,
+   "source": "cache",
    "unanswered": null
   }
  ]

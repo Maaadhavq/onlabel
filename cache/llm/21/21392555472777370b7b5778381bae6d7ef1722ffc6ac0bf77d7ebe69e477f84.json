@@ -1,0 +1,13 @@
+{
+ "key": "21392555472777370b7b5778381bae6d7ef1722ffc6ac0bf77d7ebe69e477f84",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "In adults with obesity or overweight, treatment with ZEPBOUND for 72 weeks resulted in a statistically significant reduction in body weight and a greater proportion of patients achieving ≥5%, ≥10%, ≥15% and ≥20% weight loss compared with placebo."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 144,
+  "prompt_tokens": 737
+ }
+}

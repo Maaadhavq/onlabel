@@ -1,0 +1,18 @@
+{
+ "key": "5f7ee4987858253beace201425127cc70c32b7530e4f4d28a0c7fbb3d5d3d932",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [],
+  "reasoning": "The claim states a specific average weight loss of 25.9% for ZEPBOUND 15 mg over 72 weeks, but none of the provided label excerpts contain that figure or any comparable numeric value for the 15 mg dose. Therefore the claim is not supported by the excerpts.",
+  "verdict": "unsupported",
+  "violations": [
+   "unsupported_absolute_claim"
+  ]
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 190,
+  "prompt_tokens": 1957
+ }
+}

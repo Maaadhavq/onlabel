@@ -1,0 +1,13 @@
+{
+ "key": "e5ea9730b28eec3fa30246ed88ecdbab50f8473ded7e93ac4da3ddc55cec0da3",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "rewrite-v1",
+ "response": {
+  "rewrite": "Ozempic is indicated to reduce the risk of end‑stage kidney disease (kidney failure) in adults with type 2 diabetes mellitus and chronic kidney disease."
+ },
+ "schema": "Rewrite",
+ "usage": {
+  "completion_tokens": 163,
+  "prompt_tokens": 1140
+ }
+}

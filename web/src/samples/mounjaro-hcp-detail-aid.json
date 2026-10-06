@@ -5,7 +5,7 @@
  "label": "mounjaro",
  "audience": "hcp",
  "text": "MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus. MOUNJARO is approved for chronic weight management in adults with obesity. In SURPASS-2, MOUNJARO provided greater A1C reduction than semaglutide 1 mg. MOUNJARO can be used in patients with a personal history of medullary thyroid carcinoma.",
- "created": "2026-10-05T09:35:08+00:00",
+ "created": "2026-10-06T20:20:10+00:00",
  "events": [
   {
    "id": 0,
@@ -22,10 +22,16 @@
        "MOUNJARO KWIKPEN"
       ],
       "generic": "tirzepatide",
-      "ingredient": "tirzepatide"
+      "ingredient": "tirzepatide",
+      "drug": "MOUNJARO"
      }
     ],
-    "ambiguous": false
+    "ambiguous": false,
+    "injection": {
+     "flagged": false,
+     "findings": [],
+     "prompt_guard": 0.0004
+    }
    }
   },
   {
@@ -67,7 +73,8 @@
      }
     ],
     "split_by": "model",
-    "split_model": "groq/qwen3.8-27b"
+    "split_model": "groq/qwen3.8-27b",
+    "omitted": 0
    }
   },
   {
@@ -104,7 +111,7 @@
       },
       {
        "ok": true,
-       "text": "No figures in the claim to check."
+       "text": "Figures 10 appear in the quoted label text."
       }
      ],
      "flags": [],
@@ -136,16 +143,16 @@
       {
        "chunk_id": "mounjaro:v40:79:0",
        "section": "14 CLINICAL STUDIES > 14.5 MOUNJARO Use in Combination with Metformin or Basal Insulin, or Both in Pediatric Patients 10 Years of Age and Older with Type 2 Diabetes Mellitus",
-       "score": 0.0462,
+       "score": 0.0466,
        "dense_rank": 3,
-       "bm25_rank": 6,
-       "number_rank": 6
+       "bm25_rank": 5,
+       "number_rank": 5
       },
       {
        "chunk_id": "mounjaro:v40:98:2",
        "section": "Mounjaro Medication Guide",
-       "score": 0.046,
-       "dense_rank": 8,
+       "score": 0.0457,
+       "dense_rank": 9,
        "bm25_rank": 4,
        "number_rank": 4
       }
@@ -167,7 +174,7 @@
         "Indications and Usage"
        ],
        "routed_added": 0,
-       "ms": 16
+       "ms": 22
       },
       {
        "step": "judge",
@@ -183,7 +190,7 @@
        "flags": [],
        "kept_quotes": 1,
        "proposed_quotes": 1,
-       "ms": 0.0
+       "ms": 0.2
       }
      ]
     }
@@ -199,10 +206,9 @@
      "status": "off_label",
      "model_verdict": "off_label",
      "violations": [
-      "broadened_indication",
-      "omitted_qualifier"
+      "broadened_indication"
      ],
-     "reasoning": "The label excerpts list MOUNJARO's indications as improving glycemic control in type 2 diabetes and reducing CV events in adults with type 2 diabetes at high risk. There is no mention of an indication for chronic weight management or obesity. Therefore the claim promotes a use not included in the FDA-approved labeling.",
+     "reasoning": "The label excerpts list MOUNJARO's indications as improving glycemic control in type 2 diabetes and reducing CV events in adults with type 2 diabetes at high risk. No excerpt mentions approval for chronic weight management or use in obesity, so the claim describes a use not supported by the label.",
      "evidence": [
       {
        "chunk_id": "mounjaro:v40:1:0",
@@ -234,25 +240,33 @@
       {
        "chunk_id": "mounjaro:v40:98:2",
        "section": "Mounjaro Medication Guide",
-       "score": 0.0306,
-       "dense_rank": 8,
-       "bm25_rank": 3,
+       "score": 0.0313,
+       "dense_rank": 7,
+       "bm25_rank": 1,
        "number_rank": null
       },
       {
        "chunk_id": "mounjaro:v40:1:0",
        "section": "1 INDICATIONS AND USAGE",
-       "score": 0.0294,
+       "score": 0.0291,
        "dense_rank": 1,
-       "bm25_rank": 17,
+       "bm25_rank": 19,
        "number_rank": null
       },
       {
        "chunk_id": "mounjaro:v40:98:11",
        "section": "Mounjaro Medication Guide",
-       "score": 0.0276,
+       "score": 0.0278,
        "dense_rank": 14,
-       "bm25_rank": 11,
+       "bm25_rank": 10,
+       "number_rank": null
+      },
+      {
+       "chunk_id": "mounjaro:v40:73:0",
+       "section": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
+       "score": 0.0276,
+       "dense_rank": 2,
+       "bm25_rank": 27,
        "number_rank": null
       },
       {
@@ -262,20 +276,12 @@
        "dense_rank": 10,
        "bm25_rank": 16,
        "number_rank": null
-      },
-      {
-       "chunk_id": "mounjaro:v40:98:4",
-       "section": "Mounjaro Medication Guide",
-       "score": 0.0273,
-       "dense_rank": 22,
-       "bm25_rank": 6,
-       "number_rank": null
       }
      ],
      "model": "groq/gpt-oss-120b",
      "source": "cache",
      "prompt_version": "judge-v2",
-     "tokens": 2610,
+     "tokens": 2758,
      "latency_s": 0.01,
      "trace": [
       {
@@ -289,14 +295,14 @@
         "Indications and Usage"
        ],
        "routed_added": 0,
-       "ms": 12
+       "ms": 13
       },
       {
        "step": "judge",
        "model": "groq/gpt-oss-120b",
        "source": "cache",
        "attempts": [],
-       "tokens": 2610,
+       "tokens": 2758,
        "ms": 0
       },
       {
@@ -321,8 +327,22 @@
      "status": "supported",
      "model_verdict": "supported",
      "violations": [],
-     "reasoning": "Table 5 shows that at Week 40 the HbA1c change was -1.9% for semaglutide 1 mg and -2.2% (10 mg) and -2.3% (15 mg) for MOUNJARO, indicating a greater reduction with MOUNJARO. The text also states the reduction was statistically significant versus semaglutide.",
+     "reasoning": "The label excerpts report that in SURPASS-2, MOUNJARO 10 mg and 15 mg achieved a statistically significant greater reduction in HbA1c versus semaglutide 1 mg, with changes of -2.2% and -2.3% compared to -1.9% for semaglutide. This directly supports the claim of greater A1C reduction.",
      "evidence": [
+      {
+       "chunk_id": "mounjaro:v40:75:0",
+       "quote": "Treatment with MOUNJARO 10 mg and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with semaglutide 1 mg once weekly (see Table 5 and Figure 2).",
+       "match": "exact",
+       "section_path": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "drug": "MOUNJARO",
+       "label_version": 40,
+       "effective_time": "20260827",
+       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
+       "kind": "text",
+       "before": "…and 47% were men. The mean duration of type 2 diabetes mellitus was 8.6 years, and the mean BMI was 34 kg/m^2. Overall, 83% were White, 4% were Black or African American, and 1% were Asian; 70% identified as Hispanic or Latino ethnicity.\n\n",
+       "after": "",
+       "table": null
+      },
       {
        "chunk_id": "mounjaro:v40:75:2",
        "quote": "Change at Week 40 | -1.9 | -2.0 | -2.2 | -2.3",
@@ -442,20 +462,6 @@
          4
         ]
        }
-      },
-      {
-       "chunk_id": "mounjaro:v40:75:0",
-       "quote": "Treatment with MOUNJARO 10 mg and 15 mg once weekly for 40 weeks resulted in a statistically significant reduction in HbA1c compared with semaglutide 1 mg once weekly (see Table 5 and Figure 2).",
-       "match": "exact",
-       "section_path": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
-       "drug": "MOUNJARO",
-       "label_version": 40,
-       "effective_time": "20260827",
-       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d2d7da5d-ad07-4228-955f-cf7e355c8cc0",
-       "kind": "text",
-       "before": "…and 47% were men. The mean duration of type 2 diabetes mellitus was 8.6 years, and the mean BMI was 34 kg/m^2. Overall, 83% were White, 4% were Black or African American, and 1% were Asian; 70% identified as Hispanic or Latino ethnicity.\n\n",
-       "after": "",
-       "table": null
       }
      ],
      "checks": [
@@ -465,26 +471,34 @@
       },
       {
        "ok": true,
-       "text": "No figures in the claim to check."
+       "text": "Figures 1 appear in the quoted label text."
       }
      ],
      "flags": [],
      "retrieved": [
       {
-       "chunk_id": "mounjaro:v40:73:0",
-       "section": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
-       "score": 0.0489,
-       "dense_rank": 2,
+       "chunk_id": "mounjaro:v40:1:0",
+       "section": "1 INDICATIONS AND USAGE",
+       "score": 0.0492,
+       "dense_rank": 1,
        "bm25_rank": 1,
        "number_rank": 1
       },
       {
-       "chunk_id": "mounjaro:v40:75:0",
-       "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
-       "score": 0.0479,
-       "dense_rank": 4,
+       "chunk_id": "mounjaro:v40:73:0",
+       "section": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
+       "score": 0.0487,
+       "dense_rank": 1,
        "bm25_rank": 2,
        "number_rank": 2
+      },
+      {
+       "chunk_id": "mounjaro:v40:75:0",
+       "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
+       "score": 0.0484,
+       "dense_rank": 4,
+       "bm25_rank": 1,
+       "number_rank": 1
       },
       {
        "chunk_id": "mounjaro:v40:75:2",
@@ -497,55 +511,47 @@
       {
        "chunk_id": "mounjaro:v40:75:1",
        "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
-       "score": 0.0467,
-       "dense_rank": 1,
-       "bm25_rank": 7,
-       "number_rank": 5
+       "score": 0.0474,
+       "dense_rank": 2,
+       "bm25_rank": 4,
+       "number_rank": 4
       },
       {
        "chunk_id": "mounjaro:v40:75:3",
        "section": "14 CLINICAL STUDIES > 14.3 MOUNJARO Use in Combination with Metformin, Sulfonylureas, and/or SGLT2 Inhibitors in Adult Patients with Type 2 Diabetes Mellitus > Clinical Studies",
-       "score": 0.0451,
-       "dense_rank": 10,
-       "bm25_rank": 6,
-       "number_rank": 4
+       "score": 0.0453,
+       "dense_rank": 9,
+       "bm25_rank": 5,
+       "number_rank": 5
       }
      ],
      "model": "groq/gpt-oss-120b",
-     "source": "live",
+     "source": "cache",
      "prompt_version": "judge-v2",
-     "tokens": 3084,
-     "latency_s": 58.14,
+     "tokens": 3231,
+     "latency_s": 0.02,
      "trace": [
       {
        "step": "search_label",
        "labels": [
         "mounjaro"
        ],
-       "n_hits": 5,
-       "pinned_for_figures": 1,
+       "n_hits": 6,
+       "pinned_for_figures": 2,
        "routed_to": [
         "Indications and Usage",
         "Clinical Studies"
        ],
-       "routed_added": 0,
-       "ms": 10
+       "routed_added": 1,
+       "ms": 16
       },
       {
        "step": "judge",
        "model": "groq/gpt-oss-120b",
-       "source": "live",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2726,
-         "completion_tokens": 358,
-         "latency_s": 3.1063319999957457,
-         "repaired": false
-        }
-       ],
-       "tokens": 3084,
-       "ms": 3106
+       "source": "cache",
+       "attempts": [],
+       "tokens": 3231,
+       "ms": 0
       },
       {
        "step": "guards",
@@ -617,17 +623,17 @@
       {
        "chunk_id": "mounjaro:v40:6:1",
        "section": "5 WARNINGS AND PRECAUTIONS > 5.1 Risk of Thyroid C-Cell Tumors",
-       "score": 0.031,
+       "score": 0.0315,
        "dense_rank": 5,
-       "bm25_rank": 4,
+       "bm25_rank": 2,
        "number_rank": null
       },
       {
        "chunk_id": "mounjaro:v40:9:0",
        "section": "5 WARNINGS AND PRECAUTIONS > 5.4 Hypersensitivity Reactions",
-       "score": 0.0301,
-       "dense_rank": 7,
-       "bm25_rank": 6,
+       "score": 0.0315,
+       "dense_rank": 3,
+       "bm25_rank": 4,
        "number_rank": null
       },
       {
@@ -649,8 +655,8 @@
       {
        "chunk_id": "mounjaro:v40:5:0",
        "section": "4 CONTRAINDICATIONS",
-       "score": 0.032,
-       "dense_rank": 4,
+       "score": 0.0318,
+       "dense_rank": 5,
        "bm25_rank": 1,
        "number_rank": null
       },
@@ -664,10 +670,10 @@
       }
      ],
      "model": "groq/gpt-oss-120b",
-     "source": "live",
+     "source": "cache",
      "prompt_version": "judge-v2",
      "tokens": 2471,
-     "latency_s": 1.34,
+     "latency_s": 0.02,
      "trace": [
       {
        "step": "search_label",
@@ -682,23 +688,15 @@
         "Warnings and Precautions"
        ],
        "routed_added": 2,
-       "ms": 49
+       "ms": 15
       },
       {
        "step": "judge",
        "model": "groq/gpt-oss-120b",
-       "source": "live",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 2062,
-         "completion_tokens": 409,
-         "latency_s": 1.2190112000098452,
-         "repaired": false
-        }
-       ],
+       "source": "cache",
+       "attempts": [],
        "tokens": 2471,
-       "ms": 1219
+       "ms": 0
       },
       {
        "step": "guards",
@@ -706,7 +704,7 @@
        "flags": [],
        "kept_quotes": 2,
        "proposed_quotes": 2,
-       "ms": 0.5
+       "ms": 0.2
       }
      ]
     }
@@ -723,6 +721,7 @@
       "ok": true,
       "title": "Boxed warning is mentioned",
       "detail": "The copy mentions thyroid from the MOUNJARO boxed warning. A reviewer still checks it is presented in full.",
+      "denied": [],
       "evidence": {
        "chunk_id": "mounjaro:v40:0:0",
        "section_path": "WARNING: RISK OF THYROID C-CELL TUMORS",
@@ -736,22 +735,22 @@
    "id": 7,
    "event": "done",
    "data": {
-    "seconds": 59.5,
-    "tokens": 10813,
+    "seconds": 0.2,
+    "tokens": 11108,
     "n_claims": 4
    }
   }
  ],
  "rewrites": {
   "2": {
-   "rewrite": "MOUNJARO is indicated, as an adjunct to diet and exercise, to improve glycemic control in adults and pediatric patients ≥ 10 years old with type 2 diabetes mellitus, and to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes mellitus who are at high risk for these events.",
+   "rewrite": "MOUNJARO is indicated, as an adjunct to diet and exercise, to improve glycemic control in adults (and pediatric patients ≥ 10 years old) with type 2 diabetes mellitus, and to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes who are at high risk.",
    "model": "groq/gpt-oss-120b",
    "review": {
-    "claim": "MOUNJARO is indicated, as an adjunct to diet and exercise, to improve glycemic control in adults and pediatric patients ≥ 10 years old with type 2 diabetes mellitus, and to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes mellitus who are at high risk for these events.",
+    "claim": "MOUNJARO is indicated, as an adjunct to diet and exercise, to improve glycemic control in adults (and pediatric patients ≥ 10 years old) with type 2 diabetes mellitus, and to reduce the risk of major adverse cardiovascular events in adults with type 2 diabetes who are at high risk.",
     "status": "supported",
     "model_verdict": "supported",
     "violations": [],
-    "reasoning": "The claim states that MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients ≥10 years with type 2 diabetes, and to reduce major adverse cardiovascular events in adults with type 2 diabetes at high risk. Both elements are directly listed in the INDICATIONS AND USAGE excerpt.",
+    "reasoning": "The claim states that MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients ≥10 years with type 2 diabetes, and to reduce CV risk in adults with type 2 diabetes at high risk. The INDICATIONS AND USAGE excerpt explicitly lists both indications with the same population and conditions.",
     "evidence": [
      {
       "chunk_id": "mounjaro:v40:1:0",
@@ -775,7 +774,7 @@
      },
      {
       "ok": true,
-      "text": "No figures in the claim to check."
+      "text": "Figures 10 appear in the quoted label text."
      }
     ],
     "flags": [],
@@ -791,16 +790,16 @@
      {
       "chunk_id": "mounjaro:v40:46:0",
       "section": "8 USE IN SPECIFIC POPULATIONS > 8.4 Pediatric Use",
-      "score": 0.0484,
+      "score": 0.0481,
       "dense_rank": 2,
-      "bm25_rank": 2,
+      "bm25_rank": 3,
       "number_rank": 2
      },
      {
       "chunk_id": "mounjaro:v40:73:0",
       "section": "14 CLINICAL STUDIES > 14.1 Overview of Clinical Studies",
-      "score": 0.0469,
-      "dense_rank": 4,
+      "score": 0.0471,
+      "dense_rank": 3,
       "bm25_rank": 4,
       "number_rank": 4
      },
@@ -808,24 +807,24 @@
       "chunk_id": "mounjaro:v40:98:2",
       "section": "Mounjaro Medication Guide",
       "score": 0.0465,
-      "dense_rank": 8,
-      "bm25_rank": 3,
+      "dense_rank": 9,
+      "bm25_rank": 2,
       "number_rank": 3
      },
      {
       "chunk_id": "mounjaro:v40:74:0",
       "section": "14 CLINICAL STUDIES > 14.2 Monotherapy Use of MOUNJARO in Adult Patients with Type 2 Diabetes Mellitus",
-      "score": 0.0457,
-      "dense_rank": 6,
+      "score": 0.0462,
+      "dense_rank": 4,
       "bm25_rank": 6,
       "number_rank": 5
      }
     ],
     "model": "groq/gpt-oss-120b",
-    "source": "live",
+    "source": "cache",
     "prompt_version": "judge-v2",
-    "tokens": 2289,
-    "latency_s": 1.21,
+    "tokens": 2284,
+    "latency_s": 0.17,
     "trace": [
      {
       "step": "search_label",
@@ -838,23 +837,15 @@
        "Indications and Usage"
       ],
       "routed_added": 0,
-      "ms": 57
+      "ms": 33
      },
      {
       "step": "judge",
       "model": "groq/gpt-oss-120b",
-      "source": "live",
-      "attempts": [
-       {
-        "model": "groq/gpt-oss-120b",
-        "prompt_tokens": 2039,
-        "completion_tokens": 250,
-        "latency_s": 1.1324812000093516,
-        "repaired": false
-       }
-      ],
-      "tokens": 2289,
-      "ms": 1132
+      "source": "cache",
+      "attempts": [],
+      "tokens": 2284,
+      "ms": 0
      },
      {
       "step": "guards",
@@ -862,7 +853,7 @@
       "flags": [],
       "kept_quotes": 1,
       "proposed_quotes": 1,
-      "ms": 0.0
+      "ms": 0.4
      }
     ]
    }
@@ -921,17 +912,17 @@
      {
       "chunk_id": "mounjaro:v40:9:0",
       "section": "5 WARNINGS AND PRECAUTIONS > 5.4 Hypersensitivity Reactions",
-      "score": 0.0308,
-      "dense_rank": 4,
-      "bm25_rank": 6,
+      "score": 0.0318,
+      "dense_rank": 2,
+      "bm25_rank": 4,
       "number_rank": null
      },
      {
       "chunk_id": "mounjaro:v40:6:1",
       "section": "5 WARNINGS AND PRECAUTIONS > 5.1 Risk of Thyroid C-Cell Tumors",
-      "score": 0.0306,
-      "dense_rank": 7,
-      "bm25_rank": 4,
+      "score": 0.0313,
+      "dense_rank": 6,
+      "bm25_rank": 2,
       "number_rank": null
      },
      {
@@ -968,10 +959,10 @@
      }
     ],
     "model": "groq/gpt-oss-120b",
-    "source": "live",
+    "source": "cache",
     "prompt_version": "judge-v2",
     "tokens": 2372,
-    "latency_s": 58.86,
+    "latency_s": 0.15,
     "trace": [
      {
       "step": "search_label",
@@ -986,23 +977,15 @@
        "Warnings and Precautions"
       ],
       "routed_added": 2,
-      "ms": 15
+      "ms": 19
      },
      {
       "step": "judge",
       "model": "groq/gpt-oss-120b",
-      "source": "live",
-      "attempts": [
-       {
-        "model": "groq/gpt-oss-120b",
-        "prompt_tokens": 2062,
-        "completion_tokens": 310,
-        "latency_s": 2.796812200016575,
-        "repaired": false
-       }
-      ],
+      "source": "cache",
+      "attempts": [],
       "tokens": 2372,
-      "ms": 2797
+      "ms": 0
      },
      {
       "step": "guards",

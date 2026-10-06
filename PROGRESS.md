@@ -186,6 +186,20 @@ moves a quote to the shown excerpt it is really in, and ignores empty quotes: 35
 remain, mostly tables a model rebuilt in its own layout. One loophole closed on the way:
 figures in a skipped middle used to count as quoted; now only the quoted parts vouch.
 
+### 24. Every remaining false approval left out a condition the indication attaches
+Regenerating the samples, gpt-oss-120b traced "Ozempic also reduces the risk of kidney
+failure" on the indication that limits it to adults with type 2 diabetes and chronic kidney
+disease, and restated that limit in its own reasoning. The quote was real and the claim had
+no figures, so no guard applied. The benchmark's remaining false approvals were all the same
+kind (a glycemic claim without "as an adjunct to diet and exercise", a CV claim without
+"established cardiovascular disease"). New guard: a traced claim resting on Indications text
+must carry the conditions of the quoted item and the lines that introduce it; a trial result
+backed by a Clinical Studies quote is left alone. Replayed over the cached answers: false
+approvals 2/42 -> 0/42 (gpt-oss-120b, test), 1/78 -> 0/78 (Gemma), 3/78 -> 1/78 (Llama), with
+no faithful claim held back. Written after seeing test-split failures, so the test split no
+longer measures it blind (EVALS.md says so); the OPDP holdout is the blind test it has not had.
+A bug on the way: a model's "type 2 diabetes" (no-break space) read as missing.
+
 ### 23. Smaller logic errors found in the same review
 - Ages and doses under 11 were never checked ("as young as 8" passed on "12 years and
   older"); small numbers now count when a unit or an age goes with them.

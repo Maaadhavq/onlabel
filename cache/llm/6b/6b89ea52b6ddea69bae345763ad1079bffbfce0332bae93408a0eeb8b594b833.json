@@ -1,0 +1,25 @@
+{
+ "key": "6b89ea52b6ddea69bae345763ad1079bffbfce0332bae93408a0eeb8b594b833",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:35:18",
+    "quote": "p<0.0001 (2-sided) for superiority, adjusted for multiplicity."
+   },
+   {
+    "chunk_id": "ozempic:v20:35:18",
+    "quote": "The mean changes from baseline to week 30 were -1.2 kg, -3.5 kg, and -6 kg in the placebo, OZEMPIC 0.5 mg, and OZEMPIC 1 mg arms, respectively."
+   }
+  ],
+  "reasoning": "The label states that semaglutide (OZEMPIC) demonstrated superiority in lowering HbA1c in clinical trials and provides data showing weight loss compared with placebo. Both elements of the claim are directly reflected in the excerpts.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 351,
+  "prompt_tokens": 2415
+ }
+}

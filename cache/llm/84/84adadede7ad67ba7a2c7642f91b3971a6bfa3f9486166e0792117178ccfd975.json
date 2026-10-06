@@ -1,0 +1,21 @@
+{
+ "key": "84adadede7ad67ba7a2c7642f91b3971a6bfa3f9486166e0792117178ccfd975",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "ozempic:v20:1:0",
+    "quote": "- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in adults with type 2 diabetes mellitus and chronic kidney disease."
+   }
+  ],
+  "reasoning": "The INDICATIONS AND USAGE section lists Ozempic as indicated to reduce the risk of end-stage kidney disease in adults with type 2 diabetes mellitus and chronic kidney disease, which matches the claim exactly.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 251,
+  "prompt_tokens": 2049
+ }
+}

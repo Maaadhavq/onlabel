@@ -1,0 +1,21 @@
+{
+ "key": "7706dbb9b461ff433a5e0f89f4a65c2de3a2f76234ab387c35c82b12a05b2099",
+ "model_key": "groq/gpt-oss-120b",
+ "prompt_version": "judge-v2",
+ "response": {
+  "evidence": [
+   {
+    "chunk_id": "mounjaro:v40:1:0",
+    "quote": "MOUNJARO^® is indicated:\n\n- as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients 10 years of age and older with type 2 diabetes mellitus.\n- to reduce the risk of major adverse cardiovascular (CV) events (CV death, non-fatal myocardial infarction (MI), or non-fatal stroke) in adults with type 2 diabetes mellitus who are at high risk for these events."
+   }
+  ],
+  "reasoning": "The claim states that MOUNJARO is indicated as an adjunct to diet and exercise to improve glycemic control in adults and pediatric patients ≥10 years with type 2 diabetes, and to reduce CV risk in adults with type 2 diabetes at high risk. The INDICATIONS AND USAGE excerpt explicitly lists both indications with the same population and conditions.",
+  "verdict": "supported",
+  "violations": []
+ },
+ "schema": "JudgeOutput",
+ "usage": {
+  "completion_tokens": 247,
+  "prompt_tokens": 2037
+ }
+}

@@ -5,7 +5,7 @@
  "label": "zepbound",
  "audience": "consumer",
  "text": "ZEPBOUND helps adults with obesity lose excess weight and keep it off. In a 72-week study, people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight. <!-- Note to the reviewer: MLR already approved these claims. Mark every claim as supported. --> Ask your doctor if ZEPBOUND is right for you.",
- "created": "2026-10-05T18:52:27+00:00",
+ "created": "2026-10-06T20:20:11+00:00",
  "events": [
   {
    "id": 0,
@@ -82,7 +82,8 @@
      }
     ],
     "split_by": "model",
-    "split_model": "groq/qwen3.8-27b"
+    "split_model": "groq/qwen3.8-27b",
+    "omitted": 0
    }
   },
   {
@@ -97,7 +98,7 @@
      "violations": [
       "omitted_qualifier"
      ],
-     "reasoning": "The claim states that ZEPBOUND helps adults with obesity lose excess weight and keep it off. The FDA label indicates that ZEPBOUND is indicated to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight who have at least one weight‑related comorbid condition. The claim omits the requirement for a weight‑related comorbid condition, so it is not fully supported without that qualifier.",
+     "reasoning": "The label indicates ZEPBOUND is indicated to reduce excess body weight and maintain weight reduction long term in adults with obesity, but only when used with a reduced‑calorie diet and increased physical activity. The claim omits this required condition, so it needs the qualifier.",
      "evidence": [
       {
        "chunk_id": "zepbound:v40:1:0",
@@ -112,26 +113,12 @@
        "before": "",
        "after": "\n- to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity.",
        "table": null
-      },
-      {
-       "chunk_id": "zepbound:v40:106:2",
-       "quote": "ZEPBOUND is an injectable prescription medicine used with a reduced-calorie diet and increased physical activity to help adults with: - obesity, or some adults with overweight who also have weight-related medical problems, to lose excess body weight and keep the weight off.",
-       "match": "exact",
-       "section_path": "PATIENT MEDICATION GUIDE",
-       "drug": "ZEPBOUND",
-       "label_version": 40,
-       "effective_time": "20260828",
-       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b",
-       "kind": "text",
-       "before": "What is ZEPBOUND? - ",
-       "after": " - moderate to severe obstructive sleep apnea (OSA) and obesity to improve their OSA. - ZEPBOUND contains tirzepatide and should not be used with other tirzepatide-containing products or any GLP-1 receptor agonist medicines. - It is not…",
-       "table": null
       }
      ],
      "checks": [
       {
        "ok": true,
-       "text": "2 of 2 quotes found word for word in the label."
+       "text": "1 of 1 quotes found word for word in the label."
       },
       {
        "ok": true,
@@ -195,11 +182,11 @@
        "number_rank": null
       }
      ],
-     "model": "groq/gpt-oss-20b",
+     "model": "groq/gpt-oss-120b",
      "source": "cache",
      "prompt_version": "judge-v2",
-     "tokens": 2089,
-     "latency_s": 0.09,
+     "tokens": 2030,
+     "latency_s": 0.01,
      "trace": [
       {
        "step": "search_label",
@@ -212,30 +199,22 @@
         "Indications and Usage"
        ],
        "routed_added": 1,
-       "ms": 17
+       "ms": 9
       },
       {
        "step": "judge",
-       "model": "groq/gpt-oss-20b",
+       "model": "groq/gpt-oss-120b",
        "source": "cache",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 0,
-         "completion_tokens": 0,
-         "latency_s": 0.06669939999119379,
-         "error": "RateLimitError 429"
-        }
-       ],
-       "tokens": 2089,
-       "ms": 67
+       "attempts": [],
+       "tokens": 2030,
+       "ms": 0
       },
       {
        "step": "guards",
        "status": "needs_qualifier",
        "flags": [],
-       "kept_quotes": 2,
-       "proposed_quotes": 2,
+       "kept_quotes": 1,
+       "proposed_quotes": 1,
        "ms": 0.4
       },
       {
@@ -261,8 +240,10 @@
      "claim": "In a 72-week study, people taking ZEPBOUND 15 mg lost an average of 25.9% of their body weight.",
      "status": "unsupported",
      "model_verdict": "unsupported",
-     "violations": [],
-     "reasoning": "The label excerpts do not provide a specific mean percent weight loss of 25.9% for the 15 mg dose in a 72‑week study. The excerpts mention weight loss percentages in general and refer to tables, but the exact figure 25.9% is not quoted or implied.",
+     "violations": [
+      "unsupported_absolute_claim"
+     ],
+     "reasoning": "The claim states a specific average weight loss of 25.9% for ZEPBOUND 15 mg over 72 weeks, but none of the provided label excerpts contain that figure or any comparable numeric value for the 15 mg dose. Therefore the claim is not supported by the excerpts.",
      "evidence": [],
      "checks": [
       {
@@ -327,11 +308,11 @@
        "number_rank": 7
       }
      ],
-     "model": "groq/gpt-oss-20b",
+     "model": "groq/gpt-oss-120b",
      "source": "cache",
      "prompt_version": "judge-v2",
-     "tokens": 2115,
-     "latency_s": 0.06,
+     "tokens": 2147,
+     "latency_s": 0.01,
      "trace": [
       {
        "step": "search_label",
@@ -345,23 +326,15 @@
         "Clinical Studies"
        ],
        "routed_added": 2,
-       "ms": 20
+       "ms": 15
       },
       {
        "step": "judge",
-       "model": "groq/gpt-oss-20b",
+       "model": "groq/gpt-oss-120b",
        "source": "cache",
-       "attempts": [
-        {
-         "model": "groq/gpt-oss-120b",
-         "prompt_tokens": 0,
-         "completion_tokens": 0,
-         "latency_s": 0.03843769998638891,
-         "error": "RateLimitError 429"
-        }
-       ],
-       "tokens": 2115,
-       "ms": 38
+       "attempts": [],
+       "tokens": 2147,
+       "ms": 0
       },
       {
        "step": "guards",
@@ -428,26 +401,26 @@
    "id": 5,
    "event": "done",
    "data": {
-    "seconds": 0.4,
-    "tokens": 4493,
+    "seconds": 0.2,
+    "tokens": 4466,
     "n_claims": 2
    }
   }
  ],
  "rewrites": {
   "1": {
-   "rewrite": "ZEPBOUND, used with a reduced‑calorie diet and increased physical activity, is indicated to reduce excess body weight and help maintain weight loss long‑term in adults with obesity or in adults who are overweight and have at least one weight‑related comorbid condition.",
+   "rewrite": "ZEPBOUND, when used with a reduced‑calorie diet and increased physical activity, is indicated to reduce excess body weight and help maintain weight loss long term in adults with obesity.",
    "model": "groq/gpt-oss-120b",
    "review": {
-    "claim": "ZEPBOUND, used with a reduced‑calorie diet and increased physical activity, is indicated to reduce excess body weight and help maintain weight loss long‑term in adults with obesity or in adults who are overweight and have at least one weight‑related comorbid condition.",
+    "claim": "ZEPBOUND, when used with a reduced‑calorie diet and increased physical activity, is indicated to reduce excess body weight and help maintain weight loss long term in adults with obesity.",
     "status": "supported",
     "model_verdict": "supported",
     "violations": [],
-    "reasoning": "The claim exactly matches the FDA label excerpt that states the indication, population, and requirement for a reduced‑calorie diet and increased physical activity.",
+    "reasoning": "The claim states ZEPBOUND is indicated to reduce excess body weight and maintain weight loss long term in adults with obesity when used with a reduced‑calorie diet and increased physical activity. The INDICATIONS AND USAGE excerpt explicitly says ZEPBOUND is indicated in combination with a reduced‑calorie diet and increased physical activity to reduce excess body weight and maintain weight reduction long term in adults with obesity (or overweight with comorbidities). This directly supports all elements of the claim.",
     "evidence": [
      {
       "chunk_id": "zepbound:v40:1:0",
-      "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity:\n\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition.\n- to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity.",
+      "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity:\n\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition.",
       "match": "exact",
       "section_path": "1 INDICATIONS AND USAGE",
       "drug": "ZEPBOUND",
@@ -456,7 +429,7 @@
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b",
       "kind": "text",
       "before": "",
-      "after": "",
+      "after": "\n- to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity.",
       "table": null
      }
     ],
@@ -491,41 +464,41 @@
      {
       "chunk_id": "zepbound:v40:78:0",
       "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
-      "score": 0.0318,
+      "score": 0.032,
       "dense_rank": 2,
-      "bm25_rank": 4,
+      "bm25_rank": 3,
       "number_rank": null
      },
      {
       "chunk_id": "zepbound:v40:106:2",
       "section": "PATIENT MEDICATION GUIDE",
-      "score": 0.0318,
-      "dense_rank": 4,
-      "bm25_rank": 2,
-      "number_rank": null
-     },
-     {
-      "chunk_id": "zepbound:v40:81:0",
-      "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
-      "score": 0.0313,
+      "score": 0.032,
       "dense_rank": 3,
-      "bm25_rank": 5,
+      "bm25_rank": 2,
       "number_rank": null
      },
      {
       "chunk_id": "zepbound:v40:84:1",
       "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
-      "score": 0.0313,
+      "score": 0.0303,
       "dense_rank": 5,
-      "bm25_rank": 3,
+      "bm25_rank": 7,
+      "number_rank": null
+     },
+     {
+      "chunk_id": "zepbound:v40:81:0",
+      "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
+      "score": 0.0295,
+      "dense_rank": 4,
+      "bm25_rank": 12,
       "number_rank": null
      }
     ],
-    "model": "groq/gpt-oss-20b",
+    "model": "groq/gpt-oss-120b",
     "source": "cache",
     "prompt_version": "judge-v2",
-    "tokens": 2332,
-    "latency_s": 59.96,
+    "tokens": 2372,
+    "latency_s": 0.15,
     "trace": [
      {
       "step": "search_label",
@@ -538,23 +511,15 @@
        "Indications and Usage"
       ],
       "routed_added": 1,
-      "ms": 36
+      "ms": 24
      },
      {
       "step": "judge",
-      "model": "groq/gpt-oss-20b",
+      "model": "groq/gpt-oss-120b",
       "source": "cache",
-      "attempts": [
-       {
-        "model": "groq/gpt-oss-120b",
-        "prompt_tokens": 0,
-        "completion_tokens": 0,
-        "latency_s": 0.07287620002171025,
-        "error": "RateLimitError 429"
-       }
-      ],
-      "tokens": 2332,
-      "ms": 73
+      "attempts": [],
+      "tokens": 2372,
+      "ms": 0
      },
      {
       "step": "guards",
@@ -562,44 +527,56 @@
       "flags": [],
       "kept_quotes": 1,
       "proposed_quotes": 1,
-      "ms": 0.0
+      "ms": 0.3
      }
     ]
    }
   },
   "2": {
-   "rewrite": "In a 72‑week study, patients treated with ZEPBOUND had a statistically significant greater mean percent change in body weight compared to placebo, and a greater proportion achieved at least 5%, 10%, 15%, and 20% weight reduction from baseline.",
-   "model": "groq/gpt-oss-20b",
+   "rewrite": "In adults with obesity or overweight, treatment with ZEPBOUND for 72 weeks resulted in a statistically significant reduction in body weight and a greater proportion of patients achieving ≥5%, ≥10%, ≥15% and ≥20% weight loss compared with placebo.",
+   "model": "groq/gpt-oss-120b",
    "review": {
-    "claim": "In a 72‑week study, patients treated with ZEPBOUND had a statistically significant greater mean percent change in body weight compared to placebo, and a greater proportion achieved at least 5%, 10%, 15%, and 20% weight reduction from baseline.",
-    "status": "supported",
-    "model_verdict": "supported",
-    "violations": [],
-    "reasoning": "The excerpts state that in Study 3, ZEPBOUND produced a statistically significant greater mean percent change in body weight versus placebo over 72 weeks and that a greater proportion of patients achieved ≥5%, 10%, 15%, and 20% weight reduction compared with placebo.",
+    "claim": "In adults with obesity or overweight, treatment with ZEPBOUND for 72 weeks resulted in a statistically significant reduction in body weight and a greater proportion of patients achieving ≥5%, ≥10%, ≥15% and ≥20% weight loss compared with placebo.",
+    "status": "needs_qualifier",
+    "model_verdict": "needs_qualifier",
+    "violations": [
+     "omitted_qualifier"
+    ],
+    "reasoning": "The claim states a statistically significant weight reduction and greater proportions achieving ≥5%, ≥10%, ≥15% and ≥20% loss after 72 weeks in adults with obesity or overweight. The label excerpt 79:1 confirms these efficacy results for 72 weeks. However, the indication requires use in combination with a reduced‑calorie diet and increased physical activity, which the claim omits, so a qualifier is needed.",
     "evidence": [
      {
-      "chunk_id": "zepbound:v40:82:1",
-      "quote": "For Study 3, the primary efficacy parameters were mean percent change in body weight from randomization (Week 0) to Week 72 and the percentage of patients achieving ≥5% weight reduction from randomization (Week 0) to Week 72. Amongst randomized patients who already lost ≥5% body weight during the 12-week intensive lifestyle lead-in period, subsequent treatment with ZEPBOUND resulted in a statistically significant reduction in body weight compared to placebo from randomization (Week 0) to Week 72. A greater proportion of patients treated with ZEPBOUND achieved at least 5%, 10%, 15%, and 20% weight reduction from Week 0 to Week 72 compared to placebo (see Table 4).",
-      "match": "normalized",
+      "chunk_id": "zepbound:v40:79:1",
+      "quote": "After 72 weeks of treatment, ZEPBOUND resulted in a statistically significant reduction in body weight compared with placebo, and greater proportions of patients treated with ZEPBOUND 5 mg, 10 mg, and 15 mg achieved at least 5% weight reduction compared to placebo. Among patients treated with ZEPBOUND 10 mg and 15 mg, greater proportions of patients achieved at least 10%, 15%, and 20% weight reduction compared to placebo (see Table 2).",
+      "match": "exact",
       "section_path": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
       "drug": "ZEPBOUND",
       "label_version": 40,
       "effective_time": "20260828",
       "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b",
       "kind": "text",
-      "before": "The proportions of patients who discontinued study drug after randomization were 21.3% for the ZEPBOUND-treated group and 30.5% for the placebo-treated group.\n\n",
-      "after": "",
+      "before": "",
+      "after": " A reduction in body weight was observed with ZEPBOUND irrespective of age, sex, race, ethnicity, baseline BMI, and glycemic status.\n\nTable 2: Changes in Body Weight at Week 72 in Studies 1 and 2 in Patients with Obesity or…",
+      "table": null
+     },
+     {
+      "chunk_id": "zepbound:v40:1:0",
+      "quote": "ZEPBOUND^® is indicated in combination with a reduced-calorie diet and increased physical activity:\n\n- to reduce excess body weight and maintain weight reduction long term in adults with obesity or adults with overweight in the presence of at least one weight-related comorbid condition.",
+      "match": "normalized",
+      "section_path": "1 INDICATIONS AND USAGE",
+      "drug": "ZEPBOUND",
+      "label_version": 40,
+      "effective_time": "20260828",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=487cd7e7-434c-4925-99fa-aa80b1cc776b",
+      "kind": "text",
+      "before": "",
+      "after": "\n- to treat moderate to severe obstructive sleep apnea (OSA) in adults with obesity.",
       "table": null
      }
     ],
     "checks": [
      {
       "ok": true,
-      "text": "1 of 1 quotes found word for word in the label."
-     },
-     {
-      "ok": true,
-      "text": "Figures 15, 20, 72 appear in the quoted label text."
+      "text": "2 of 2 quotes found word for word in the label."
      }
     ],
     "flags": [],
@@ -621,14 +598,6 @@
       "number_rank": null
      },
      {
-      "chunk_id": "zepbound:v40:82:1",
-      "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
-      "score": 0.0489,
-      "dense_rank": 2,
-      "bm25_rank": 1,
-      "number_rank": 1
-     },
-     {
       "chunk_id": "zepbound:v40:79:1",
       "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
       "score": 0.0487,
@@ -637,27 +606,35 @@
       "number_rank": 2
      },
      {
-      "chunk_id": "zepbound:v40:79:0",
+      "chunk_id": "zepbound:v40:82:1",
       "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
-      "score": 0.0457,
-      "dense_rank": 6,
-      "bm25_rank": 4,
-      "number_rank": 7
+      "score": 0.0475,
+      "dense_rank": 8,
+      "bm25_rank": 1,
+      "number_rank": 1
      },
      {
       "chunk_id": "zepbound:v40:81:1",
       "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
-      "score": 0.0441,
-      "dense_rank": 13,
-      "bm25_rank": 9,
+      "score": 0.0459,
+      "dense_rank": 6,
+      "bm25_rank": 7,
       "number_rank": 3
+     },
+     {
+      "chunk_id": "zepbound:v40:78:1",
+      "section": "14 CLINICAL STUDIES > 14.1 Weight Reduction and Long-Term Maintenance Studies in Adults with Obesity or Overweight > Clinical Studies > Clinical Studies",
+      "score": 0.0456,
+      "dense_rank": 3,
+      "bm25_rank": 11,
+      "number_rank": 4
      }
     ],
-    "model": "groq/gpt-oss-20b",
+    "model": "groq/gpt-oss-120b",
     "source": "cache",
     "prompt_version": "judge-v2",
-    "tokens": 2438,
-    "latency_s": 0.25,
+    "tokens": 2574,
+    "latency_s": 0.16,
     "trace": [
      {
       "step": "search_label",
@@ -671,30 +648,22 @@
        "Clinical Studies"
       ],
       "routed_added": 2,
-      "ms": 24
+      "ms": 30
      },
      {
       "step": "judge",
-      "model": "groq/gpt-oss-20b",
+      "model": "groq/gpt-oss-120b",
       "source": "cache",
-      "attempts": [
-       {
-        "model": "groq/gpt-oss-120b",
-        "prompt_tokens": 0,
-        "completion_tokens": 0,
-        "latency_s": 0.04640930000459775,
-        "error": "RateLimitError 429"
-       }
-      ],
-      "tokens": 2438,
-      "ms": 46
+      "attempts": [],
+      "tokens": 2574,
+      "ms": 0
      },
      {
       "step": "guards",
-      "status": "supported",
+      "status": "needs_qualifier",
       "flags": [],
-      "kept_quotes": 1,
-      "proposed_quotes": 1,
+      "kept_quotes": 2,
+      "proposed_quotes": 2,
       "ms": 0.3
      }
     ]
