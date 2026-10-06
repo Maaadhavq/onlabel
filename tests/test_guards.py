@@ -210,3 +210,61 @@ def test_a_table_cell_vouches_for_a_small_figure_whose_unit_is_in_the_header():
                       evidence=[EvidenceQuote(chunk_id="s:v1:0:0", quote="Percent change from baseline (LSMean) | -7.4 | -3")])
     res = check_verdict(out, {"s:v1:0:0": chunk}, claim="in a 56-week study, people lost 7.4%, compared with 3% with placebo")
     assert res.status == "supported" and res.flags == []
+
+
+IND = ("OZEMPIC is indicated:\n"
+       "- as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.\n"
+       "- to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death "
+       "in adults with type 2 diabetes mellitus and chronic kidney disease.")
+
+
+def _ind_chunk() -> Chunk:
+    return Chunk("o:v20:1:0", "ozempic", "set", 20, "OZEMPIC", "semaglutide", 1, "1 INDICATIONS AND USAGE",
+                 "34067-9", "1", 0, len(IND), 0, len(IND), IND)
+
+
+def _supported(*quotes, chunk_id="o:v20:1:0"):
+    return JudgeOutput(reasoning="r", verdict="supported", violations=[],
+                       evidence=[EvidenceQuote(chunk_id=chunk_id, quote=q) for q in quotes])
+
+
+def test_a_traced_claim_must_carry_the_conditions_its_indication_attaches():
+    # The regenerated Ozempic sample: gpt-oss-120b traced this on the CKD indication.
+    out = _supported("to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular "
+                     "death in adults with type 2 diabetes mellitus and chronic kidney disease.")
+    chunks = {"o:v20:1:0": _ind_chunk()}
+    res = check_verdict(out, chunks, claim="Ozempic also reduces the risk of kidney failure.")
+    assert res.status == "needs_human_review"
+    assert "conditions_not_in_claim:type 2 diabetes;chronic kidney disease" in res.flags
+    ok = check_verdict(out, chunks, claim="In adults with type 2 diabetes and chronic kidney disease, Ozempic "
+                                          "reduces the risk of end-stage kidney disease.")
+    assert ok.status == "supported" and ok.flags == []
+
+
+def test_a_lead_in_quoted_with_its_item_is_not_an_item_of_its_own():
+    out = _supported("OZEMPIC is indicated: - as an adjunct to diet and exercise to improve glycemic control "
+                     "in adults with type 2 diabetes mellitus.")
+    res = check_verdict(out, {"o:v20:1:0": _ind_chunk()}, claim="Ozempic improves blood sugar control in adults with type 2 diabetes.")
+    assert res.status == "needs_human_review" and "conditions_not_in_claim:diet and exercise" in res.flags
+
+
+def test_a_trial_result_backed_by_a_study_quote_is_judged_on_the_study():
+    study = Chunk("o:v20:35:2", "ozempic", "set", 20, "OZEMPIC", "semaglutide", 35, "14 CLINICAL STUDIES",
+                  "34092-7", "14", 0, 40, 0, 40, "Change at week 30 | -0.1 | -1.4 | -1.6")
+    chunks = {"o:v20:1:0": _ind_chunk(), "o:v20:35:2": study}
+    out = JudgeOutput(reasoning="r", verdict="supported", violations=[], evidence=[
+        EvidenceQuote(chunk_id="o:v20:1:0", quote="as an adjunct to diet and exercise to improve glycemic control in "
+                                                  "adults with type 2 diabetes mellitus."),
+        EvidenceQuote(chunk_id="o:v20:35:2", quote="Change at week 30 | -0.1 | -1.4 | -1.6")])
+    res = check_verdict(out, chunks, claim="In a 30-week trial in adults with type 2 diabetes, A1C fell by 1.6%.")
+    assert res.status == "supported"
+    # An age is no trial result: it does not excuse a missing condition.
+    aged = check_verdict(out, chunks, claim="Ozempic improves blood sugar control in adults 18 years and older with type 2 diabetes.")
+    assert aged.status == "needs_human_review"
+
+
+def test_conditions_are_read_through_no_break_spaces_and_dashes():
+    out = _supported("to reduce the risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular "
+                     "death in adults with type 2 diabetes mellitus and chronic kidney disease.")
+    claim = "Ozempic reduces the risk of end‑stage kidney disease in adults with type 2 diabetes and chronic kidney disease."
+    assert check_verdict(out, {"o:v20:1:0": _ind_chunk()}, claim=claim).status == "supported"

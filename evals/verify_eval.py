@@ -20,6 +20,7 @@ violative claim that is traced is the failure the tool exists to prevent.
 from __future__ import annotations
 
 import argparse
+import json
 import time
 from collections import Counter
 from pathlib import Path
@@ -43,10 +44,13 @@ OPS = ["faithful", "drop_qualifier", "broaden", "inflate", "superiority", "absol
 TRANSIENT_RETRIES = 3
 
 
-def run(model: str, claims: list[dict], timeout_s: float) -> tuple[list[dict], str | None]:
+def run(model: str, claims: list[dict], timeout_s: float, offline: bool = False,
+        earlier: dict[str, str] | None = None) -> tuple[list[dict], str | None]:
+    """`offline` replays cached answers only (a guard change re-scored with no new model
+    calls); a claim with no cached answer keeps the reason `earlier` recorded for it."""
     index = LabelIndex.load(Path("data/index"))
     encoder = OnnxEncoder(BGE_SMALL_INT8.onnx_path, BGE_SMALL_INT8.tokenizer_path, query_prefix=BGE_QUERY_PREFIX)
-    llm = LLMClient([model], ResponseCache("cache/llm"), wait_for_budget=True, timeout_s=timeout_s)
+    llm = LLMClient([model], ResponseCache("cache/llm"), wait_for_budget=True, timeout_s=timeout_s, offline=offline)
     reviewer = Reviewer(index, encoder, llm)
     rows, stopped = [], None
     t0 = time.perf_counter()
@@ -69,7 +73,8 @@ def run(model: str, claims: list[dict], timeout_s: float) -> tuple[list[dict], s
             if any(s in errors for s in ("429", "401", "403", "no api key", "budget")):
                 stopped = f"claim {i} ({c['id']}): no answer from {model}: {judge.get('attempts')}"
                 break
-            unanswered = errors.strip() or "no answer"
+            unanswered = (earlier or {}).get(c["id"]) if offline else None
+            unanswered = unanswered or errors.strip() or "no answer"
         rows.append({
             "id": c["id"], "card": c["card"], "label": c["label"], "split": c["split"], "kind": c["kind"],
             "op": c["op"], "gold": c["gold"], "accept": c["accept"], "expected_violations": c["violations"],
@@ -196,16 +201,22 @@ def main() -> int:
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--timeout", type=float, default=120.0)
     ap.add_argument("--name", default="")
+    ap.add_argument("--offline", action="store_true", help="replay cached answers only")
     args = ap.parse_args()
 
     claims = load_claims(args.split)
     if args.limit:
         claims = claims[: args.limit]
-    rows, stopped = run(args.model, claims, args.timeout)
+    name = args.name or f"{args.model.split('/')[-1]}_{args.split}"
+    earlier: dict[str, str] = {}
+    previous = Path("reports") / f"verify_{name}.json"
+    if args.offline and previous.exists():
+        earlier = {c["id"]: c["unanswered"] for c in json.loads(previous.read_text(encoding="utf-8"))["claims"]
+                   if c.get("unanswered")}
+    rows, stopped = run(args.model, claims, args.timeout, args.offline, earlier)
     if not rows:
         print(f"no results: {stopped}")
         return 1
-    name = args.name or f"{args.model.split('/')[-1]}_{args.split}"
     lat = sorted(r["latency_s"] for r in rows)
     report = {
         "meta": {"model": args.model, "split": args.split, "n_claims": len(rows), "n_requested": len(claims),
