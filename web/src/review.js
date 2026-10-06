@@ -67,7 +67,7 @@ export function applyEvent(doc, event, data) {
     case "start":
       return { ...doc, status: "splitting", labels: data.labels || [], ambiguous: !!data.ambiguous, injection: data.injection || null };
     case "claims":
-      return { ...doc, status: "checking", claims: data.claims || [], splitBy: data.split_by, splitModel: data.split_model };
+      return { ...doc, status: "checking", claims: data.claims || [], splitBy: data.split_by, splitModel: data.split_model, omitted: data.omitted || 0 };
     case "claim":
       return { ...doc, reviews: { ...doc.reviews, [data.n]: data.review } };
     case "document":
@@ -205,6 +205,7 @@ export function buildAudit(doc, decisions = {}, rewrites = {}) {
     copy: doc.text,
     labels: doc.labels.map((l) => ({ key: l.key, products: l.products, set_id: l.set_id, version: l.version, effective: l.effective_time })),
     document_checks: doc.checks,
+    claims_not_checked: doc.omitted || 0,
     claims: doc.claims.map((c) => {
       const r = doc.reviews[c.n];
       const rw = rewrites[c.n]?.data;

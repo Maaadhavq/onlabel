@@ -20,6 +20,7 @@ class Job:
     def __init__(self, text: str, labels: list[str] | None, audience: str) -> None:
         self.id = uuid.uuid4().hex[:12]
         self.text, self.labels, self.audience = text, labels, audience
+        self.checked_labels: list[str] = list(labels or [])  # filled in when the review detects them
         self.created = time.time()
         self.events: list[dict] = []
         self.done = False
@@ -30,6 +31,9 @@ class Job:
             if self.done:
                 return
             self.events.append({"id": len(self.events), "event": event, "data": data})
+            if event == "start":
+                self.checked_labels = [lab["key"] if isinstance(lab, dict) else str(lab)
+                                       for lab in data.get("labels", [])]
             self.done = event in TERMINAL
 
     def since(self, index: int) -> tuple[list[dict], bool]:
@@ -57,13 +61,16 @@ class JobRunner:
         self.jobs: dict[str, Job] = {}
         self._queue: queue.Queue[Job] = queue.Queue()
         self._lock = threading.Lock()
+        self._busy = False  # a review is running
         threading.Thread(target=self._work, daemon=True, name="document-reviews").start()
 
     def submit(self, job: Job) -> Job:
         with self._lock:
             self._prune()
             self.jobs[job.id] = job
-        ahead = self._queue.qsize()
+        # The review that is running counts too: the queue alone said "no one ahead" while a
+        # new check sat waiting for it.
+        ahead = self._queue.qsize() + (1 if self._busy else 0)
         if ahead:
             job.emit("queued", {"ahead": ahead})
         self._queue.put(job)
@@ -85,10 +92,12 @@ class JobRunner:
     def _work(self) -> None:
         while True:
             job = self._queue.get()
+            self._busy = True
             try:
                 self._run(job)
             except Exception as exc:  # noqa: BLE001 - reported to the page, never swallowed
                 job.emit("error", {"message": f"The review stopped: {type(exc).__name__}.", "code": "internal"})
             finally:
+                self._busy = False
                 if not job.done:
                     job.emit("done", {})

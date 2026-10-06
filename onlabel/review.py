@@ -187,10 +187,11 @@ class Reviewer:
                                   for k in labels],
                        "ambiguous": ambiguous, "injection": injection.to_dict()})
 
-        claims, split = split_claims(self.splitter, text)
+        claims, split, omitted = split_claims(self.splitter, text)
         emit("claims", {"claims": [c.to_dict() for c in claims],
                         "split_by": claims[0].source if claims else "none",
-                        "split_model": split.model_key if split else None})
+                        "split_model": split.model_key if split else None,
+                        "omitted": omitted})
         tokens = (split.prompt_tokens + split.completion_tokens) if split else 0
         for c in claims:
             review = self.review_claim(c.text, labels, kind=c.kind, injection=injection)

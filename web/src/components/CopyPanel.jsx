@@ -134,7 +134,10 @@ export function ProofCard({ doc, sel, onSelect, onEdit, onDownload, hoverN, setH
         {doc.claims.length > 0 ? `${doc.claims.length} claims found. ` : ""}
         {doc.labels.length ? `Checked against ${doc.labels.map(labelText).join(" and ")}.` : ""}
         {doc.ambiguous && doc.labels.length > 1
-          ? " The drug named in the copy appears on more than one label, so every claim was checked against each. Pick a label to narrow the check."
+          ? " The drug named in the copy appears on more than one label, so each claim was judged against both labels' text together. Pick a label for a check against one."
+          : ""}
+        {doc.omitted > 0
+          ? ` Only the first ${doc.claims.length} claims were checked; ${doc.omitted} more in the copy were not. Check the rest as a separate piece.`
           : ""}
         {doc.splitBy === "sentences" ? " Claims were split by sentence because no model was available to split them." : ""}
       </p>

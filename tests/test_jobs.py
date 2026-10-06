@@ -40,3 +40,27 @@ def test_runner_runs_jobs_and_reports_crashes():
     err = bad.since(0)[0][-1]
     assert err["event"] == "error" and "secret detail" not in err["data"]["message"]
     assert runner.get(ok.id) is ok and runner.get("nope") is None
+
+
+def test_a_job_remembers_the_labels_its_review_detected():
+    job = Job("Ozempic copy", None, "consumer")
+    job.emit("start", {"labels": [{"key": "ozempic"}, {"key": "rybelsus"}]})
+    assert job.labels is None and job.checked_labels == ["ozempic", "rybelsus"]
+
+
+def test_a_new_check_counts_the_review_that_is_running():
+    gate = threading.Event()
+
+    def run(job):
+        if job.text == "first":
+            gate.wait(5)
+        job.emit("claims", {"claims": []})
+
+    runner = JobRunner(run)
+    first = runner.submit(Job("first", None, "consumer"))
+    while not runner._busy:  # the worker has picked the first job up
+        threading.Event().wait(0.01)
+    second = runner.submit(Job("second", None, "consumer"))
+    gate.set()
+    _wait(first), _wait(second)
+    assert second.since(0)[0][0] == {"id": 0, "event": "queued", "data": {"ahead": 1}}

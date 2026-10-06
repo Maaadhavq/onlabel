@@ -70,7 +70,8 @@ _CALL_TO_ACTION = re.compile(
 
 
 def sentence_claims(text: str) -> list[ClaimSpan]:
-    """Fallback split: one claim per sentence, calls to action and fragments dropped."""
+    """Fallback split: one claim per sentence, calls to action and fragments dropped. Every
+    sentence is returned; `split_claims` applies the cap and says what it left out."""
     out: list[ClaimSpan] = []
     cuts = [0, *[p for m in _BOUNDARY.finditer(text) for p in (m.start(), m.end())], len(text)]
     for s, e in zip(cuts[::2], cuts[1::2], strict=False):
@@ -80,19 +81,25 @@ def sentence_claims(text: str) -> list[ClaimSpan]:
         if len(sentence.split()) < 4 or _CALL_TO_ACTION.match(sentence):
             continue
         out.append(ClaimSpan(len(out) + 1, sentence, s + lead, s + lead + len(sentence), "other", "sentences"))
-        if len(out) == MAX_CLAIMS:
-            break
     return out
 
 
-def split_claims(llm: LLMClient | None, text: str) -> tuple[list[ClaimSpan], LLMResult | None]:
+def _capped(claims: list[ClaimSpan], res: LLMResult | None) -> tuple[list[ClaimSpan], LLMResult | None, int]:
+    """The first MAX_CLAIMS claims, the call that found them, and how many were left out. A
+    cap the page never mentioned read as "every claim was checked"."""
+    return claims[:MAX_CLAIMS], res, max(0, len(claims) - MAX_CLAIMS)
+
+
+def split_claims(llm: LLMClient | None, text: str) -> tuple[list[ClaimSpan], LLMResult | None, int]:
+    """The claims to check (at most MAX_CLAIMS), the model call that found them, and how
+    many more the copy holds."""
     if llm is None:
-        return sentence_claims(text), None
+        return _capped(sentence_claims(text), None)
 
     def usable(answer: ClaimList) -> str | None:
         if not answer.claims:
             return "no claims in the answer"
-        if not any(locate(text, c.text).ok for c in answer.claims):
+        if not any(_in_copy(text, c.text) for c in answer.claims):
             return "none of the claims appear in the copy"
         return None
 
@@ -101,20 +108,28 @@ def split_claims(llm: LLMClient | None, text: str) -> tuple[list[ClaimSpan], LLM
         schema=ClaimList, max_completion_tokens=900, accept=usable,
     )
     if res.data is None:
-        return sentence_claims(text), res
+        return _capped(sentence_claims(text), res)
     spans: list[tuple[int, int, str, str]] = []
     for item in res.data.claims:
-        g = locate(text, item.text)
-        if not g.ok or g.start is None:
+        g = _in_copy(text, item.text)
+        if g is None:
             continue  # a claim that is not in the copy is not reviewed
         if any(not (g.end <= s or g.start >= e) for s, e, _, _ in spans):
             continue  # overlapping duplicates
         spans.append((g.start, g.end, text[g.start : g.end], item.kind))
     if not spans:
-        return sentence_claims(text), res
+        return _capped(sentence_claims(text), res)
     spans.sort()
-    claims = [ClaimSpan(i + 1, t, s, e, k, "model") for i, (s, e, t, k) in enumerate(spans[:MAX_CLAIMS])]
-    return claims, res
+    claims = [ClaimSpan(i + 1, t, s, e, k, "model") for i, (s, e, t, k) in enumerate(spans)]
+    return _capped(claims, res)
+
+
+def _in_copy(text: str, claim: str):
+    """Where a claim sits in the copy, as one continuous piece. A stitched match (parts with
+    whole lines skipped) is right for a label quote, but here it would turn a claim into a
+    span covering lines the model left out."""
+    g = locate(text, claim)
+    return g if g.ok and g.start is not None and g.match != "stitched" else None
 
 
 def detect_labels(text: str, labels_meta: dict[str, dict]) -> tuple[list[str], bool]:

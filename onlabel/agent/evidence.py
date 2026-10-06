@@ -28,8 +28,10 @@ def _is_row(line: str) -> bool:
     return line.count("|") >= 1 and (" | " in line or line.startswith("| ") or line.endswith(" |"))
 
 
-def _table(chunk: Chunk, q_start: int, q_end: int) -> dict | None:
-    """The chunk's table with the rows overlapping the quote marked; None if not a table quote."""
+def _table(chunk: Chunk, q_start: int, q_end: int, quoted: list[tuple[int, int]]) -> dict | None:
+    """The chunk's table with the rows the quote covers marked; None if not a table quote.
+    `quoted` are the spans the model actually quoted: a caption plus one row marks that row,
+    never the rows it skipped."""
     lines, pos = [], 0
     for ln in chunk.text.split("\n"):
         lines.append((pos, pos + len(ln), ln))
@@ -48,7 +50,7 @@ def _table(chunk: Chunk, q_start: int, q_end: int) -> dict | None:
         "caption": caption,
         "header": [_cells(h) for h in header],
         "rows": [_cells(ln) for _, _, ln in body],
-        "highlight": [i for i, (s, e, _) in enumerate(body) if s < q_end and e > q_start],
+        "highlight": [i for i, (s, e, _) in enumerate(body) if any(s < qe and e > qs for qs, qe in quoted)],
     }
 
 
@@ -88,7 +90,8 @@ def present(ev: CheckedEvidence, chunk: Chunk, label_meta: dict | None = None) -
         "table": None,
     }
     if in_text:
-        table = _table(chunk, q_start, q_end)
+        quoted = [(max(0, s - chunk.start), min(len(chunk.text), e - chunk.start)) for s, e in ev.parts]
+        table = _table(chunk, q_start, q_end, [p for p in quoted if p[1] > p[0]] or [(q_start, q_end)])
         if table is not None:
             out["kind"], out["table"] = "table", table
     return out

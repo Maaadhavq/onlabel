@@ -50,7 +50,8 @@ def test_model_claims_are_located_in_the_copy_and_invented_ones_dropped():
         {"text": "Wegovy is approved for weight loss in children as young as 8.", "kind": "indication"},
         {"text": "Wegovy cures obesity forever.", "kind": "efficacy"},  # not in the copy
     ]}
-    claims, res = split_claims(_splitter(payload), COPY)
+    claims, res, omitted = split_claims(_splitter(payload), COPY)
+    assert omitted == 0
     assert [c.n for c in claims] == [1, 2] and res.model_key == "ollama/llama3.1-8b"
     assert claims[0].text.startswith("Wegovy is approved")  # reading order, not model order
     assert all(COPY[c.start : c.end] == c.text and c.source == "model" for c in claims)
@@ -61,13 +62,13 @@ def test_an_empty_split_asks_the_next_model():
         {"text": "Wegovy is approved for weight loss in children as young as 8.", "kind": "indication"}]})
     llm = LLMClient(["groq/qwen3.8-27b", "ollama/llama3.1-8b"],
                     client_factory=lambda spec: {"groq": empty, "ollama": good}[spec.provider])
-    claims, res = split_claims(llm, COPY)
+    claims, res, _ = split_claims(llm, COPY)
     assert [c.source for c in claims] == ["model"] and res.model_key == "ollama/llama3.1-8b"
     assert res.attempts[0]["rejected"] == "no claims in the answer"
 
 
 def test_no_usable_model_answer_falls_back_to_sentences():
-    claims, _ = split_claims(_splitter({"claims": [{"text": "not in the copy at all", "kind": "other"}]}), COPY)
+    claims, _, _ = split_claims(_splitter({"claims": [{"text": "not in the copy at all", "kind": "other"}]}), COPY)
     assert claims and all(c.source == "sentences" for c in claims)
 
 
@@ -117,3 +118,9 @@ def test_risk_language_with_conditions_or_instructions_is_not_a_denial():
                  "Do not ignore thyroid symptoms such as a lump in your neck."]:
         found = risk_information_check(COPY + " " + line, "wegovy", "WEGOVY", _boxed())
         assert found["ok"] is True and found["denied"] == [], line
+
+
+def test_claims_past_the_cap_are_counted_not_silently_dropped():
+    long_copy = " ".join(f"Testadrug claim number {i} says something about weight." for i in range(11))
+    claims, _, omitted = split_claims(None, long_copy)
+    assert len(claims) == 8 and omitted == 3

@@ -28,6 +28,7 @@ from fastapi.responses import StreamingResponse
 from openai import OpenAI
 from pydantic import BaseModel, ConfigDict, Field
 
+from onlabel.agent.document import detect_labels
 from onlabel.agent.rewrite import suggest_rewrite
 from onlabel.api.jobs import Job, JobRunner
 from onlabel.data.corpus import label_name
@@ -210,11 +211,16 @@ def labels() -> list[dict]:
 async def review(req: ReviewRequest, request: Request) -> dict:
     reviewer = _ready()
     _known_labels(req.labels)
+    # A claim with no label is checked against the drug it names, like a document; searching
+    # every label could trace one drug's claim to another drug's text.
+    labels = req.labels or detect_labels(req.claim, reviewer.labels_meta)[0]
+    if not labels:
+        raise HTTPException(422, "No indexed drug is named in the claim. Pass the labels to check against.")
     _rate_limit(_ip(request))
 
     def run() -> dict:
         with state.lock:
-            return reviewer.review_claim(req.claim, req.labels).to_dict()
+            return reviewer.review_claim(req.claim, labels).to_dict()
 
     return await anyio.to_thread.run_sync(run)
 
@@ -290,7 +296,8 @@ async def rewrite(job_id: str, n: int, request: Request) -> dict:
             res = suggest_rewrite(reviewer.llm, original["claim"], original, chunks, job.audience)
             if res.data is None:
                 raise HTTPException(503, "No model is available to suggest wording right now. Try again in a minute.")
-            labels = sorted({c.label_key for c in chunks}) or job.labels
+            # The labels the review used: the evidence alone may come from only one of two.
+            labels = job.checked_labels or sorted({c.label_key for c in chunks})
             check = reviewer.review_claim(res.data.rewrite, labels, kind=job.claim_kind(n))
             return {"rewrite": res.data.rewrite, "model": res.model_key, "review": check.to_dict()}
 

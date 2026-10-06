@@ -104,3 +104,11 @@ test("labels are named by their brands, device presentations left out", async ()
   assert.equal(labelName({ key: "zepbound", drug: "ZEPBOUND", products: ["ZEPBOUND", "ZEPBOUND KWIKPEN"] }), "ZEPBOUND");
   assert.equal(labelName({ key: "lantus" }), "LANTUS");
 });
+
+test("claims the splitter left out are carried to the page and the audit", async () => {
+  const { applyEvent, buildAudit, emptyDoc } = await import("./review.js");
+  let doc = emptyDoc({ source: "live", id: "x", title: "t", text: "copy", audience: "consumer" });
+  doc = applyEvent(doc, "claims", { claims: [{ n: 1, text: "a", start: 0, end: 1 }], split_by: "model", omitted: 3 });
+  assert.equal(doc.omitted, 3);
+  assert.equal(buildAudit(doc).claims_not_checked, 3);
+});

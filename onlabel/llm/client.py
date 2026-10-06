@@ -156,6 +156,9 @@ class LLMClient:
         self.wait_for_budget = wait_for_budget
         self.max_wait_s = max_wait_s
         self._sleep = sleep
+        # Models the provider is rate-limiting, and until when. Without this, a model out of
+        # its daily quota was asked again for every claim and answered 429 every time.
+        self._resting: dict[str, float] = {}
 
     def _openai_client(self, spec: ModelSpec) -> Any:
         prov = providers()[spec.provider]
@@ -207,6 +210,10 @@ class LLMClient:
             if client is None:
                 result.attempts.append({"model": spec.key, "skipped": "no api key"})
                 continue
+            rest = self._resting.get(spec.key, 0.0) - self.budget.clock()
+            if rest > 0:
+                result.attempts.append({"model": spec.key, "skipped": f"rate limited (429), resting {rest:.0f}s"})
+                continue
             need = estimate_tokens(system + user) + max_completion_tokens
             limit = int(spec.tpm * TPM_HEADROOM) if spec.tpm else None
             if limit is not None and need > limit:
@@ -227,6 +234,8 @@ class LLMClient:
                 if not (retry and self.wait_for_budget and retry <= self.max_wait_s):
                     break
                 self._sleep(retry)
+            if outcome.get("retry_after") and outcome.get("data") is None:
+                self._resting[spec.key] = self.budget.clock() + outcome["retry_after"]
             reason = accept(outcome["data"]) if (outcome.get("data") is not None and accept) else None
             if reason:
                 outcome = {**outcome, "data": None, "rejected": reason}

@@ -18,12 +18,16 @@ class StubReviewer:
         self.calls = []
         self.index = index
 
+    @property
+    def labels_meta(self):
+        return self.index.meta.get("labels", {})
+
     def review_claim(self, claim, labels):
         self.calls.append((claim, labels))
         return SimpleNamespace(to_dict=lambda: {"claim": claim, "status": "unsupported", "labels": labels})
 
     def review_document(self, text, labels, emit):
-        emit("start", {"labels": labels or ["testadrug"]})
+        emit("start", {"labels": [{"key": k} for k in (labels or ["testadrug"])]})
         emit("claims", {"claims": [{"n": 1, "text": text[:20]}]})
         emit("claim", {"n": 1, "review": {"claim": text[:20], "status": "supported", "evidence": [], "retrieved": []}})
         emit("done", {"n_claims": 1})
@@ -74,12 +78,19 @@ def test_unknown_label_is_named(client):
 
 def test_not_ready_is_503(client, monkeypatch):
     monkeypatch.setattr(main.state, "reviewer", None)
-    assert client.post("/reviews", json={"claim": "A long enough claim."}).status_code == 503
+    assert client.post("/reviews", json={"claim": "Testadrug is a long enough claim."}).status_code == 503
+
+
+def test_a_claim_without_labels_is_checked_against_the_drug_it_names(client):
+    r = client.post("/reviews", json={"claim": "Testadrug cures obesity in everyone."})
+    assert r.status_code == 200 and r.json()["labels"] == ["testadrug"]
+    r = client.post("/reviews", json={"claim": "This medicine cures obesity in everyone."})
+    assert r.status_code == 422  # never every label at once
 
 
 def test_rate_limit(client, monkeypatch):
     monkeypatch.setattr(main, "REVIEWS_PER_HOUR", 2)
-    codes = [client.post("/reviews", json={"claim": "A long enough claim."}).status_code for _ in range(3)]
+    codes = [client.post("/reviews", json={"claim": "Testadrug is a long enough claim."}).status_code for _ in range(3)]
     assert codes == [200, 200, 429]
 
 
@@ -133,7 +144,7 @@ def test_rewrite_refuses_traced_or_unchecked_claims(client):
 
 def test_limit_is_per_visitor_behind_the_proxy(client, monkeypatch):
     monkeypatch.setattr(main, "REVIEWS_PER_HOUR", 1)
-    body = {"claim": "A long enough claim."}
+    body = {"claim": "Testadrug is a long enough claim."}
     first = client.post("/reviews", json=body, headers={"X-Forwarded-For": "6.6.6.6, 10.0.0.1"})
     other = client.post("/reviews", json=body, headers={"X-Forwarded-For": "10.0.0.2"})
     spoofed = client.post("/reviews", json=body, headers={"X-Forwarded-For": "1.2.3.4, 10.0.0.1"})
@@ -143,7 +154,7 @@ def test_limit_is_per_visitor_behind_the_proxy(client, monkeypatch):
 def test_daily_cap_covers_every_visitor(client, monkeypatch):
     monkeypatch.setattr(main, "CHECKS_PER_DAY", 2)
     main._today.update(day=0, count=0)
-    codes = [client.post("/reviews", json={"claim": "A long enough claim."},
+    codes = [client.post("/reviews", json={"claim": "Testadrug is a long enough claim."},
                          headers={"X-Forwarded-For": f"10.0.0.{i}"}).status_code for i in range(3)]
     assert codes == [200, 200, 429]
 

@@ -196,3 +196,13 @@ def test_offline_mode_never_calls_a_model(tmp_path):
     stub = StubClient([])
     res = _ask(_client({"ollama": stub}, ["ollama/llama3.1-8b"], ResponseCache(tmp_path), offline=True))
     assert res.data is None and stub.calls == []
+
+
+def test_a_rate_limited_model_rests_until_the_provider_says():
+    groq = StubClient([_rate_limited()])
+    local = StubClient([_ok(), _ok()])
+    llm = _client({"groq": groq, "ollama": local}, ["groq/gpt-oss-120b", "ollama/llama3.1-8b"])
+    first, second = _ask(llm), _ask(llm)
+    assert first.model_key == second.model_key == "ollama/llama3.1-8b"
+    assert len(groq.calls) == 1  # not asked again while it rests
+    assert second.attempts[0]["skipped"].startswith("rate limited (429), resting")

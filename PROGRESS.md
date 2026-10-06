@@ -173,6 +173,33 @@ sample was kept (the 20b output is in `scratch/`). The fallback chain changes sa
 only speed. Open decision for Madhav: send every verdict a fallback model traces to a
 reviewer, at the cost of fewer traced claims whenever the first model is out of quota.
 
+### 22. A third of rejected quotes were real quotes, written differently
+The first live two-label check sent both claims to a reviewer: gpt-oss-120b's verdicts were
+right, but none of its quotes matched the excerpt it cited. Replaying all 567 quotes in the
+cached benchmark answers, the guards had rejected 89: 23 flattened a bulleted list into one
+line ("patients with: - A personal ..."), 10 were found word for word in a different excerpt
+the judge was shown (two labels carry the same boxed-warning sentence), 7 cited ids that do
+not exist, and several stitched a list's lead-in to a later item or a table caption to a later
+row. Grounding now folds inline bullets, superscripts and "[see ...]" cross-references, accepts
+"stitched" quotes (parts found word for word with only whole lines skipped, never fuzzy),
+moves a quote to the shown excerpt it is really in, and ignores empty quotes: 35 rejections
+remain, mostly tables a model rebuilt in its own layout. One loophole closed on the way:
+figures in a skipped middle used to count as quoted; now only the quoted parts vouch.
+
+### 23. Smaller logic errors found in the same review
+- Ages and doses under 11 were never checked ("as young as 8" passed on "12 years and
+  older"); small numbers now count when a unit or an age goes with them.
+- A suggested rewrite was re-checked against the labels of a few evidence excerpts, not the
+  labels the review used; jobs now remember the labels they detected.
+- `/reviews` with no label judged a claim against all 12 labels; it now detects the drug.
+- Copy with more than 8 claims said "8 claims found" and silently skipped the rest; the page
+  now says how many were not checked.
+- The two-label note said each claim "was checked against each" label; it is one judgement
+  over both labels' text, and the note says so.
+- A new check waiting behind a running review was told nothing; the queue counts it now.
+- A model out of its daily quota was asked again for every claim and answered 429 each time;
+  the client rests it for as long as the provider says.
+
 ## Done this session (2026-10-05)
 
 - Repo scaffold: `pyproject.toml` (uv, Python 3.12), `.gitattributes`, `.gitignore`,
@@ -210,12 +237,8 @@ reviewer, at the cost of fewer traced claims whenever the first model is out of 
 
 ## Next
 
-1. Keys are set on Render (2026-10-06; /health shows prompt_guard true). First live check:
-   with the label picked, verdicts are clean; when "Ozempic" matches two labels (Ozempic and
-   Rybelsus/Ozempic tablets), gpt-oss-120b's verdicts were right but none of its quotes matched
-   the excerpt it cited, so both claims went to a reviewer. Likely the model citing the other
-   label's near-identical excerpt; check whether a quote found verbatim in another shown excerpt
-   can be re-attributed to it.
+1. Keys are set on Render (2026-10-06; /health shows prompt_guard true). The two-label quote
+   problem from the first live check is fixed (finding 22).
 2. OPDP holdout (Set C): 15-20 letters from 2024-26, claims extracted with help, verified by
    Madhav, sealed, run once on the frozen config.
 3. When gpt-oss-120b's daily quota resets: the dev split, the rest of the red team, and

@@ -76,3 +76,16 @@ def test_unsupported_needs_no_quote():
     out = _judge("unsupported", [])
     res = check_verdict(out, {c.chunk_id: c}, claim="cures obesity")
     assert checks_for("cures obesity", out, res)[0]["ok"] is True
+
+
+def test_a_stitched_table_quote_marks_only_the_rows_it_quoted():
+    text = ("- Baseline mean (kg) | 105.2 | 105.4\n"
+            "- Absolute change (kg) | -2.6 | -15.3\n"
+            "- % change from baseline (LSMean) | -2.4 | -14.9")
+    c = _chunk(text, top_code="34092-7", context="- Table 8. Changes in Body Weight at Week 68\n| PLACEBO | WEGOVY")
+    out = JudgeOutput(reasoning="r", verdict="supported", violations=[], evidence=[EvidenceQuote(
+        chunk_id=c.chunk_id, quote="Baseline mean (kg) | 105.2 | 105.4 % change from baseline (LSMean) | -2.4 | -14.9")])
+    res = check_verdict(out, {c.chunk_id: c}, claim="lost 14.9%")
+    assert res.evidence[0].match == "stitched"
+    table = present(res.evidence[0], c)["table"]
+    assert table["highlight"] == [0, 2]  # the skipped "Absolute change" row is not marked

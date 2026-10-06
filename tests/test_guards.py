@@ -1,5 +1,5 @@
 from onlabel.agent.ground import locate
-from onlabel.agent.guards import check_verdict, figures
+from onlabel.agent.guards import check_verdict, checks_for, figures
 from onlabel.agent.verdict import EvidenceQuote, JudgeOutput
 from onlabel.data.chunk import Chunk
 
@@ -122,8 +122,91 @@ def test_an_unquoted_title_vouches_for_nothing():
     assert "claim_figures_not_in_quotes:12" in res.flags
 
 
-def test_unknown_excerpt_id_is_flagged():
+def test_an_unknown_excerpt_id_with_a_quote_found_nowhere_is_flagged():
     out = JudgeOutput(reasoning="r", verdict="supported", violations=[],
-                      evidence=[EvidenceQuote(chunk_id="nope", quote="mean change was -14.9% with WEGOVY")])
-    res = check_verdict(out, CHUNK, claim="lost 14.9%")
+                      evidence=[EvidenceQuote(chunk_id="nope", quote="mean change was -20.1% with WEGOVY")])
+    res = check_verdict(out, CHUNK, claim="lost 20.1%")
     assert res.status == "needs_human_review" and "cited_unknown_excerpt" in res.flags
+
+
+def test_a_real_quote_cited_to_the_wrong_excerpt_moves_to_where_it_is():
+    # Two labels can show the judge the same boxed-warning sentence; models mix up the ids.
+    a = Chunk("ozempic:v20:0:0", "ozempic", "set-a", 20, "OZEMPIC", "semaglutide", 0, "WARNING", "34066-1", None,
+              0, 60, 0, 60, "In rodents, semaglutide causes thyroid C-cell tumors.")
+    b = Chunk("rybelsus:v14:8:0", "rybelsus", "set-b", 14, "RYBELSUS", "semaglutide", 8, "5.1 Thyroid", "43685-7",
+              "5.1", 0, 60, 0, 60, "Counsel patients regarding the potential risk for MTC.")
+    for cited in ("rybelsus:v14:8:0", "nope"):
+        out = JudgeOutput(reasoning="r", verdict="contradicted", violations=["minimized_risk"],
+                          evidence=[EvidenceQuote(chunk_id=cited, quote="semaglutide causes thyroid C-cell tumors")])
+        res = check_verdict(out, {a.chunk_id: a, b.chunk_id: b}, claim="no risk of thyroid tumors")
+        assert res.status == "contradicted" and res.flags == ["quote_reattributed"]
+        assert res.evidence[0].chunk_id == "ozempic:v20:0:0"
+
+
+def test_an_empty_quote_is_no_citation_and_not_a_failed_one():
+    out = JudgeOutput(reasoning="r", verdict="supported", violations=[],
+                      evidence=[EvidenceQuote(chunk_id="d:v1:0:0", quote=""),
+                                EvidenceQuote(chunk_id="d:v1:0:0", quote="mean change was -14.9% with WEGOVY")])
+    res = check_verdict(out, CHUNK, claim="lost 14.9%")
+    assert res.status == "supported" and res.flags == []
+    assert checks_for("lost 14.9%", out, res)[0]["text"] == "1 of 1 quotes found word for word in the label."
+
+
+def test_flattened_bullets_cross_references_and_superscripts_still_match():
+    text = ("OZEMPIC^® is contraindicated in patients with:\n\n"
+            "- A personal or family history of MTC or in patients with MEN 2 [see Warnings and Precautions (5.1)].\n"
+            "% change from baseline (LSMean)^3 | -2.4 | -13.6")
+    assert locate(text, "OZEMPIC® is contraindicated in patients with: - A personal or family history of MTC").ok
+    assert locate(text, "family history of MTC or in patients with MEN 2.").ok
+    assert locate(text, "% change from baseline (LSMean) | -2.4 | -13.6").ok
+
+
+LIST = ("WEGOVY injection is indicated in combination with a reduced calorie diet:\n"
+        "- to reduce the risk of major adverse cardiovascular events in adults with established CV disease.\n"
+        "- to reduce excess body weight in adults and pediatric patients aged 12 years and older with obesity.\n"
+        "Table 8. Changes in Body Weight at Week 68\n"
+        "Body Weight | |\n"
+        "Baseline mean (kg) | 105.8 | 105.2\n"
+        "% change from baseline | -2.4 | -14.9")
+
+
+def test_a_lead_in_with_a_later_list_item_or_a_caption_with_a_later_row_is_stitched():
+    g = locate(LIST, "WEGOVY injection is indicated in combination with a reduced calorie diet: "
+                     "to reduce excess body weight in adults and pediatric patients aged 12 years and older")
+    assert g.match == "stitched" and len(g.parts) == 2
+    assert "cardiovascular" in g.located  # the reviewer sees the skipped item
+    g = locate(LIST, "Table 8. Changes in Body Weight at Week 68 % change from baseline | -2.4 | -14.9")
+    assert g.match == "stitched"
+
+
+def test_stitching_skips_only_whole_lines():
+    # "with established CV disease" would be dropped from the middle of a line.
+    assert not locate(LIST, "to reduce the risk of major adverse cardiovascular events in adults. "
+                            "to reduce excess body weight in adults").ok
+
+
+def test_figures_in_a_skipped_middle_are_not_quoted():
+    chunk = _chunk(LIST)
+    quote = "Table 8. Changes in Body Weight at Week 68 % change from baseline | -2.4 | -14.9"
+    out = _out("supported", [quote])
+    res = check_verdict(out, {"d:v1:0:0": chunk}, claim="patients weighed 105.8 kg at baseline and lost 14.9%")
+    assert res.status == "needs_human_review" and "claim_figures_not_in_quotes:105.8" in res.flags
+
+
+def test_small_numbers_count_with_an_age_or_a_unit():
+    assert figures("children as young as 8, aged 6, for 4 weeks, 2 mg, 10%") == {"8", "6", "4", "2", "10"}
+    assert figures("type 2 diabetes, MEN 2, phase 3, 2 doses") == set()
+    assert figures("lost 14.9% of body weight") == {"14.9"}  # "9%" is part of the decimal
+    out = _out("supported", ["mean change was -14.9% with WEGOVY"])
+    res = check_verdict(out, CHUNK, claim="children as young as 8 lost 14.9%")
+    assert "claim_figures_not_in_quotes:8" in res.flags
+
+
+def test_a_table_cell_vouches_for_a_small_figure_whose_unit_is_in_the_header():
+    chunk = Chunk("s:v1:0:0", "s", "set", 1, "SAXENDA", "liraglutide", 0, "14 CLINICAL STUDIES", "34092-7", "14",
+                  0, 60, 0, 60, "- Percent change from baseline (LSMean) | -7.4 | -3 | -5.4",
+                  context="Table 4. Changes in Weight at Week 56 for Studies 1, 2, and 3")
+    out = JudgeOutput(reasoning="r", verdict="supported", violations=[],
+                      evidence=[EvidenceQuote(chunk_id="s:v1:0:0", quote="Percent change from baseline (LSMean) | -7.4 | -3")])
+    res = check_verdict(out, {"s:v1:0:0": chunk}, claim="in a 56-week study, people lost 7.4%, compared with 3% with placebo")
+    assert res.status == "supported" and res.flags == []

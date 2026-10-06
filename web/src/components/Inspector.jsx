@@ -6,6 +6,7 @@ const MATCH = {
   exact: ["exact quote", "Found word for word in the label."],
   normalized: ["exact quote", "Found word for word once spacing, dashes and bullet marks were evened out."],
   elided: ["shortened quote", "The model shortened the quote with an ellipsis; every part was found, in order, in the label. The full passage is shown."],
+  stitched: ["quote skips lines", "The model quoted parts of this passage and left out whole lines between them, such as other list items or table rows. Every part was found word for word; the full passage is shown."],
   fuzzy: ["near match", "Found with small wording differences; quotes with figures never match this way."],
 };
 
