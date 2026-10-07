@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06",
+ "generated": "2026-10-07",
  "repo": "https://github.com/Maaadhavq/onlabel/blob/main",
  "bench": {
   "claims": 132,
@@ -1091,102 +1091,6 @@
     "januvia-eff:2",
     "mounjaro-comp-semaglutide:1",
     "saxenda-limit:0"
-   ]
-  },
-  "section_batched_embeddings": {
-   "strategy": "section",
-   "n_chunks": 1595,
-   "n_claims": 132,
-   "configs": {
-    "dense": {
-     "hit@1": 0.432,
-     "hit@5": 0.848,
-     "hit@10": 0.939,
-     "all": null,
-     "mrr@10": 0.602,
-     "misses": 20
-    },
-    "dense (no label filter)": {
-     "hit@1": 0.432,
-     "hit@5": 0.848,
-     "hit@10": 0.939,
-     "all": null,
-     "mrr@10": 0.601,
-     "misses": 20
-    },
-    "bm25": {
-     "hit@1": 0.379,
-     "hit@5": 0.841,
-     "hit@10": 0.886,
-     "all": null,
-     "mrr@10": 0.572,
-     "misses": 21
-    },
-    "bm25 (no label filter)": {
-     "hit@1": 0.348,
-     "hit@5": 0.644,
-     "hit@10": 0.78,
-     "all": null,
-     "mrr@10": 0.475,
-     "misses": 47
-    },
-    "hybrid": {
-     "hit@1": 0.53,
-     "hit@5": 0.894,
-     "hit@10": 0.947,
-     "all": null,
-     "mrr@10": 0.684,
-     "misses": 14
-    },
-    "hybrid (no label filter)": {
-     "hit@1": 0.53,
-     "hit@5": 0.879,
-     "hit@10": 0.909,
-     "all": null,
-     "mrr@10": 0.676,
-     "misses": 16
-    },
-    "hybrid+figures": {
-     "hit@1": 0.538,
-     "hit@5": 0.864,
-     "hit@10": 0.909,
-     "all": null,
-     "mrr@10": 0.679,
-     "misses": 18
-    },
-    "hybrid+figures (no label filter)": {
-     "hit@1": 0.53,
-     "hit@5": 0.856,
-     "hit@10": 0.902,
-     "all": null,
-     "mrr@10": 0.668,
-     "misses": 19
-    },
-    "production": {
-     "hit@1": 0.432,
-     "hit@5": 0.947,
-     "hit@10": null,
-     "all": 0.962,
-     "mrr@10": 0.626,
-     "misses": 7
-    },
-    "production (no label filter)": {
-     "hit@1": 0.265,
-     "hit@5": 0.909,
-     "hit@10": null,
-     "all": 0.939,
-     "mrr@10": 0.514,
-     "misses": 12
-    }
-   },
-   "production_misses": [
-    "januvia-eff:2",
-    "lantus-contra:1",
-    "mounjaro-comp-semaglutide:1",
-    "mounjaro-contra:1",
-    "saxenda-limit:0",
-    "wegovy-contra:0",
-    "zepbound-box:0"
    ]
   }
  },

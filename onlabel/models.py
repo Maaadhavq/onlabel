@@ -1,7 +1,7 @@
-"""The ONNX artefacts the API ships, pinned to exact Hub revisions and SHA-256 digests.
+"""The ONNX encoder the API ships, pinned to an exact Hub revision and SHA-256 digests.
 
-Both are int8 and small enough for a 512 MB / 0.1 CPU instance. Documents and queries are
-embedded with the same file; switching the encoder means re-embedding the corpus.
+bge-small-en-v1.5 int8 is small enough for a 512 MB / 0.1 CPU instance. Documents and
+queries are embedded with the same file; switching the encoder means re-embedding the corpus.
 The digests match the Hub's LFS metadata (checked 2026-10-05), so a truncated or
 tampered download fails the build instead of loading.
 """
@@ -55,14 +55,4 @@ BGE_SMALL_INT8 = OnnxArtefact(
     tokenizer_sha256=BERT_UNCASED_TOKENIZER_SHA256,
 )
 
-# quint8_avx2 rather than avx512: Render's free instances are not guaranteed AVX-512.
-MINILM_RERANK_INT8 = OnnxArtefact(
-    key="ms-marco-MiniLM-L6-v2-int8",
-    repo="cross-encoder/ms-marco-MiniLM-L6-v2",
-    revision="233902d25c440f23af6f7d6e94d2946bac0bee0a",
-    onnx_file="onnx/model_quint8_avx2.onnx",
-    onnx_sha256="c80a8b34256ea453093d612e3ac48d3d965a0c0a48c7906709af8b8e28461bf9",
-    tokenizer_sha256=BERT_UNCASED_TOKENIZER_SHA256,
-)
-
-SHIPPED = [BGE_SMALL_INT8, MINILM_RERANK_INT8]
+SHIPPED = [BGE_SMALL_INT8]

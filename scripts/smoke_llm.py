@@ -1,7 +1,7 @@
 """Check every registered model against reality: does the ID exist, does strict JSON work.
 
-One tiny claim-vs-label call per model. Providers without a key are skipped, not failed,
-because running keyless is a supported mode. Results go to reports/smoke_llm.json.
+One tiny claim-vs-label call per model. Providers without a key are skipped, because
+running keyless is a supported mode. Exits 1 if a configured model is missing or fails.
 
     uv run python scripts/smoke_llm.py
 """
@@ -130,11 +130,10 @@ def main() -> int:
             except Exception as exc:  # noqa: BLE001
                 report["prompt_guard"] = {"error": f"{type(exc).__name__}: {str(exc)[:200]}"}
 
-    out = Path("reports/smoke_llm.json")
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8", newline="\n")
-    print(f"wrote {out}")
-    return 0
+    failed = sorted(k for k, v in report["models"].items() if not v.get("ok"))
+    ok = len(report["models"]) - len(failed)
+    print(f"{ok} of {len(report['models'])} checked models ok" + (f"; failed: {', '.join(failed)}" if failed else ""))
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

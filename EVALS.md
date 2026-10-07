@@ -1,6 +1,6 @@
 # OnLabel evaluation
 
-Generated 2026-10-06 by `evals/summarize.py` from the JSON in `reports/`. Every number below traces to a committed report, and the model answers behind them are in the committed cache (`cache/llm`), so a fresh clone reproduces them without API keys.
+Generated 2026-10-07 by `evals/summarize.py` from the JSON in `reports/`. Every number below traces to a committed report, and the model answers behind them are in the committed cache (`cache/llm`), so a fresh clone reproduces them without API keys.
 
 ## The benchmark
 
@@ -8,7 +8,7 @@ Generated 2026-10-06 by `evals/summarize.py` from the JSON in `reports/`. Every 
 
 Splits follow the active ingredient. Semaglutide and tirzepatide labels were in view while the prompts and guards were written (dev, 62 claims); the other six ingredients were not (test, 70 claims).
 
-Faithful efficacy claims state the figure with its trial context (study length, population, dose, comparator). A claim that generalises one study's figure to "in clinical trials" is not used as a faithful item, because an MLR reviewer would ask for a qualifier (PROGRESS finding 12).
+Faithful efficacy claims state the figure with its trial context (study length, population, dose, comparator). A claim that generalises one study's figure to "in clinical trials" is not used as a faithful item, because an MLR reviewer would ask for a qualifier (see `docs/engineering-notes.md`).
 
 ## Would it trace a violation?
 
@@ -43,11 +43,6 @@ Does the label text a claim depends on reach the judge? Gold is the character sp
 | section (section, 1595 chunks) | hybrid | 0.89 | 0.93 | 0.67 |
 | section (section, 1595 chunks) | hybrid+figures | 0.86 | 0.91 | 0.67 |
 | section (section, 1595 chunks) | production | 0.96 | 0.98 | 0.58 |
-| section_batched_embeddings (section, 1595 chunks) | dense | 0.85 | 0.94 | 0.60 |
-| section_batched_embeddings (section, 1595 chunks) | bm25 | 0.84 | 0.89 | 0.57 |
-| section_batched_embeddings (section, 1595 chunks) | hybrid | 0.89 | 0.95 | 0.68 |
-| section_batched_embeddings (section, 1595 chunks) | hybrid+figures | 0.86 | 0.91 | 0.68 |
-| section_batched_embeddings (section, 1595 chunks) | production | 0.95 | 0.96 | 0.63 |
 
 `production` is what the API sends the judge: 5 similarity hits plus up to 2 excerpts from the sections that govern the claim's kind, 6 at most. `Judge's excerpts` is hit@10 for the other rows.
 
@@ -70,10 +65,17 @@ Each attack wraps a violative claim in an injection asking for it to be traced. 
 
 ## Reproduce
 
+Every model answer behind these numbers is in `cache/llm`, and `--offline` replays it with no API keys. The red-team runs also call Llama Prompt Guard 2, which needs `GROQ_API_KEY`; without it they run the pattern layer alone.
+
 ```bash
 uv run python -m evals.build_bench
 uv run python -m evals.retrieval_eval
-uv run python -m evals.verify_eval --model groq/gpt-oss-120b --split test
-uv run python -m evals.redteam_eval --model groq/gpt-oss-120b
+uv run python -m onlabel.retrieval.build_index --strategy fixed --out scratch/index_fixed
+uv run python -m evals.retrieval_eval --index scratch/index_fixed --name fixed
+uv run python -m evals.verify_eval --model groq/gpt-oss-120b --split test --offline
+uv run python -m evals.verify_eval --model gemini/gemma-4-26b --split all --offline
+uv run python -m evals.verify_eval --model ollama/llama3.1-8b --split all --offline
+uv run python -m evals.redteam_eval --model groq/gpt-oss-20b
+uv run python -m evals.redteam_eval --model ollama/llama3.1-8b
 uv run python -m evals.summarize
 ```

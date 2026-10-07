@@ -1,7 +1,7 @@
 """Chunk the parsed labels, embed them, and write the index the API serves.
 
     uv run python -m onlabel.retrieval.build_index                     # section strategy
-    uv run python -m onlabel.retrieval.build_index --strategy fixed --out data/index_fixed
+    uv run python -m onlabel.retrieval.build_index --strategy fixed --out scratch/index_fixed
 """
 
 from __future__ import annotations

@@ -1,7 +1,7 @@
 # Render Blueprint: the API (Docker, ONNX-only) and the static React page.
 #
-# The API image downloads its two pinned ONNX models at build time (hash-checked) and
-# ships the committed label index, so a deploy needs no manual step. API keys are set in
+# The API image downloads its pinned ONNX encoder at build time (hash-checked) and ships
+# the committed label index, so a deploy needs no manual step. API keys are set in
 # the Render dashboard (sync: false) and never reach the frontend bundle.
 services:
   - type: web

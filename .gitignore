@@ -16,12 +16,12 @@ web/.vite/
 .env.*
 !.env.example
 
-# Large downloads, re-fetchable with the scripts in onlabel/data/
+# Large downloads: label XML (python -m onlabel.data.fetch_labels) and ONNX models
+# (scripts/fetch_models.py)
 data/raw/
 models/hf/
-train/runs/
 
-# Personal working docs
+# Local scratch output: temporary indexes and experiments
 scratch/
 
 # OS

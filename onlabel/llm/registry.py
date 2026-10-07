@@ -75,7 +75,6 @@ MODELS: dict[str, ModelSpec] = {
 # Tried in order by the live demo; each model has its own quota, so the chain also
 # multiplies daily capacity. After the last one the API serves cached samples.
 DEMO_CHAIN = ["groq/gpt-oss-120b", "groq/gpt-oss-20b", "groq/qwen3.8-27b", "gemini/gemma-4-26b"]
-LOCAL_EVAL = ["ollama/llama3.1-8b", "ollama/qwen3-8b", "ollama/gemma4-e4b"]
 
 # Injection classifier (86M params), served free by Groq. Not a chat model.
 PROMPT_GUARD = ModelSpec(

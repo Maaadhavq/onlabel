@@ -7,7 +7,6 @@ models
 data/raw
 web
 evals
-train
 tests
 reports
 cache

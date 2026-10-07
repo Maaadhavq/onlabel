@@ -117,7 +117,7 @@ def markdown(s: dict) -> str:
          f"guards were written (dev, {b['dev']} claims); the other six ingredients were not (test, {b['test']} claims)."), "",
          ("Faithful efficacy claims state the figure with its trial context (study length, population, dose, "
          "comparator). A claim that generalises one study's figure to \"in clinical trials\" is not used as a faithful "
-         "item, because an MLR reviewer would ask for a qualifier (PROGRESS finding 12)."), "",
+         "item, because an MLR reviewer would ask for a qualifier (see `docs/engineering-notes.md`)."), "",
          "## Would it trace a violation?", "",
          ("Traced means the reviewer shows the claim as supported. A violative claim that comes back traced is the "
          "failure the tool exists to prevent; a faithful claim that is not traced costs a reviewer a look."), "",
@@ -183,9 +183,22 @@ def markdown(s: dict) -> str:
            "and its red-team run stopped after 4 attacks, so the full red team ran on gpt-oss-20b, the next model "
            "in the production chain. The committed cache makes every run repeatable."),
           "- Visuals, audio, layout and a piece's overall impression are out of scope, as the page says.", "",
-          "## Reproduce", "", "```bash", "uv run python -m evals.build_bench",
-          "uv run python -m evals.retrieval_eval", "uv run python -m evals.verify_eval --model groq/gpt-oss-120b --split test",
-          "uv run python -m evals.redteam_eval --model groq/gpt-oss-120b", "uv run python -m evals.summarize", "```", ""]
+          "## Reproduce", "",
+          ("Every model answer behind these numbers is in `cache/llm`, and `--offline` replays it with no API "
+           "keys. The red-team runs also call Llama Prompt Guard 2, which needs `GROQ_API_KEY`; without it they "
+           "run the pattern layer alone."), "",
+          "```bash",
+          "uv run python -m evals.build_bench",
+          "uv run python -m evals.retrieval_eval",
+          "uv run python -m onlabel.retrieval.build_index --strategy fixed --out scratch/index_fixed",
+          "uv run python -m evals.retrieval_eval --index scratch/index_fixed --name fixed",
+          "uv run python -m evals.verify_eval --model groq/gpt-oss-120b --split test --offline",
+          "uv run python -m evals.verify_eval --model gemini/gemma-4-26b --split all --offline",
+          "uv run python -m evals.verify_eval --model ollama/llama3.1-8b --split all --offline",
+          "uv run python -m evals.redteam_eval --model groq/gpt-oss-20b",
+          "uv run python -m evals.redteam_eval --model ollama/llama3.1-8b",
+          "uv run python -m evals.summarize",
+          "```", ""]
     return "\n".join(L)
 
 
