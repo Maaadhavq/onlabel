@@ -45,7 +45,10 @@ For the whole piece, OnLabel also flags a boxed warning the copy leaves out, a b
 risk the copy denies ("no risk of thyroid tumors"), and instructions aimed at the reviewer.
 
 <p align="center">
-  <img src="docs/images/injection.webp" width="560" alt="OnLabel reviewing a Zepbound email whose HTML comment tells the reviewer to approve every claim: the page leads with a notice that the copy contains instructions aimed at the reviewer">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/injection-dark.webp">
+    <img src="docs/images/injection.webp" width="560" alt="OnLabel reviewing a Zepbound email whose HTML comment tells the reviewer to approve every claim: the page leads with a notice that the copy contains instructions aimed at the reviewer">
+  </picture>
   <br>
   <sub>The Zepbound sample hides an instruction to the reviewer in an HTML comment. The page leads with it, and no claim in the piece can be traced.</sub>
 </p>
