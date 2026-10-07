@@ -236,6 +236,9 @@ def test_a_traced_claim_must_carry_the_conditions_its_indication_attaches():
     res = check_verdict(out, chunks, claim="Ozempic also reduces the risk of kidney failure.")
     assert res.status == "needs_human_review"
     assert "conditions_not_in_claim:type 2 diabetes;chronic kidney disease" in res.flags
+    assert {"ok": False, "text": "The quoted indication attaches conditions the claim leaves out: type 2 "
+                                 "diabetes and chronic kidney disease. A reviewer decides."} in checks_for(
+        "Ozempic also reduces the risk of kidney failure.", out, res)
     ok = check_verdict(out, chunks, claim="In adults with type 2 diabetes and chronic kidney disease, Ozempic "
                                           "reduces the risk of end-stage kidney disease.")
     assert ok.status == "supported" and ok.flags == []

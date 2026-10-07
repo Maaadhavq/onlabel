@@ -265,8 +265,11 @@ def checks_for(claim: str, out: JudgeOutput | None, res: GuardResult | None) -> 
         checks.append({"ok": True, "text": "No figures in the claim to check."})
     unmet = next((f.split(":", 1)[1] for f in res.flags if f.startswith("conditions_not_in_claim:")), None)
     if unmet:
-        checks.append({"ok": False, "text": f"The quoted indication applies only with {unmet.replace(';', ', ')}, "
-                                            "and the claim does not say so. A reviewer decides."})
+        conds = unmet.split(";")
+        listed = conds[0] if len(conds) == 1 else f"{', '.join(conds[:-1])} and {conds[-1]}"
+        what = "a condition" if len(conds) == 1 else "conditions"
+        checks.append({"ok": False, "text": f"The quoted indication attaches {what} the claim leaves out: "
+                                            f"{listed}. A reviewer decides."})
     if "supported_but_lists_violations" in res.flags:
         checks.append({"ok": False, "text": "The model said traced and also listed violations, so a reviewer decides."})
     if "violation_without_grounded_quote" in res.flags:
