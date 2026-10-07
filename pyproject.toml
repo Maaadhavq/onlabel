@@ -3,6 +3,7 @@ name = "onlabel"
 version = "0.1.0"
 description = "MLR pre-check agent: traces promotional drug claims to the FDA label and flags the ones it cannot ground."
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "fastapi>=0.115",

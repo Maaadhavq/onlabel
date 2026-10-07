@@ -261,3 +261,8 @@ Medicine). `data/labels/manifest.json` pins each label's set id, version and XML
 sample copy in the app was written for testing and is marked as synthetic; drug names are
 trademarks of their owners. OnLabel is a portfolio project. It prepares evidence for a
 reviewer and gives no medical, legal or regulatory advice.
+
+## License
+
+The code is released under the [MIT License](LICENSE). Label text in `data/` comes from
+DailyMed, as described above.
